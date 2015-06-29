@@ -1,0 +1,2186 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+end_init CODE 0 116 116 4 1
+reset_vec CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\Template.X.production.obj
+intcodelo CODE 0 18 18 FE 1
+intcode CODE 0 8 8 C 1
+smallconst SMALLCONST 0 800 800 3A 1
+text103 CODE 0 1C4C 1C4C 42 1
+text102 CODE 0 18A4 18A4 46 1
+text100 CODE 0 1C0A 1C0A 42 1
+text99 CODE 0 E04 E04 A6 1
+text97 CODE 0 19B6 19B6 44 1
+text96 CODE 0 1CCE 1CCE 40 1
+text95 CODE 0 1972 1972 44 1
+text94 CODE 0 192E 192E 44 1
+text93 CODE 0 227C 227C 18 1
+text92 CODE 0 2230 2230 1C 1
+text91 CODE 0 2156 2156 22 1
+text90 CODE 0 2134 2134 22 1
+text87 CODE 0 1BC8 1BC8 42 1
+text86 CODE 0 20C6 20C6 28 1
+text85 CODE 0 209E 209E 28 1
+text84 CODE 0 2076 2076 28 1
+text83 CODE 0 204E 204E 28 1
+text82 CODE 0 2026 2026 28 1
+text81 CODE 0 1FFE 1FFE 28 1
+intcode_body CODE 0 97A 97A E0 1
+text79 CODE 0 1B86 1B86 42 1
+text77 CODE 0 1B44 1B44 42 1
+text76 CODE 0 EAA EAA A2 1
+text74 CODE 0 1B02 1B02 42 1
+text73 CODE 0 1C8E 1C8E 40 1
+text72 CODE 0 18EA 18EA 44 1
+text71 CODE 0 178A 178A 48 1
+text70 CODE 0 2264 2264 18 1
+text69 CODE 0 2214 2214 1C 1
+text68 CODE 0 21D8 21D8 20 1
+text67 CODE 0 2112 2112 22 1
+text64 CODE 0 185E 185E 46 1
+text63 CODE 0 1AC0 1AC0 42 1
+text62 CODE 0 1FD6 1FD6 28 1
+text61 CODE 0 1FAE 1FAE 28 1
+text60 CODE 0 1F86 1F86 28 1
+text59 CODE 0 1F5E 1F5E 28 1
+text58 CODE 0 1F36 1F36 28 1
+text57 CODE 0 1F0E 1F0E 28 1
+text55 CODE 0 22B4 22B4 E 1
+text54 CODE 0 1818 1818 46 1
+text53 CODE 0 1552 1552 5C 1
+text52 CODE 0 1D8A 1D8A 3C 1
+text51 CODE 0 A5A A5A CE 1
+text50 CODE 0 1D4C 1D4C 3E 1
+text49 CODE 0 16F8 16F8 4A 1
+text48 CODE 0 1EE6 1EE6 28 1
+text47 CODE 0 1494 1494 60 1
+text46 CODE 0 1EBE 1EBE 28 1
+text45 CODE 0 15AE 15AE 58 1
+text44 CODE 0 11B6 11B6 72 1
+text43 CODE 0 1300 1300 6A 1
+text42 CODE 0 1434 1434 60 1
+text41 CODE 0 22DC 22DC 2 1
+text40 CODE 0 22DA 22DA 2 1
+text39 CODE 0 22D8 22D8 2 1
+text38 CODE 0 22D6 22D6 2 1
+text37 CODE 0 22A6 22A6 E 1
+text36 CODE 0 D54 D54 B0 1
+text35 CODE 0 22CA 22CA 8 1
+text34 CODE 0 21B8 21B8 20 1
+text33 CODE 0 1E32 1E32 34 1
+text32 CODE 0 1DFE 1DFE 34 1
+text31 CODE 0 104C 104C 7C 1
+text30 CODE 0 1E94 1E94 2A 1
+text29 CODE 0 2198 2198 20 1
+text28 CODE 0 17D2 17D2 46 1
+text27 CODE 0 1140 1140 76 1
+text26 CODE 0 1A7E 1A7E 42 1
+text25 CODE 0 1296 1296 6A 1
+text24 CODE 0 165C 165C 52 1
+text23 CODE 0 1E66 1E66 2E 1
+text22 CODE 0 BE8 BE8 B8 1
+text21 CODE 0 20EE 20EE 24 1
+text20 CODE 0 1DC6 1DC6 38 1
+text19 CODE 0 10C8 10C8 78 1
+text18 CODE 0 136A 136A 68 1
+text17 CODE 0 B28 B28 C0 1
+text16 CODE 0 16AE 16AE 4A 1
+text15 CODE 0 1D0E 1D0E 3E 1
+text14 CODE 0 FCC FCC 80 1
+text13 CODE 0 83A 83A 140 1
+text12 CODE 0 1742 1742 48 1
+text11 CODE 0 21F8 21F8 1C 1
+text10 CODE 0 1A3C 1A3C 42 1
+text9 CODE 0 19FA 19FA 42 1
+text8 CODE 0 224C 224C 18 1
+text7 CODE 0 F4C F4C 80 1
+text6 CODE 0 2178 2178 20 1
+text5 CODE 0 22D4 22D4 2 1
+text4 CODE 0 CA0 CA0 B4 1
+text3 CODE 0 22D2 22D2 2 1
+text2 CODE 0 13D2 13D2 62 1
+text1 CODE 0 14F4 14F4 5E 1
+text0 CODE 0 2294 2294 12 1
+cstackCOMRAM COMRAM 1 1 1 20 1
+cstackBANK0 BANK0 1 E8 E8 E 1
+cstackBANK1 BANK1 1 184 184 29 1
+bssBANK1 BANK1 1 100 100 84 1
+dataBANK0 BANK0 1 60 60 56 1
+bssBANK0 BANK0 1 B6 B6 32 1
+dataCOMRAM COMRAM 1 40 40 8 1
+bssCOMRAM COMRAM 1 21 21 1F 1
+cinit CODE 0 1228 1228 6E 1
+idataBANK0 CODE 0 1606 1606 56 1
+idataCOMRAM CODE 0 22C2 22C2 8 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0000F6-0000FF 1
+BANK1 0001AD-0001FF 1
+BANK2 000200-0002FF 1
+BANK3 000300-0003FF 1
+BANK4 000400-0004FF 1
+BANK5 000500-0005FF 1
+BANK6 000600-0006FF 1
+BANK7 000700-0007FF 1
+BIGRAM 000048-00005F 1
+BIGRAM 0000F6-0000FF 1
+BIGRAM 0001AD-0007FF 1
+CODE 000004-000007 1
+CODE 000014-000017 1
+CODE 00011A-0007FF 1
+CODE 0022DE-007FFF 1
+COMRAM 000048-00005F 1
+CONST 000004-000007 1
+CONST 000014-000017 1
+CONST 00011A-0007FF 1
+CONST 0022DE-007FFF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 0022DE-007FFF 1
+RAM 0000F6-0000FF 1
+RAM 0001AD-0007FF 1
+SFR 000F60-000FFF 1
+SMALLCONST 0022DE-007FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Template.X.production.obj
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":131 3C intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":133 56 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":136 5A intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":138 74 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":141 78 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":143 92 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":146 96 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":148 B0 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":151 B4 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":153 CE intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":156 D2 intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":158 EC intcodelo CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":160 F0 intcodelo CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":187 83A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":189 842 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":191 844 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":195 856 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":196 860 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":201 862 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":202 870 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":208 87A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":212 87C text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":213 88E text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":219 89A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":223 89C text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":224 8AE text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":230 8BA text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":234 8BC text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":235 8CE text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":241 8DA text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":193 8DC text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":249 900 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":250 90A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":251 91A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":254 91C text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":255 926 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":258 928 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":259 932 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":262 934 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":263 948 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":246 94A text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":267 964 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":189 968 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":271 976 text13 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":189 978 text13 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":92 97A intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":95 98C intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":97 9A6 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":100 9AA intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":102 9C4 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":105 9C8 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":107 9E2 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":110 9E6 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":112 A00 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":115 A04 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":117 A1E intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":120 A22 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":122 A3C intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":124 A40 intcode_body CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":151 A5E text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":154 A60 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":155 A6A text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":156 A74 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":159 A76 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":161 A7A text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":162 A7E text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":165 A80 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":170 A92 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":172 A9C text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":173 AB4 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":174 AC8 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":175 ADE text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":176 AF6 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":179 AF8 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":181 AFC text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":182 B00 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":185 B02 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":151 B14 text51 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":189 B26 text51 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":294 B28 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":297 B2C text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":298 B2E text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":300 B32 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":301 B3A text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":305 B3E text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":306 B60 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":307 B7A text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":309 B7E text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":311 B84 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":314 B88 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":319 B96 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":321 B9E text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":322 BA6 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":325 BA8 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":317 BCC text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":328 BD8 text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":317 BDA text17 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":63 BE8 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":64 BF0 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":66 BF8 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":68 C06 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":70 C0A text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":72 C10 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":68 C1E text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":75 C28 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":77 C2C text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":79 C2E text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":81 C48 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":77 C56 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":84 C60 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":85 C6C text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":86 C78 text22 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":87 C84 text22 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":41 CA0 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":44 CA4 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":45 CA8 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":46 CB4 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":49 CC0 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":50 CCE text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":51 CDC text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":52 CEA text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":53 CF8 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":54 D06 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":55 D14 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":57 D18 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":58 D20 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":61 D26 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":62 D34 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":63 D42 text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":64 D4C text4 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":18 D54 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":19 D66 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":20 D76 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":21 D86 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":22 D96 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":25 DA6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":26 DB6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":27 DC6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":28 DD6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":29 DE6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":34 DF6 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":35 DF8 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":38 DFA text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":39 DFC text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":40 DFE text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":41 E00 text36 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c":42 E02 text36 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":64 E04 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":67 E06 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":71 E08 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":76 E38 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":67 E52 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":81 E5A text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":83 E5E text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":86 E64 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":88 E6A text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":94 E80 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":95 E82 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":98 E84 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":100 E8C text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":106 E96 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":113 EA0 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":115 EA2 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":121 EA8 text99 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":64 EAA text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":67 EAC text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":71 EAE text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":76 EDE text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":67 EF6 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":81 EFE text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":83 F02 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":86 F08 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":88 F0E text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":94 F22 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":95 F24 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":98 F26 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":100 F2E text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":106 F38 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":113 F42 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":115 F44 text76 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":121 F4A text76 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":56 F50 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":63 F52 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":71 F54 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":72 F5A text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":75 F5E text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":77 F64 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":82 F66 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":85 F6A text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":86 F6E text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":89 F72 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":90 F78 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":93 F7C text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":95 F82 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":102 F84 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":103 F8A text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":106 F8E text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":109 F92 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":110 F96 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":112 F9A text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":127 F9E text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":129 FA2 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":56 FA4 text7 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":132 FB4 text7 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":276 FCC text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":281 FD0 text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":282 FF2 text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":283 100C text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":284 1010 text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":288 1018 text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":286 103C text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":290 1048 text14 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":286 104A text14 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":181 104C text31 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":184 1050 text31 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":185 107C text31 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":189 1080 text31 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":191 10AE text31 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":14 10C8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":15 10CA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":16 10CE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":17 10D6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":19 10DA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":20 10DE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":21 10E6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":23 10EA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":24 10EE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":25 10F4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":26 10F8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":27 10FA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":28 1100 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":26 1102 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":31 1106 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":32 110C text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":33 1116 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":34 111E text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":36 1120 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":37 1126 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":39 112A text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":40 112E text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":41 1136 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c":42 113E text19 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":200 1144 text27 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":202 114A text27 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":203 1170 text27 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":206 1174 text27 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":208 119C text27 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":169 11B6 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":172 11B8 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":174 11C0 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":175 11C2 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":178 11C4 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":180 11CC text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":181 11CE text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":184 11D0 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":186 11D8 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":187 11DA text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":190 11DC text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":192 11E4 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":193 11E6 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":196 11E8 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":198 11F0 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":199 11F2 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":202 11F4 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":204 11FC text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":205 11FE text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":169 1200 text44 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":208 1226 text44 CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8075 1228 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8076 122C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8078 122E cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8079 1230 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8080 1232 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8083 1234 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8084 1238 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8086 123A cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8087 123C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8088 123E cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8091 1240 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8092 1244 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8094 1246 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8095 1248 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8096 124A cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8101 124C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8102 124E cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8103 1250 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8104 1252 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8105 1254 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8106 1256 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8107 1258 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8108 125C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8110 1260 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8111 1262 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8112 1266 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8113 1268 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8114 126A cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8118 126C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8119 126E cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8120 1270 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8121 1272 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8122 1274 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8123 1276 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8124 1278 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8125 127C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8127 1280 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8128 1282 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8129 1286 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8130 1288 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8131 128A cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8139 128C cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8140 128E cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8141 1290 cinit CODE
+"C:\Users\jwin\AppData\Local\Temp\s4qk.":8142 1292 cinit CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":94 1296 text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":97 129E text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":98 12AE text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":99 12BE text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":100 12CE text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":102 12DE text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":104 12EC text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":106 12F4 text25 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":108 12FA text25 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":292 1304 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":295 1306 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":296 1318 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":299 131A text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":300 132C text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":303 132E text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":304 1340 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":307 1342 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":308 1354 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":292 1356 text43 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":310 1368 text43 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":13 136A text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":14 136C text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":15 1370 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":16 1378 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":18 137C text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":19 1380 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":20 1388 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":21 138E text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":22 1392 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":23 1394 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":24 139A text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":22 139C text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":27 13A0 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":28 13AA text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":29 13B2 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":30 13B8 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":32 13BC text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":33 13C0 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":34 13C8 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c":35 13D0 text18 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":125 13D6 text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":127 13DA text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":130 13F4 text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":133 1404 text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":136 1406 text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":141 140A text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":146 1410 text2 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":163 1426 text2 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":23 1434 text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":26 143A text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":27 1442 text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":28 1452 text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":29 145E text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":32 146E text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":33 1476 text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":40 147E text42 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":35 148C text42 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":240 1498 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":243 149A text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":244 149C text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":245 14A6 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":248 14A8 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":249 14AA text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":250 14B4 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":253 14B6 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":254 14B8 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":255 14C2 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":258 14C4 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":259 14C6 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":260 14D0 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":240 14D2 text47 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":263 14E4 text47 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":18 14F4 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":20 1502 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":21 150A text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":22 1510 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":23 151A text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":26 1522 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":28 1530 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":29 1538 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":30 153E text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":31 1546 text1 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c":33 1550 text1 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":87 1556 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":90 1558 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":91 155A text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":92 155C text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":93 155E text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":94 1560 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":95 1562 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":96 1564 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":97 1566 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":98 1568 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":101 156A text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":102 156C text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":103 156E text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":104 1570 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":105 1574 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":106 1576 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":107 1578 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":108 157A text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":111 157C text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":112 157E text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":113 1582 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":114 1586 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":117 1588 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":118 158A text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":119 158C text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":120 158E text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":121 1592 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":122 1594 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":123 1596 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":124 1598 text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":87 159A text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":126 15AC text53 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":268 15B2 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":271 15B4 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":272 15BE text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":275 15C0 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":276 15CA text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":279 15CC text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":280 15D6 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":283 15D8 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":284 15E2 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":268 15E4 text45 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":287 15F6 text45 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":113 1660 text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":115 1668 text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":117 166E text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":119 1674 text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":120 167C text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":123 167E text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":126 1686 text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":128 1696 text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":130 169E text24 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":131 16A6 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":14 16AE text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":15 16B2 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":16 16B8 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":17 16BC text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":18 16BE text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":19 16C4 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":17 16C6 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":22 16CA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":23 16D0 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":24 16DA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":25 16E2 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":27 16E4 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":28 16EA text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":30 16EE text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c":31 16F6 text16 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":218 16FC text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":221 16FE text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":222 1708 text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":225 170A text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":226 1714 text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":229 1716 text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":230 1720 text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":233 1722 text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":234 172C text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":218 172E text49 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":236 1740 text49 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 1742 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":252 1748 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":254 1762 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":255 1770 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":257 1772 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 1780 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":260 1788 text12 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 178A text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":252 1790 text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":254 17AA text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":255 17B8 text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":257 17BA text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 17C8 text71 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":260 17D0 text71 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":176 17D6 text28 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":177 1816 text28 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":35 1818 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 1824 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":41 1826 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":42 182A text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":43 182E text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":46 1830 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":47 1834 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":48 1838 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":51 183A text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":52 183E text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":55 1840 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":56 1844 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":57 1848 text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 184A text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":59 185C text54 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":35 185E text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 186A text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":41 186C text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":42 1870 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":43 1874 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":46 1876 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":47 187A text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":48 187E text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":51 1880 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":52 1884 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":55 1886 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":56 188A text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":57 188E text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 1890 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":59 18A2 text64 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":35 18A4 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 18B0 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":41 18B2 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":42 18B6 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":43 18BA text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":46 18BC text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":47 18C0 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":48 18C4 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":51 18C6 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":52 18CA text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":55 18CC text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":56 18D0 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":57 18D4 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":38 18D6 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":59 18E8 text102 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":176 18EE text72 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":177 192C text72 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 192E text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":252 1934 text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":254 194E text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":255 195A text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":257 195C text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":249 1968 text94 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":260 1970 text94 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":176 1976 text95 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":177 19B4 text95 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":233 19B6 text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 19B8 text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":237 19BA text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":239 19D2 text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 19EC text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":242 19F6 text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":243 19F8 text97 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":233 19FA text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 19FC text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":237 19FE text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":239 1A18 text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 1A30 text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":242 1A38 text9 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":243 1A3A text9 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":195 1A3C text10 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":196 1A7C text10 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":171 1A82 text26 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":172 1ABE text26 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":48 1AC0 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":53 1ACE text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":55 1AD4 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":88 1AD8 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":61 1ADC text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":63 1AE2 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":95 1AE6 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":69 1AEA text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":71 1AF8 text63 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":76 1B00 text63 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":233 1B02 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 1B04 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":237 1B06 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":239 1B20 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":235 1B38 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":242 1B40 text74 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":243 1B42 text74 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":195 1B44 text77 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":196 1B84 text77 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":81 1B86 text79 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":83 1B96 text79 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":85 1BA6 text79 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":86 1BB8 text79 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":48 1BC8 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":53 1BD6 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":55 1BDC text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":88 1BE0 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":61 1BE4 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":63 1BEA text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":95 1BEE text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":69 1BF2 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":71 1C00 text87 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c":76 1C08 text87 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":195 1C0A text100 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":196 1C4A text100 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":81 1C4C text103 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":83 1C5C text103 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":85 1C6C text103 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":86 1C7E text103 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":171 1C92 text73 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":172 1CCC text73 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":171 1CD2 text96 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":172 1D0C text96 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":13 1D0E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":14 1D14 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":15 1D18 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":16 1D1A text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":17 1D20 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":15 1D22 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":20 1D26 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":21 1D30 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":22 1D38 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":23 1D3E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":25 1D42 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c":26 1D4A text15 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":196 1D50 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":199 1D52 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":200 1D5C text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":203 1D5E text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":204 1D68 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":211 1D6A text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":212 1D74 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":196 1D76 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":214 1D88 text50 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":130 1D8E text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":133 1D90 text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":134 1D9A text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":135 1DA6 text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":138 1DA8 text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":139 1DB2 text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":130 1DB4 text52 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c":147 1DC4 text52 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":148 1DCA text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":151 1DCC text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":155 1DD0 text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":159 1DD4 text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":163 1DD8 text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":164 1DDC text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":148 1DDE text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":167 1DF0 text20 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":169 1DF4 text20 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":165 1DFE text32 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":166 1E14 text32 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":167 1E30 text32 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":44 1E32 text33 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":46 1E36 text33 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":47 1E4A text33 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":44 1E5C text33 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":49 1E64 text33 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":18 1E66 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":19 1E6E text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":20 1E70 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":19 1E80 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":22 1E90 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c":19 1E92 text23 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":54 1E94 text30 CODE
+"C:\JAGA_TESTE/Middleware/buttons/buttons.c":57 1EB0 text30 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":57 1EBE text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":60 1EC0 text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":61 1ED0 text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":64 1ED2 text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":65 1EDA text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":57 1EDC text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":67 1EE4 text46 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":42 1EE6 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":45 1EE8 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":46 1EF0 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":49 1EF2 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":50 1F02 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":42 1F04 text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":52 1F0C text48 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":282 1F0E text57 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":284 1F12 text57 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":286 1F16 text57 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":290 1F32 text57 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":292 1F34 text57 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":268 1F36 text58 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":270 1F3A text58 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":272 1F3E text58 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":276 1F5A text58 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":278 1F5C text58 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":254 1F5E text59 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":256 1F62 text59 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":258 1F66 text59 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":262 1F82 text59 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":264 1F84 text59 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":240 1F86 text60 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":242 1F8A text60 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":244 1F8E text60 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":248 1FAA text60 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":250 1FAC text60 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":226 1FAE text61 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":228 1FB2 text61 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":230 1FB6 text61 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":234 1FD2 text61 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":236 1FD4 text61 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":212 1FD6 text62 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":214 1FDA text62 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":216 1FDE text62 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":220 1FFA text62 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":222 1FFC text62 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":282 1FFE text81 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":284 2002 text81 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":286 2006 text81 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":290 2022 text81 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":292 2024 text81 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":268 2026 text82 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":270 202A text82 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":272 202E text82 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":276 204A text82 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":278 204C text82 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":254 204E text83 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":256 2052 text83 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":258 2056 text83 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":262 2072 text83 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":264 2074 text83 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":240 2076 text84 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":242 207A text84 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":244 207E text84 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":248 209A text84 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":250 209C text84 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":226 209E text85 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":228 20A2 text85 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":230 20A6 text85 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":234 20C2 text85 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":236 20C4 text85 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":212 20C6 text86 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":214 20CA text86 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":216 20CE text86 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":220 20EA text86 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":222 20EC text86 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":137 20EE text21 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":139 20F0 text21 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":140 20FA text21 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":137 20FE text21 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":142 2110 text21 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":151 2112 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":152 2114 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":155 2116 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":158 211C text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":161 2122 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":165 2124 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":168 212A text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":171 2130 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":173 2132 text67 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":151 2134 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":152 2136 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":155 2138 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":158 213E text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":161 2144 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":165 2146 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":168 214C text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":171 2152 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":173 2154 text90 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":181 2156 text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":185 2160 text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":188 2164 text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":191 216A text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":194 2170 text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":197 2176 text91 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":139 2178 text6 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":142 218C text6 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":52 2198 text29 CODE
+"C:\JAGA_TESTE/Middleware/lcd/lcd.c":55 21AC text29 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":14 21B8 text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":17 21BC text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":20 21C0 text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":23 21C4 text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":26 21C8 text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":29 21CC text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":32 21D0 text34 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c":35 21D4 text34 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":181 21D8 text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":185 21E0 text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":188 21E4 text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":191 21EA text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":194 21F0 text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":197 21F6 text68 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":219 21F8 text11 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":220 2202 text11 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":222 2206 text11 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":223 220A text11 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":226 220E text11 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":219 2214 text69 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":220 221E text69 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":222 2222 text69 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":223 2226 text69 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":226 222A text69 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":219 2230 text92 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":220 223A text92 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":222 223E text92 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":223 2242 text92 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":226 2246 text92 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":203 224C text8 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":206 2254 text8 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":207 225A text8 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":209 225E text8 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":203 2264 text70 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":206 226C text70 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":207 2272 text70 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":209 2276 text70 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":203 227C text93 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":206 2284 text93 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":207 228A text93 CODE
+"C:\JAGA_TESTE/Middleware/leds/leds.c":209 228E text93 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c":14 2294 text0 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c":17 2298 text0 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c":22 229C text0 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c":25 22A0 text0 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":128 22A6 text37 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c":129 22B2 text37 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":32 22B4 text55 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":34 22B8 text55 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":36 22BC text55 CODE
+"C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c":37 22C0 text55 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c":15 22CA text35 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c":16 22CC text35 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c":17 22CE text35 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c":18 22D0 text35 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_control.c":14 22D2 text3 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_info.c":22 22D4 text5 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_uart.c":16 22D6 text38 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_pwm.c":14 22D8 text39 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_ad.c":14 22DA text40 CODE
+"C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_i2c.c":15 22DC text41 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwdiv@dividend 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofPL50 11B6 0 CODE 0 text27 dist/default/production\Template.X.production.obj
+___awdiv@counter 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_GPIO_input_state 1A3C 0 CODE 0 text10 dist/default/production\Template.X.production.obj
+___lwdiv@counter 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofi1_GPIO_pin_low 192E 0 CODE 0 text72 dist/default/production\Template.X.production.obj
+_GPIO_confDir 104C 0 CODE 0 text31 dist/default/production\Template.X.production.obj
+PL50 119E 0 CODE 0 text27 dist/default/production\Template.X.production.obj
+PL60 1428 0 CODE 0 text2 dist/default/production\Template.X.production.obj
+PL52 FB6 0 CODE 0 text7 dist/default/production\Template.X.production.obj
+PL54 1BBA 0 CODE 0 text79 dist/default/production\Template.X.production.obj
+PL46 C90 0 CODE 0 text22 dist/default/production\Template.X.production.obj
+PL56 1C80 0 CODE 0 text103 dist/default/production\Template.X.production.obj
+PL48 10B0 0 CODE 0 text31 dist/default/production\Template.X.production.obj
+lcd_gotoxy@linha 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+PL58 BDC 0 CODE 0 text17 dist/default/production\Template.X.production.obj
+_rA1 70 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rD0 85 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_PR2 FCB 0 ABS 0 - dist/default/production\Template.X.production.obj
+_rA2 77 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rB2 7E 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rD1 8C 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rE1 AF 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\Template.X.production.obj
+__S1 1AD 0 ABS 0 - dist/default/production\Template.X.production.obj
+_rD4 93 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rD5 9A 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rD6 A1 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_rD7 A8 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+__end_of_button_attach 1EBE 0 CODE 0 text30 dist/default/production\Template.X.production.obj
+__end_ofi2_GPIO_pin_low 19B6 0 CODE 0 text95 dist/default/production\Template.X.production.obj
+__end_ofPL60 1434 0 CODE 0 text2 dist/default/production\Template.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\Template.X.production.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\Template.X.production.obj
+__size_of_init_i2c 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_GPIO_confDir 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofi2_interrupt_is_enable 1C80 0 CODE 0 text103 dist/default/production\Template.X.production.obj
+__end_of___awdiv 1140 0 CODE 0 text19 dist/default/production\Template.X.production.obj
+__size_of_buttons_read_isr_10ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i2_buttons_read_isr_10ms E04 0 CODE 0 text99 dist/default/production\Template.X.production.obj
+_timer_counter B6 0 BANK0 1 bssBANK0 dist/default/production\Template.X.production.obj
+timer_set_counter@module 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR1 FCE 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR2 FCC 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR3 FB2 0 ABS 0 - dist/default/production\Template.X.production.obj
+timer_set_counter@aux_value 187 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_WDTPS$256 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_LATA F89 0 ABS 0 - dist/default/production\Template.X.production.obj
+_LATB F8A 0 ABS 0 - dist/default/production\Template.X.production.obj
+_LATC F8B 0 ABS 0 - dist/default/production\Template.X.production.obj
+_LATD F8C 0 ABS 0 - dist/default/production\Template.X.production.obj
+_LATE F8D 0 ABS 0 - dist/default/production\Template.X.production.obj
+_lcd_print_uint16 FCC 0 CODE 0 text14 dist/default/production\Template.X.production.obj
+?_interrupt_is_enable 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__end_of_timer_init_regs 15AE 0 CODE 0 text53 dist/default/production\Template.X.production.obj
+i1GPIO_pin_low@pin 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2GPIO_pin_low@pin 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+leds_set@UI8_Action 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_leds_status 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_counter_10_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_print_uint16 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+GPIO_write_data@registrador 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2interrupt_is_enable@priority 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+lcd_init@i 192 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i1leds_status@status A 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_status@status EA 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+_main 2294 0 CODE 0 text0 dist/default/production\Template.X.production.obj
+_leds BE 0 BANK0 1 bssBANK0 dist/default/production\Template.X.production.obj
+timer_setup_scale@on_off 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+timer_start@value 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+start 116 0 CODE 0 init C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+_UN_ledsBlinkSlow 3B 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+leds_reverse@UI8_LedsMask F 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+?i1_GPIO_input_state 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+?i2_GPIO_input_state 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_lcd_gotoxy 1DC6 0 CODE 0 text20 dist/default/production\Template.X.production.obj
+timer_setup_scale@module 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_leds_action_isr_10ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_interrupt_set_callback 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofi2_uart_rx_isr 204E 0 CODE 0 text82 dist/default/production\Template.X.production.obj
+__end_ofi2_uart_tx_isr 2026 0 CODE 0 text81 dist/default/production\Template.X.production.obj
+__end_ofPL52 FCC 0 CODE 0 text7 dist/default/production\Template.X.production.obj
+_FSR0H FEA 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR0H FD7 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR1H FCF 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR3H FB3 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer_priority_interrupt 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_FSR0L FE9 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR0L FD6 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR1L FCE 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TMR3L FB2 0 ABS 0 - dist/default/production\Template.X.production.obj
+_buttons_vector 16C 0 BANK1 1 bssBANK1 dist/default/production\Template.X.production.obj
+_RCREG FAE 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TRISA F92 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TRISB F93 0 ABS 0 - dist/default/production\Template.X.production.obj
+leds_reverse@UI8_LedsTemp E 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_TRISC F94 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TXREG FAD 0 ABS 0 - dist/default/production\Template.X.production.obj
+_PORTA F80 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TRISD F95 0 ABS 0 - dist/default/production\Template.X.production.obj
+_PORTB F81 0 ABS 0 - dist/default/production\Template.X.production.obj
+_SPBRG FAF 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Template.X.production.obj
+_TRISE F96 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Template.X.production.obj
+_PORTC F82 0 ABS 0 - dist/default/production\Template.X.production.obj
+_setupHardware 21B8 0 CODE 0 text34 dist/default/production\Template.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_inlined$_counter_1_s 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+_EEADR FA9 0 ABS 0 - dist/default/production\Template.X.production.obj
+_PORTD F83 0 ABS 0 - dist/default/production\Template.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+sys_timer@timer_counter@tmr_1_s 44 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+_PORTE F84 0 ABS 0 - dist/default/production\Template.X.production.obj
+_buttons_init 1E32 0 CODE 0 text33 dist/default/production\Template.X.production.obj
+_SSPEN 7E35 0 ABS 0 - dist/default/production\Template.X.production.obj
+_leds_off 21F8 0 CODE 0 text11 dist/default/production\Template.X.production.obj
+leds_action_isr_10ms@UI8_timerLedFastReverseCounter 3E 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+buttons_read_isr_10ms@i A 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+GPIO_pin_outputBit@flag 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+lcd_send_string@c 193 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+leds_action_isr_10ms@UI8_timerLedSlowReverseCounter 3F 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\Template.X.production.obj
+buttons_init@i 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\Template.X.production.obj
+?_timer_setup_clock 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_uart_tx_isr 1F36 0 CODE 0 text57 dist/default/production\Template.X.production.obj
+__end_of_timer2_isr 1FAE 0 CODE 0 text60 dist/default/production\Template.X.production.obj
+?___awmod 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+lcd_send_string@fmt 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofsys_timer@timer_counter 1B02 0 CODE 0 text63 dist/default/production\Template.X.production.obj
+__end_ofi2_leds_action_isr_10ms 2156 0 CODE 0 text90 dist/default/production\Template.X.production.obj
+?___lwmod 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_inlined$i2_counter_1_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+sys_timer@timer_counter@tmr_10_ms 47 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+__end_of_buttons_read_isr_10ms F4C 0 CODE 0 text76 dist/default/production\Template.X.production.obj
+_interrupt_set_priority 1EBE 0 CODE 0 text46 dist/default/production\Template.X.production.obj
+__end_of_leds_attach 2198 0 CODE 0 text6 dist/default/production\Template.X.production.obj
+_isr_high_interrupt 8 0 CODE 0 intcode dist/default/production\Template.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Template.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Template.X.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/default/production\Template.X.production.obj
+interrupt_set_priority@_interrupt 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/default/production\Template.X.production.obj
+__end_ofi1_timer_set_counter 18A4 0 CODE 0 text64 dist/default/production\Template.X.production.obj
+i2_interrupt_is_enable 1C4C 0 CODE 0 text103 dist/default/production\Template.X.production.obj
+__end_of_GPIO_pin_attach 1E32 0 CODE 0 text32 dist/default/production\Template.X.production.obj
+__end_ofi2_buttons_read_isr_10ms EAA 0 CODE 0 text99 dist/default/production\Template.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\Template.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\Template.X.production.obj
+__size_of_uart_tx_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\Template.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\Template.X.production.obj
+__end_ofi1_leds_on 227C 0 CODE 0 text70 dist/default/production\Template.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Template.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Template.X.production.obj
+__end_of__stringdata 838 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\Template.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\Template.X.production.obj
+__end_ofi2_timer_set_counter 18EA 0 CODE 0 text102 dist/default/production\Template.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Template.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Template.X.production.obj
+__end_of_timer_priority_interrupt 1606 0 CODE 0 text45 dist/default/production\Template.X.production.obj
+__end_ofi1_leds_off 2230 0 CODE 0 text69 dist/default/production\Template.X.production.obj
+_interrupt_set_callback 11B6 0 CODE 0 text44 dist/default/production\Template.X.production.obj
+__end_ofi2_leds_on 2294 0 CODE 0 text93 dist/default/production\Template.X.production.obj
+__end_of_interrupt_setup 1F0E 0 CODE 0 text48 dist/default/production\Template.X.production.obj
+__size_ofi2_leds_reverse 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_lcd_send_string 20EE 0 CODE 0 text21 dist/default/production\Template.X.production.obj
+?_interrupt_set_priority 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_GPIO_input_state 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_counter_100_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi2_leds_off 224C 0 CODE 0 text92 dist/default/production\Template.X.production.obj
+?_GPIO_pin_outputBit 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_counter_1_s 0 0 CODE 0 text65 dist/default/production\Template.X.production.obj
+__end_ofi2sys_timer@timer_counter 1C0A 0 CODE 0 text87 dist/default/production\Template.X.production.obj
+?_lcd_gotoxy 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_timer0_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_lcd_send_byte 16AE 0 CODE 0 text24 dist/default/production\Template.X.production.obj
+_timer_set_callbak 1300 0 CODE 0 text43 dist/default/production\Template.X.production.obj
+_EECON2 FA7 0 ABS 0 - dist/default/production\Template.X.production.obj
+_inlined$_counter_1_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofPL54 1BC8 0 CODE 0 text79 dist/default/production\Template.X.production.obj
+_PIE1bits F9D 0 ABS 0 - dist/default/production\Template.X.production.obj
+_PIE2bits FA0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Template.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Template.X.production.obj
+_init_mcu 22CA 0 CODE 0 text35 dist/default/production\Template.X.production.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/production\Template.X.production.obj
+_IPR1bits F9F 0 ABS 0 - dist/default/production\Template.X.production.obj
+_PIR2bits FA1 0 ABS 0 - dist/default/production\Template.X.production.obj
+_IPR2bits FA2 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_GPIO_pin_outputBit 119E 0 CODE 0 text27 dist/default/production\Template.X.production.obj
+leds_write@i 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_UN_ledsStatus 3D 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+_leds_set F4C 0 CODE 0 text7 dist/default/production\Template.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Template.X.production.obj
+_SSPADD FC8 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Template.X.production.obj
+interrupt_setup@_interrupt 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_CCPR1L FBE 0 ABS 0 - dist/default/production\Template.X.production.obj
+_RCONbits FD0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_lcd_init BE8 0 CODE 0 text22 dist/default/production\Template.X.production.obj
+_EEDATA FA8 0 ABS 0 - dist/default/production\Template.X.production.obj
+interrupt_is_enable@priority_status 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Template.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Template.X.production.obj
+_init_pwm 22D8 0 CODE 0 text39 dist/default/production\Template.X.production.obj
+?___awdiv 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\Template.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\Template.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\Template.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\Template.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Template.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Template.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Template.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Template.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Template.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Template.X.production.obj
+_SPBRGH FB0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?___lwdiv 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Template.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Template.X.production.obj
+__Hintcode 14 0 CODE 0 intcode dist/default/production\Template.X.production.obj
+_SSPBUF FC9 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/production\Template.X.production.obj
+__end_of_counter_1_ms 0 0 CODE 0 text78 dist/default/production\Template.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Template.X.production.obj
+_ADRESH FC4 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Template.X.production.obj
+_counter_100_ms 0 0 CODE 0 text66 dist/default/production\Template.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/default/production\Template.X.production.obj
+__size_ofi2_counter_1_s 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi1_leds_write 17D2 0 CODE 0 text71 dist/default/production\Template.X.production.obj
+_TABLAT FF5 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Template.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Template.X.production.obj
+_ADRESL FC3 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext100 0 0 ABS 0 text100 dist/default/production\Template.X.production.obj
+__Ltext100 0 0 ABS 0 text100 dist/default/production\Template.X.production.obj
+__ptext100 1C0A 0 CODE 0 text100 dist/default/production\Template.X.production.obj
+__size_of_buttons_init 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_interrupt_is_enable 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_lcd_printf 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__end_ofi2_leds_write 1972 0 CODE 0 text94 dist/default/production\Template.X.production.obj
+timer_priority_interrupt@module 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext101 0 0 ABS 0 text101 dist/default/production\Template.X.production.obj
+__size_of_timer_set_counter 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Ltext101 0 0 ABS 0 text101 dist/default/production\Template.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Template.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Template.X.production.obj
+lcd_gotoxy@coluna 192 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__ptext101 0 0 CODE 0 text101 dist/default/production\Template.X.production.obj
+lcd_print_int16@n 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext102 0 0 ABS 0 text102 dist/default/production\Template.X.production.obj
+__size_of_timer3_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Ltext102 0 0 ABS 0 text102 dist/default/production\Template.X.production.obj
+__size_of_leds_on 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_lcd_attach 21B8 0 CODE 0 text29 dist/default/production\Template.X.production.obj
+__ptext102 18A4 0 CODE 0 text102 dist/default/production\Template.X.production.obj
+__size_of_leds_off 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext103 0 0 ABS 0 text103 dist/default/production\Template.X.production.obj
+lcd_send_byte@n 190 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Ltext103 0 0 ABS 0 text103 dist/default/production\Template.X.production.obj
+lcd_print_int16@cnt 1A1 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofPL46 CA0 0 CODE 0 text22 dist/default/production\Template.X.production.obj
+__end_of_run_system 22D4 0 CODE 0 text3 dist/default/production\Template.X.production.obj
+__ptext103 1C4C 0 CODE 0 text103 dist/default/production\Template.X.production.obj
+_counter_1_ms 0 0 CODE 0 text78 dist/default/production\Template.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext104 0 0 ABS 0 text104 dist/default/production\Template.X.production.obj
+__Ltext104 0 0 ABS 0 text104 dist/default/production\Template.X.production.obj
+__ptext104 0 0 CODE 0 text104 dist/default/production\Template.X.production.obj
+__end_ofi1_GPIO_input_state 1B86 0 CODE 0 text77 dist/default/production\Template.X.production.obj
+__size_of_run_system 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_memset 1E94 0 CODE 0 text23 dist/default/production\Template.X.production.obj
+__end_of___awmod 13D2 0 CODE 0 text18 dist/default/production\Template.X.production.obj
+__end_ofPL56 1C8E 0 CODE 0 text103 dist/default/production\Template.X.production.obj
+__end_of_lcd_print_uint16 104C 0 CODE 0 text14 dist/default/production\Template.X.production.obj
+__end_ofi1_GPIO_pin_high 1CCE 0 CODE 0 text73 dist/default/production\Template.X.production.obj
+__end_ofi2_GPIO_input_state 1C4C 0 CODE 0 text100 dist/default/production\Template.X.production.obj
+_interrupt_callback 21 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__end_of_counter_10_ms 0 0 CODE 0 text75 dist/default/production\Template.X.production.obj
+_interrupt_is_enable$1887 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\Template.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\Template.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi2_GPIO_pin_high 1D0E 0 CODE 0 text96 dist/default/production\Template.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Template.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Template.X.production.obj
+_buttons_read 38 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi1_leds_status 1B44 0 CODE 0 text74 dist/default/production\Template.X.production.obj
+__end_of_leds_off 2214 0 CODE 0 text11 dist/default/production\Template.X.production.obj
+__pcstackBANK0 E8 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+___awmod@sign 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_ofsys_timer@timer_counter 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Template.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Template.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Template.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Template.X.production.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hinit 116 0 CODE 0 init dist/default/production\Template.X.production.obj
+__Linit 116 0 CODE 0 init dist/default/production\Template.X.production.obj
+__Hintcodelo 116 0 CODE 0 intcodelo dist/default/production\Template.X.production.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\Template.X.production.obj
+_memset 1E66 0 CODE 0 text23 dist/default/production\Template.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Template.X.production.obj
+__end_of_main 22A6 0 CODE 0 text0 dist/default/production\Template.X.production.obj
+__size_of_init_uart 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Template.X.production.obj
+__end_ofi2_leds_status 19FA 0 CODE 0 text97 dist/default/production\Template.X.production.obj
+timer_setup_interrupt@module 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/default/production\Template.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\Template.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\Template.X.production.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_leds_write 178A 0 CODE 0 text12 dist/default/production\Template.X.production.obj
+GPIO_pin_low@pin 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_GPIO_confDir 10B0 0 CODE 0 text31 dist/default/production\Template.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Template.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Template.X.production.obj
+_inlined$_counter_10_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+__pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+end_of_initialization 128C 0 CODE 0 cinit dist/default/production\Template.X.production.obj
+__size_ofi1_GPIO_pin_low 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_buttons_read_isr_10ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i1_leds_on 2264 0 CODE 0 text70 dist/default/production\Template.X.production.obj
+i2_leds_on 227C 0 CODE 0 text93 dist/default/production\Template.X.production.obj
+i1_leds_status 1B02 0 CODE 0 text74 dist/default/production\Template.X.production.obj
+i2_leds_status 19B6 0 CODE 0 text97 dist/default/production\Template.X.production.obj
+___awdiv@sign 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_ofPL48 10C8 0 CODE 0 text31 dist/default/production\Template.X.production.obj
+__end_of_buttons_check_press 1428 0 CODE 0 text2 dist/default/production\Template.X.production.obj
+__end_of_leds_status 1A3C 0 CODE 0 text9 dist/default/production\Template.X.production.obj
+__size_of_interrupt_setup 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer_setup_interrupt 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_print_int16 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_init_gpio D54 0 CODE 0 text36 dist/default/production\Template.X.production.obj
+sys_timer@timer_counter@tmr_100_ms 46 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+i1_leds_write 178A 0 CODE 0 text71 dist/default/production\Template.X.production.obj
+i2_leds_write 192E 0 CODE 0 text94 dist/default/production\Template.X.production.obj
+__size_of_button_attach 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+buttons_check_press@press 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_ofi2_GPIO_pin_low 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i1_GPIO_input_state 1B44 0 CODE 0 text77 dist/default/production\Template.X.production.obj
+i2_GPIO_input_state 1C0A 0 CODE 0 text100 dist/default/production\Template.X.production.obj
+__end_ofPL58 BE8 0 CODE 0 text17 dist/default/production\Template.X.production.obj
+lcd_attach@pin 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_isr_high_interrupt 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_interrupt_is_enable 1BBA 0 CODE 0 text79 dist/default/production\Template.X.production.obj
+i1GPIO_pin_high@pin 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2GPIO_pin_high@pin 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_leds_reverse 21D8 0 CODE 0 text68 dist/default/production\Template.X.production.obj
+lcd_print_int16@buffer 196 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_leds_set 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2interrupt_is_enable@enable_status 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/production\Template.X.production.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/production\Template.X.production.obj
+_T0CONbits FD5 0 ABS 0 - dist/default/production\Template.X.production.obj
+_T1CONbits FCD 0 ABS 0 - dist/default/production\Template.X.production.obj
+_T2CONbits FCA 0 ABS 0 - dist/default/production\Template.X.production.obj
+_T3CONbits FB1 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_timer_start 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_timer_set_counter 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+timer_set_callbak@module 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_init_uart 22D8 0 CODE 0 text38 dist/default/production\Template.X.production.obj
+__end_ofi2_counter_100_ms 0 0 CODE 0 text89 dist/default/production\Template.X.production.obj
+__end_of_timer_start 1742 0 CODE 0 text49 dist/default/production\Template.X.production.obj
+_info_init 22D4 0 CODE 0 text5 dist/default/production\Template.X.production.obj
+_spi_device 150 0 BANK1 1 bssBANK1 dist/default/production\Template.X.production.obj
+_button_attach 1E94 0 CODE 0 text30 dist/default/production\Template.X.production.obj
+_lcd_print_int16 B28 0 CODE 0 text17 dist/default/production\Template.X.production.obj
+_interrupt_setup 1EE6 0 CODE 0 text48 dist/default/production\Template.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Template.X.production.obj
+__size_of_setupHardware 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Template.X.production.obj
+i1_timer_set_counter 185E 0 CODE 0 text64 dist/default/production\Template.X.production.obj
+i2_timer_set_counter 18A4 0 CODE 0 text102 dist/default/production\Template.X.production.obj
+i1leds_off@UI8_LedsMask D 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_off@UI8_LedsMask EC 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+i2_interrupt_is_enable$1887 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__end_ofi2_counter_1_s 0 0 CODE 0 text88 dist/default/production\Template.X.production.obj
+button_attach@reg 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_GPIO_input_state 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Template.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Template.X.production.obj
+i1leds_off@UI8_LedsTemp B 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_init_AD 22DA 0 CODE 0 text40 dist/default/production\Template.X.production.obj
+i2leds_off@UI8_LedsTemp EA 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__end_of_counter_100_ms 0 0 CODE 0 text66 dist/default/production\Template.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\Template.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\Template.X.production.obj
+timer_priority_interrupt@value 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\Template.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\Template.X.production.obj
+_TBLPTRH FF7 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\Template.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\Template.X.production.obj
+_init_uart 22D6 0 CODE 0 text38 dist/default/production\Template.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\Template.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\Template.X.production.obj
+_lcd_attach 2198 0 CODE 0 text29 dist/default/production\Template.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\Template.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\Template.X.production.obj
+__size_ofi1_timer_set_counter 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+lcd_print_int16@flag_negativo 195 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_interrupts_enable 30 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Template.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Template.X.production.obj
+_TBLPTRL FF6 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hpowerup 116 0 CODE 0 powerup dist/default/production\Template.X.production.obj
+__Lpowerup 116 0 CODE 0 powerup dist/default/production\Template.X.production.obj
+_timer_setup_clock 1D8A 0 CODE 0 text52 dist/default/production\Template.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Template.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Template.X.production.obj
+__end_of_LCD_INIT_STRING 804 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+__end_of_setupHardware 21D8 0 CODE 0 text34 dist/default/production\Template.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Template.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Template.X.production.obj
+i1_leds_off 2214 0 CODE 0 text69 dist/default/production\Template.X.production.obj
+i2_leds_off 2230 0 CODE 0 text92 dist/default/production\Template.X.production.obj
+__size_of_buttons_check_press 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi2_leds_reverse 2178 0 CODE 0 text91 dist/default/production\Template.X.production.obj
+?_timer_setup_scale 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\Template.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Template.X.production.obj
+_SSPCON1bits FC6 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_leds_reverse 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_uart_rx_isr 1F5E 0 CODE 0 text58 dist/default/production\Template.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\Template.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Template.X.production.obj
+__ptext0 2294 0 CODE 0 text0 dist/default/production\Template.X.production.obj
+__size_of_run_him 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/production\Template.X.production.obj
+_SSPCON2bits FC5 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_timer0_isr 1FFE 0 CODE 0 text62 dist/default/production\Template.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\Template.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Template.X.production.obj
+__ptext1 14F4 0 CODE 0 text1 dist/default/production\Template.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\Template.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Template.X.production.obj
+__ptext2 13D2 0 CODE 0 text2 dist/default/production\Template.X.production.obj
+__size_ofi2_timer_set_counter 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\Template.X.production.obj
+_interrupt_init 22B4 0 CODE 0 text55 dist/default/production\Template.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Template.X.production.obj
+__ptext3 22D2 0 CODE 0 text3 dist/default/production\Template.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\Template.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Template.X.production.obj
+__ptext4 CA0 0 CODE 0 text4 dist/default/production\Template.X.production.obj
+leds_off@UI8_aux 18F 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_TBLPTRU FF8 0 ABS 0 - dist/default/production\Template.X.production.obj
+_buttons_check_press 13D2 0 CODE 0 text2 dist/default/production\Template.X.production.obj
+i2_leds_reverse 2156 0 CODE 0 text91 dist/default/production\Template.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\Template.X.production.obj
+GPIO_write_data@UI8_value 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Template.X.production.obj
+__ptext5 22D4 0 CODE 0 text5 dist/default/production\Template.X.production.obj
+_timer_setup_scale A5A 0 CODE 0 text51 dist/default/production\Template.X.production.obj
+leds_on@UI8_LedsMask 18F 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\Template.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Template.X.production.obj
+__ptext6 2178 0 CODE 0 text6 dist/default/production\Template.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Template.X.production.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Template.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\Template.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Template.X.production.obj
+leds_write@out 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__ptext7 F4C 0 CODE 0 text7 dist/default/production\Template.X.production.obj
+__pbssCOMRAM 21 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\Template.X.production.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Template.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Template.X.production.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Template.X.production.obj
+__ptext8 224C 0 CODE 0 text8 dist/default/production\Template.X.production.obj
+timer_init_regs@module 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__ptext9 19FA 0 CODE 0 text9 dist/default/production\Template.X.production.obj
+__pcstackBANK1 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_lcd_init 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Template.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Template.X.production.obj
+__end_of_timer3_isr 1F86 0 CODE 0 text59 dist/default/production\Template.X.production.obj
+__size_ofi2_uart_rx_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_uart_tx_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i2_counter_1_s 0 0 CODE 0 text88 dist/default/production\Template.X.production.obj
+__size_of_counter_1_s 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_lcd_print_int16 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_interrupt_set_callback 1228 0 CODE 0 text44 dist/default/production\Template.X.production.obj
+sys_timer@timer_counter 1AC0 0 CODE 0 text63 dist/default/production\Template.X.production.obj
+_GPIO_pin_low 17D2 0 CODE 0 text28 dist/default/production\Template.X.production.obj
+i2buttons_read_isr_10ms@i 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__size_of_lcd_gotoxy 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_timer_set_callbak 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of__initialization 128C 0 CODE 0 cinit dist/default/production\Template.X.production.obj
+_CCP1CONbits FBD 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_USBDIV$2 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_GPIO_pin_attach 1DFE 0 CODE 0 text32 dist/default/production\Template.X.production.obj
+memset@c 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_BAUDCONbits FB8 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_counter_1_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_init_AD 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_setupDevices 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of___lwdiv 16F8 0 CODE 0 text16 dist/default/production\Template.X.production.obj
+i2_uart_rx_isr 2026 0 CODE 0 text82 dist/default/production\Template.X.production.obj
+lcd_send_nibble@aux 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+button_attach@index 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+interrupt_set_priority@priority 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+timer_setup_bits@bits 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_SSPSTATbits FC7 0 ABS 0 - dist/default/production\Template.X.production.obj
+i2_uart_tx_isr 1FFE 0 CODE 0 text81 dist/default/production\Template.X.production.obj
+GPIO_input_state@pin 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_memset 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+memset@n 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_init_AD 22DC 0 CODE 0 text40 dist/default/production\Template.X.production.obj
+__end_of_isr_high_interrupt A5A 0 CODE 0 intcode_body dist/default/production\Template.X.production.obj
+memset@p 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i1GPIO_input_state@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2GPIO_input_state@pin 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__size_of_interrupt_set_priority 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer_start 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer2_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\Template.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\Template.X.production.obj
+timer_set_counter@val 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_lcd_gotoxy 1DFE 0 CODE 0 text20 dist/default/production\Template.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Template.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Template.X.production.obj
+__size_ofi2_leds_action_isr_10ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_counter_1_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_timer_setup_bits 1D8A 0 CODE 0 text50 dist/default/production\Template.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\Template.X.production.obj
+__end_of_timer_setup_scale B28 0 CODE 0 text51 dist/default/production\Template.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\Template.X.production.obj
+__CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi2_counter_1_ms 0 0 CODE 0 text101 dist/default/production\Template.X.production.obj
+__end_of_init_timer0 1494 0 CODE 0 text42 dist/default/production\Template.X.production.obj
+__end_of_lcd_printf 97A 0 CODE 0 text13 dist/default/production\Template.X.production.obj
+interrupt_set_callback@function 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?i2_interrupt_is_enable 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_LCD_INIT_STRING 800 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+int_func 97A 0 CODE 0 intcode_body dist/default/production\Template.X.production.obj
+___awmod 136A 0 CODE 0 text18 dist/default/production\Template.X.production.obj
+__end_of_timer_set_callbak 136A 0 CODE 0 text43 dist/default/production\Template.X.production.obj
+___lwmod 1D0E 0 CODE 0 text15 dist/default/production\Template.X.production.obj
+__Hparam 0 0 ABS 0 rparam dist/default/production\Template.X.production.obj
+__Lparam 0 0 ABS 0 rparam dist/default/production\Template.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Template.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Template.X.production.obj
+__size_ofi2_timer0_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_timer1_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_timer2_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_timer3_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_GPIO_write_data 22A6 0 CODE 0 text37 dist/default/production\Template.X.production.obj
+GPIO_confDir@pin 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_run_him 14F4 0 CODE 0 text1 dist/default/production\Template.X.production.obj
+_ref_TRISA 42 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+__end_of_lcd_send_nibble 1300 0 CODE 0 text25 dist/default/production\Template.X.production.obj
+i1leds_off@UI8_aux C 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_off@UI8_aux EB 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__size_ofi1_leds_on 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_lcd_send_byte 18E 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2_counter_100_ms 0 0 CODE 0 text89 dist/default/production\Template.X.production.obj
+_timer_init_regs 1552 0 CODE 0 text53 dist/default/production\Template.X.production.obj
+_leds_on 224C 0 CODE 0 text8 dist/default/production\Template.X.production.obj
+__Hsmallconst 83A 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+_ref_TRISB 68 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+_leds_write 1742 0 CODE 0 text12 dist/default/production\Template.X.production.obj
+interrupt_is_enable@priority 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_inlined$_counter_100_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Template.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Template.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Template.X.production.obj
+?_lcd_send_string 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Template.X.production.obj
+__size_ofi1_leds_off 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_memset 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_lcd_send_string 2112 0 CODE 0 text21 dist/default/production\Template.X.production.obj
+_ref_TRISC 6A 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+__pcinit 1228 0 CODE 0 cinit dist/default/production\Template.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_ref_PORTA 40 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+lcd_gotoxy@address 193 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+___awdiv 10C8 0 CODE 0 text19 dist/default/production\Template.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+___lwdiv 16AE 0 CODE 0 text16 dist/default/production\Template.X.production.obj
+__size_ofi2_leds_on 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_display D6 0 BANK0 1 bssBANK0 dist/default/production\Template.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+GPIO_pin_high@pin 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2_counter_10_ms 0 0 CODE 0 text98 dist/default/production\Template.X.production.obj
+_ref_TRISD 6C 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_lcd_printf 83A 0 CODE 0 text13 dist/default/production\Template.X.production.obj
+_ref_PORTB 60 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_buttons 36 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__Hconst 0 0 CODE 0 const dist/default/production\Template.X.production.obj
+__end_of_timer_setup_clock 1DC6 0 CODE 0 text52 dist/default/production\Template.X.production.obj
+__Lconst 0 0 CODE 0 const dist/default/production\Template.X.production.obj
+GPIO_confDir@IODirection 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_isr_low_interrupt 18 0 CODE 0 intcodelo dist/default/production\Template.X.production.obj
+i1timer_set_counter@module 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2timer_set_counter@module 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__size_ofi2_leds_off 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_GPIO_write_data 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_ref_TRISE 6E 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_ref_PORTC 62 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+_counter_1_s 0 0 CODE 0 text65 dist/default/production\Template.X.production.obj
+lcd_printf@s 1A8 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_uart_rx_isr 1F36 0 CODE 0 text58 dist/default/production\Template.X.production.obj
+i1_GPIO_pin_high 1C8E 0 CODE 0 text73 dist/default/production\Template.X.production.obj
+_ref_PORTD 64 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+i2_GPIO_pin_high 1CCE 0 CODE 0 text96 dist/default/production\Template.X.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Template.X.production.obj
+i1timer_set_counter@aux_value 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2timer_set_counter@aux_value 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Template.X.production.obj
+_uart_tx_isr 1F0E 0 CODE 0 text57 dist/default/production\Template.X.production.obj
+lcd_send_nibble@nibble 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__pidataBANK0 1606 0 CODE 0 idataBANK0 dist/default/production\Template.X.production.obj
+__end_of_info_init 22D6 0 CODE 0 text5 dist/default/production\Template.X.production.obj
+i1timer_set_counter@val 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2timer_set_counter@val 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_setupDevices CA0 0 CODE 0 text4 dist/default/production\Template.X.production.obj
+_ref_PORTE 66 0 BANK0 1 dataBANK0 dist/default/production\Template.X.production.obj
+leds_off@UI8_LedsMask 190 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_timer_init_regs 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+lcd_send_byte@address 18E 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+leds_off@UI8_LedsTemp 18E 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_init_timer0 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_lcd_buffer 100 0 BANK1 1 bssBANK1 dist/default/production\Template.X.production.obj
+_POSTINC0 FEE 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_printf 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_leds_action_isr_10ms 2134 0 CODE 0 text67 dist/default/production\Template.X.production.obj
+i2sys_timer@timer_counter 1BC8 0 CODE 0 text87 dist/default/production\Template.X.production.obj
+_timer_setup_bits 1D4C 0 CODE 0 text50 dist/default/production\Template.X.production.obj
+_GPIO_pin_high 1A7E 0 CODE 0 text26 dist/default/production\Template.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_BORV$1 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_GPIO_pin_low 1818 0 CODE 0 text28 dist/default/production\Template.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_leds_attach 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_init_gpio 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Template.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Template.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__pbssBANK0 B6 0 BANK0 1 bssBANK0 dist/default/production\Template.X.production.obj
+_run_system 22D2 0 CODE 0 text3 dist/default/production\Template.X.production.obj
+__Hpa_nodes 0 0 ABS 0 pa_nodes dist/default/production\Template.X.production.obj
+__Lpa_nodes 0 0 ABS 0 pa_nodes dist/default/production\Template.X.production.obj
+?_interrupt_setup 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_GPIO_write_data 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2interrupt_is_enable@_interrupt 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+buttons_check_press@button_id 187 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+leds_set@UI8_LedsTemp 192 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_inlined$i2_counter_10_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+lcd_print_uint16@n 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_lcd_print_uint16 191 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_leds_action_isr_10ms 2112 0 CODE 0 text67 dist/default/production\Template.X.production.obj
+_timer_start 16F8 0 CODE 0 text49 dist/default/production\Template.X.production.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Template.X.production.obj
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Template.X.production.obj
+?_leds_attach 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+leds_status@status 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_counter_10_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\Template.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\Template.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Template.X.production.obj
+leds_set@UI8_InLeds 193 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\Template.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Template.X.production.obj
+__ptext10 1A3C 0 CODE 0 text10 dist/default/production\Template.X.production.obj
+leds_status@i 18E 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production\Template.X.production.obj
+__end_of_leds_reverse 21F8 0 CODE 0 text68 dist/default/production\Template.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\Template.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production\Template.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Template.X.production.obj
+__ptext20 1DC6 0 CODE 0 text20 dist/default/production\Template.X.production.obj
+__Htext40 0 0 ABS 0 text40 dist/default/production\Template.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\Template.X.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/default/production\Template.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Template.X.production.obj
+__ptext11 21F8 0 CODE 0 text11 dist/default/production\Template.X.production.obj
+__ptext30 1E94 0 CODE 0 text30 dist/default/production\Template.X.production.obj
+__size_ofi1_leds_write 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_of_run_him 1552 0 CODE 0 text1 dist/default/production\Template.X.production.obj
+__Htext50 0 0 ABS 0 text50 dist/default/production\Template.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production\Template.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\Template.X.production.obj
+?_timer_setup_bits 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_interrupt_is_enable 1B86 0 CODE 0 text79 dist/default/production\Template.X.production.obj
+__Ltext50 0 0 ABS 0 text50 dist/default/production\Template.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production\Template.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Template.X.production.obj
+leds_attach@pin 18D 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__ptext21 20EE 0 CODE 0 text21 dist/default/production\Template.X.production.obj
+__ptext40 22DA 0 CODE 0 text40 dist/default/production\Template.X.production.obj
+__Htext60 0 0 ABS 0 text60 dist/default/production\Template.X.production.obj
+__Htext41 0 0 ABS 0 text41 dist/default/production\Template.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\Template.X.production.obj
+__Ltext60 0 0 ABS 0 text60 dist/default/production\Template.X.production.obj
+__Ltext41 0 0 ABS 0 text41 dist/default/production\Template.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Template.X.production.obj
+__ptext12 1742 0 CODE 0 text12 dist/default/production\Template.X.production.obj
+__ptext31 104C 0 CODE 0 text31 dist/default/production\Template.X.production.obj
+__ptext50 1D4C 0 CODE 0 text50 dist/default/production\Template.X.production.obj
+__Htext70 0 0 ABS 0 text70 dist/default/production\Template.X.production.obj
+__Htext51 0 0 ABS 0 text51 dist/default/production\Template.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production\Template.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\Template.X.production.obj
+__end_ofi2_timer0_isr 20EE 0 CODE 0 text86 dist/default/production\Template.X.production.obj
+__end_ofi2_timer1_isr 20C6 0 CODE 0 text85 dist/default/production\Template.X.production.obj
+__end_ofi2_timer2_isr 209E 0 CODE 0 text84 dist/default/production\Template.X.production.obj
+__end_ofi2_timer3_isr 2076 0 CODE 0 text83 dist/default/production\Template.X.production.obj
+__Ltext70 0 0 ABS 0 text70 dist/default/production\Template.X.production.obj
+__Ltext51 0 0 ABS 0 text51 dist/default/production\Template.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production\Template.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Template.X.production.obj
+__ptext22 BE8 0 CODE 0 text22 dist/default/production\Template.X.production.obj
+__ptext41 22DC 0 CODE 0 text41 dist/default/production\Template.X.production.obj
+__ptext60 1F86 0 CODE 0 text60 dist/default/production\Template.X.production.obj
+lcd_printf@u 1A6 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+lcd_print_uint16@cnt 1A0 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext61 0 0 ABS 0 text61 dist/default/production\Template.X.production.obj
+__Htext42 0 0 ABS 0 text42 dist/default/production\Template.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\Template.X.production.obj
+__Ltext61 0 0 ABS 0 text61 dist/default/production\Template.X.production.obj
+__Ltext42 0 0 ABS 0 text42 dist/default/production\Template.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\Template.X.production.obj
+__ptext13 83A 0 CODE 0 text13 dist/default/production\Template.X.production.obj
+__ptext32 1DFE 0 CODE 0 text32 dist/default/production\Template.X.production.obj
+__ptext51 A5A 0 CODE 0 text51 dist/default/production\Template.X.production.obj
+__ptext70 2264 0 CODE 0 text70 dist/default/production\Template.X.production.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_interrupt_init 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext90 0 0 ABS 0 text90 dist/default/production\Template.X.production.obj
+__Htext71 0 0 ABS 0 text71 dist/default/production\Template.X.production.obj
+__Htext52 0 0 ABS 0 text52 dist/default/production\Template.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production\Template.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\Template.X.production.obj
+__Ltext90 0 0 ABS 0 text90 dist/default/production\Template.X.production.obj
+__Ltext71 0 0 ABS 0 text71 dist/default/production\Template.X.production.obj
+__Ltext52 0 0 ABS 0 text52 dist/default/production\Template.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production\Template.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Template.X.production.obj
+_ADCON1bits FC1 0 ABS 0 - dist/default/production\Template.X.production.obj
+__ptext23 1E66 0 CODE 0 text23 dist/default/production\Template.X.production.obj
+__ptext42 1434 0 CODE 0 text42 dist/default/production\Template.X.production.obj
+__ptext61 1FAE 0 CODE 0 text61 dist/default/production\Template.X.production.obj
+_EECON1bits FA6 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_ADCON2bits FC0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext81 0 0 ABS 0 text81 dist/default/production\Template.X.production.obj
+__Htext62 0 0 ABS 0 text62 dist/default/production\Template.X.production.obj
+_timer0_isr 1FD6 0 CODE 0 text62 dist/default/production\Template.X.production.obj
+__Htext43 0 0 ABS 0 text43 dist/default/production\Template.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\Template.X.production.obj
+__Ltext81 0 0 ABS 0 text81 dist/default/production\Template.X.production.obj
+__Ltext62 0 0 ABS 0 text62 dist/default/production\Template.X.production.obj
+__Ltext43 0 0 ABS 0 text43 dist/default/production\Template.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Template.X.production.obj
+__ptext14 FCC 0 CODE 0 text14 dist/default/production\Template.X.production.obj
+__ptext33 1E32 0 CODE 0 text33 dist/default/production\Template.X.production.obj
+__ptext52 1D8A 0 CODE 0 text52 dist/default/production\Template.X.production.obj
+__ptext71 178A 0 CODE 0 text71 dist/default/production\Template.X.production.obj
+__ptext90 2134 0 CODE 0 text90 dist/default/production\Template.X.production.obj
+_timer1_isr 1FAE 0 CODE 0 text61 dist/default/production\Template.X.production.obj
+__end_of_buttons_init 1E66 0 CODE 0 text33 dist/default/production\Template.X.production.obj
+__Htext91 0 0 ABS 0 text91 dist/default/production\Template.X.production.obj
+__Htext72 0 0 ABS 0 text72 dist/default/production\Template.X.production.obj
+_timer2_isr 1F86 0 CODE 0 text60 dist/default/production\Template.X.production.obj
+__Htext53 0 0 ABS 0 text53 dist/default/production\Template.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production\Template.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\Template.X.production.obj
+__Ltext91 0 0 ABS 0 text91 dist/default/production\Template.X.production.obj
+__Ltext72 0 0 ABS 0 text72 dist/default/production\Template.X.production.obj
+__Ltext53 0 0 ABS 0 text53 dist/default/production\Template.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production\Template.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Template.X.production.obj
+__ptext24 165C 0 CODE 0 text24 dist/default/production\Template.X.production.obj
+__ptext43 1300 0 CODE 0 text43 dist/default/production\Template.X.production.obj
+__ptext62 1FD6 0 CODE 0 text62 dist/default/production\Template.X.production.obj
+__ptext81 1FFE 0 CODE 0 text81 dist/default/production\Template.X.production.obj
+_timer3_isr 1F5E 0 CODE 0 text59 dist/default/production\Template.X.production.obj
+__Htext82 0 0 ABS 0 text82 dist/default/production\Template.X.production.obj
+__Htext63 0 0 ABS 0 text63 dist/default/production\Template.X.production.obj
+__Htext44 0 0 ABS 0 text44 dist/default/production\Template.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production\Template.X.production.obj
+__Ltext82 0 0 ABS 0 text82 dist/default/production\Template.X.production.obj
+__Ltext63 0 0 ABS 0 text63 dist/default/production\Template.X.production.obj
+__Ltext44 0 0 ABS 0 text44 dist/default/production\Template.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Template.X.production.obj
+__end_of_timer_set_counter 185E 0 CODE 0 text54 dist/default/production\Template.X.production.obj
+__ptext15 1D0E 0 CODE 0 text15 dist/default/production\Template.X.production.obj
+__ptext34 21B8 0 CODE 0 text34 dist/default/production\Template.X.production.obj
+__ptext53 1552 0 CODE 0 text53 dist/default/production\Template.X.production.obj
+__ptext72 18EA 0 CODE 0 text72 dist/default/production\Template.X.production.obj
+__ptext91 2156 0 CODE 0 text91 dist/default/production\Template.X.production.obj
+__end_of_GPIO_pin_high 1AC0 0 CODE 0 text26 dist/default/production\Template.X.production.obj
+__size_ofi2_leds_write 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+timer_setup_bits@module 185 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext92 0 0 ABS 0 text92 dist/default/production\Template.X.production.obj
+__Htext73 0 0 ABS 0 text73 dist/default/production\Template.X.production.obj
+__Htext54 0 0 ABS 0 text54 dist/default/production\Template.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production\Template.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\Template.X.production.obj
+__Ltext92 0 0 ABS 0 text92 dist/default/production\Template.X.production.obj
+__Ltext73 0 0 ABS 0 text73 dist/default/production\Template.X.production.obj
+__Ltext54 0 0 ABS 0 text54 dist/default/production\Template.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production\Template.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Template.X.production.obj
+__ptext25 1296 0 CODE 0 text25 dist/default/production\Template.X.production.obj
+__ptext44 11B6 0 CODE 0 text44 dist/default/production\Template.X.production.obj
+__ptext63 1AC0 0 CODE 0 text63 dist/default/production\Template.X.production.obj
+__ptext82 2026 0 CODE 0 text82 dist/default/production\Template.X.production.obj
+timer_setup_scale@prescale 185 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext83 0 0 ABS 0 text83 dist/default/production\Template.X.production.obj
+__Htext64 0 0 ABS 0 text64 dist/default/production\Template.X.production.obj
+__Htext45 0 0 ABS 0 text45 dist/default/production\Template.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production\Template.X.production.obj
+__Ltext83 0 0 ABS 0 text83 dist/default/production\Template.X.production.obj
+__Ltext64 0 0 ABS 0 text64 dist/default/production\Template.X.production.obj
+__Ltext45 0 0 ABS 0 text45 dist/default/production\Template.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production\Template.X.production.obj
+__ptext16 16AE 0 CODE 0 text16 dist/default/production\Template.X.production.obj
+__ptext35 22CA 0 CODE 0 text35 dist/default/production\Template.X.production.obj
+__ptext54 1818 0 CODE 0 text54 dist/default/production\Template.X.production.obj
+__ptext73 1C8E 0 CODE 0 text73 dist/default/production\Template.X.production.obj
+__ptext92 2230 0 CODE 0 text92 dist/default/production\Template.X.production.obj
+_timer_setup_interrupt 1494 0 CODE 0 text47 dist/default/production\Template.X.production.obj
+__Htext93 0 0 ABS 0 text93 dist/default/production\Template.X.production.obj
+__Htext74 0 0 ABS 0 text74 dist/default/production\Template.X.production.obj
+__Htext55 0 0 ABS 0 text55 dist/default/production\Template.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production\Template.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\Template.X.production.obj
+__Ltext93 0 0 ABS 0 text93 dist/default/production\Template.X.production.obj
+__Ltext74 0 0 ABS 0 text74 dist/default/production\Template.X.production.obj
+__Ltext55 0 0 ABS 0 text55 dist/default/production\Template.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production\Template.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Template.X.production.obj
+__ptext26 1A7E 0 CODE 0 text26 dist/default/production\Template.X.production.obj
+__ptext45 15AE 0 CODE 0 text45 dist/default/production\Template.X.production.obj
+__ptext64 185E 0 CODE 0 text64 dist/default/production\Template.X.production.obj
+__ptext83 204E 0 CODE 0 text83 dist/default/production\Template.X.production.obj
+i1leds_write@i A 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_write@i E9 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__end_of_GPIO_write_data 22B4 0 CODE 0 text37 dist/default/production\Template.X.production.obj
+__Htext84 0 0 ABS 0 text84 dist/default/production\Template.X.production.obj
+__Htext65 0 0 ABS 0 text65 dist/default/production\Template.X.production.obj
+__Htext46 0 0 ABS 0 text46 dist/default/production\Template.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production\Template.X.production.obj
+__Ltext84 0 0 ABS 0 text84 dist/default/production\Template.X.production.obj
+__Ltext65 0 0 ABS 0 text65 dist/default/production\Template.X.production.obj
+__Ltext46 0 0 ABS 0 text46 dist/default/production\Template.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production\Template.X.production.obj
+__ptext17 B28 0 CODE 0 text17 dist/default/production\Template.X.production.obj
+__ptext36 D54 0 CODE 0 text36 dist/default/production\Template.X.production.obj
+__size_of_interrupt_is_enable 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__ptext55 22B4 0 CODE 0 text55 dist/default/production\Template.X.production.obj
+__ptext74 1B02 0 CODE 0 text74 dist/default/production\Template.X.production.obj
+__ptext93 227C 0 CODE 0 text93 dist/default/production\Template.X.production.obj
+__end_of_setupDevices D54 0 CODE 0 text4 dist/default/production\Template.X.production.obj
+___awmod@divisor 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext94 0 0 ABS 0 text94 dist/default/production\Template.X.production.obj
+__Htext75 0 0 ABS 0 text75 dist/default/production\Template.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production\Template.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\Template.X.production.obj
+__end_of___lwmod 1D4C 0 CODE 0 text15 dist/default/production\Template.X.production.obj
+__Ltext94 0 0 ABS 0 text94 dist/default/production\Template.X.production.obj
+__Ltext75 0 0 ABS 0 text75 dist/default/production\Template.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production\Template.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Template.X.production.obj
+__ptext27 1140 0 CODE 0 text27 dist/default/production\Template.X.production.obj
+__ptext46 1EBE 0 CODE 0 text46 dist/default/production\Template.X.production.obj
+__ptext65 0 0 CODE 0 text65 dist/default/production\Template.X.production.obj
+__ptext84 2076 0 CODE 0 text84 dist/default/production\Template.X.production.obj
+leds_on@UI8_aux 190 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+___lwmod@divisor 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Htext85 0 0 ABS 0 text85 dist/default/production\Template.X.production.obj
+__Htext66 0 0 ABS 0 text66 dist/default/production\Template.X.production.obj
+__Htext47 0 0 ABS 0 text47 dist/default/production\Template.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/default/production\Template.X.production.obj
+__Ltext85 0 0 ABS 0 text85 dist/default/production\Template.X.production.obj
+__Ltext66 0 0 ABS 0 text66 dist/default/production\Template.X.production.obj
+__Ltext47 0 0 ABS 0 text47 dist/default/production\Template.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/production\Template.X.production.obj
+__ptext18 136A 0 CODE 0 text18 dist/default/production\Template.X.production.obj
+__ptext37 22A6 0 CODE 0 text37 dist/default/production\Template.X.production.obj
+__ptext75 0 0 CODE 0 text75 dist/default/production\Template.X.production.obj
+__ptext94 192E 0 CODE 0 text94 dist/default/production\Template.X.production.obj
+i1leds_on@UI8_LedsMask C 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_on@UI8_LedsMask EC 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__Htext95 0 0 ABS 0 text95 dist/default/production\Template.X.production.obj
+__Htext76 0 0 ABS 0 text76 dist/default/production\Template.X.production.obj
+__Htext57 0 0 ABS 0 text57 dist/default/production\Template.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/default/production\Template.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\Template.X.production.obj
+__Ltext95 0 0 ABS 0 text95 dist/default/production\Template.X.production.obj
+__Ltext76 0 0 ABS 0 text76 dist/default/production\Template.X.production.obj
+__Ltext57 0 0 ABS 0 text57 dist/default/production\Template.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/production\Template.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Template.X.production.obj
+__ptext28 17D2 0 CODE 0 text28 dist/default/production\Template.X.production.obj
+__ptext47 1494 0 CODE 0 text47 dist/default/production\Template.X.production.obj
+__ptext66 0 0 CODE 0 text66 dist/default/production\Template.X.production.obj
+__ptext85 209E 0 CODE 0 text85 dist/default/production\Template.X.production.obj
+__Htext86 0 0 ABS 0 text86 dist/default/production\Template.X.production.obj
+__Htext67 0 0 ABS 0 text67 dist/default/production\Template.X.production.obj
+__Htext48 0 0 ABS 0 text48 dist/default/production\Template.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/default/production\Template.X.production.obj
+__Ltext86 0 0 ABS 0 text86 dist/default/production\Template.X.production.obj
+__Ltext67 0 0 ABS 0 text67 dist/default/production\Template.X.production.obj
+__Ltext48 0 0 ABS 0 text48 dist/default/production\Template.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/production\Template.X.production.obj
+__ptext19 10C8 0 CODE 0 text19 dist/default/production\Template.X.production.obj
+__ptext38 22D6 0 CODE 0 text38 dist/default/production\Template.X.production.obj
+__ptext57 1F0E 0 CODE 0 text57 dist/default/production\Template.X.production.obj
+__ptext76 EAA 0 CODE 0 text76 dist/default/production\Template.X.production.obj
+__ptext95 1972 0 CODE 0 text95 dist/default/production\Template.X.production.obj
+__Htext96 0 0 ABS 0 text96 dist/default/production\Template.X.production.obj
+__Htext77 0 0 ABS 0 text77 dist/default/production\Template.X.production.obj
+__Htext58 0 0 ABS 0 text58 dist/default/production\Template.X.production.obj
+__Htext39 0 0 ABS 0 text39 dist/default/production\Template.X.production.obj
+__Ltext96 0 0 ABS 0 text96 dist/default/production\Template.X.production.obj
+__Ltext77 0 0 ABS 0 text77 dist/default/production\Template.X.production.obj
+__Ltext58 0 0 ABS 0 text58 dist/default/production\Template.X.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/default/production\Template.X.production.obj
+__ptext29 2198 0 CODE 0 text29 dist/default/production\Template.X.production.obj
+__ptext48 1EE6 0 CODE 0 text48 dist/default/production\Template.X.production.obj
+__ptext67 2112 0 CODE 0 text67 dist/default/production\Template.X.production.obj
+__ptext86 20C6 0 CODE 0 text86 dist/default/production\Template.X.production.obj
+__Htext87 0 0 ABS 0 text87 dist/default/production\Template.X.production.obj
+__Htext68 0 0 ABS 0 text68 dist/default/production\Template.X.production.obj
+__Htext49 0 0 ABS 0 text49 dist/default/production\Template.X.production.obj
+__Ltext87 0 0 ABS 0 text87 dist/default/production\Template.X.production.obj
+__Ltext68 0 0 ABS 0 text68 dist/default/production\Template.X.production.obj
+__Ltext49 0 0 ABS 0 text49 dist/default/production\Template.X.production.obj
+__ptext39 22D8 0 CODE 0 text39 dist/default/production\Template.X.production.obj
+__ptext58 1F36 0 CODE 0 text58 dist/default/production\Template.X.production.obj
+__ptext77 1B44 0 CODE 0 text77 dist/default/production\Template.X.production.obj
+__ptext96 1CCE 0 CODE 0 text96 dist/default/production\Template.X.production.obj
+__Htext97 0 0 ABS 0 text97 dist/default/production\Template.X.production.obj
+__Htext78 0 0 ABS 0 text78 dist/default/production\Template.X.production.obj
+__Htext59 0 0 ABS 0 text59 dist/default/production\Template.X.production.obj
+__Ltext97 0 0 ABS 0 text97 dist/default/production\Template.X.production.obj
+__Ltext78 0 0 ABS 0 text78 dist/default/production\Template.X.production.obj
+__Ltext59 0 0 ABS 0 text59 dist/default/production\Template.X.production.obj
+__ptext49 16F8 0 CODE 0 text49 dist/default/production\Template.X.production.obj
+__ptext68 21D8 0 CODE 0 text68 dist/default/production\Template.X.production.obj
+__ptext87 1BC8 0 CODE 0 text87 dist/default/production\Template.X.production.obj
+__end_of_GPIO_input_state 1A7E 0 CODE 0 text10 dist/default/production\Template.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Htext88 0 0 ABS 0 text88 dist/default/production\Template.X.production.obj
+__Htext69 0 0 ABS 0 text69 dist/default/production\Template.X.production.obj
+__Ltext88 0 0 ABS 0 text88 dist/default/production\Template.X.production.obj
+__Ltext69 0 0 ABS 0 text69 dist/default/production\Template.X.production.obj
+__ptext59 1F5E 0 CODE 0 text59 dist/default/production\Template.X.production.obj
+__ptext78 0 0 CODE 0 text78 dist/default/production\Template.X.production.obj
+__ptext97 19B6 0 CODE 0 text97 dist/default/production\Template.X.production.obj
+__Htext98 0 0 ABS 0 text98 dist/default/production\Template.X.production.obj
+__Htext79 0 0 ABS 0 text79 dist/default/production\Template.X.production.obj
+__Ltext98 0 0 ABS 0 text98 dist/default/production\Template.X.production.obj
+__Ltext79 0 0 ABS 0 text79 dist/default/production\Template.X.production.obj
+__ptext69 2214 0 CODE 0 text69 dist/default/production\Template.X.production.obj
+__ptext88 0 0 CODE 0 text88 dist/default/production\Template.X.production.obj
+__Hend_init 11A 0 CODE 0 end_init dist/default/production\Template.X.production.obj
+__Lend_init 116 0 CODE 0 end_init dist/default/production\Template.X.production.obj
+__end_of_interrupt_set_priority 1EE6 0 CODE 0 text46 dist/default/production\Template.X.production.obj
+__Htext89 0 0 ABS 0 text89 dist/default/production\Template.X.production.obj
+__Ltext89 0 0 ABS 0 text89 dist/default/production\Template.X.production.obj
+__ptext79 1B86 0 CODE 0 text79 dist/default/production\Template.X.production.obj
+__ptext98 0 0 CODE 0 text98 dist/default/production\Template.X.production.obj
+_init_timer0 1434 0 CODE 0 text42 dist/default/production\Template.X.production.obj
+i2leds_reverse@UI8_LedsMask EF 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__Htext99 0 0 ABS 0 text99 dist/default/production\Template.X.production.obj
+__size_of_uart_rx_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Ltext99 0 0 ABS 0 text99 dist/default/production\Template.X.production.obj
+__ptext89 0 0 CODE 0 text89 dist/default/production\Template.X.production.obj
+timer_setup_clock@transition 185 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_leds_write 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__ptext99 E04 0 CODE 0 text99 dist/default/production\Template.X.production.obj
+___awdiv@divisor 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Template.X.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Template.X.production.obj
+___lwdiv@divisor 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__pidataCOMRAM 22C2 0 CODE 0 idataCOMRAM dist/default/production\Template.X.production.obj
+?_button_attach 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_timer_setup_interrupt 14F4 0 CODE 0 text47 dist/default/production\Template.X.production.obj
+leds_attach@reg 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_timer1_isr 1FD6 0 CODE 0 text61 dist/default/production\Template.X.production.obj
+_interrupts_priority 33 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__size_of_init_mcu 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_inlined$i2_counter_100_ms 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+i1leds_status@i B 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_status@i EB 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+i2_leds_action_isr_10ms 2134 0 CODE 0 text90 dist/default/production\Template.X.production.obj
+?_buttons_check_press 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_leds_on 2264 0 CODE 0 text8 dist/default/production\Template.X.production.obj
+__end_of_init_pwm 22DA 0 CODE 0 text39 dist/default/production\Template.X.production.obj
+_lcd_send_byte 165C 0 CODE 0 text24 dist/default/production\Template.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+__CFG_FOSC$HSPLL_HS 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+GPIO_pin_attach@reg 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+GPIO_pin_attach@pin 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+_timer_priority_interrupt 15AE 0 CODE 0 text45 dist/default/production\Template.X.production.obj
+memset@p1 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Template.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Template.X.production.obj
+interrupt_setup@setup 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_send_nibble 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi1_GPIO_input_state 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_GPIO_pin_attach 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_UN_ledsBlinkFast 3A 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+interrupt_is_enable@enable_status 6 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+?i1_timer_set_counter 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+?i2_timer_set_counter 19 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+__stringdata 804 0 SMALLCONST 0 smallconst dist/default/production\Template.X.production.obj
+i1leds_write@out 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_write@out E8 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+timer_setup_interrupt@value 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_ofi1_GPIO_pin_high 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Template.X.production.obj
+__size_ofi2_GPIO_input_state 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Template.X.production.obj
+__pintcode_body 97A 0 CODE 0 intcode_body dist/default/production\Template.X.production.obj
+_inlined$i2_counter_1_s 1 0 ABS 0 - dist/default/production\Template.X.production.obj
+__end_ofi2_counter_10_ms 0 0 CODE 0 text98 dist/default/production\Template.X.production.obj
+__end_of_isr_low_interrupt 116 0 CODE 0 intcodelo dist/default/production\Template.X.production.obj
+_leds_status 19FA 0 CODE 0 text9 dist/default/production\Template.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+i1leds_on@UI8_aux D 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+i2leds_on@UI8_aux ED 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+lcd_printf@pa 1AC 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_lcd_attach 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+intlevel1 0 0 CODE 0 text C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+_UN_ledsON 3C 0 COMRAM 1 bssCOMRAM dist/default/production\Template.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_send_string 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+intlevel2 0 0 CODE 0 text C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+_leds_attach 2178 0 CODE 0 text6 dist/default/production\Template.X.production.obj
+i2leds_reverse@UI8_LedsTemp EE 0 BANK0 1 cstackBANK0 dist/default/production\Template.X.production.obj
+__end_of_interrupt_init 22C2 0 CODE 0 text55 dist/default/production\Template.X.production.obj
+__size_ofi2_GPIO_pin_high 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_init_pwm 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+intlevel3 0 0 CODE 0 text C:\Users\jwin\AppData\Local\Temp\s4qk.obj
+lcd_printf@a 1AA 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+?_timer_setup_interrupt 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_GPIO_pin_low 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer1_isr 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_attach 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi1_leds_status 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i2_timer0_isr 20C6 0 CODE 0 text86 dist/default/production\Template.X.production.obj
+timer_setup_clock@source 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2_timer1_isr 209E 0 CODE 0 text85 dist/default/production\Template.X.production.obj
+__size_of_timer_setup_bits 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer_setup_scale 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_timer_priority_interrupt 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i2_timer2_isr 2076 0 CODE 0 text84 dist/default/production\Template.X.production.obj
+timer_setup_clock@module 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_init_gpio E04 0 CODE 0 text36 dist/default/production\Template.X.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Template.X.production.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Template.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+i2_timer3_isr 204E 0 CODE 0 text83 dist/default/production\Template.X.production.obj
+_GPIO_pin_outputBit 1140 0 CODE 0 text27 dist/default/production\Template.X.production.obj
+__pdataCOMRAM 40 0 COMRAM 1 dataCOMRAM dist/default/production\Template.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_ofi2_leds_status 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+lcd_attach@reg 18C 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_ofi2sys_timer@timer_counter 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_GPIO_pin_outputBit 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+start_initialization 1228 0 CODE 0 cinit dist/default/production\Template.X.production.obj
+__size_of_GPIO_confDir 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+?_GPIO_pin_attach 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_lcd_print_int16 BDC 0 CODE 0 text17 dist/default/production\Template.X.production.obj
+_counter_10_ms 0 0 CODE 0 text75 dist/default/production\Template.X.production.obj
+__size_of_timer_set_callbak 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+___awdiv@quotient 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+___lwdiv@quotient 189 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_init_i2c 22DE 0 CODE 0 text41 dist/default/production\Template.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_info_init 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_isr_low_interrupt 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_lcd_send_nibble 1296 0 CODE 0 text25 dist/default/production\Template.X.production.obj
+i2interrupt_is_enable@priority_status 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+lcd_printf@c 1AB 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+_init_i2c 22DC 0 CODE 0 text41 dist/default/production\Template.X.production.obj
+timer_setup_scale@postscale 186 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__initialization 1228 0 CODE 0 cinit dist/default/production\Template.X.production.obj
+interrupt_set_callback@_interrupt 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+timer_set_callbak@func 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+i1_GPIO_pin_low 18EA 0 CODE 0 text72 dist/default/production\Template.X.production.obj
+i2_GPIO_pin_low 1972 0 CODE 0 text95 dist/default/production\Template.X.production.obj
+timer_start@module 185 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+lcd_print_uint16@buffer 195 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_lcd_init C90 0 CODE 0 text22 dist/default/production\Template.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_counter_100_ms 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+___awmod@dividend 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+___lwmod@dividend 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\Template.X.production.obj
+___awmod@counter 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+___lwmod@counter 188 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__end_of_leds_set FB6 0 CODE 0 text7 dist/default/production\Template.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+lcd_printf@d 1A4 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_GPIO_pin_high 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+GPIO_pin_outputBit@pin 18A 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+__size_of_leds_set 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_lcd_send_byte 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_timer_setup_clock 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+__size_of_interrupt_set_callback 0 0 ABS 0 - dist/default/production\Template.X.production.obj
+interrupt_is_enable@_interrupt 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Template.X.production.obj
+_timer_set_counter 1818 0 CODE 0 text54 dist/default/production\Template.X.production.obj
+_buttons_read_isr_10ms EAA 0 CODE 0 text76 dist/default/production\Template.X.production.obj
+__end_of_init_mcu 22D2 0 CODE 0 text35 dist/default/production\Template.X.production.obj
+i2_counter_1_ms 0 0 CODE 0 text101 dist/default/production\Template.X.production.obj
+___awdiv@dividend 184 0 BANK1 1 cstackBANK1 dist/default/production\Template.X.production.obj
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta> <class name>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1 CODE
+intcode 0 8 8 C 1 CODE
+intcodelo 0 18 18 102 1 CODE
+smallconst 0 800 800 3A 1 SMALLCONST
+config 0 300000 300000 E 1 CONFIG
+idloc 0 200000 200000 8 1 IDLOC
+cstackCOMRAM 1 1 1 47 1 COMRAM
+dataBANK0 1 60 60 96 1 BANK0
+bssBANK1 1 100 100 AD 1 BANK1
+text13 0 83A 83A 1AA4 1 CODE

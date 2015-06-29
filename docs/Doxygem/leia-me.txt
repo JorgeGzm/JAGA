@@ -1,0 +1,7 @@
+A pasta so vem com o arquivo de configuracao do doxygen ele deve ser usado pelo "doxywizard" 
+para gerar os arquivos de documentação.
+
+Pelo grande numero de arquivos que ele gera foi optado por deixar somente o arquivo de configuracao 
+no repositorio e o restante dos arquuivos na maquina do usuario.
+
+OS ARQUIVOS GERADO PELO DOXYGEN NÃO DEVEM SER SALVOS NO REPOSITORIO!!

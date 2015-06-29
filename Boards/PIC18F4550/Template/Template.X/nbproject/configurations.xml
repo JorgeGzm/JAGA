@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="Middleware" displayName="Middleware" projectFiles="true">
+        <logicalFolder name="buttons" displayName="buttons" projectFiles="true">
+          <itemPath>../../../../Middleware/buttons/buttons.c</itemPath>
+          <itemPath>../../../../Middleware/buttons/buttons.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="info_hw" displayName="info_hw" projectFiles="true">
+          <itemPath>../../../../Middleware/info_hw/info_hw.c</itemPath>
+          <itemPath>../../../../Middleware/info_hw/info_hw.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="lcd" displayName="lcd" projectFiles="true">
+          <itemPath>../../../../Middleware/lcd/lcd.c</itemPath>
+          <itemPath>../../../../Middleware/lcd/lcd.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="leds" displayName="leds" projectFiles="true">
+          <itemPath>../../../../Middleware/leds/leds.c</itemPath>
+          <itemPath>../../../../Middleware/leds/leds.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="PIC18F4550" displayName="PIC18F4550" projectFiles="true">
+        <logicalFolder name="ad" displayName="ad" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/ad/hal_ad.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/ad/hal_ad.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="delay" displayName="delay" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/delay/hal_delay.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/delay/hal_delay.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="device" displayName="device" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/device/hal_device.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="eeprom" displayName="eeprom" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/eeprom/hal_eeprom.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/eeprom/hal_eeprom.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="flash" displayName="flash" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/flash/hal_flash.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/flash/hal_flash.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/gpio/hal_gpio.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/gpio/hal_gpio.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="i2c" displayName="i2c" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/i2c/hal_i2c.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/i2c/hal_i2c.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="interrupt" displayName="interrupt" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/interrupt/hal_interrupts.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/interrupt/hal_interrupts.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/pwm/hal_pwm.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/pwm/hal_pwm.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="reset" displayName="reset" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/reset/hal_reset.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/reset/hal_reset.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="spi" displayName="spi" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/spi/hal_spi.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/spi/hal_spi.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="timer" displayName="timer" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/timer/hal_timer.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/timer/hal_timer.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="uart" displayName="uart" projectFiles="true">
+          <itemPath>../../../../HAL/PIC18F4550/uart/hal_uart.c</itemPath>
+          <itemPath>../../../../HAL/PIC18F4550/uart/hal_uart.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="Util" displayName="Util" projectFiles="true">
+        <logicalFolder name="crc" displayName="crc" projectFiles="true">
+          <itemPath>../../../../Util/crc/crc.c</itemPath>
+          <itemPath>../../../../Util/crc/crc.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="types" displayName="types" projectFiles="true">
+          <itemPath>../../../../Util/types/types.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="vars" displayName="vars" projectFiles="true">
+          <itemPath>../../../../Util/vars/vars.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../Header/main.h</itemPath>
+      <itemPath>../Header/sys_timer.h</itemPath>
+      <itemPath>../Header/sys_i2c.h</itemPath>
+      <itemPath>../Header/sys_ad.h</itemPath>
+      <itemPath>../Header/sys_spi.h</itemPath>
+      <itemPath>../Header/sys_pwm.h</itemPath>
+      <itemPath>../Header/sys_uart.h</itemPath>
+      <itemPath>../Header/app_control.h</itemPath>
+      <itemPath>../Header/app_him.h</itemPath>
+      <itemPath>../Header/app_info.h</itemPath>
+      <itemPath>../Header/sys_gpio.h</itemPath>
+      <itemPath>../Header/sys_hw.h</itemPath>
+      <itemPath>../Header/sys_mcu.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>../Source/main.c</itemPath>
+      <itemPath>../Source/sys_timer.c</itemPath>
+      <itemPath>../Source/sys_i2c.c</itemPath>
+      <itemPath>../Source/sys_ad.c</itemPath>
+      <itemPath>../Source/sys_spi.c</itemPath>
+      <itemPath>../Source/sys_pwm.c</itemPath>
+      <itemPath>../Source/sys_uart.c</itemPath>
+      <itemPath>../Source/app_control.c</itemPath>
+      <itemPath>../Source/app_him.c</itemPath>
+      <itemPath>../Source/app_info.c</itemPath>
+      <itemPath>../Source/sys_gpio.c</itemPath>
+      <itemPath>../Source/sys_hw.c</itemPath>
+      <itemPath>../Source/sys_mcu.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../..</Elem>
+    <Elem>../../../../HAL/PIC18F4550</Elem>
+    <Elem>../../../../Middleware</Elem>
+    <Elem>../../../../Util</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC18F4550</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>ICD3PlatformTool</platformTool>
+        <languageToolchain>XC8</languageToolchain>
+        <languageToolchainVersion>1.21</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <HI-TECH-COMP>
+        <property key="asmlist" value="true"/>
+        <property key="define-macros" value="__PIC18F4550"/>
+        <property key="extra-include-directories"
+                  value="..\..\..\..\HAL\PIC18F4550;..\..\..\..\Middleware;..\Header;..\..\..\..\Util"/>
+        <property key="identifier-length" value="255"/>
+        <property key="operation-mode" value="pro"/>
+        <property key="opt-xc8-compiler-strict_ansi" value="false"/>
+        <property key="optimization-assembler" value="true"/>
+        <property key="optimization-assembler-files" value="true"/>
+        <property key="optimization-debug" value="false"/>
+        <property key="optimization-global" value="true"/>
+        <property key="optimization-level" value="9"/>
+        <property key="optimization-set" value="default"/>
+        <property key="optimization-speed" value="false"/>
+        <property key="preprocess-assembler" value="true"/>
+        <property key="undefine-macros" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="verbose" value="false"/>
+        <property key="warning-level" value="0"/>
+        <property key="what-to-do" value="ignore"/>
+      </HI-TECH-COMP>
+      <HI-TECH-LINK>
+        <property key="additional-options-checksum" value=""/>
+        <property key="additional-options-code-offset" value=""/>
+        <property key="additional-options-command-line" value=""/>
+        <property key="additional-options-errata" value=""/>
+        <property key="additional-options-extend-address" value="false"/>
+        <property key="additional-options-trace-type" value=""/>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="backup-reset-condition-flags" value="false"/>
+        <property key="calibrate-oscillator" value="true"/>
+        <property key="calibrate-oscillator-value" value=""/>
+        <property key="clear-bss" value="true"/>
+        <property key="code-model-external" value="wordwrite"/>
+        <property key="code-model-rom" value=""/>
+        <property key="create-html-files" value="false"/>
+        <property key="data-model-ram" value=""/>
+        <property key="data-model-size-of-double" value="24"/>
+        <property key="data-model-size-of-float" value="24"/>
+        <property key="display-class-usage" value="false"/>
+        <property key="display-hex-usage" value="false"/>
+        <property key="display-overall-usage" value="true"/>
+        <property key="display-psect-usage" value="false"/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="format-hex-file-for-download" value="false"/>
+        <property key="initialize-data" value="true"/>
+        <property key="keep-generated-startup.as" value="false"/>
+        <property key="link-in-c-library" value="true"/>
+        <property key="link-in-peripheral-library" value="true"/>
+        <property key="managed-stack" value="false"/>
+        <property key="opt-xc8-linker-file" value="false"/>
+        <property key="opt-xc8-linker-link_startup" value="false"/>
+        <property key="opt-xc8-linker-serial" value=""/>
+        <property key="program-the-device-with-default-config-words" value="true"/>
+      </HI-TECH-LINK>
+      <ICD3PlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="Freeze Peripherals" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="false"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x7fff"/>
+        <property key="memories.programmemory.start" value="0x0"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preserveeeprom" value="true"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x7fff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x0"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="5.0"/>
+      </ICD3PlatformTool>
+      <XC8-config-global>
+        <property key="output-file-format" value="-mcof,+elf"/>
+      </XC8-config-global>
+    </conf>
+  </confs>
+</configurationDescriptor>

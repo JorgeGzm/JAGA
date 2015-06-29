@@ -1,0 +1,23 @@
+main.c
+main.h
+
+Core
+	-> main
+	-> sys_control
+	-> sys_ihm
+
+Conexao
+
+Driver
+
+Util
+
+Projetos
+	-> Projeto x
+		-> init_hardware
+		-> mcu
+		-> sys_control
+		-> sys_driver
+		-> sys_ihm
+		-> projeto_mplab.x
+	
