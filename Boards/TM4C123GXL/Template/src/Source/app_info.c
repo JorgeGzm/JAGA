@@ -22,9 +22,6 @@ uint16 version;
 /** Senha usada para configurar ou alterar informacoes de fabrica. */
 UWord pwd_device;
 
-/** Data de ativacao do equipamento no formato de Time Stamp*/
-Timestamp data_active;
-
 /** Inicializa informacoes do equipamento*/
 void info_init(void)
 {
