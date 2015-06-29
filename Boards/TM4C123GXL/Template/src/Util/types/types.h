@@ -27,9 +27,6 @@
 #include "vars/vars.h"
 
 /** @brief Estrutura para acessar bits individuais de um byte */
-#ifdef __LM4C123G
-#pragma anon_unions
-#endif
 typedef union _UByte
 {
     uint8 value;
@@ -47,9 +44,7 @@ typedef union _UByte
     };
 }UByte;
 
-#ifdef __LM4C123G
-#pragma anon_unions
-#endif
+/** @brief TODO*/
 typedef union _Byte
 {
     int8 value;
@@ -68,9 +63,6 @@ typedef union _Byte
 }Byte;
 
 /** @brief Estrutura de 16 bits que pode ser quebrada em bytes ou bits */
-#ifdef __LM4C123G
-#pragma anon_unions
-#endif
 typedef union _UWord
 {
     uint16 value;
@@ -103,9 +95,7 @@ typedef union _UWord
     };
 }UWord;
 
-#ifdef __LM4C123G
-#pragma anon_unions
-#endif
+/** @brief TODO*/
 typedef union _UDWord
 {
     uint32 value;
@@ -165,9 +155,6 @@ typedef union _UDWord
 }UDWord;
 
 /** @brief Estrutura para manipular variaveis grandes */
-#ifdef __LM4C123G
-#pragma anon_unions
-#endif
 typedef union _UQWord
 {
     uint64 value;
@@ -275,27 +262,5 @@ typedef union _UQWord
 
     
 }UQWord;
-
-
-/** @brief Estrutura DataTime */
-typedef struct _DataHora
-{
-    uint8 diaSemana;
-    uint8 dia;
-    uint8 mes;
-    uint8 ano8;
-    uint16 ano16;
-    uint8 hora;
-    uint8 min;
-    uint8 seg;
-}DataHora;
-
-/** @brief Estruta que armazena o calculo timestamp  */
-typedef struct _Timestamp
-{
-    UWord UN_TS0; //parte Low
-    UWord UN_TS1; //parte mi
-    UWord UN_TS2; //parte High
-}Timestamp;
 
 #endif	/* TYPES_H */

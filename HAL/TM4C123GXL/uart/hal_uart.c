@@ -3,6 +3,7 @@
  * @author  Jorge Guzman (jorge.gzm@gmail.com)
  * @date    26 de Abril de 2015
  * @version 0.1.0.0 
+
  * @brief   Codigo do Driver UART para o microcontrolador TM4C123GXL.
  * @section LICENSE
  *

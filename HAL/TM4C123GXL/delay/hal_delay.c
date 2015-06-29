@@ -1,3 +1,4 @@
+
 /**
  * @file    hal_delay.c
  * @author  Jorge Guzman (jorge.gzm@gmail.com)
@@ -6,6 +7,7 @@
  * @brief   Codigo do Driver Delay para o microcontrolador TM4C123GXL.
  * @section LICENSE
  *
+
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of
@@ -21,6 +23,7 @@
  */
 
 #include "hal_delay.h"
+
 
 void Delay(void)
 {
@@ -43,6 +46,11 @@ void Delay_10ms(void)
   }
 }
 
+
+
+
+
+
 void Delay_us(uint16 delay)
 {
 	uint16 i;
@@ -58,6 +66,10 @@ void Delay_us(uint16 delay)
 	}
 }
 
+
+
+
+
 void Delay_ms(uint16 delay)
 {
 	uint16 i;
@@ -72,4 +84,13 @@ void Delay_ms(uint16 delay)
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
 

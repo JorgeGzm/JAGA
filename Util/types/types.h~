@@ -95,7 +95,6 @@ typedef union _UWord
     };
 }UWord;
 
-/** @brief TODO*/
 typedef union _UDWord
 {
     uint32 value;
@@ -262,5 +261,26 @@ typedef union _UQWord
 
     
 }UQWord;
+
+/** @brief Estrutura DataTime */
+typedef struct _DataHora
+{
+    uint8 diaSemana;
+    uint8 dia;
+    uint8 mes;
+    uint8 ano8;
+    uint16 ano16;
+    uint8 hora;
+    uint8 min;
+    uint8 seg;
+}DataHora;
+
+/** @brief Estruta que armazena o calculo timestamp  */
+typedef struct _Timestamp
+{
+    UWord UN_TS0; //parte Low
+    UWord UN_TS1; //parte mi
+    UWord UN_TS2; //parte High
+}Timestamp;
 
 #endif	/* TYPES_H */

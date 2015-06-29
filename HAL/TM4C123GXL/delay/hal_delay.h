@@ -1,4 +1,5 @@
 /**
+
  * @file    hal_delay.h
  * @author  Jorge Guzman (jorge.gzm@gmail.com)
  * @date    29 de Janeiro de 2014
@@ -16,8 +17,10 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details at
  * http://www.gnu.org/copyleft/gpl.html
+
  *
  * @section DESCRIPTION
+
  */
 
 #ifndef HAL_DELAY_H
@@ -52,5 +55,15 @@ void Delay_ms(uint16 delay);
 // * @brief TODO
 // */
 //#define Delay_ms(x) __delay_ms(x)
+
+
+
+
+
+
+
+
+
+
 
 #endif	/* HAL_DELAY_H */

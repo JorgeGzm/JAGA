@@ -32,9 +32,6 @@ volatile uint32 *ref_PORTA = &GPIO_PORTA_DATA_R;
 /** variavel abstrair para trarar com o TRISA*/
 volatile uint32 *ref_TRISA = &GPIO_PORTA_DIR_R;
 
-
-
-
 /** */
 regGPIO rA0 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_0};
 regGPIO rA1 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_1};
@@ -46,27 +43,6 @@ regGPIO rA6 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_6};
 regGPIO rA7 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_7};
 
 //------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** variavel abstrair para trarar com o PORTB*/
 volatile uint32 *ref_PORTB = &GPIO_PORTB_DATA_R;
@@ -83,39 +59,7 @@ regGPIO rB5 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_5};
 regGPIO rB6 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_6};
 regGPIO rB7 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_7};
 
-
-
 //------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** variavel abstrair para trarar com o PORTC*/
 volatile uint32 *ref_PORTC = &GPIO_PORTC_DATA_R;
@@ -133,41 +77,7 @@ regGPIO rC6 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_6};
 regGPIO rC7 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_7};
 
 
-
-
-
-
-
-
-
-
-
-
-
 //------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** variavel abstrair para trarar com PORTD*/
 volatile uint32 *ref_PORTD = &GPIO_PORTD_DATA_R;
 
@@ -183,40 +93,7 @@ regGPIO rD5 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_5};
 regGPIO rD6 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_6};
 regGPIO rD7 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_7};
 
-
-
 //------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** variavel abstrair para trarar com o PORTE*/
 volatile uint32 *ref_PORTE = &GPIO_PORTE_DATA_R;
@@ -233,40 +110,7 @@ regGPIO rE5 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_5};
 regGPIO rE6 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_6};
 regGPIO rE7 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_7};
 
-
-
 //------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** variavel abstrair para trarar com o PORTF*/
 volatile uint32 *ref_PORTF = &GPIO_PORTF_DATA_R;
@@ -283,30 +127,9 @@ regGPIO rF5 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_5};
 regGPIO rF6 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_6};
 regGPIO rF7 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_7};
 
-
-
 /**
  * Rotinha de inicializacao das variaveis abstraidas.
-
-
-
-
-
-
-
-
-
  */
-
-
-
-
-
-
-
-
-
-
 void V_initRefRegisters(void)
 {
 
@@ -332,7 +155,6 @@ void GPIO_write_data(volatile uint32 *registrador, uint32 UI8_value)
 void GPIO_attach(regGPIO *reg, regGPIO *_port)
 {
     reg = _port;
-
 }
 
 /**
