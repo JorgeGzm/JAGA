@@ -8,16 +8,16 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/Util/crc/subdir.mk
--include src/TM4C123GXL/uart/subdir.mk
--include src/TM4C123GXL/systick/subdir.mk
--include src/TM4C123GXL/gpio/subdir.mk
--include src/TM4C123GXL/delay/subdir.mk
 -include src/Source/subdir.mk
--include src/Middleware/leds/subdir.mk
--include src/Middleware/lcd/subdir.mk
--include src/Middleware/info_hw/subdir.mk
--include src/Middleware/buttons/subdir.mk
+-include Util/crc/subdir.mk
+-include TM4C123GXL/uart/subdir.mk
+-include TM4C123GXL/systick/subdir.mk
+-include TM4C123GXL/gpio/subdir.mk
+-include TM4C123GXL/delay/subdir.mk
+-include Middleware/leds/subdir.mk
+-include Middleware/lcd/subdir.mk
+-include Middleware/info_hw/subdir.mk
+-include Middleware/buttons/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -50,7 +50,7 @@ all: Template.elf secondary-outputs
 Template.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/home/jaga/JAGAV1.1.0/Boards/TM4C123GXL/Template/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template.map" -o "Template.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/home/jaga/git/JAGA/Boards/TM4C123GXL/workspace/Template/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template.map" -o "Template.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

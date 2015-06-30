@@ -17,14 +17,14 @@ S_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-src/Util/crc \
-src/TM4C123GXL/uart \
-src/TM4C123GXL/systick \
-src/TM4C123GXL/gpio \
-src/TM4C123GXL/delay \
 src/Source \
-src/Middleware/leds \
-src/Middleware/lcd \
-src/Middleware/info_hw \
-src/Middleware/buttons \
+Util/crc \
+TM4C123GXL/uart \
+TM4C123GXL/systick \
+TM4C123GXL/gpio \
+TM4C123GXL/delay \
+Middleware/leds \
+Middleware/lcd \
+Middleware/info_hw \
+Middleware/buttons \
 
