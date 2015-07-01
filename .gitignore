@@ -25,3 +25,4 @@
 *.pre
 *.p1
 
+/Boards/PIC18F4550/Template/Template.X/build/default/

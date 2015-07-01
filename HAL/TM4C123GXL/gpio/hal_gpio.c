@@ -249,6 +249,18 @@ void GPIO_pin_attach(regPin *pin, regGPIO *reg)
     pin->pin = reg->numPin;
 }
 
+uint8 GPIO_pin_state(regPin *pin)
+{
+    if(tst_bit(*pin->out, pin->pin))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection)
 {
 	/*

@@ -56,8 +56,8 @@
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.1000512070" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/Header}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/Source}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/jaga/git/JAGA/Middleware"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/Source}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/jaga/git/JAGA/Util"/>
 									<listOptionValue builtIn="false" value="/home/jaga/git/JAGA/HAL/TM4C123GXL"/>
 								</option>
@@ -253,6 +253,9 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.2051370197" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1645546756"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="Middleware/FreeRTOS|TM4C123GXL/portable" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -330,6 +333,9 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="Middleware/FreeRTOS|TM4C123GXL/portable" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>

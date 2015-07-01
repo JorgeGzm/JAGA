@@ -1,24 +1,25 @@
-[p PRO_MODE GLOBOPT AUTOSTATIC LFSROK SPACEOPT EMI_WORD ]
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 18F4550 ]
-"57 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[e E5460 _PIN_DIR `uc
+[d frameptr 4065 ]
+"57 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"55 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[e E5460 _PIN_DIR `uc
+"55 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"142 C:\JAGA_TESTE/Middleware/leds/leds.c
-[e E5460 _PIN_DIR `uc
+"142 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"36 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[e E5464 PinosMCU `uc
+"36 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[e E5457 PinosMCU `uc
 PIN_0 0
 PIN_1 1
 PIN_2 2
@@ -29,12 +30,12 @@ PIN_6 6
 PIN_7 7
 ]
 "180
-[e E5460 _PIN_DIR `uc
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"252 C:\JAGA_TESTE/HAL/PIC18F4550/i2c/hal_i2c.c
-[e E5572 _I2C_COMMAND `uc
+"252 /home/jaga/git/JAGA/HAL/PIC18F4550/i2c/hal_i2c.c
+[e E5567 _I2C_COMMAND `uc
 EN_I2C_START 0
 EN_I2C_REPET_START 1
 EN_I2C_STOP 2
@@ -46,491 +47,273 @@ EN_I2C_WRITE 7
 EN_I2C_READ 8
 EN_I2C_IDLE 9
 ]
-"50 C:\JAGA_TESTE/HAL/PIC18F4550/spi/hal_spi.c
-[e E5460 _PIN_DIR `uc
+"50 /home/jaga/git/JAGA/HAL/PIC18F4550/spi/hal_spi.c
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"102 C:\JAGA_TESTE/HAL/PIC18F4550/uart/hal_uart.c
-[e E5460 _PIN_DIR `uc
+"102 /home/jaga/git/JAGA/HAL/PIC18F4550/uart/hal_uart.c
+[e E5453 _PIN_DIR `uc
 DIR_OUTPUT 0
 DIR_INPUT 1
 ]
-"18 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c
-[e E5574 SYS_TECLAS `uc
-TECLA_MENU 0
-TECLA_UP 1
-TECLA_DOWN 2
-TECLA_BACK 3
+"18 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c
+[e E5569 SYS_TECLAS `uc
+TECLA_MENU 1
+TECLA_UP 2
+TECLA_DOWN 4
+TECLA_BACK 8
 ]
-"45 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c
-[e E5809 SYS_TECLAS `uc
-TECLA_MENU 0
-TECLA_UP 1
-TECLA_DOWN 2
-TECLA_BACK 3
+"45 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c
+[e E5804 SYS_TECLAS `uc
+TECLA_MENU 1
+TECLA_UP 2
+TECLA_DOWN 4
+TECLA_BACK 8
 ]
-"28 C:\JAGA_TESTE/HAL/PIC18F4550/ad/hal_ad.c
-[v _ad_setup_vref ad_setup_vref `(v  1 e 0 0 ]
-"35
-[v _ad_setup_enable ad_setup_enable `(v  1 e 0 0 ]
-"49
-[v _ad_setup_clock ad_setup_clock `(v  1 e 0 0 ]
-"59
-[v _ad_read ad_read `(us  1 e 2 0 ]
-"26 C:\JAGA_TESTE/HAL/PIC18F4550/eeprom/hal_eeprom.c
-[v _eeprom_rd eeprom_rd `(uc  1 e 1 0 ]
-"36
-[v _eeprom_wr eeprom_wr `(v  1 e 0 0 ]
-"31 C:\JAGA_TESTE/HAL/PIC18F4550/flash/hal_flash.c
-[v _flash_rd flash_rd `(us  1 e 2 0 ]
-"53
-[v _flash_erasing flash_erasing `(v  1 e 0 0 ]
-"81
-[v _flash_wr flash_wr `(v  1 e 0 0 ]
-"122 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _V_initRefRegisters V_initRefRegisters `(v  1 e 0 0 ]
-"127
+"126 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 [v _GPIO_write_data GPIO_write_data `(v  1 e 0 0 ]
-"132
+"131
 [v _GPIO_attach GPIO_attach `(v  1 e 0 0 ]
-"137
-[v _GPIO_outputBit GPIO_outputBit `(v  1 e 0 0 ]
-"149
-[v _GPIO_low GPIO_low `(v  1 e 0 0 ]
-"154
-[v _GPIO_high GPIO_high `(v  1 e 0 0 ]
-"159
-[v _GPIO_output_toggle GPIO_output_toggle `(v  1 e 0 0 ]
-"164
+"163
 [v _GPIO_pin_attach GPIO_pin_attach `(v  1 e 0 0 ]
-"170
+"169
 [v _GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
 [v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-[v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
 [v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-[v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-"175
+"174
 [v _GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
 [v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-[v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
 [v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-[v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-"180
+"179
 [v _GPIO_confDir GPIO_confDir `(v  1 e 0 0 ]
-"194
+"193
 [v _GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
 [v i1_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-[v i1_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
 [v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-[v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-"199
+"198
+[v _GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+[v i2_GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+"210
 [v _GPIO_pin_outputBit GPIO_pin_outputBit `(v  1 e 0 0 ]
-"211
-[v _GPIO_pin_pulse GPIO_pin_pulse `(v  1 e 0 0 ]
-"32 C:\JAGA_TESTE/HAL/PIC18F4550/i2c/hal_i2c.c
-[v _isr_1ms_i2c1 isr_1ms_i2c1 `(v  1 e 0 0 ]
-"39
-[v _set_i2c1_timeout set_i2c1_timeout `(v  1 e 0 0 ]
-"44
-[v _get_i2c1_timeout get_i2c1_timeout `(uc  1 e 1 0 ]
-"49
-[v _i2c_setup_enable i2c_setup_enable `(v  1 e 0 0 ]
-"65
-[v _i2c_setup_master i2c_setup_master `(v  1 e 0 0 ]
-"83
-[v _i2c_setup_slave i2c_setup_slave `(v  1 e 0 0 ]
-"127
+"126 /home/jaga/git/JAGA/HAL/PIC18F4550/i2c/hal_i2c.c
 [v _i2c_idle i2c_idle `(v  1 e 0 0 ]
-"137
+"136
 [v _i2c_start i2c_start `(v  1 e 0 0 ]
-"150
+"149
 [v _i2c_repeat_start i2c_repeat_start `(v  1 e 0 0 ]
-"163
+"162
 [v _i2c_stop i2c_stop `(v  1 e 0 0 ]
-"176
+"175
 [v _i2c_ack i2c_ack `(v  1 e 0 0 ]
-"183
+"182
 [v _i2c_ack_stat i2c_ack_stat `(uc  1 e 1 0 ]
-"189
+"188
 [v _i2c_nack i2c_nack `(v  1 e 0 0 ]
-"196
+"195
 [v _i2c_wait_ack i2c_wait_ack `(v  1 e 0 0 ]
-"205
+"204
 [v _i2c_write i2c_write `(uc  1 e 1 0 ]
-"231
+"230
 [v _i2c_read i2c_read `(uc  1 e 1 0 ]
-"249
-[v _i2c i2c `(uc  1 e 1 0 ]
-"31 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
+"30 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
 [v _interrupt_init interrupt_init `(v  1 e 0 0 ]
-"41
+"40
 [v _interrupt_setup interrupt_setup `(v  1 e 0 0 ]
-"56
+"55
 [v _interrupt_set_priority interrupt_set_priority `(v  1 e 0 0 ]
-"77
+"76
 [v _interrupt_is_enable interrupt_is_enable `(uc  1 e 1 0 ]
 [v i2_interrupt_is_enable interrupt_is_enable `(uc  1 e 1 0 ]
-[v i2_interrupt_is_enable interrupt_is_enable `(uc  1 e 1 0 ]
-"92
+"91
 [v _isr_high_interrupt isr_high_interrupt `II(v  1 e 0 0 ]
-"130
+"129
 [v _isr_low_interrupt isr_low_interrupt `IIL(v  1 e 0 0 ]
-"168
+"167
 [v _interrupt_set_callback interrupt_set_callback `(v  1 e 0 0 ]
-"211
+"210
 [v _timer0_isr timer0_isr `T(v  1 s 0 timer0_isr ]
 [v i2_timer0_isr timer0_isr `T(v  1 s 0 i2_timer0_isr ]
-[v i2_timer0_isr timer0_isr `T(v  1 s 0 i2_timer0_isr ]
-"225
+"224
 [v _timer1_isr timer1_isr `T(v  1 s 0 timer1_isr ]
 [v i2_timer1_isr timer1_isr `T(v  1 s 0 i2_timer1_isr ]
-[v i2_timer1_isr timer1_isr `T(v  1 s 0 i2_timer1_isr ]
-"239
+"238
 [v _timer2_isr timer2_isr `T(v  1 s 0 timer2_isr ]
 [v i2_timer2_isr timer2_isr `T(v  1 s 0 i2_timer2_isr ]
-[v i2_timer2_isr timer2_isr `T(v  1 s 0 i2_timer2_isr ]
-"253
+"252
 [v _timer3_isr timer3_isr `T(v  1 s 0 timer3_isr ]
 [v i2_timer3_isr timer3_isr `T(v  1 s 0 i2_timer3_isr ]
-[v i2_timer3_isr timer3_isr `T(v  1 s 0 i2_timer3_isr ]
-"267
+"266
 [v _uart_rx_isr uart_rx_isr `T(v  1 s 0 uart_rx_isr ]
 [v i2_uart_rx_isr uart_rx_isr `T(v  1 s 0 i2_uart_rx_isr ]
-[v i2_uart_rx_isr uart_rx_isr `T(v  1 s 0 i2_uart_rx_isr ]
-"281
+"280
 [v _uart_tx_isr uart_tx_isr `T(v  1 s 0 uart_tx_isr ]
 [v i2_uart_tx_isr uart_tx_isr `T(v  1 s 0 i2_uart_tx_isr ]
-[v i2_uart_tx_isr uart_tx_isr `T(v  1 s 0 i2_uart_tx_isr ]
-"27 C:\JAGA_TESTE/HAL/PIC18F4550/pwm/hal_pwm.c
+"26 /home/jaga/git/JAGA/HAL/PIC18F4550/pwm/hal_pwm.c
 [v _pwmMCU_set_frequencia pwmMCU_set_frequencia `(v  1 e 0 0 ]
-"76
-[v _pwmMCU_setup_tmr pwmMCU_setup_tmr `(v  1 e 0 0 ]
-"83
-[v _pwmMCU_setup_conf pwmMCU_setup_conf `(v  1 e 0 0 ]
-"91
-[v _pwmMCU_set_fduty pwmMCU_set_fduty `(v  1 e 0 0 ]
-"117
-[v _pwmMCU_set_duty pwmMCU_set_duty `(v  1 e 0 0 ]
-"30 C:\JAGA_TESTE/HAL/PIC18F4550/reset/hal_reset.c
+"29 /home/jaga/git/JAGA/HAL/PIC18F4550/reset/hal_reset.c
 [v _resetMCU resetMCU `(v  1 e 0 0 ]
-"40
-[v _resetMCU_device resetMCU_device `(v  1 e 0 0 ]
-"34 C:\JAGA_TESTE/HAL/PIC18F4550/spi/hal_spi.c
-[v _spi_init spi_init `(v  1 e 0 0 ]
-"44
-[v _spi_attach spi_attach `(v  1 e 0 0 ]
-"66
-[v _spi_set_chipselect spi_set_chipselect `(v  1 e 0 0 ]
-"76
+"75 /home/jaga/git/JAGA/HAL/PIC18F4550/spi/hal_spi.c
 [v _spi_set_cpol spi_set_cpol `(v  1 e 0 0 ]
-"88
+"87
 [v _spi_set_cke spi_set_cke `(v  1 e 0 0 ]
-"95
-[v _spi_set_mode spi_set_mode `(v  1 e 0 0 ]
-"138
+"137
 [v _spi_set_sampled_time spi_set_sampled_time `(v  1 e 0 0 ]
-"151
-[v _spi_enable spi_enable `(v  1 e 0 0 ]
-"158
-[v _spi_set_type spi_set_type `(v  1 e 0 0 ]
-"178
-[v _spi_wr_rd spi_wr_rd `(uc  1 e 1 0 ]
-"224
-[v _spi_write spi_write `(uc  1 e 1 0 ]
-"254
-[v _spi_read spi_read `(uc  1 e 1 0 ]
-"32 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
+"31 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
 [v _timer_set_counter timer_set_counter `(v  1 e 0 0 ]
 [v i1_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
-[v i1_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
 [v i2_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
-[v i2_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
-"62
-[v _timer_get_counter timer_get_counter `(us  1 e 2 0 ]
-"86
+"85
 [v _timer_init_regs timer_init_regs `(v  1 e 0 0 ]
-"129
+"128
 [v _timer_setup_clock timer_setup_clock `(v  1 e 0 0 ]
-"150
+"149
 [v _timer_setup_scale timer_setup_scale `(v  1 e 0 0 ]
-"192
+"191
 [v _timer_setup_bits timer_setup_bits `(v  1 e 0 0 ]
-"217
+"216
 [v _timer_start timer_start `(v  1 e 0 0 ]
-"239
+"238
 [v _timer_setup_interrupt timer_setup_interrupt `(v  1 e 0 0 ]
-"267
+"266
 [v _timer_priority_interrupt timer_priority_interrupt `(v  1 e 0 0 ]
-"291
+"290
 [v _timer_set_callbak timer_set_callbak `(v  1 e 0 0 ]
-"30 C:\JAGA_TESTE/HAL/PIC18F4550/uart/hal_uart.c
-[v _uart_setup_interrupt uart_setup_interrupt `(v  1 e 0 0 ]
-"46
-[v _uart_priority_interrupt uart_priority_interrupt `(v  1 e 0 0 ]
-"62
-[v _uart_set_baudRate uart_set_baudRate `(v  1 e 0 0 ]
-"95
-[v _uart_attach uart_attach `(v  1 e 0 0 ]
-"106
-[v _uart_set_conf uart_set_conf `(v  1 e 0 0 ]
-"121
-[v _uart_set_enable uart_set_enable `(v  1 e 0 0 ]
-"134
-[v _uart_rx_set_callbak uart_rx_set_callbak `(v  1 e 0 0 ]
-"144
-[v _uart_tx_set_callbak uart_tx_set_callbak `(v  1 e 0 0 ]
-"154
-[v _uart_putc uart_putc `(v  1 e 0 0 ]
-"166
-[v _uart_get_data uart_get_data `T(uc  1 e 1 0 ]
-"41 C:\JAGA_TESTE/Middleware/buttons/buttons.c
+"40 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
 [v _buttons_init buttons_init `(v  1 e 0 0 ]
-"52
+"51
 [v _button_attach button_attach `(v  1 e 0 0 ]
-"61
+"60
 [v _buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
 [v i2_buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
-[v i2_buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
-"124
+"118
 [v _buttons_check_press buttons_check_press `(uc  1 e 1 0 ]
-"166
-[v _button_is_press button_is_press `(uc  1 e 1 0 ]
-"176
-[v _button_is_hold button_is_hold `(uc  1 e 1 0 ]
-"48 C:\JAGA_TESTE/Middleware/lcd/lcd.c
+"47 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
 [v _lcd_attach lcd_attach `(v  1 e 0 0 ]
-"59
+"58
 [v _lcd_init lcd_init `(v  1 e 0 0 ]
-"91
+"90
 [v _lcd_send_nibble lcd_send_nibble `(v  1 e 0 0 ]
-"112
+"111
 [v _lcd_send_byte lcd_send_byte `(v  1 e 0 0 ]
-"135
+"134
 [v _lcd_send_string lcd_send_string `(v  1 e 0 0 ]
-"145
+"144
 [v _lcd_gotoxy lcd_gotoxy `(v  1 e 0 0 ]
-"174
+"173
 [v _lcd_printf lcd_printf `(v  1 e 0 0 ]
-"275
+"252
 [v _lcd_print_uint16 lcd_print_uint16 `(v  1 e 0 0 ]
-"293
+"270
 [v _lcd_print_int16 lcd_print_int16 `(v  1 e 0 0 ]
-"42 C:\JAGA_TESTE/Middleware/leds/leds.c
-[v _leds_init leds_init `(v  1 e 0 0 ]
-"51
+"50 /home/jaga/git/JAGA/Middleware/leds/leds.c
 [v _leds_set leds_set `(v  1 e 0 0 ]
-"135
+"134
 [v _leds_attach leds_attach `(v  1 e 0 0 ]
-"146
+"145
 [v _leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
 [v i2_leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
-[v i2_leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
-"176
+"175
 [v _leds_reverse leds_reverse `(v  1 e 0 0 ]
 [v i2_leds_reverse leds_reverse `(v  1 e 0 0 ]
-[v i2_leds_reverse leds_reverse `(v  1 e 0 0 ]
-"200
+"199
 [v _leds_on leds_on `(v  1 e 0 0 ]
 [v i1_leds_on leds_on `(v  1 e 0 0 ]
-[v i1_leds_on leds_on `(v  1 e 0 0 ]
 [v i2_leds_on leds_on `(v  1 e 0 0 ]
-[v i2_leds_on leds_on `(v  1 e 0 0 ]
-"213
+"212
 [v _leds_off leds_off `(v  1 e 0 0 ]
 [v i1_leds_off leds_off `(v  1 e 0 0 ]
-[v i1_leds_off leds_off `(v  1 e 0 0 ]
 [v i2_leds_off leds_off `(v  1 e 0 0 ]
-[v i2_leds_off leds_off `(v  1 e 0 0 ]
-"230
+"229
 [v _leds_status leds_status `(uc  1 e 1 0 ]
 [v i1_leds_status leds_status `(uc  1 e 1 0 ]
-[v i1_leds_status leds_status `(uc  1 e 1 0 ]
 [v i2_leds_status leds_status `(uc  1 e 1 0 ]
-[v i2_leds_status leds_status `(uc  1 e 1 0 ]
-"246
+"245
 [v _leds_write leds_write `(v  1 e 0 0 ]
 [v i1_leds_write leds_write `(v  1 e 0 0 ]
-[v i1_leds_write leds_write `(v  1 e 0 0 ]
 [v i2_leds_write leds_write `(v  1 e 0 0 ]
-[v i2_leds_write leds_write `(v  1 e 0 0 ]
-"27 C:\JAGA_TESTE/Util/crc/crc.c
+"26 /home/jaga/git/JAGA/Util/crc/crc.c
 [v _crc_calculo crc_calculo `(us  1 e 2 0 ]
-"51
-[v _crc_calcula_buff crc_calcula_buff `(us  1 e 2 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_control.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_control.c
 [v _run_system run_system `(v  1 e 0 0 ]
-"17 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c
+"16 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c
 [v _run_him run_him `(v  1 e 0 0 ]
-"19 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_info.c
+"18 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_info.c
 [v _info_init info_init `(v  1 e 0 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/main.c
 [v _main main `(v  1 e 0 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_ad.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_ad.c
 [v _init_AD init_AD `(v  1 e 0 0 ]
-"16 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c
+"15 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_gpio.c
 [v _init_gpio init_gpio `(v  1 e 0 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c
 [v _setupHardware setupHardware `(v  1 e 0 0 ]
-"39
+"38
 [v _setupDevices setupDevices `(v  1 e 0 0 ]
-"13 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_i2c.c
+"12 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_i2c.c
 [v _init_i2c init_i2c `(v  1 e 0 0 ]
-"13 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c
+"12 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_mcu.c
 [v _init_mcu init_mcu `(v  1 e 0 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_pwm.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_pwm.c
 [v _init_pwm init_pwm `(v  1 e 0 0 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_spi.c
-[v _init_spi init_spi `(v  1 e 0 0 ]
-"21 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
+"20 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 [v _init_timer0 init_timer0 `(v  1 e 0 0 ]
-"40
+"39
 [v sys_timer@timer_counter timer_counter `(v  1 s 0 timer_counter ]
 [v i2sys_timer@timer_counter timer_counter `(v  1 s 0 i2sys_timer@timer_counter ]
-[v i2sys_timer@timer_counter timer_counter `(v  1 s 0 i2sys_timer@timer_counter ]
-"80
+"79
 [v _counter_1_ms counter_1_ms `T(v  1 s 0 counter_1_ms ]
 [v i2_counter_1_ms counter_1_ms `T(v  1 s 0 i2_counter_1_ms ]
-[v i2_counter_1_ms counter_1_ms `T(v  1 s 0 i2_counter_1_ms ]
-"86
+"85
 [v _counter_10_ms counter_10_ms `T(v  1 s 0 counter_10_ms ]
 [v i2_counter_10_ms counter_10_ms `T(v  1 s 0 i2_counter_10_ms ]
-[v i2_counter_10_ms counter_10_ms `T(v  1 s 0 i2_counter_10_ms ]
-"93
+"92
 [v _counter_100_ms counter_100_ms `T(v  1 s 0 counter_100_ms ]
 [v i2_counter_100_ms counter_100_ms `T(v  1 s 0 i2_counter_100_ms ]
-[v i2_counter_100_ms counter_100_ms `T(v  1 s 0 i2_counter_100_ms ]
-"100
+"99
 [v _counter_1_s counter_1_s `T(v  1 s 0 counter_1_s ]
 [v i2_counter_1_s counter_1_s `T(v  1 s 0 i2_counter_1_s ]
-[v i2_counter_1_s counter_1_s `T(v  1 s 0 i2_counter_1_s ]
-"14 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_uart.c
+"13 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_uart.c
 [v _init_uart init_uart `(v  1 e 0 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abdiv.c
-[v ___abdiv __abdiv `(c  1 e 1 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abmod.c
-[v ___abmod __abmod `(c  1 e 1 0 ]
-"32 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abtofl.c
-[v ___abtofl __abtofl `(d  1 e 3 0 ]
-"34 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\abtoft.c
-[v ___abtoft __abtoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\almod.c
-[v ___almod __almod `(l  1 e 4 0 ]
-"37 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\altofl.c
-[v ___altofl __altofl `(d  1 e 3 0 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\altoft.c
-[v ___altoft __altoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\atdiv.c
-[v ___atdiv __atdiv `(m  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\atmod.c
-[v ___atmod __atmod `(m  1 e 3 0 ]
-"38 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\attofl.c
-[v ___attofl __attofl `(d  1 e 3 0 ]
-"38 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\attoft.c
-[v ___attoft __attoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c
+"8 /opt/microchip/xc8/v1.34/sources/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c
+"8 /opt/microchip/xc8/v1.34/sources/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"32 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awtofl.c
-[v ___awtofl __awtofl `(d  1 e 3 0 ]
-"33 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awtoft.c
-[v ___awtoft __awtoft `(f  1 e 3 0 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\bmul.c
-[v ___bmul __bmul `(uc  1 e 1 0 ]
-"64 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\double.c
+"63 /opt/microchip/xc8/v1.34/sources/common/double.c
 [v ___flpack __flpack `(d  1 e 3 0 ]
-"89 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fladd.c
+"88 /opt/microchip/xc8/v1.34/sources/common/fladd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
-"50 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fldiv.c
+"54 /opt/microchip/xc8/v1.34/sources/common/fldiv.c
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-"51 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flmul.c
+"62 /opt/microchip/xc8/v1.34/sources/common/flmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
-"16 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flneg.c
-[v ___flneg __flneg `(d  1 e 3 0 ]
-"63 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\float.c
+"62 /opt/microchip/xc8/v1.34/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"22 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\flsub.c
+"20 /opt/microchip/xc8/v1.34/sources/common/flsub.c
 [v ___flsub __flsub `(d  1 e 3 0 ]
-"44 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-"87 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftadd.c
+"86 /opt/microchip/xc8/v1.34/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"50 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftdiv.c
+"54 /opt/microchip/xc8/v1.34/sources/common/ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftge.c
+"4 /opt/microchip/xc8/v1.34/sources/common/ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]
-"52 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftmul.c
+"62 /opt/microchip/xc8/v1.34/sources/common/ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"16 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-"22 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ftsub.c
+"20 /opt/microchip/xc8/v1.34/sources/common/ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"45 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\fttol.c
+"44 /opt/microchip/xc8/v1.34/sources/common/fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbdiv.c
-[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbmod.c
-[v ___lbmod __lbmod `(uc  1 e 1 0 ]
-"28 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbtofl.c
-[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
-"28 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lbtoft.c
-[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
-"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lltofl.c
-[v ___lltofl __lltofl `(d  1 e 3 0 ]
-"36 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lmul.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ltdiv.c
-[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\ltmod.c
-[v ___ltmod __ltmod `(um  1 e 3 0 ]
-"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lttofl.c
-[v ___lttofl __lttofl `(d  1 e 3 0 ]
-"31 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lttoft.c
-[v ___lttoft __lttoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c
+"8 /opt/microchip/xc8/v1.34/sources/common/lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c
+"8 /opt/microchip/xc8/v1.34/sources/common/lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"29 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwtofl.c
-[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
-"29 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwtoft.c
+"28 /opt/microchip/xc8/v1.34/sources/common/lwtoft.c
 [v ___lwtoft __lwtoft `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c
+"8 /opt/microchip/xc8/v1.34/sources/common/memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\tmul.c
-[v ___tmul __tmul `(um  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\wmul.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asfladd.c
-[v ___asfladd __asfladd `(d  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asfldiv.c
-[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asflmul.c
-[v ___asflmul __asflmul `(d  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asflsub.c
-[v ___asflsub __asflsub `(d  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftadd.c
-[v ___asftadd __asftadd `(f  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftdiv.c
-[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftmul.c
-[v ___asftmul __asftmul `(f  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\asftsub.c
-[v ___asftsub __asftsub `(f  1 e 3 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic18\aslmul.c
-[v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"27 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
+"15 /opt/microchip/xc8/v1.34/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"27 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 [v _ref_PORTA ref_PORTA `*.39VEuc  1 e 2 0 ]
 "30
 [v _ref_TRISA ref_TRISA `*.39VEuc  1 e 2 0 ]
@@ -571,7 +354,9 @@ TECLA_BACK 3
 [v _ref_TRISE ref_TRISE `*.39VEuc  1 e 2 0 ]
 "117
 [v _rE1 rE1 `S45  1 e 7 0 ]
-[s S1625 . 3 `uc 1 TMR0 1 0 :1:0 
+"26 /home/jaga/git/JAGA/HAL/PIC18F4550/i2c/hal_i2c.c
+[v _tmr_i2c1_tout tmr_i2c1_tout `uc  1 e 1 0 ]
+[s S1655 . 3 `uc 1 TMR0 1 0 :1:0 
 `uc 1 TMR1 1 0 :1:1 
 `uc 1 TMR2 1 0 :1:2 
 `uc 1 TMR3 1 0 :1:3 
@@ -589,21 +374,31 @@ TECLA_BACK 3
 `uc 1 EEPROM 1 1 :1:7 
 `uc 1 COMP 1 2 :1:0 
 ]
-"26 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
-[u S1643 _Interrupts 3 `us 1 value 2 0 `S1625 1 . 3 0 ]
-[v _interrupts_enable interrupts_enable `S1643  1 s 3 interrupts_enable ]
+"26 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
+[u S1673 _Interrupts 3 `us 1 value 2 0 `S1655 1 . 3 0 ]
+[v _interrupts_enable interrupts_enable `S1673  1 s 3 interrupts_enable ]
 "27
-[v _interrupts_priority interrupts_priority `S1643  1 s 3 interrupts_priority ]
+[v _interrupts_priority interrupts_priority `S1673  1 s 3 interrupts_priority ]
 "28
-[s S1652 _InterruptsCallBack 15 `S1643 1 call_back_ctrl 3 0 `*.37(v 1 tmr0_callback 2 3 `*.37(v 1 tmr1_callback 2 5 `*.37(v 1 tmr2_callback 2 7 `*.37(v 1 tmr3_callback 2 9 `*.37(v 1 uart_rx_callback 2 11 `*.37(v 1 uart_tx_callback 2 13 ]
-[v _interrupt_callback interrupt_callback `S1652  1 s 15 interrupt_callback ]
-"30 C:\JAGA_TESTE/HAL/PIC18F4550/spi/hal_spi.c
-[s S2158 _SpiDevice 28 `S45 1 sdi_tris 7 0 `S45 1 sdo_tris 7 7 `S45 1 sck_tris 7 14 `S45 1 ss_tris 7 21 ]
-[v _spi_device spi_device `S2158  1 s 28 spi_device ]
-"29 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
+[s S1682 _InterruptsCallBack 15 `S1673 1 call_back_ctrl 3 0 `*.37(v 1 tmr0_callback 2 3 `*.37(v 1 tmr1_callback 2 5 `*.37(v 1 tmr2_callback 2 7 `*.37(v 1 tmr3_callback 2 9 `*.37(v 1 uart_rx_callback 2 11 `*.37(v 1 uart_tx_callback 2 13 ]
+[v _interrupt_callback interrupt_callback `S1682  1 s 15 interrupt_callback ]
+"30 /home/jaga/git/JAGA/HAL/PIC18F4550/spi/hal_spi.c
+[s S2197 _SpiDevice 28 `S45 1 sdi_tris 7 0 `S45 1 sdo_tris 7 7 `S45 1 sck_tris 7 14 `S45 1 ss_tris 7 21 ]
+[v _spi_device spi_device `S2197  1 s 28 spi_device ]
+[s S2202 . 2 `uc 1 enable 1 0 :1:0 
+`uc 1 type 1 0 :3:1 
+`uc 1 mode 1 0 :2:4 
+`uc 1 polarity 1 0 :1:6 
+`uc 1 transmit 1 0 :1:7 
+`uc 1 sampled_time 1 1 :1:0 
+]
+"31
+[u S2209 _SpiSetup 2 `us 1 value 2 0 `S2202 1 . 2 0 ]
+[v _spi_setup spi_setup `S2209  1 s 2 spi_setup ]
+"29 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
 [v _timer_counter timer_counter `VE[4]us  1 s 8 timer_counter ]
 [s S21 . 2 `uc 1 b1 1 0 `uc 1 b2 1 1 ]
-"31 C:\JAGA_TESTE/Middleware/buttons/buttons.c
+"31 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
 [s S24 . 2 `uc 1 button_1 1 0 :1:0 
 `uc 1 button_2 1 0 :1:1 
 `uc 1 button_3 1 0 :1:2 
@@ -625,16 +420,16 @@ TECLA_BACK 3
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
 "37
 [v _buttons_vector buttons_vector `[8]S42  1 e 24 0 ]
-"31 C:\JAGA_TESTE/Middleware/lcd/lcd.c
+"31 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
 [s S159 _DisplayLcd 18 `S42 1 db4 3 0 `S42 1 db5 3 3 `S42 1 db6 3 6 `S42 1 db7 3 9 `S42 1 E 3 12 `S42 1 RS 3 15 ]
 [v _display display `S159  1 e 18 0 ]
 "34
 [v _lcd_buffer lcd_buffer `[4][20]uc  1 e 80 0 ]
 "37
 [v _LCD_INIT_STRING LCD_INIT_STRING `C[4]uc  1 e 4 0 ]
-"25 C:\JAGA_TESTE/Middleware/leds/leds.c
+"25 /home/jaga/git/JAGA/Middleware/leds/leds.c
 [v _leds leds `[8]S42  1 e 24 0 ]
-[s S326 . 1 `uc 1 L1 1 0 :1:0 
+[s S329 . 1 `uc 1 L1 1 0 :1:0 
 `uc 1 L2 1 0 :1:1 
 `uc 1 L3 1 0 :1:2 
 `uc 1 L4 1 0 :1:3 
@@ -644,1104 +439,17 @@ TECLA_BACK 3
 `uc 1 L8 1 0 :1:7 
 ]
 "36
-[u S335 _Leds 1 `uc 1 UI8_value 1 0 `S326 1 . 1 0 ]
-[v _UN_ledsStatus UN_ledsStatus `S335  1 e 1 0 ]
+[u S338 _Leds 1 `uc 1 UI8_value 1 0 `S329 1 . 1 0 ]
+[v _UN_ledsStatus UN_ledsStatus `S338  1 e 1 0 ]
 "37
-[v _UN_ledsON UN_ledsON `S335  1 e 1 0 ]
+[v _UN_ledsON UN_ledsON `S338  1 e 1 0 ]
 "38
-[v _UN_ledsBlinkSlow UN_ledsBlinkSlow `S335  1 e 1 0 ]
+[v _UN_ledsBlinkSlow UN_ledsBlinkSlow `S338  1 e 1 0 ]
 "39
-[v _UN_ledsBlinkFast UN_ledsBlinkFast `S335  1 e 1 0 ]
-"2566 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic18f4550.h
-[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
-"2722
-[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-"2831
-[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-"2984
-[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-"3104
-[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
-"3355
-[v _LATA LATA `VEuc  1 e 1 @3977 ]
-"3490
-[v _LATB LATB `VEuc  1 e 1 @3978 ]
-"3622
-[v _LATC LATC `VEuc  1 e 1 @3979 ]
-"3737
-[v _LATD LATD `VEuc  1 e 1 @3980 ]
-"3869
-[v _LATE LATE `VEuc  1 e 1 @3981 ]
-"3971
-[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-"4168
-[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"4389
-[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-"4560
-[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-"4781
-[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S1738 . 1 `uc 1 TMR1IF 1 0 :1:0 
-`uc 1 TMR2IF 1 0 :1:1 
-`uc 1 CCP1IF 1 0 :1:2 
-`uc 1 SSPIF 1 0 :1:3 
-`uc 1 TXIF 1 0 :1:4 
-`uc 1 RCIF 1 0 :1:5 
-`uc 1 ADIF 1 0 :1:6 
-`uc 1 SPPIF 1 0 :1:7 
-]
-"4969
-[s S1747 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 PSPIF 1 0 :1:7 
-]
-[s S1750 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 RC1IF 1 0 :1:5 
-]
-[s S1753 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 TX1IF 1 0 :1:4 
-]
-[u S1756 . 1 `S1738 1 . 1 0 `S1747 1 . 1 0 `S1750 1 . 1 0 `S1753 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES1756  1 e 1 @3997 ]
-"5057
-[v _PIR1bits PIR1bits `VES1756  1 e 1 @3998 ]
-"5145
-[v _IPR1bits IPR1bits `VES1756  1 e 1 @3999 ]
-[s S1780 . 1 `uc 1 CCP2IF 1 0 :1:0 
-`uc 1 TMR3IF 1 0 :1:1 
-`uc 1 HLVDIF 1 0 :1:2 
-`uc 1 BCLIF 1 0 :1:3 
-`uc 1 EEIF 1 0 :1:4 
-`uc 1 USBIF 1 0 :1:5 
-`uc 1 CMIF 1 0 :1:6 
-`uc 1 OSCFIF 1 0 :1:7 
-]
-"5225
-[s S1789 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 LVDIF 1 0 :1:2 
-]
-[u S1792 . 1 `S1780 1 . 1 0 `S1789 1 . 1 0 ]
-[v _PIE2bits PIE2bits `VES1792  1 e 1 @4000 ]
-"5295
-[v _PIR2bits PIR2bits `VES1792  1 e 1 @4001 ]
-"5365
-[v _IPR2bits IPR2bits `VES1792  1 e 1 @4002 ]
-[s S700 . 1 `uc 1 RD 1 0 :1:0 
-`uc 1 WR 1 0 :1:1 
-`uc 1 WREN 1 0 :1:2 
-`uc 1 WRERR 1 0 :1:3 
-`uc 1 FREE 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 CFGS 1 0 :1:6 
-`uc 1 EEPGD 1 0 :1:7 
-]
-"5435
-[s S709 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 EEFS 1 0 :1:6 
-]
-[u S712 . 1 `S700 1 . 1 0 `S709 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES712  1 e 1 @4006 ]
-"5479
-[v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
-"5485
-[v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
-"5491
-[v _EEADR EEADR `VEuc  1 e 1 @4009 ]
-[s S3190 . 1 `uc 1 RX9D 1 0 :1:0 
-`uc 1 OERR 1 0 :1:1 
-`uc 1 FERR 1 0 :1:2 
-`uc 1 ADDEN 1 0 :1:3 
-`uc 1 CREN 1 0 :1:4 
-`uc 1 SREN 1 0 :1:5 
-`uc 1 RX9 1 0 :1:6 
-`uc 1 SPEN 1 0 :1:7 
-]
-"5538
-[s S3199 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 ADEN 1 0 :1:3 
-]
-[s S3202 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 SRENA 1 0 :1:5 
-]
-[s S3205 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 RC8_9 1 0 :1:6 
-]
-[s S3208 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 RC9 1 0 :1:6 
-]
-[s S3211 . 1 `uc 1 RCD8 1 0 :1:0 
-]
-[u S3213 . 1 `S3190 1 . 1 0 `S3199 1 . 1 0 `S3202 1 . 1 0 `S3205 1 . 1 0 `S3208 1 . 1 0 `S3211 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES3213  1 e 1 @4011 ]
-[s S3103 . 1 `uc 1 TX9D 1 0 :1:0 
-`uc 1 TRMT 1 0 :1:1 
-`uc 1 BRGH 1 0 :1:2 
-`uc 1 SENDB 1 0 :1:3 
-`uc 1 SYNC 1 0 :1:4 
-`uc 1 TXEN 1 0 :1:5 
-`uc 1 TX9 1 0 :1:6 
-`uc 1 CSRC 1 0 :1:7 
-]
-"5766
-[s S3112 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 BRGH1 1 0 :1:2 
-]
-[s S3115 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 CSRC1 1 0 :1:7 
-]
-[s S3118 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 SENDB1 1 0 :1:3 
-]
-[s S3121 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 SYNC1 1 0 :1:4 
-]
-[s S3124 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 TRMT1 1 0 :1:1 
-]
-[s S3127 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 TX91 1 0 :1:6 
-]
-[s S3130 . 1 `uc 1 TX9D1 1 0 :1:0 
-]
-[s S3132 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 TXEN1 1 0 :1:5 
-]
-[s S3135 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 TX8_9 1 0 :1:6 
-]
-[s S3138 . 1 `uc 1 TXD8 1 0 :1:0 
-]
-[u S3140 . 1 `S3103 1 . 1 0 `S3112 1 . 1 0 `S3115 1 . 1 0 `S3118 1 . 1 0 `S3121 1 . 1 0 `S3124 1 . 1 0 `S3127 1 . 1 0 `S3130 1 . 1 0 `S3132 1 . 1 0 `S3135 1 . 1 0 `S3138 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES3140  1 e 1 @4012 ]
-"6003
-[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
-"6014
-[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
-"6025
-[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
-"6036
-[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
-[s S2518 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_T3SYNC 1 0 :1:2 
-]
-"6085
-[s S2521 . 1 `uc 1 TMR3ON 1 0 :1:0 
-`uc 1 TMR3CS 1 0 :1:1 
-`uc 1 nT3SYNC 1 0 :1:2 
-`uc 1 T3CCP1 1 0 :1:3 
-`uc 1 T3CKPS 1 0 :2:4 
-`uc 1 T3CCP2 1 0 :1:6 
-`uc 1 RD16 1 0 :1:7 
-]
-[s S2529 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T3SYNC 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 T3CKPS0 1 0 :1:4 
-`uc 1 T3CKPS1 1 0 :1:5 
-]
-[s S2535 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T3NSYNC 1 0 :1:2 
-]
-[s S2538 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 RD163 1 0 :1:7 
-]
-[s S2541 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 SOSCEN3 1 0 :1:3 
-]
-[s S2544 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 T3RD16 1 0 :1:7 
-]
-[u S2547 . 1 `S2518 1 . 1 0 `S2521 1 . 1 0 `S2529 1 . 1 0 `S2535 1 . 1 0 `S2538 1 . 1 0 `S2541 1 . 1 0 `S2544 1 . 1 0 ]
-[v _T3CONbits T3CONbits `VES2547  1 e 1 @4017 ]
-"6164
-[v _TMR3 TMR3 `VEus  1 e 2 @4018 ]
-"6170
-[v _TMR3L TMR3L `VEuc  1 e 1 @4018 ]
-"6176
-[v _TMR3H TMR3H `VEuc  1 e 1 @4019 ]
-[s S3244 . 1 `uc 1 ABDEN 1 0 :1:0 
-`uc 1 WUE 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 BRG16 1 0 :1:3 
-`uc 1 TXCKP 1 0 :1:4 
-`uc 1 RXDTP 1 0 :1:5 
-`uc 1 RCIDL 1 0 :1:6 
-`uc 1 ABDOVF 1 0 :1:7 
-]
-"6695
-[s S3253 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 SCKP 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 RCMT 1 0 :1:6 
-]
-[s S3258 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 RXCKP 1 0 :1:5 
-]
-[s S3261 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 W4E 1 0 :1:1 
-]
-[u S3264 . 1 `S3244 1 . 1 0 `S3253 1 . 1 0 `S3258 1 . 1 0 `S3261 1 . 1 0 ]
-[v _BAUDCONbits BAUDCONbits `VES3264  1 e 1 @4024 ]
-[s S1943 . 1 `uc 1 CCP1M 1 0 :4:0 
-`uc 1 DC1B 1 0 :2:4 
-`uc 1 P1M 1 0 :2:6 
-]
-"6946
-[s S1947 . 1 `uc 1 CCP1M0 1 0 :1:0 
-`uc 1 CCP1M1 1 0 :1:1 
-`uc 1 CCP1M2 1 0 :1:2 
-`uc 1 CCP1M3 1 0 :1:3 
-`uc 1 DC1B0 1 0 :1:4 
-`uc 1 DC1B1 1 0 :1:5 
-`uc 1 P1M0 1 0 :1:6 
-`uc 1 P1M1 1 0 :1:7 
-]
-[u S1956 . 1 `S1943 1 . 1 0 `S1947 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES1956  1 e 1 @4029 ]
-"7086
-[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
-[s S591 . 1 `uc 1 ADCS 1 0 :3:0 
-`uc 1 ACQT 1 0 :3:3 
-`uc 1 . 1 0 :1:6 
-`uc 1 ADFM 1 0 :1:7 
-]
-"7119
-[s S596 . 1 `uc 1 ADCS0 1 0 :1:0 
-`uc 1 ADCS1 1 0 :1:1 
-`uc 1 ADCS2 1 0 :1:2 
-`uc 1 ACQT0 1 0 :1:3 
-`uc 1 ACQT1 1 0 :1:4 
-`uc 1 ACQT2 1 0 :1:5 
-]
-[u S603 . 1 `S591 1 . 1 0 `S596 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES603  1 e 1 @4032 ]
-[s S471 . 1 `uc 1 PCFG 1 0 :4:0 
-`uc 1 VCFG 1 0 :2:4 
-]
-"7199
-[s S474 . 1 `uc 1 PCFG0 1 0 :1:0 
-`uc 1 PCFG1 1 0 :1:1 
-`uc 1 PCFG2 1 0 :1:2 
-`uc 1 PCFG3 1 0 :1:3 
-`uc 1 VCFG0 1 0 :1:4 
-`uc 1 VCFG1 1 0 :1:5 
-]
-[s S481 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CHSN3 1 0 :1:3 
-]
-[s S484 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 VCFG01 1 0 :1:4 
-]
-[s S487 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 VCFG11 1 0 :1:5 
-]
-[u S490 . 1 `S471 1 . 1 0 `S474 1 . 1 0 `S481 1 . 1 0 `S484 1 . 1 0 `S487 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES490  1 e 1 @4033 ]
-[s S516 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_NOT_DONE 1 0 :1:1 
-]
-"7306
-[s S519 . 1 `uc 1 ADON 1 0 :1:0 
-`uc 1 GO_nDONE 1 0 :1:1 
-`uc 1 CHS 1 0 :4:2 
-]
-[s S526 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_DONE 1 0 :1:1 
-`uc 1 CHS0 1 0 :1:2 
-`uc 1 CHS1 1 0 :1:3 
-`uc 1 CHS2 1 0 :1:4 
-`uc 1 CHS3 1 0 :1:5 
-]
-[s S533 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 DONE 1 0 :1:1 
-]
-[s S536 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO 1 0 :1:1 
-]
-[s S539 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_DONE 1 0 :1:1 
-]
-[s S542 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 nDONE 1 0 :1:1 
-]
-[s S545 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GODONE 1 0 :1:1 
-]
-[u S548 . 1 `S516 1 . 1 0 `S519 1 . 1 0 `S516 1 . 1 0 `S526 1 . 1 0 `S533 1 . 1 0 `S536 1 . 1 0 `S539 1 . 1 0 `S542 1 . 1 0 `S545 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES548  1 e 1 @4034 ]
-"7386
-[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
-"7392
-[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S1536 . 1 `uc 1 SEN 1 0 :1:0 
-`uc 1 RSEN 1 0 :1:1 
-`uc 1 PEN 1 0 :1:2 
-`uc 1 RCEN 1 0 :1:3 
-`uc 1 ACKEN 1 0 :1:4 
-`uc 1 ACKDT 1 0 :1:5 
-`uc 1 ACKSTAT 1 0 :1:6 
-`uc 1 GCEN 1 0 :1:7 
-]
-"7415
-[u S1545 . 1 `S1536 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES1545  1 e 1 @4037 ]
-[s S1508 . 1 `uc 1 SSPM 1 0 :4:0 
-`uc 1 CKP 1 0 :1:4 
-`uc 1 SSPEN 1 0 :1:5 
-`uc 1 SSPOV 1 0 :1:6 
-`uc 1 WCOL 1 0 :1:7 
-]
-"7479
-[s S1514 . 1 `uc 1 SSPM0 1 0 :1:0 
-`uc 1 SSPM1 1 0 :1:1 
-`uc 1 SSPM2 1 0 :1:2 
-`uc 1 SSPM3 1 0 :1:3 
-]
-[u S1519 . 1 `S1508 1 . 1 0 `S1514 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES1519  1 e 1 @4038 ]
-[s S1335 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_NOT_W 1 0 :1:2 
-]
-"7630
-[s S1338 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 D_NOT_A 1 0 :1:5 
-]
-[s S1341 . 1 `uc 1 BF 1 0 :1:0 
-`uc 1 UA 1 0 :1:1 
-`uc 1 R_nW 1 0 :1:2 
-`uc 1 S 1 0 :1:3 
-`uc 1 P 1 0 :1:4 
-`uc 1 D_nA 1 0 :1:5 
-`uc 1 CKE 1 0 :1:6 
-`uc 1 SMP 1 0 :1:7 
-]
-[s S1356 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_W 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 D_A 1 0 :1:5 
-]
-[s S1361 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 I2C_READ 1 0 :1:2 
-`uc 1 I2C_START 1 0 :1:3 
-`uc 1 I2C_STOP 1 0 :1:4 
-`uc 1 I2C_DAT 1 0 :1:5 
-]
-[s S1367 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nW 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 nA 1 0 :1:5 
-]
-[s S1372 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_WRITE 1 0 :1:2 
-]
-[s S1375 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 NOT_ADDRESS 1 0 :1:5 
-]
-[s S1378 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nWRITE 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 nADDRESS 1 0 :1:5 
-]
-[s S1383 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 READ_WRITE 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 DATA_ADDRESS 1 0 :1:5 
-]
-[s S1388 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 D 1 0 :1:5 
-]
-[s S1393 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 DA 1 0 :1:5 
-]
-[s S1396 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 RW 1 0 :1:2 
-]
-[s S1399 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 START 1 0 :1:3 
-]
-[s S1402 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 STOP 1 0 :1:4 
-]
-[s S1405 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_W 1 0 :1:2 
-]
-[s S1408 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 NOT_A 1 0 :1:5 
-]
-[u S1411 . 1 `S1335 1 . 1 0 `S1338 1 . 1 0 `S1341 1 . 1 0 `S1335 1 . 1 0 `S1338 1 . 1 0 `S1356 1 . 1 0 `S1361 1 . 1 0 `S1367 1 . 1 0 `S1372 1 . 1 0 `S1375 1 . 1 0 `S1378 1 . 1 0 `S1383 1 . 1 0 `S1388 1 . 1 0 `S1393 1 . 1 0 `S1396 1 . 1 0 `S1399 1 . 1 0 `S1402 1 . 1 0 `S1405 1 . 1 0 `S1408 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES1411  1 e 1 @4039 ]
-"7794
-[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
-"7800
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
-[s S1974 . 1 `uc 1 T2CKPS 1 0 :2:0 
-`uc 1 TMR2ON 1 0 :1:2 
-`uc 1 TOUTPS 1 0 :4:3 
-]
-"7834
-[s S1978 . 1 `uc 1 T2CKPS0 1 0 :1:0 
-`uc 1 T2CKPS1 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 T2OUTPS0 1 0 :1:3 
-`uc 1 T2OUTPS1 1 0 :1:4 
-`uc 1 T2OUTPS2 1 0 :1:5 
-`uc 1 T2OUTPS3 1 0 :1:6 
-]
-[s S1986 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 TOUTPS0 1 0 :1:3 
-`uc 1 TOUTPS1 1 0 :1:4 
-`uc 1 TOUTPS2 1 0 :1:5 
-`uc 1 TOUTPS3 1 0 :1:6 
-]
-[u S1992 . 1 `S1974 1 . 1 0 `S1978 1 . 1 0 `S1986 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1992  1 e 1 @4042 ]
-"7903
-[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
-"8012
-[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S2442 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_T1SYNC 1 0 :1:2 
-]
-"8053
-[s S2445 . 1 `uc 1 TMR1ON 1 0 :1:0 
-`uc 1 TMR1CS 1 0 :1:1 
-`uc 1 nT1SYNC 1 0 :1:2 
-`uc 1 T1OSCEN 1 0 :1:3 
-`uc 1 T1CKPS 1 0 :2:4 
-`uc 1 T1RUN 1 0 :1:6 
-`uc 1 RD16 1 0 :1:7 
-]
-[s S2453 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T1SYNC 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 T1CKPS0 1 0 :1:4 
-`uc 1 T1CKPS1 1 0 :1:5 
-]
-[s S2459 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 SOSCEN 1 0 :1:3 
-]
-[s S2462 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 T1RD16 1 0 :1:7 
-]
-[u S2465 . 1 `S2442 1 . 1 0 `S2445 1 . 1 0 `S2453 1 . 1 0 `S2459 1 . 1 0 `S2462 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES2465  1 e 1 @4045 ]
-"8122
-[v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
-"8128
-[v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
-"8134
-[v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
-[s S3737 . 1 `uc 1 NOT_BOR 1 0 :1:0 
-]
-"8189
-[s S3739 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_POR 1 0 :1:1 
-]
-[s S3742 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_PD 1 0 :1:2 
-]
-[s S3745 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 NOT_TO 1 0 :1:3 
-]
-[s S3748 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 NOT_RI 1 0 :1:4 
-]
-[s S3751 . 1 `uc 1 nBOR 1 0 :1:0 
-`uc 1 nPOR 1 0 :1:1 
-`uc 1 nPD 1 0 :1:2 
-`uc 1 nTO 1 0 :1:3 
-`uc 1 nRI 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 SBOREN 1 0 :1:6 
-`uc 1 IPEN 1 0 :1:7 
-]
-[s S3760 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 NOT_IPEN 1 0 :1:7 
-]
-[s S3763 . 1 `uc 1 BOR 1 0 :1:0 
-`uc 1 POR 1 0 :1:1 
-`uc 1 PD 1 0 :1:2 
-`uc 1 TO 1 0 :1:3 
-`uc 1 RI 1 0 :1:4 
-`uc 1 . 1 0 :2:5 
-`uc 1 nIPEN 1 0 :1:7 
-]
-[u S3771 . 1 `S3737 1 . 1 0 `S3739 1 . 1 0 `S3742 1 . 1 0 `S3745 1 . 1 0 `S3748 1 . 1 0 `S3751 1 . 1 0 `S3760 1 . 1 0 `S3763 1 . 1 0 ]
-[v _RCONbits RCONbits `VES3771  1 e 1 @4048 ]
-[s S2416 . 1 `uc 1 T0PS 1 0 :3:0 
-`uc 1 PSA 1 0 :1:3 
-`uc 1 T0SE 1 0 :1:4 
-`uc 1 T0CS 1 0 :1:5 
-`uc 1 T08BIT 1 0 :1:6 
-`uc 1 TMR0ON 1 0 :1:7 
-]
-"8686
-[s S2423 . 1 `uc 1 T0PS0 1 0 :1:0 
-`uc 1 T0PS1 1 0 :1:1 
-`uc 1 T0PS2 1 0 :1:2 
-]
-[u S2427 . 1 `S2416 1 . 1 0 `S2423 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES2427  1 e 1 @4053 ]
-"8741
-[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
-"8747
-[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
-"8945
-[v _FSR0L FSR0L `VEuc  1 e 1 @4073 ]
-"8951
-[v _FSR0H FSR0H `VEuc  1 e 1 @4074 ]
-"8975
-[v _POSTINC0 POSTINC0 `VEuc  1 e 1 @4078 ]
-[s S2743 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 NOT_RBPU 1 0 :1:7 
-]
-"9105
-[s S2746 . 1 `uc 1 RBIP 1 0 :1:0 
-`uc 1 . 1 0 :1:1 
-`uc 1 TMR0IP 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 INTEDG2 1 0 :1:4 
-`uc 1 INTEDG1 1 0 :1:5 
-`uc 1 INTEDG0 1 0 :1:6 
-`uc 1 nRBPU 1 0 :1:7 
-]
-[s S2755 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T0IP 1 0 :1:2 
-`uc 1 . 1 0 :4:3 
-`uc 1 RBPU 1 0 :1:7 
-]
-[u S2760 . 1 `S2743 1 . 1 0 `S2746 1 . 1 0 `S2755 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES2760  1 e 1 @4081 ]
-[s S729 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INT0IF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INT0IE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 PEIE_GIEL 1 0 :1:6 
-`uc 1 GIE_GIEH 1 0 :1:7 
-]
-"9206
-[s S738 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INT0IF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INT0IE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-[s S747 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INT0IF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INT0IE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 GIEL 1 0 :1:6 
-`uc 1 GIEH 1 0 :1:7 
-]
-[s S756 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 INT0F 1 0 :1:1 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 INT0E 1 0 :1:4 
-`uc 1 T0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-[s S765 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 GIEL 1 0 :1:6 
-`uc 1 GIEH 1 0 :1:7 
-]
-[u S769 . 1 `S729 1 . 1 0 `S738 1 . 1 0 `S747 1 . 1 0 `S756 1 . 1 0 `S765 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES769  1 e 1 @4082 ]
-"9308
-[v _TABLAT TABLAT `VEuc  1 e 1 @4085 ]
-"9322
-[v _TBLPTRL TBLPTRL `VEuc  1 e 1 @4086 ]
-"9328
-[v _TBLPTRH TBLPTRH `VEuc  1 e 1 @4087 ]
-"9334
-[v _TBLPTRU TBLPTRU `VEuc  1 e 1 @4088 ]
-"10678
-[v _SSPEN SSPEN `VEb  1 e 0 @32309 ]
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/main.c
-[v _main main `(v  1 e 0 0 ]
-{
-"27
-} 0
-"17 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_him.c
-[v _run_him run_him `(v  1 e 0 0 ]
-{
-"33
-} 0
-"124 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[v _buttons_check_press buttons_check_press `(uc  1 e 1 0 ]
-{
-[v buttons_check_press@button_id button_id `uc  1 a 1 3 ]
-[v buttons_check_press@button_id button_id `uc  1 a 1 3 ]
-[v buttons_check_press@press press `uc  1 p 1 0 ]
-"163
-} 0
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_control.c
-[v _run_system run_system `(v  1 e 0 0 ]
-{
-"14
-} 0
-"39 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c
-[v _setupDevices setupDevices `(v  1 e 0 0 ]
-{
-"65
-} 0
-"19 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/app_info.c
-[v _info_init info_init `(v  1 e 0 0 ]
-{
-"22
-} 0
-"135 C:\JAGA_TESTE/Middleware/leds/leds.c
-[v _leds_attach leds_attach `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v leds_attach@pin pin `*.30S42  1 a 1 9 ]
-[v leds_attach@pin pin `*.30S42  1 a 1 9 ]
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v leds_attach@reg reg `*.30S45  1 p 1 8 ]
-"143
-} 0
-"51
-[v _leds_set leds_set `(v  1 e 0 0 ]
-{
-[v leds_set@UI8_InLeds UI8_InLeds `uc  1 a 1 15 ]
-"53
-[v leds_set@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 14 ]
-"51
-[v leds_set@UI8_InLeds UI8_InLeds `uc  1 a 1 15 ]
-[v leds_set@UI8_Action UI8_Action `uc  1 p 1 13 ]
-"132
-} 0
-"200
-[v _leds_on leds_on `(v  1 e 0 0 ]
-{
-[v leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 11 ]
-"201
-[v leds_on@UI8_aux UI8_aux `uc  1 a 1 12 ]
-"200
-[v leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 11 ]
-"210
-} 0
-"230
-[v _leds_status leds_status `(uc  1 e 1 0 ]
-{
-"231
-[v leds_status@i i `uc  1 a 1 10 ]
-[s S204 . 1 `uc 1 bit0 1 0 :1:0 
-`uc 1 bit1 1 0 :1:1 
-`uc 1 bit2 1 0 :1:2 
-`uc 1 bit3 1 0 :1:3 
-`uc 1 bit4 1 0 :1:4 
-`uc 1 bit5 1 0 :1:5 
-`uc 1 bit6 1 0 :1:6 
-`uc 1 bit7 1 0 :1:7 
-]
-"232
-[u S381 _UByte 1 `uc 1 value 1 0 `S204 1 . 1 0 ]
-[v leds_status@status status `S381  1 a 1 9 ]
-"243
-} 0
-"194 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_input_state@pin pin `*.39S42  1 p 2 0 ]
-"196
-} 0
-"213 C:\JAGA_TESTE/Middleware/leds/leds.c
-[v _leds_off leds_off `(v  1 e 0 0 ]
-{
-[v leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 12 ]
-"215
-[v leds_off@UI8_aux UI8_aux `uc  1 a 1 11 ]
-"216
-[v leds_off@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 10 ]
-"213
-[v leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 12 ]
-"227
-} 0
-"246
-[v _leds_write leds_write `(v  1 e 0 0 ]
-{
-[v leds_write@out out `uc  1 a 1 8 ]
-"247
-[v leds_write@i i `uc  1 a 1 9 ]
-"246
-[v leds_write@out out `uc  1 a 1 8 ]
-"260
-} 0
-"174 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[v _lcd_printf lcd_printf `(v  1 e 0 0 ]
-{
-[v lcd_printf@c c `*.31uc  1 a 1 39 ]
-"181
-[v lcd_printf@s s `*.39uc  1 a 2 36 ]
-"178
-[v lcd_printf@u u `us  1 a 2 34 ]
-"177
-[v lcd_printf@d d `s  1 a 2 32 ]
-"175
-[v lcd_printf@pa pa `[1]*.29v  1 a 1 40 ]
-"176
-[v lcd_printf@a a `uc  1 a 1 38 ]
-"174
-[v lcd_printf@c c `*.31uc  1 a 1 39 ]
-"271
-} 0
-"275
-[v _lcd_print_uint16 lcd_print_uint16 `(v  1 e 0 0 ]
-{
-"277
-[v lcd_print_uint16@buffer buffer `[11]uc  1 a 11 17 ]
-"276
-[v lcd_print_uint16@cnt cnt `ui  1 a 2 28 ]
-"275
-[v lcd_print_uint16@n n `us  1 p 2 13 ]
-"290
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwmod@counter counter `uc  1 a 1 4 ]
-"10
-[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
-[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
-"26
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
-"12
-[v ___lwdiv@counter counter `uc  1 a 1 4 ]
-"10
-[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
-"31
-} 0
-"293 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[v _lcd_print_int16 lcd_print_int16 `(v  1 e 0 0 ]
-{
-"296
-[v lcd_print_int16@buffer buffer `VE[11]uc  1 a 11 18 ]
-"294
-[v lcd_print_int16@cnt cnt `ui  1 a 2 29 ]
-"295
-[v lcd_print_int16@flag_negativo flag_negativo `uc  1 a 1 17 ]
-"293
-[v lcd_print_int16@n n `s  1 p 2 13 ]
-"328
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"11
-[v ___awmod@sign sign `uc  1 a 1 5 ]
-[v ___awmod@counter counter `uc  1 a 1 4 ]
-"10
-[v ___awmod@dividend dividend `i  1 p 2 0 ]
-[v ___awmod@divisor divisor `i  1 p 2 2 ]
-"35
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"11
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"12
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"10
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"42
-} 0
-"145 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[v _lcd_gotoxy lcd_gotoxy `(v  1 e 0 0 ]
-{
-[v lcd_gotoxy@coluna coluna `uc  1 a 1 14 ]
-"146
-[v lcd_gotoxy@address address `uc  1 a 1 15 ]
-"145
-[v lcd_gotoxy@coluna coluna `uc  1 a 1 14 ]
-[v lcd_gotoxy@linha linha `uc  1 p 1 13 ]
-"170
-} 0
-"135
-[v _lcd_send_string lcd_send_string `(v  1 e 0 0 ]
-{
-"136
-[v lcd_send_string@c c `uc  1 a 1 15 ]
-"135
-[v lcd_send_string@fmt fmt `*.39uc  1 p 2 13 ]
-"142
-} 0
-"59
-[v _lcd_init lcd_init `(v  1 e 0 0 ]
-{
-"60
-[v lcd_init@i i `uc  1 a 1 14 ]
-"88
-} 0
-"10 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\memset.c
-[v _memset memset `(*.39v  1 e 2 0 ]
-{
-"15
-[v memset@p p `*.39uc  1 a 2 6 ]
-"10
-[v memset@p1 p1 `*.39v  1 p 2 0 ]
-[v memset@c c `i  1 p 2 2 ]
-[v memset@n n `ui  1 p 2 4 ]
-"22
-} 0
-"112 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[v _lcd_send_byte lcd_send_byte `(v  1 e 0 0 ]
-{
-[v lcd_send_byte@n n `uc  1 a 1 12 ]
-[v lcd_send_byte@n n `uc  1 a 1 12 ]
-[v lcd_send_byte@address address `uc  1 p 1 10 ]
-"132
-} 0
-"91
-[v _lcd_send_nibble lcd_send_nibble `(v  1 e 0 0 ]
-{
-[v lcd_send_nibble@nibble nibble `uc  1 a 1 8 ]
-[s S204 . 1 `uc 1 bit0 1 0 :1:0 
-`uc 1 bit1 1 0 :1:1 
-`uc 1 bit2 1 0 :1:2 
-`uc 1 bit3 1 0 :1:3 
-`uc 1 bit4 1 0 :1:4 
-`uc 1 bit5 1 0 :1:5 
-`uc 1 bit6 1 0 :1:6 
-`uc 1 bit7 1 0 :1:7 
-]
-"92
-[u S213 _Byte 1 `uc 1 value 1 0 `S204 1 . 1 0 ]
-[v lcd_send_nibble@aux aux `S213  1 a 1 9 ]
-"91
-[v lcd_send_nibble@nibble nibble `uc  1 a 1 8 ]
-"109
-} 0
-"170 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_high@pin pin `*.30S42  1 a 1 4 ]
-[v GPIO_pin_high@pin pin `*.30S42  1 a 1 4 ]
-"172
-} 0
-"199
-[v _GPIO_pin_outputBit GPIO_pin_outputBit `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_outputBit@pin pin `*.30S42  1 a 1 6 ]
-[v GPIO_pin_outputBit@pin pin `*.30S42  1 a 1 6 ]
-[v GPIO_pin_outputBit@flag flag `uc  1 p 1 0 ]
-"208
-} 0
-"175
-[v _GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_low@pin pin `*.30S42  1 a 1 5 ]
-[v GPIO_pin_low@pin pin `*.30S42  1 a 1 5 ]
-"177
-} 0
-"48 C:\JAGA_TESTE/Middleware/lcd/lcd.c
-[v _lcd_attach lcd_attach `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v lcd_attach@pin pin `*.30S42  1 a 1 9 ]
-[v lcd_attach@pin pin `*.30S42  1 a 1 9 ]
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v lcd_attach@reg reg `*.30S45  1 p 1 8 ]
-"56
-} 0
-"52 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[v _button_attach button_attach `(v  1 e 0 0 ]
-{
-[v button_attach@index index `uc  1 a 1 9 ]
-[v button_attach@index index `uc  1 a 1 9 ]
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v button_attach@reg reg `*.30S45  1 p 1 8 ]
-"58
-} 0
-"180 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_confDir GPIO_confDir `(v  1 e 0 0 ]
-{
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v GPIO_confDir@pin pin `*.39S45  1 p 2 0 ]
-[v GPIO_confDir@IODirection IODirection `E5460  1 p 1 2 ]
-"191
-} 0
-"164
-[v _GPIO_pin_attach GPIO_pin_attach `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_attach@pin pin `*.39S42  1 p 2 0 ]
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v GPIO_pin_attach@reg reg `*.30S45  1 p 1 2 ]
-"167
-} 0
-"41 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[v _buttons_init buttons_init `(v  1 e 0 0 ]
-{
-"42
-[v buttons_init@i i `uc  1 a 1 0 ]
-"49
-} 0
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_hw.c
-[v _setupHardware setupHardware `(v  1 e 0 0 ]
-{
-"36
-} 0
-"13 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_mcu.c
-[v _init_mcu init_mcu `(v  1 e 0 0 ]
-{
-"18
-} 0
-"16 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_gpio.c
-[v _init_gpio init_gpio `(v  1 e 0 0 ]
-{
-"42
-} 0
-"127 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_write_data GPIO_write_data `(v  1 e 0 0 ]
-{
-[v GPIO_write_data@registrador registrador `*.39VEuc  1 p 2 0 ]
-[v GPIO_write_data@UI8_value UI8_value `uc  1 p 1 2 ]
-"129
-} 0
-"14 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_uart.c
-[v _init_uart init_uart `(v  1 e 0 0 ]
-{
-"16
-} 0
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_pwm.c
-[v _init_pwm init_pwm `(v  1 e 0 0 ]
-{
-"14
-} 0
-"12 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_ad.c
-[v _init_AD init_AD `(v  1 e 0 0 ]
-{
-"14
-} 0
-"13 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_i2c.c
-[v _init_i2c init_i2c `(v  1 e 0 0 ]
-{
-"15
-} 0
-"21 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
-[v _init_timer0 init_timer0 `(v  1 e 0 0 ]
-{
-"36
-} 0
-"291 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
-[v _timer_set_callbak timer_set_callbak `(v  1 e 0 0 ]
-{
-[v timer_set_callbak@module module `uc  1 a 1 8 ]
-[v timer_set_callbak@module module `uc  1 a 1 8 ]
-[v timer_set_callbak@func func `*.37(v  1 p 2 6 ]
-"310
-} 0
-"168 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
-[v _interrupt_set_callback interrupt_set_callback `(v  1 e 0 0 ]
-{
-[v interrupt_set_callback@_interrupt _interrupt `us  1 p 2 0 ]
-[v interrupt_set_callback@function function `*.37(v  1 p 2 2 ]
-"208
-} 0
-"267 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
-[v _timer_priority_interrupt timer_priority_interrupt `(v  1 e 0 0 ]
-{
-[v timer_priority_interrupt@module module `uc  1 a 1 6 ]
-[v timer_priority_interrupt@module module `uc  1 a 1 6 ]
-[v timer_priority_interrupt@value value `uc  1 p 1 5 ]
-"288
-} 0
-"56 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
-[v _interrupt_set_priority interrupt_set_priority `(v  1 e 0 0 ]
-{
-[v interrupt_set_priority@_interrupt _interrupt `us  1 p 2 0 ]
-[v interrupt_set_priority@priority priority `uc  1 p 1 2 ]
-"67
-} 0
-"239 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
-[v _timer_setup_interrupt timer_setup_interrupt `(v  1 e 0 0 ]
-{
-[v timer_setup_interrupt@module module `uc  1 a 1 6 ]
-[v timer_setup_interrupt@module module `uc  1 a 1 6 ]
-[v timer_setup_interrupt@value value `uc  1 p 1 5 ]
-"264
-} 0
-"41 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
-[v _interrupt_setup interrupt_setup `(v  1 e 0 0 ]
-{
-[v interrupt_setup@_interrupt _interrupt `us  1 p 2 0 ]
-[v interrupt_setup@setup setup `uc  1 p 1 2 ]
-"52
-} 0
-"217 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
-[v _timer_start timer_start `(v  1 e 0 0 ]
-{
-[v timer_start@module module `uc  1 a 1 1 ]
-[v timer_start@module module `uc  1 a 1 1 ]
-[v timer_start@value value `uc  1 p 1 0 ]
-"236
-} 0
-"192
-[v _timer_setup_bits timer_setup_bits `(v  1 e 0 0 ]
-{
-[v timer_setup_bits@module module `uc  1 a 1 1 ]
-[v timer_setup_bits@module module `uc  1 a 1 1 ]
-[v timer_setup_bits@bits bits `uc  1 p 1 0 ]
-"214
-} 0
-"150
-[v _timer_setup_scale timer_setup_scale `(v  1 e 0 0 ]
-{
-[v timer_setup_scale@module module `uc  1 a 1 4 ]
-[v timer_setup_scale@module module `uc  1 a 1 4 ]
-[v timer_setup_scale@on_off on_off `uc  1 p 1 0 ]
-[v timer_setup_scale@prescale prescale `uc  1 p 1 1 ]
-[v timer_setup_scale@postscale postscale `uc  1 p 1 2 ]
-"189
-} 0
-"129
-[v _timer_setup_clock timer_setup_clock `(v  1 e 0 0 ]
-{
-[v timer_setup_clock@module module `uc  1 a 1 2 ]
-[v timer_setup_clock@module module `uc  1 a 1 2 ]
-[v timer_setup_clock@source source `uc  1 p 1 0 ]
-[v timer_setup_clock@transition transition `uc  1 p 1 1 ]
-"147
-} 0
-"86
-[v _timer_init_regs timer_init_regs `(v  1 e 0 0 ]
-{
-[v timer_init_regs@module module `uc  1 a 1 0 ]
-[v timer_init_regs@module module `uc  1 a 1 0 ]
-"126
-} 0
-"32
-[v _timer_set_counter timer_set_counter `(v  1 e 0 0 ]
-{
-[v timer_set_counter@module module `uc  1 a 1 2 ]
+[v _UN_ledsBlinkFast UN_ledsBlinkFast `S338  1 e 1 0 ]
 [s S21 . 2 `uc 1 b1 1 0 `uc 1 b2 1 1 ]
-"33
-[s S622 . 2 `uc 1 bit0 1 0 :1:0 
+"12 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_info.c
+[s S629 . 2 `uc 1 bit0 1 0 :1:0 
 `uc 1 bit1 1 0 :1:1 
 `uc 1 bit2 1 0 :1:2 
 `uc 1 bit3 1 0 :1:3 
@@ -1758,54 +466,1238 @@ TECLA_BACK 3
 `uc 1 bit14 1 1 :1:6 
 `uc 1 bit15 1 1 :1:7 
 ]
-[u S639 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S622 1 . 2 0 ]
-[v timer_set_counter@aux_value aux_value `S639  1 a 2 3 ]
-"32
-[v timer_set_counter@module module `uc  1 a 1 2 ]
-[v timer_set_counter@val val `us  1 p 2 0 ]
-"59
+[u S646 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S629 1 . 2 0 ]
+[v _id_device id_device `S646  1 e 2 0 ]
+"15
+[v _version version `us  1 e 2 0 ]
+"2571 /opt/microchip/xc8/v1.34/include/pic18f4550.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+"2727
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"2836
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"2989
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"3109
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+"3976
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"4173
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4394
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"4565
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4786
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S2700 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 SPPIE 1 0 :1:7 
+]
+"4974
+[s S2709 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIE 1 0 :1:7 
+]
+[s S2712 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[s S2715 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+]
+[u S2718 . 1 `S2700 1 . 1 0 `S2709 1 . 1 0 `S2712 1 . 1 0 `S2715 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES2718  1 e 1 @3997 ]
+[s S1768 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 SPPIF 1 0 :1:7 
+]
+"5062
+[s S1777 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[s S1780 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[s S1783 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+]
+[u S1786 . 1 `S1768 1 . 1 0 `S1777 1 . 1 0 `S1780 1 . 1 0 `S1783 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1786  1 e 1 @3998 ]
+[s S2826 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR2IP 1 0 :1:1 
+`uc 1 CCP1IP 1 0 :1:2 
+`uc 1 SSPIP 1 0 :1:3 
+`uc 1 TXIP 1 0 :1:4 
+`uc 1 RCIP 1 0 :1:5 
+`uc 1 ADIP 1 0 :1:6 
+`uc 1 SPPIP 1 0 :1:7 
+]
+"5150
+[s S2835 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIP 1 0 :1:7 
+]
+[s S2838 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IP 1 0 :1:5 
+]
+[s S2841 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IP 1 0 :1:4 
+]
+[u S2844 . 1 `S2826 1 . 1 0 `S2835 1 . 1 0 `S2838 1 . 1 0 `S2841 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES2844  1 e 1 @3999 ]
+[s S2758 . 1 `uc 1 CCP2IE 1 0 :1:0 
+`uc 1 TMR3IE 1 0 :1:1 
+`uc 1 HLVDIE 1 0 :1:2 
+`uc 1 BCLIE 1 0 :1:3 
+`uc 1 EEIE 1 0 :1:4 
+`uc 1 USBIE 1 0 :1:5 
+`uc 1 CMIE 1 0 :1:6 
+`uc 1 OSCFIE 1 0 :1:7 
+]
+"5230
+[s S2767 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIE 1 0 :1:2 
+]
+[u S2770 . 1 `S2758 1 . 1 0 `S2767 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES2770  1 e 1 @4000 ]
+[s S1810 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 USBIF 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"5300
+[s S1819 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+]
+[u S1822 . 1 `S1810 1 . 1 0 `S1819 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES1822  1 e 1 @4001 ]
+[s S2868 . 1 `uc 1 CCP2IP 1 0 :1:0 
+`uc 1 TMR3IP 1 0 :1:1 
+`uc 1 HLVDIP 1 0 :1:2 
+`uc 1 BCLIP 1 0 :1:3 
+`uc 1 EEIP 1 0 :1:4 
+`uc 1 USBIP 1 0 :1:5 
+`uc 1 CMIP 1 0 :1:6 
+`uc 1 OSCFIP 1 0 :1:7 
+]
+"5370
+[s S2877 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIP 1 0 :1:2 
+]
+[u S2880 . 1 `S2868 1 . 1 0 `S2877 1 . 1 0 ]
+[v _IPR2bits IPR2bits `VES2880  1 e 1 @4002 ]
+[s S707 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"5440
+[s S716 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 EEFS 1 0 :1:6 
+]
+[u S719 . 1 `S707 1 . 1 0 `S716 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES719  1 e 1 @4006 ]
+"5484
+[v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
+"5490
+[v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
+"5496
+[v _EEADR EEADR `VEuc  1 e 1 @4009 ]
+[s S3237 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"5543
+[s S3246 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S3249 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S3252 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S3255 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S3258 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S3260 . 1 `S3237 1 . 1 0 `S3246 1 . 1 0 `S3249 1 . 1 0 `S3252 1 . 1 0 `S3255 1 . 1 0 `S3258 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES3260  1 e 1 @4011 ]
+[s S3150 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"5771
+[s S3159 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S3162 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S3165 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S3168 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S3171 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S3174 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S3177 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S3179 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[s S3182 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S3185 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S3187 . 1 `S3150 1 . 1 0 `S3159 1 . 1 0 `S3162 1 . 1 0 `S3165 1 . 1 0 `S3168 1 . 1 0 `S3171 1 . 1 0 `S3174 1 . 1 0 `S3177 1 . 1 0 `S3179 1 . 1 0 `S3182 1 . 1 0 `S3185 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES3187  1 e 1 @4012 ]
+"6008
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"6019
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"6030
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"6041
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
+[s S2562 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+]
+"6090
+[s S2565 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 TMR3CS 1 0 :1:1 
+`uc 1 nT3SYNC 1 0 :1:2 
+`uc 1 T3CCP1 1 0 :1:3 
+`uc 1 T3CKPS 1 0 :2:4 
+`uc 1 T3CCP2 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S2573 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T3SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+]
+[s S2579 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T3NSYNC 1 0 :1:2 
+]
+[s S2582 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RD163 1 0 :1:7 
+]
+[s S2585 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN3 1 0 :1:3 
+]
+[s S2588 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T3RD16 1 0 :1:7 
+]
+[u S2591 . 1 `S2562 1 . 1 0 `S2565 1 . 1 0 `S2573 1 . 1 0 `S2579 1 . 1 0 `S2582 1 . 1 0 `S2585 1 . 1 0 `S2588 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES2591  1 e 1 @4017 ]
+"6169
+[v _TMR3 TMR3 `VEus  1 e 2 @4018 ]
+"6175
+[v _TMR3L TMR3L `VEuc  1 e 1 @4018 ]
+"6181
+[v _TMR3H TMR3H `VEuc  1 e 1 @4019 ]
+[s S3291 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 TXCKP 1 0 :1:4 
+`uc 1 RXDTP 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"6700
+[s S3300 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCMT 1 0 :1:6 
+]
+[s S3305 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RXCKP 1 0 :1:5 
+]
+[s S3308 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 W4E 1 0 :1:1 
+]
+[u S3311 . 1 `S3291 1 . 1 0 `S3300 1 . 1 0 `S3305 1 . 1 0 `S3308 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES3311  1 e 1 @4024 ]
+[s S1980 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+"6951
+[s S1984 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+[u S1993 . 1 `S1980 1 . 1 0 `S1984 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES1993  1 e 1 @4029 ]
+"7091
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+[s S598 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"7124
+[s S603 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S610 . 1 `S598 1 . 1 0 `S603 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES610  1 e 1 @4032 ]
+[s S478 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"7204
+[s S481 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S488 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+]
+[s S491 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG01 1 0 :1:4 
+]
+[s S494 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S497 . 1 `S478 1 . 1 0 `S481 1 . 1 0 `S488 1 . 1 0 `S491 1 . 1 0 `S494 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES497  1 e 1 @4033 ]
+[s S523 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"7311
+[s S526 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S533 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S540 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S543 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S546 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S549 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S552 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S555 . 1 `S523 1 . 1 0 `S526 1 . 1 0 `S523 1 . 1 0 `S533 1 . 1 0 `S540 1 . 1 0 `S543 1 . 1 0 `S546 1 . 1 0 `S549 1 . 1 0 `S552 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES555  1 e 1 @4034 ]
+"7391
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"7397
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S1556 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"7420
+[u S1565 . 1 `S1556 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES1565  1 e 1 @4037 ]
+[s S1524 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"7484
+[s S1530 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S1535 . 1 `S1524 1 . 1 0 `S1530 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES1535  1 e 1 @4038 ]
+[s S1351 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"7635
+[s S1354 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S1357 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S1372 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S1377 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S1383 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S1388 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S1391 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S1394 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S1399 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S1404 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S1409 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S1412 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S1415 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S1418 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S1421 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S1424 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S1427 . 1 `S1351 1 . 1 0 `S1354 1 . 1 0 `S1357 1 . 1 0 `S1351 1 . 1 0 `S1354 1 . 1 0 `S1372 1 . 1 0 `S1377 1 . 1 0 `S1383 1 . 1 0 `S1388 1 . 1 0 `S1391 1 . 1 0 `S1394 1 . 1 0 `S1399 1 . 1 0 `S1404 1 . 1 0 `S1409 1 . 1 0 `S1412 1 . 1 0 `S1415 1 . 1 0 `S1418 1 . 1 0 `S1421 1 . 1 0 `S1424 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES1427  1 e 1 @4039 ]
+"7799
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"7805
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+[s S2011 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"7839
+[s S2015 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[s S2023 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S2029 . 1 `S2011 1 . 1 0 `S2015 1 . 1 0 `S2023 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES2029  1 e 1 @4042 ]
+"7908
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"8017
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+[s S2486 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"8058
+[s S2489 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 T1RUN 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S2497 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S2503 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN 1 0 :1:3 
+]
+[s S2506 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T1RD16 1 0 :1:7 
+]
+[u S2509 . 1 `S2486 1 . 1 0 `S2489 1 . 1 0 `S2497 1 . 1 0 `S2503 1 . 1 0 `S2506 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES2509  1 e 1 @4045 ]
+"8127
+[v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
+"8133
+[v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
+"8139
+[v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
+[s S3812 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"8194
+[s S3814 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S3817 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S3820 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S3823 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S3826 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S3835 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S3838 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S3846 . 1 `S3812 1 . 1 0 `S3814 1 . 1 0 `S3817 1 . 1 0 `S3820 1 . 1 0 `S3823 1 . 1 0 `S3826 1 . 1 0 `S3835 1 . 1 0 `S3838 1 . 1 0 ]
+[v _RCONbits RCONbits `VES3846  1 e 1 @4048 ]
+[s S2460 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"8691
+[s S2467 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S2471 . 1 `S2460 1 . 1 0 `S2467 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES2471  1 e 1 @4053 ]
+"8746
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"8752
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"8950
+[v _FSR0L FSR0L `VEuc  1 e 1 @4073 ]
+"8956
+[v _FSR0H FSR0H `VEuc  1 e 1 @4074 ]
+"8980
+[v _POSTINC0 POSTINC0 `VEuc  1 e 1 @4078 ]
+[s S2787 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"9110
+[s S2790 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S2799 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S2804 . 1 `S2787 1 . 1 0 `S2790 1 . 1 0 `S2799 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES2804  1 e 1 @4081 ]
+[s S736 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"9211
+[s S745 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S754 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[s S763 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S772 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S776 . 1 `S736 1 . 1 0 `S745 1 . 1 0 `S754 1 . 1 0 `S763 1 . 1 0 `S772 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES776  1 e 1 @4082 ]
+"9313
+[v _TABLAT TABLAT `VEuc  1 e 1 @4085 ]
+"9327
+[v _TBLPTRL TBLPTRL `VEuc  1 e 1 @4086 ]
+"9333
+[v _TBLPTRH TBLPTRH `VEuc  1 e 1 @4087 ]
+"9339
+[v _TBLPTRU TBLPTRU `VEuc  1 e 1 @4088 ]
+"10683
+[v _SSPEN SSPEN `VEb  1 e 0 @32309 ]
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"27
 } 0
-"31 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c
+[v _setupHardware setupHardware `(v  1 e 0 0 ]
+{
+"36
+} 0
+"30 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
 [v _interrupt_init interrupt_init `(v  1 e 0 0 ]
 {
 "37
 } 0
-"130
+"13 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_uart.c
+[v _init_uart init_uart `(v  1 e 0 0 ]
+{
+"16
+} 0
+"20 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
+[v _init_timer0 init_timer0 `(v  1 e 0 0 ]
+{
+"36
+} 0
+"216 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
+[v _timer_start timer_start `(v  1 e 0 0 ]
+{
+[v timer_start@module module `uc  1 a 1 wreg ]
+[v timer_start@module module `uc  1 a 1 wreg ]
+[v timer_start@value value `uc  1 p 1 30 ]
+[v timer_start@module module `uc  1 a 1 31 ]
+"236
+} 0
+"149
+[v _timer_setup_scale timer_setup_scale `(v  1 e 0 0 ]
+{
+[v timer_setup_scale@module module `uc  1 a 1 wreg ]
+[v timer_setup_scale@module module `uc  1 a 1 wreg ]
+[v timer_setup_scale@on_off on_off `uc  1 p 1 30 ]
+[v timer_setup_scale@prescale prescale `uc  1 p 1 31 ]
+[v timer_setup_scale@postscale postscale `uc  1 p 1 32 ]
+[v timer_setup_scale@module module `uc  1 a 1 0 ]
+"189
+} 0
+"238
+[v _timer_setup_interrupt timer_setup_interrupt `(v  1 e 0 0 ]
+{
+[v timer_setup_interrupt@module module `uc  1 a 1 wreg ]
+[v timer_setup_interrupt@module module `uc  1 a 1 wreg ]
+[v timer_setup_interrupt@value value `uc  1 p 1 33 ]
+[v timer_setup_interrupt@module module `uc  1 a 1 0 ]
+"264
+} 0
+"40 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
+[v _interrupt_setup interrupt_setup `(v  1 e 0 0 ]
+{
+[v interrupt_setup@_interrupt _interrupt `us  1 p 2 30 ]
+[v interrupt_setup@setup setup `uc  1 p 1 32 ]
+"52
+} 0
+"128 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
+[v _timer_setup_clock timer_setup_clock `(v  1 e 0 0 ]
+{
+[v timer_setup_clock@module module `uc  1 a 1 wreg ]
+[v timer_setup_clock@module module `uc  1 a 1 wreg ]
+[v timer_setup_clock@source source `uc  1 p 1 30 ]
+[v timer_setup_clock@transition transition `uc  1 p 1 31 ]
+[v timer_setup_clock@module module `uc  1 a 1 32 ]
+"147
+} 0
+"191
+[v _timer_setup_bits timer_setup_bits `(v  1 e 0 0 ]
+{
+[v timer_setup_bits@module module `uc  1 a 1 wreg ]
+[v timer_setup_bits@module module `uc  1 a 1 wreg ]
+[v timer_setup_bits@bits bits `uc  1 p 1 30 ]
+[v timer_setup_bits@module module `uc  1 a 1 31 ]
+"214
+} 0
+"31
+[v _timer_set_counter timer_set_counter `(v  1 e 0 0 ]
+{
+[v timer_set_counter@module module `uc  1 a 1 wreg ]
+[s S21 . 2 `uc 1 b1 1 0 `uc 1 b2 1 1 ]
+"33
+[s S629 . 2 `uc 1 bit0 1 0 :1:0 
+`uc 1 bit1 1 0 :1:1 
+`uc 1 bit2 1 0 :1:2 
+`uc 1 bit3 1 0 :1:3 
+`uc 1 bit4 1 0 :1:4 
+`uc 1 bit5 1 0 :1:5 
+`uc 1 bit6 1 0 :1:6 
+`uc 1 bit7 1 0 :1:7 
+`uc 1 bit8 1 1 :1:0 
+`uc 1 bit9 1 1 :1:1 
+`uc 1 bit10 1 1 :1:2 
+`uc 1 bit11 1 1 :1:3 
+`uc 1 bit12 1 1 :1:4 
+`uc 1 bit13 1 1 :1:5 
+`uc 1 bit14 1 1 :1:6 
+`uc 1 bit15 1 1 :1:7 
+]
+[u S646 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S629 1 . 2 0 ]
+[v timer_set_counter@aux_value aux_value `S646  1 a 2 1 ]
+"31
+[v timer_set_counter@module module `uc  1 a 1 wreg ]
+[v timer_set_counter@val val `us  1 p 2 30 ]
+"35
+[v timer_set_counter@module module `uc  1 a 1 0 ]
+"59
+} 0
+"290
+[v _timer_set_callbak timer_set_callbak `(v  1 e 0 0 ]
+{
+[v timer_set_callbak@module module `uc  1 a 1 wreg ]
+[v timer_set_callbak@module module `uc  1 a 1 wreg ]
+[v timer_set_callbak@func func `*.37(v  1 p 2 2 ]
+[v timer_set_callbak@module module `uc  1 a 1 0 ]
+"310
+} 0
+"167 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
+[v _interrupt_set_callback interrupt_set_callback `(v  1 e 0 0 ]
+{
+[v interrupt_set_callback@_interrupt _interrupt `us  1 p 2 30 ]
+[v interrupt_set_callback@function function `*.37(v  1 p 2 32 ]
+"208
+} 0
+"266 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
+[v _timer_priority_interrupt timer_priority_interrupt `(v  1 e 0 0 ]
+{
+[v timer_priority_interrupt@module module `uc  1 a 1 wreg ]
+[v timer_priority_interrupt@module module `uc  1 a 1 wreg ]
+[v timer_priority_interrupt@value value `uc  1 p 1 33 ]
+[v timer_priority_interrupt@module module `uc  1 a 1 0 ]
+"288
+} 0
+"55 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
+[v _interrupt_set_priority interrupt_set_priority `(v  1 e 0 0 ]
+{
+[v interrupt_set_priority@_interrupt _interrupt `us  1 p 2 30 ]
+[v interrupt_set_priority@priority priority `uc  1 p 1 32 ]
+"67
+} 0
+"85 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
+[v _timer_init_regs timer_init_regs `(v  1 e 0 0 ]
+{
+[v timer_init_regs@module module `uc  1 a 1 wreg ]
+[v timer_init_regs@module module `uc  1 a 1 wreg ]
+[v timer_init_regs@module module `uc  1 a 1 30 ]
+"126
+} 0
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_pwm.c
+[v _init_pwm init_pwm `(v  1 e 0 0 ]
+{
+"14
+} 0
+"12 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_mcu.c
+[v _init_mcu init_mcu `(v  1 e 0 0 ]
+{
+"18
+} 0
+"12 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_i2c.c
+[v _init_i2c init_i2c `(v  1 e 0 0 ]
+{
+"15
+} 0
+"15 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_gpio.c
+[v _init_gpio init_gpio `(v  1 e 0 0 ]
+{
+"42
+} 0
+"126 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_write_data GPIO_write_data `(v  1 e 0 0 ]
+{
+[v GPIO_write_data@registrador registrador `*.39VEuc  1 p 2 30 ]
+[v GPIO_write_data@UI8_value UI8_value `uc  1 p 1 32 ]
+"129
+} 0
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_ad.c
+[v _init_AD init_AD `(v  1 e 0 0 ]
+{
+"14
+} 0
+"38 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c
+[v _setupDevices setupDevices `(v  1 e 0 0 ]
+{
+"65
+} 0
+"134 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v _leds_attach leds_attach `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v leds_attach@pin pin `*.39S42  1 p 2 5 ]
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v leds_attach@reg reg `*.39S45  1 p 2 7 ]
+"143
+} 0
+"58 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[v _lcd_init lcd_init `(v  1 e 0 0 ]
+{
+"60
+[v lcd_init@i i `uc  1 a 1 10 ]
+"88
+} 0
+"8 /opt/microchip/xc8/v1.34/sources/common/memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 30 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"47 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[v _lcd_attach lcd_attach `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v lcd_attach@pin pin `*.39S42  1 p 2 5 ]
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v lcd_attach@reg reg `*.39S45  1 p 2 7 ]
+"56
+} 0
+"18 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_info.c
+[v _info_init info_init `(v  1 e 0 0 ]
+{
+"22
+} 0
+"40 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
+[v _buttons_init buttons_init `(v  1 e 0 0 ]
+{
+"42
+[v buttons_init@i i `uc  1 a 1 30 ]
+"49
+} 0
+"51
+[v _button_attach button_attach `(v  1 e 0 0 ]
+{
+[v button_attach@index index `uc  1 a 1 wreg ]
+[v button_attach@index index `uc  1 a 1 wreg ]
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v button_attach@reg reg `*.39S45  1 p 2 5 ]
+"54
+[v button_attach@index index `uc  1 a 1 0 ]
+"58
+} 0
+"163 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_pin_attach GPIO_pin_attach `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_pin_attach@pin pin `*.39S42  1 p 2 30 ]
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v GPIO_pin_attach@reg reg `*.39S45  1 p 2 32 ]
+"167
+} 0
+"179
+[v _GPIO_confDir GPIO_confDir `(v  1 e 0 0 ]
+{
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v GPIO_confDir@pin pin `*.39S45  1 p 2 30 ]
+[v GPIO_confDir@IODirection IODirection `E5453  1 p 1 32 ]
+"191
+} 0
+"11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_control.c
+[v _run_system run_system `(v  1 e 0 0 ]
+{
+"14
+} 0
+"16 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c
+[v _run_him run_him `(v  1 e 0 0 ]
+{
+"33
+} 0
+"50 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v _leds_set leds_set `(v  1 e 0 0 ]
+{
+[v leds_set@UI8_InLeds UI8_InLeds `uc  1 a 1 wreg ]
+"53
+[v leds_set@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 10 ]
+"50
+[v leds_set@UI8_InLeds UI8_InLeds `uc  1 a 1 wreg ]
+[v leds_set@UI8_Action UI8_Action `uc  1 p 1 0 ]
+[v leds_set@UI8_InLeds UI8_InLeds `uc  1 a 1 11 ]
+"132
+} 0
+"199
+[v _leds_on leds_on `(v  1 e 0 0 ]
+{
+[v leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"201
+[v leds_on@UI8_aux UI8_aux `uc  1 a 1 8 ]
+"199
+[v leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"203
+[v leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 7 ]
+"210
+} 0
+"229
+[v _leds_status leds_status `(uc  1 e 1 0 ]
+{
+"231
+[v leds_status@i i `uc  1 a 1 6 ]
+[s S205 . 1 `uc 1 bit0 1 0 :1:0 
+`uc 1 bit1 1 0 :1:1 
+`uc 1 bit2 1 0 :1:2 
+`uc 1 bit3 1 0 :1:3 
+`uc 1 bit4 1 0 :1:4 
+`uc 1 bit5 1 0 :1:5 
+`uc 1 bit6 1 0 :1:6 
+`uc 1 bit7 1 0 :1:7 
+]
+"232
+[u S384 _UByte 1 `uc 1 value 1 0 `S205 1 . 1 0 ]
+[v leds_status@status status `S384  1 a 1 5 ]
+"243
+} 0
+"193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_input_state@pin pin `*.39S42  1 p 2 30 ]
+"196
+} 0
+"212 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v _leds_off leds_off `(v  1 e 0 0 ]
+{
+[v leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"215
+[v leds_off@UI8_aux UI8_aux `uc  1 a 1 8 ]
+"216
+[v leds_off@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 7 ]
+"212
+[v leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"219
+[v leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 9 ]
+"227
+} 0
+"245
+[v _leds_write leds_write `(v  1 e 0 0 ]
+{
+[v leds_write@out out `uc  1 a 1 wreg ]
+"247
+[v leds_write@i i `uc  1 a 1 6 ]
+"245
+[v leds_write@out out `uc  1 a 1 wreg ]
+"249
+[v leds_write@out out `uc  1 a 1 5 ]
+"260
+} 0
+"173 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[v _lcd_printf lcd_printf `(v  1 e 0 0 ]
+{
+"175
+[v lcd_printf@pa pa `[1]*.39v  1 a 2 39 ]
+"179
+[v lcd_printf@s s `*.2uc  1 a 2 36 ]
+"178
+[v lcd_printf@u u `us  1 a 2 34 ]
+"177
+[v lcd_printf@d d `s  1 a 2 32 ]
+"176
+[v lcd_printf@a a `uc  1 a 1 38 ]
+"173
+[v lcd_printf@c c `*.25uc  1 p 2 29 ]
+"249
+} 0
+"134
+[v _lcd_send_string lcd_send_string `(v  1 e 0 0 ]
+{
+"136
+[v lcd_send_string@c c `uc  1 a 1 11 ]
+"134
+[v lcd_send_string@fmt fmt `*.2uc  1 p 2 9 ]
+"142
+} 0
+"252
+[v _lcd_print_uint16 lcd_print_uint16 `(v  1 e 0 0 ]
+{
+"255
+[v lcd_print_uint16@buffer buffer `[11]uc  1 a 11 15 ]
+"254
+[v lcd_print_uint16@cnt cnt `ui  1 a 2 26 ]
+"252
+[v lcd_print_uint16@n n `us  1 p 2 9 ]
+"268
+} 0
+"8 /opt/microchip/xc8/v1.34/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 0 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 30 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 32 ]
+"26
+} 0
+"8 /opt/microchip/xc8/v1.34/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 1 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 0 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 30 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 32 ]
+"31
+} 0
+"270 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[v _lcd_print_int16 lcd_print_int16 `(v  1 e 0 0 ]
+{
+"274
+[v lcd_print_int16@buffer buffer `VE[11]uc  1 a 11 16 ]
+"272
+[v lcd_print_int16@cnt cnt `ui  1 a 2 27 ]
+"273
+[v lcd_print_int16@flag_negativo flag_negativo `uc  1 a 1 15 ]
+"270
+[v lcd_print_int16@n n `s  1 p 2 9 ]
+"306
+} 0
+"8 /opt/microchip/xc8/v1.34/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 1 ]
+[v ___awmod@counter counter `uc  1 a 1 0 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 30 ]
+[v ___awmod@divisor divisor `i  1 p 2 32 ]
+"35
+} 0
+"8 /opt/microchip/xc8/v1.34/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 30 ]
+[v ___awdiv@divisor divisor `i  1 p 2 32 ]
+"42
+} 0
+"144 /home/jaga/git/JAGA/Middleware/lcd/lcd.c
+[v _lcd_gotoxy lcd_gotoxy `(v  1 e 0 0 ]
+{
+[v lcd_gotoxy@coluna coluna `uc  1 a 1 wreg ]
+"146
+[v lcd_gotoxy@address address `uc  1 a 1 11 ]
+"144
+[v lcd_gotoxy@coluna coluna `uc  1 a 1 wreg ]
+[v lcd_gotoxy@linha linha `uc  1 p 1 9 ]
+[v lcd_gotoxy@coluna coluna `uc  1 a 1 10 ]
+"170
+} 0
+"111
+[v _lcd_send_byte lcd_send_byte `(v  1 e 0 0 ]
+{
+[v lcd_send_byte@n n `uc  1 a 1 wreg ]
+[v lcd_send_byte@n n `uc  1 a 1 wreg ]
+[v lcd_send_byte@address address `uc  1 p 1 0 ]
+"113
+[v lcd_send_byte@n n `uc  1 a 1 8 ]
+"132
+} 0
+"90
+[v _lcd_send_nibble lcd_send_nibble `(v  1 e 0 0 ]
+{
+[v lcd_send_nibble@nibble nibble `uc  1 a 1 wreg ]
+[s S205 . 1 `uc 1 bit0 1 0 :1:0 
+`uc 1 bit1 1 0 :1:1 
+`uc 1 bit2 1 0 :1:2 
+`uc 1 bit3 1 0 :1:3 
+`uc 1 bit4 1 0 :1:4 
+`uc 1 bit5 1 0 :1:5 
+`uc 1 bit6 1 0 :1:6 
+`uc 1 bit7 1 0 :1:7 
+]
+"92
+[u S214 _Byte 1 `uc 1 value 1 0 `S205 1 . 1 0 ]
+[v lcd_send_nibble@aux aux `S214  1 a 1 6 ]
+"90
+[v lcd_send_nibble@nibble nibble `uc  1 a 1 wreg ]
+"94
+[v lcd_send_nibble@nibble nibble `uc  1 a 1 5 ]
+"109
+} 0
+"210 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_pin_outputBit GPIO_pin_outputBit `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_pin_outputBit@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_pin_outputBit@flag flag `uc  1 p 1 32 ]
+"220
+} 0
+"174
+[v _GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_pin_low@pin pin `*.39S42  1 p 2 30 ]
+"177
+} 0
+"169
+[v _GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_pin_high@pin pin `*.39S42  1 p 2 30 ]
+"172
+} 0
+"118 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
+[v _buttons_check_press buttons_check_press `(uc  1 e 1 0 ]
+{
+[v buttons_check_press@button_id button_id `uc  1 a 1 wreg ]
+[v buttons_check_press@button_id button_id `uc  1 a 1 wreg ]
+[v buttons_check_press@press press `uc  1 p 1 30 ]
+"120
+[v buttons_check_press@button_id button_id `uc  1 a 1 33 ]
+"159
+} 0
+"129 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
 [v _isr_low_interrupt isr_low_interrupt `IIL(v  1 e 0 0 ]
 {
 "160
 } 0
-"281
+"280
 [v _uart_tx_isr uart_tx_isr `T(v  1 s 0 uart_tx_isr ]
 {
 "292
 } 0
-"267
+"266
 [v _uart_rx_isr uart_rx_isr `T(v  1 s 0 uart_rx_isr ]
 {
 "278
 } 0
-"253
+"252
 [v _timer3_isr timer3_isr `T(v  1 s 0 timer3_isr ]
 {
 "264
 } 0
-"239
+"238
 [v _timer2_isr timer2_isr `T(v  1 s 0 timer2_isr ]
 {
 "250
 } 0
-"225
+"224
 [v _timer1_isr timer1_isr `T(v  1 s 0 timer1_isr ]
 {
 "236
 } 0
-"211
+"210
 [v _timer0_isr timer0_isr `T(v  1 s 0 timer0_isr ]
 {
 "222
 } 0
-"40 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
+"39 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 [v sys_timer@timer_counter timer_counter `(v  1 s 0 timer_counter ]
 {
 "43
@@ -1816,12 +1708,12 @@ TECLA_BACK 3
 [v sys_timer@timer_counter@tmr_1_s tmr_1_s `us  1 s 2 tmr_1_s ]
 "76
 } 0
-"32 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
+"31 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
 [v i1_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
 {
-[v i1timer_set_counter@module module `uc  1 a 1 2 ]
+[v i1timer_set_counter@module module `uc  1 a 1 wreg ]
 [s S21 . 2 `uc 1 b1 1 0 `uc 1 b2 1 1 ]
-[s S622 . 2 `uc 1 bit0 1 0 :1:0 
+[s S629 . 2 `uc 1 bit0 1 0 :1:0 
 `uc 1 bit1 1 0 :1:1 
 `uc 1 bit2 1 0 :1:2 
 `uc 1 bit3 1 0 :1:3 
@@ -1838,23 +1730,49 @@ TECLA_BACK 3
 `uc 1 bit14 1 1 :1:6 
 `uc 1 bit15 1 1 :1:7 
 ]
-[u S639 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S622 1 . 2 0 ]
-[v i1timer_set_counter@aux_value timer_set_counter `S639  1 a 2 3 ]
-[v i1timer_set_counter@module module `uc  1 a 1 2 ]
+[u S646 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S629 1 . 2 0 ]
+[v i1timer_set_counter@aux_value timer_set_counter `S646  1 a 2 3 ]
+[v i1timer_set_counter@module module `uc  1 a 1 wreg ]
 [v i1timer_set_counter@val val `us  1 p 2 0 ]
+"35
+[v i1timer_set_counter@module module `uc  1 a 1 2 ]
 "59
 } 0
-"100 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
+"99 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 [v _counter_1_s counter_1_s `T(v  1 s 0 counter_1_s ]
 {
 "102
 } 0
-"93
+"79
+[v _counter_1_ms counter_1_ms `T(v  1 s 0 counter_1_ms ]
+{
+"82
+} 0
+"85
+[v _counter_10_ms counter_10_ms `T(v  1 s 0 counter_10_ms ]
+{
+"89
+} 0
+"60 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
+[v _buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
+{
+"62
+[v buttons_read_isr_10ms@i i `uc  1 a 1 9 ]
+"116
+} 0
+"198 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_pin_state@pin pin `*.39S42  1 p 2 0 ]
+"208
+} 0
+"92 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 [v _counter_100_ms counter_100_ms `T(v  1 s 0 counter_100_ms ]
 {
 "96
 } 0
-"146 C:\JAGA_TESTE/Middleware/leds/leds.c
+"145 /home/jaga/git/JAGA/Middleware/leds/leds.c
 [v _leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
 {
 "147
@@ -1863,62 +1781,33 @@ TECLA_BACK 3
 [v leds_action_isr_10ms@UI8_timerLedFastReverseCounter UI8_timerLedFastReverseCounter `uc  1 s 1 UI8_timerLedFastReverseCounter ]
 "173
 } 0
-"176
+"175
 [v _leds_reverse leds_reverse `(v  1 e 0 0 ]
 {
-[v leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 14 ]
+[v leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
 "178
-[v leds_reverse@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 13 ]
-"176
-[v leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 14 ]
+[v leds_reverse@UI8_LedsTemp UI8_LedsTemp `uc  1 a 1 14 ]
+"175
+[v leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"181
+[v leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 15 ]
 "197
 } 0
-"213
-[v i1_leds_off leds_off `(v  1 e 0 0 ]
-{
-[v i1leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 12 ]
-[v i1leds_off@UI8_aux leds_off `uc  1 a 1 11 ]
-[v i1leds_off@UI8_LedsTemp leds_off `uc  1 a 1 10 ]
-[v i1leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 12 ]
-"227
-} 0
-"200
+"199
 [v i1_leds_on leds_on `(v  1 e 0 0 ]
 {
-[v i1leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 11 ]
+[v i1leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
 [v i1leds_on@UI8_aux leds_on `uc  1 a 1 12 ]
+[v i1leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"203
 [v i1leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 11 ]
 "210
 } 0
-"246
-[v i1_leds_write leds_write `(v  1 e 0 0 ]
-{
-[v i1leds_write@out out `uc  1 a 1 8 ]
-[v i1leds_write@i leds_write `uc  1 a 1 9 ]
-[v i1leds_write@out out `uc  1 a 1 8 ]
-"260
-} 0
-"175 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i1GPIO_pin_low@pin pin `*.30S42  1 a 1 5 ]
-[v i1GPIO_pin_low@pin pin `*.30S42  1 a 1 5 ]
-"177
-} 0
-"170
-[v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i1GPIO_pin_high@pin pin `*.30S42  1 a 1 4 ]
-[v i1GPIO_pin_high@pin pin `*.30S42  1 a 1 4 ]
-"172
-} 0
-"230 C:\JAGA_TESTE/Middleware/leds/leds.c
+"229
 [v i1_leds_status leds_status `(uc  1 e 1 0 ]
 {
 [v i1leds_status@i leds_status `uc  1 a 1 10 ]
-[s S204 . 1 `uc 1 bit0 1 0 :1:0 
+[s S205 . 1 `uc 1 bit0 1 0 :1:0 
 `uc 1 bit1 1 0 :1:1 
 `uc 1 bit2 1 0 :1:2 
 `uc 1 bit3 1 0 :1:3 
@@ -1927,196 +1816,110 @@ TECLA_BACK 3
 `uc 1 bit6 1 0 :1:6 
 `uc 1 bit7 1 0 :1:7 
 ]
-[u S381 _UByte 1 `uc 1 value 1 0 `S204 1 . 1 0 ]
-[v i1leds_status@status leds_status `S381  1 a 1 9 ]
+[u S384 _UByte 1 `uc 1 value 1 0 `S205 1 . 1 0 ]
+[v i1leds_status@status leds_status `S384  1 a 1 9 ]
 "243
 } 0
-"86 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
-[v _counter_10_ms counter_10_ms `T(v  1 s 0 counter_10_ms ]
-{
-"89
-} 0
-"61 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[v _buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
-{
-"62
-[v buttons_read_isr_10ms@i i `uc  1 a 1 9 ]
-"121
-} 0
-"194 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
+"193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 [v i1_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
 [v i1GPIO_input_state@pin pin `*.39S42  1 p 2 0 ]
 "196
 } 0
-"80 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
-[v _counter_1_ms counter_1_ms `T(v  1 s 0 counter_1_ms ]
+"212 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v i1_leds_off leds_off `(v  1 e 0 0 ]
 {
-"82
+[v i1leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+[v i1leds_off@UI8_aux leds_off `uc  1 a 1 12 ]
+[v i1leds_off@UI8_LedsTemp leds_off `uc  1 a 1 11 ]
+[v i1leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"219
+[v i1leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 13 ]
+"227
 } 0
-"77 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
+"245
+[v i1_leds_write leds_write `(v  1 e 0 0 ]
+{
+[v i1leds_write@out out `uc  1 a 1 wreg ]
+[v i1leds_write@i leds_write `uc  1 a 1 10 ]
+[v i1leds_write@out out `uc  1 a 1 wreg ]
+"249
+[v i1leds_write@out out `uc  1 a 1 9 ]
+"260
+} 0
+"174 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i1GPIO_pin_low@pin pin `*.39S42  1 p 2 0 ]
+"177
+} 0
+"169
+[v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i1GPIO_pin_high@pin pin `*.39S42  1 p 2 0 ]
+"172
+} 0
+"76 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
 [v _interrupt_is_enable interrupt_is_enable `(uc  1 e 1 0 ]
 {
 "79
 [v interrupt_is_enable@priority_status priority_status `uc  1 a 1 6 ]
 "78
 [v interrupt_is_enable@enable_status enable_status `uc  1 a 1 5 ]
-"77
+"76
 [v interrupt_is_enable@_interrupt _interrupt `us  1 p 2 0 ]
 [v interrupt_is_enable@priority priority `uc  1 p 1 2 ]
 "86
 } 0
-"92
+"91
 [v _isr_high_interrupt isr_high_interrupt `II(v  1 e 0 0 ]
 {
 "124
 } 0
-"281
+"280
 [v i2_uart_tx_isr uart_tx_isr `T(v  1 s 0 i2_uart_tx_isr ]
 {
 "292
 } 0
-"267
+"266
 [v i2_uart_rx_isr uart_rx_isr `T(v  1 s 0 i2_uart_rx_isr ]
 {
 "278
 } 0
-"253
+"252
 [v i2_timer3_isr timer3_isr `T(v  1 s 0 i2_timer3_isr ]
 {
 "264
 } 0
-"239
+"238
 [v i2_timer2_isr timer2_isr `T(v  1 s 0 i2_timer2_isr ]
 {
 "250
 } 0
-"225
+"224
 [v i2_timer1_isr timer1_isr `T(v  1 s 0 i2_timer1_isr ]
 {
 "236
 } 0
-"211
+"210
 [v i2_timer0_isr timer0_isr `T(v  1 s 0 i2_timer0_isr ]
 {
 "222
 } 0
-"40 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
+"39 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 [v i2sys_timer@timer_counter timer_counter `(v  1 s 0 i2sys_timer@timer_counter ]
 {
 "76
 } 0
-"100
-[v i2_counter_1_s counter_1_s `T(v  1 s 0 i2_counter_1_s ]
-{
-"102
-} 0
-"93
-[v i2_counter_100_ms counter_100_ms `T(v  1 s 0 i2_counter_100_ms ]
-{
-"96
-} 0
-"146 C:\JAGA_TESTE/Middleware/leds/leds.c
-[v i2_leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
-{
-"173
-} 0
-"176
-[v i2_leds_reverse leds_reverse `(v  1 e 0 0 ]
-{
-[v i2leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 7 ]
-[v i2leds_reverse@UI8_LedsTemp leds_reverse `uc  1 a 1 6 ]
-[v i2leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 7 ]
-"197
-} 0
-"213
-[v i2_leds_off leds_off `(v  1 e 0 0 ]
-{
-[v i2leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 4 ]
-[v i2leds_off@UI8_aux leds_off `uc  1 a 1 3 ]
-[v i2leds_off@UI8_LedsTemp leds_off `uc  1 a 1 2 ]
-[v i2leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 4 ]
-"227
-} 0
-"200
-[v i2_leds_on leds_on `(v  1 e 0 0 ]
-{
-[v i2leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 4 ]
-[v i2leds_on@UI8_aux leds_on `uc  1 a 1 5 ]
-[v i2leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 4 ]
-"210
-} 0
-"246
-[v i2_leds_write leds_write `(v  1 e 0 0 ]
-{
-[v i2leds_write@out out `uc  1 a 1 0 ]
-[v i2leds_write@i leds_write `uc  1 a 1 1 ]
-[v i2leds_write@out out `uc  1 a 1 0 ]
-"260
-} 0
-"175 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_pin_low@pin pin `*.30S42  1 a 1 29 ]
-[v i2GPIO_pin_low@pin pin `*.30S42  1 a 1 29 ]
-"177
-} 0
-"170
-[v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_pin_high@pin pin `*.30S42  1 a 1 28 ]
-[v i2GPIO_pin_high@pin pin `*.30S42  1 a 1 28 ]
-"172
-} 0
-"230 C:\JAGA_TESTE/Middleware/leds/leds.c
-[v i2_leds_status leds_status `(uc  1 e 1 0 ]
-{
-[v i2leds_status@i leds_status `uc  1 a 1 3 ]
-[s S204 . 1 `uc 1 bit0 1 0 :1:0 
-`uc 1 bit1 1 0 :1:1 
-`uc 1 bit2 1 0 :1:2 
-`uc 1 bit3 1 0 :1:3 
-`uc 1 bit4 1 0 :1:4 
-`uc 1 bit5 1 0 :1:5 
-`uc 1 bit6 1 0 :1:6 
-`uc 1 bit7 1 0 :1:7 
-]
-[u S381 _UByte 1 `uc 1 value 1 0 `S204 1 . 1 0 ]
-[v i2leds_status@status leds_status `S381  1 a 1 2 ]
-"243
-} 0
-"86 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
-[v i2_counter_10_ms counter_10_ms `T(v  1 s 0 i2_counter_10_ms ]
-{
-"89
-} 0
-"61 C:\JAGA_TESTE/Middleware/buttons/buttons.c
-[v i2_buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
-{
-[v i2buttons_read_isr_10ms@i buttons_read_isr_10ms `uc  1 a 1 31 ]
-"121
-} 0
-"194 C:\JAGA_TESTE/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_input_state@pin pin `*.39S42  1 p 2 24 ]
-"196
-} 0
-"80 C:\JAGA_TESTE\Boards\PIC18F4550\Template/Source/sys_timer.c
-[v i2_counter_1_ms counter_1_ms `T(v  1 s 0 i2_counter_1_ms ]
-{
-"82
-} 0
-"32 C:\JAGA_TESTE/HAL/PIC18F4550/timer/hal_timer.c
+"31 /home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c
 [v i2_timer_set_counter timer_set_counter `(v  1 e 0 0 ]
 {
-[v i2timer_set_counter@module module `uc  1 a 1 26 ]
+[v i2timer_set_counter@module module `uc  1 a 1 wreg ]
 [s S21 . 2 `uc 1 b1 1 0 `uc 1 b2 1 1 ]
-[s S622 . 2 `uc 1 bit0 1 0 :1:0 
+[s S629 . 2 `uc 1 bit0 1 0 :1:0 
 `uc 1 bit1 1 0 :1:1 
 `uc 1 bit2 1 0 :1:2 
 `uc 1 bit3 1 0 :1:3 
@@ -2133,19 +1936,137 @@ TECLA_BACK 3
 `uc 1 bit14 1 1 :1:6 
 `uc 1 bit15 1 1 :1:7 
 ]
-[u S639 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S622 1 . 2 0 ]
-[v i2timer_set_counter@aux_value timer_set_counter `S639  1 a 2 27 ]
-[v i2timer_set_counter@module module `uc  1 a 1 26 ]
-[v i2timer_set_counter@val val `us  1 p 2 24 ]
+[u S646 _UWord 2 `us 1 value 2 0 `S21 1 b 2 0 `S629 1 . 2 0 ]
+[v i2timer_set_counter@aux_value timer_set_counter `S646  1 a 2 3 ]
+[v i2timer_set_counter@module module `uc  1 a 1 wreg ]
+[v i2timer_set_counter@val val `us  1 p 2 0 ]
+"35
+[v i2timer_set_counter@module module `uc  1 a 1 2 ]
 "59
 } 0
-"77 C:\JAGA_TESTE/HAL/PIC18F4550/interrupt/hal_interrupts.c
+"99 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
+[v i2_counter_1_s counter_1_s `T(v  1 s 0 i2_counter_1_s ]
+{
+"102
+} 0
+"79
+[v i2_counter_1_ms counter_1_ms `T(v  1 s 0 i2_counter_1_ms ]
+{
+"82
+} 0
+"85
+[v i2_counter_10_ms counter_10_ms `T(v  1 s 0 i2_counter_10_ms ]
+{
+"89
+} 0
+"60 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
+[v i2_buttons_read_isr_10ms buttons_read_isr_10ms `(v  1 e 0 0 ]
+{
+[v i2buttons_read_isr_10ms@i buttons_read_isr_10ms `uc  1 a 1 9 ]
+"116
+} 0
+"198 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v i2_GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i2GPIO_pin_state@pin pin `*.39S42  1 p 2 0 ]
+"208
+} 0
+"92 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
+[v i2_counter_100_ms counter_100_ms `T(v  1 s 0 i2_counter_100_ms ]
+{
+"96
+} 0
+"145 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v i2_leds_action_isr_10ms leds_action_isr_10ms `(v  1 e 0 0 ]
+{
+"173
+} 0
+"175
+[v i2_leds_reverse leds_reverse `(v  1 e 0 0 ]
+{
+[v i2leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+[v i2leds_reverse@UI8_LedsTemp leds_reverse `uc  1 a 1 14 ]
+[v i2leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"181
+[v i2leds_reverse@UI8_LedsMask UI8_LedsMask `uc  1 a 1 15 ]
+"197
+} 0
+"199
+[v i2_leds_on leds_on `(v  1 e 0 0 ]
+{
+[v i2leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+[v i2leds_on@UI8_aux leds_on `uc  1 a 1 12 ]
+[v i2leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"203
+[v i2leds_on@UI8_LedsMask UI8_LedsMask `uc  1 a 1 11 ]
+"210
+} 0
+"229
+[v i2_leds_status leds_status `(uc  1 e 1 0 ]
+{
+[v i2leds_status@i leds_status `uc  1 a 1 10 ]
+[s S205 . 1 `uc 1 bit0 1 0 :1:0 
+`uc 1 bit1 1 0 :1:1 
+`uc 1 bit2 1 0 :1:2 
+`uc 1 bit3 1 0 :1:3 
+`uc 1 bit4 1 0 :1:4 
+`uc 1 bit5 1 0 :1:5 
+`uc 1 bit6 1 0 :1:6 
+`uc 1 bit7 1 0 :1:7 
+]
+[u S384 _UByte 1 `uc 1 value 1 0 `S205 1 . 1 0 ]
+[v i2leds_status@status leds_status `S384  1 a 1 9 ]
+"243
+} 0
+"193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i2GPIO_input_state@pin pin `*.39S42  1 p 2 0 ]
+"196
+} 0
+"212 /home/jaga/git/JAGA/Middleware/leds/leds.c
+[v i2_leds_off leds_off `(v  1 e 0 0 ]
+{
+[v i2leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+[v i2leds_off@UI8_aux leds_off `uc  1 a 1 12 ]
+[v i2leds_off@UI8_LedsTemp leds_off `uc  1 a 1 11 ]
+[v i2leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 wreg ]
+"219
+[v i2leds_off@UI8_LedsMask UI8_LedsMask `uc  1 a 1 13 ]
+"227
+} 0
+"245
+[v i2_leds_write leds_write `(v  1 e 0 0 ]
+{
+[v i2leds_write@out out `uc  1 a 1 wreg ]
+[v i2leds_write@i leds_write `uc  1 a 1 10 ]
+[v i2leds_write@out out `uc  1 a 1 wreg ]
+"249
+[v i2leds_write@out out `uc  1 a 1 9 ]
+"260
+} 0
+"174 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i2GPIO_pin_low@pin pin `*.39S42  1 p 2 0 ]
+"177
+} 0
+"169
+[v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v i2GPIO_pin_high@pin pin `*.39S42  1 p 2 0 ]
+"172
+} 0
+"76 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
 [v i2_interrupt_is_enable interrupt_is_enable `(uc  1 e 1 0 ]
 {
-[v i2_interrupt_is_enable$1887 interrupt_is_enable `uc  1 a 1 31 ]
-[v i2interrupt_is_enable@priority_status interrupt_is_enable `uc  1 a 1 30 ]
-[v i2interrupt_is_enable@enable_status interrupt_is_enable `uc  1 a 1 29 ]
-[v i2interrupt_is_enable@_interrupt _interrupt `us  1 p 2 24 ]
-[v i2interrupt_is_enable@priority priority `uc  1 p 1 26 ]
+[v i2interrupt_is_enable@priority_status interrupt_is_enable `uc  1 a 1 6 ]
+[v i2interrupt_is_enable@enable_status interrupt_is_enable `uc  1 a 1 5 ]
+[v i2interrupt_is_enable@_interrupt _interrupt `us  1 p 2 0 ]
+[v i2interrupt_is_enable@priority priority `uc  1 p 1 2 ]
 "86
 } 0

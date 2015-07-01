@@ -41,7 +41,6 @@ enum PinosMCU
     PIN_1,
     PIN_2,
     PIN_3,
-         
     PIN_4,
     PIN_5,
     PIN_6,
@@ -115,7 +114,7 @@ void GPIO_pin_high(regPin *pin);
 void GPIO_pin_low(regPin *pin);
 void GPIO_pin_outputBit(regPin *pin, uint32 flag);
 void GPIO_pin_attach(regPin *pin, regGPIO *reg);
-
+uint8 GPIO_pin_state(regPin *pin);
 /**
  * @brief TODO
  * @param pin

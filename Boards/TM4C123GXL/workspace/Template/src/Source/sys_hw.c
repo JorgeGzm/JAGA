@@ -43,8 +43,8 @@ void init_devices(void)
 
 	//Inicializa e configura mecanismo de controle das teclas
 	buttons_init();
-	button_attach(TECLA_UP, &rF0);
-	button_attach(TECLA_DOWN, &rF4);
+	button_attach(1, &rF0);
+	button_attach(2, &rF4);
 
 	//Configura e inicializa pinos que serao usados pela biblioteca LCD.
 	lcd_attach(&display.RS, &rB5);

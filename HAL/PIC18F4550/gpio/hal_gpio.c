@@ -195,6 +195,18 @@ uint8 GPIO_input_state(regPin *pin)
     return(tst_bit(*pin->out, pin->pin));
 }
 
+uint8 GPIO_pin_state(regPin *pin)
+{
+    if(tst_bit(*pin->out, pin->pin))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 void GPIO_pin_outputBit(regPin *pin, uint8 flag)
 {
     if(flag)

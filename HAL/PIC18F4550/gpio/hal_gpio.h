@@ -187,6 +187,13 @@ void GPIO_pin_outputBit(regPin *pin, uint8 flag);
 /**
  * @brief TODO documentar
  * @param pin
+ * @return 
+ */
+uint8 GPIO_pin_state(regPin *pin);
+
+/**
+ * @brief TODO documentar
+ * @param pin
  * @param delay_us
  */
 void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us);

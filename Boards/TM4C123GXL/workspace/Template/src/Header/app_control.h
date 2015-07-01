@@ -10,10 +10,11 @@
     #define APP_CONTROL_H
 
 /**
- * @brief 1 = {input = 1, output = 0};
- *        2 = {input = 0, output = 1}
+  * @brief 0 = PULL UP
+ *        1 = PULL DOWN
  */
-#define configButton_IODirection 2
+#define configButton_pullUP 1
+
 
 /** Rotinas principais do sistemas */
 void run_system(void);

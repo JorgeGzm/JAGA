@@ -23,8 +23,8 @@
 #include "buttons.h"
 #include "app_control.h"
 
-#ifndef configButton_IODirection
-    #error "configButton_IODirection no defined in app_control.h"
+#ifndef configButton_pullUP
+    #error "configButton_pullUP no defined in app_control.h"
 #endif
 
 /** Variavel que recebe a atualizacao do estado das teclas a cada 10ms*/
@@ -62,16 +62,11 @@ void buttons_read_isr_10ms(void)
     uint8 i;
 
     buttons_read.b.b1 = 0;
-
+    
     //Leitura instantanea das teclas
     for(i = 0; i < 8; i++)
     {
-
-        #if (configButton_IODirection == 1)
-        if(buttons_vector[i].out && GPIO_input_state(&buttons_vector[i]))
-        #elif (configButton_IODirection == 2)
-        if(buttons_vector[i].out && !GPIO_input_state(&buttons_vector[i]))
-        #endif  
+        if(buttons_vector[i].out && (configButton_pullUP^GPIO_pin_state(&buttons_vector[i])) )
         {
             buttons_read.b.b1 |=  (1 << i);
         }
@@ -87,7 +82,7 @@ void buttons_read_isr_10ms(void)
             {
                 buttons_read.debounce--;
             }
-
+            
             //Debouce quando a tecla e prescionada
             else
             {
@@ -124,11 +119,11 @@ uint8 buttons_check_press(uint8 button_id, uint8 press)
 {
     if(!press)
     {
-        if(tst_bit(buttons_read.b.b1, button_id))
+        if(buttons_read.b.b1 == button_id)
         {
             //limpa flag do botao
-            clr_bit(buttons_read.b.b1, button_id);
-
+            buttons_read.b.b1 ^= (buttons_read.b.b1&button_id);
+            
             //limpa flag que sinaliza que o botao foi prescionado.
             buttons_read.press = 0;
 
@@ -143,11 +138,11 @@ uint8 buttons_check_press(uint8 button_id, uint8 press)
     }
     else
     {
-        if(tst_bit(buttons_read.b.b1, button_id) && buttons_read.press)
+        if((buttons_read.b.b1 == button_id) && buttons_read.press)
         {
             //limpa flag do botao
-            clr_bit(buttons_read.b.b1, button_id);
-
+            buttons_read.b.b1 ^= (buttons_read.b.b1&button_id);
+            
             //limpa flag que sinaliza que o botao foi prescionado.
             buttons_read.press = 0;
 

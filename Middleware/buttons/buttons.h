@@ -30,11 +30,12 @@
 
 enum SYS_TECLAS
 {
-    TECLA_MENU = 0x00,
-    TECLA_UP,
-    TECLA_DOWN,
-    TECLA_BACK,
+    TECLA_MENU = 1,
+    TECLA_UP = 2,
+    TECLA_DOWN = 4,
+    TECLA_BACK = 8
 };
+
 
 /** @brief Define o intervalo de tempo de espera para eliminar o debouce da tecla.*/
 #define BOUNCE      2

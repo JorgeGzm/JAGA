@@ -42,8 +42,8 @@ void setupDevices(void)
 
     //Inicializa e configura mecanismo de controle das teclas
     buttons_init();
-    button_attach(TECLA_UP, &rE1);
-    button_attach(TECLA_DOWN, &rB2);
+    button_attach(1, &rE1);
+    button_attach(2, &rB2);
 
     //Configura e inicializa pinos que serao usados pela biblioteca LCD.
     lcd_attach(&display.RS, &rD0);
@@ -55,7 +55,9 @@ void setupDevices(void)
     lcd_init();
 
     lcd_gotoxy(1, 1);
-    lcd_printf((int8 *)"Modulo JAGA     ");
+    int8 buff[] = {"Modulo JAGA     "};
+    lcd_printf(&buff);
+    
 
     //configura mecanismo de controle dos leds
     leds_attach(&leds[0], &rA1);
