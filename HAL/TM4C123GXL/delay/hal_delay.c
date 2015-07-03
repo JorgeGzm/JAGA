@@ -1,4 +1,3 @@
-
 /**
  * @file    hal_delay.c
  * @author  Jorge Guzman (jorge.gzm@gmail.com)
@@ -46,11 +45,6 @@ void Delay_10ms(void)
   }
 }
 
-
-
-
-
-
 void Delay_us(uint16 delay)
 {
 	uint16 i;
@@ -65,10 +59,6 @@ void Delay_us(uint16 delay)
 		}
 	}
 }
-
-
-
-
 
 void Delay_ms(uint16 delay)
 {

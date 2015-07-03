@@ -2,8 +2,6 @@
  * @file    hal_device.c
  * @brief   Bibliteoca que chama faz o include o arquivo .h especifico do microcontrolador. 
  * @author  Rafael Lopes
-
-
  * @date    25 de Fevereiro de 2015
  * @version 0.1.0.0 (beta) 
  * @section LICENSE
@@ -28,7 +26,5 @@
 //Include da lib do Microcontrolador usado no pojeto
 #include "tm4c123gh6pm.h"
 #include  "_TM4C123GH6PM.h"
-
-
 
 #endif	/* HAL_DEVICE_H */

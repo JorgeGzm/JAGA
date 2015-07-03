@@ -28,38 +28,40 @@
 #include "uart/hal_uart.h"
 #include "device/hal_device.h"
 
+/** @brief TODO */
 #define _NULL       (0)
 
-/** */
+/** @brief TODO */
 #define DISABLE     0
-/** */
+/** @brief TODO */
 #define ENABLE      1
 
-/** */
+/** @brief TODO */
 #define INTERRUPT_DISABLE   0
-/** */
+/** @brief TODO */
 #define INTERRUPT_ENABLE    1
 
-/** */
+/** @brief TODO */
 #define LOW_PRIORITY    0
-/** */
+/** @brief TODO */
 #define HIGH_PRIORITY   1
 
-/** */
+/** @brief TODO */
 #define _TMR0       0x0001
-/** */
+/** @brief TODO */
 #define _TMR1       0x0002
-/** */
+/** @brief TODO */
 #define _TMR2       0x0004
-/** */
+/** @brief TODO */
 #define _TMR3       0x0008
-/** */
+/** @brief TODO */
 #define _UART_RX    0x0010
-/** */
+/** @brief TODO */
 #define _UART_TX    0x0020
-/** */
+/** @brief TODO */
 #define _ALL    0xFFFF
 
+/** @brief TODO */
 typedef union _Interrupts
 {
     uint16 value;
@@ -97,6 +99,7 @@ typedef union _Interrupts
 
 typedef union _Interrupts Interrupts;
 
+/** @brief TODO */
 struct _InterruptsCallBack
 {
     Interrupts call_back_ctrl;
@@ -112,7 +115,7 @@ struct _InterruptsCallBack
 typedef struct _InterruptsCallBack InterruptsCallBack;
 
 /**
- *  Extern Functions
+ * @berif TODO
  */
 void interrupt_init(void);
 
@@ -133,14 +136,25 @@ void interrupt_setup(uint16 _interrupt, uint8 setup);
  */
 void interrupt_set_priority(uint16 _interrupt, uint8 priority);
 
+/** @brief TODO */
 void interrupt_set_callback(uint16 _interrupt, void (*function)());
 
-
+/** @brief TODO */
 inline static void timer0_isr(void);
+
+/** @brief TODO */
 inline static void timer1_isr(void);
+
+/** @brief TODO */
 inline static void timer2_isr(void);
+
+/** @brief TODO */
 inline static void timer3_isr(void);
+
+/** @brief TODO */
 inline static void uart_rx_isr(void);
+
+/** @brief TODO */
 inline static void uart_tx_isr(void);
 
 #endif	/* CNX_INTERRUPTS_H */

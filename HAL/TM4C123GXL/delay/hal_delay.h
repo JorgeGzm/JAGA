@@ -1,5 +1,4 @@
 /**
-
  * @file    hal_delay.h
  * @author  Jorge Guzman (jorge.gzm@gmail.com)
  * @date    29 de Janeiro de 2014
@@ -17,10 +16,8 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details at
  * http://www.gnu.org/copyleft/gpl.html
-
  *
  * @section DESCRIPTION
-
  */
 
 #ifndef HAL_DELAY_H
@@ -41,13 +38,13 @@ void Delay_10ms(void);
 
 /**
  * @brief Gera um delay de micro-segundo.
- * @param UI8_us:
+ * @param delay TODO
  */
 void Delay_us(uint16 delay);
 
 /**
  * @brief Gera um delay de micro-segundo.
- * @param UI8_us:
+ * @param delay TODO
  */
 void Delay_ms(uint16 delay);
 

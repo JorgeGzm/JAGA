@@ -1,6 +1,6 @@
 /**
  * @file    buttons.c
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
+ * @author  Rafael lopes; Jorge Guzman (jorge.gzm@gmail.com)
  * @date    27 de Fevereiro de 2015
  * @version 0.1.0.0 
  * @brief   Codigo em C da biblioteca lib_buttons.c
@@ -48,13 +48,13 @@ void buttons_init(void)
     }
 }
 
-void button_attach(uint8 index, regGPIO *reg)
+void button_attach(uint8 index, regGPIO reg)
 {
     //indica o pino do microcontrolador que sera usado para o botao
-    GPIO_pin_attach(&buttons_vector[index], reg);
+    GPIO_pin_attach(&buttons_vector[index], &reg);
 
     //Configura pino do microcontrolador como entrada
-    GPIO_confDir(reg, DIR_INPUT);
+    GPIO_confDir(&reg, DIR_INPUT);
 }
 
 void buttons_read_isr_10ms(void)
@@ -66,7 +66,7 @@ void buttons_read_isr_10ms(void)
     //Leitura instantanea das teclas
     for(i = 0; i < 8; i++)
     {
-        if(buttons_vector[i].out && (configButton_pullUP^GPIO_pin_state(&buttons_vector[i])) )
+        if (buttons_vector[i].out && (configButton_pullUP ^ GPIO_pin_state(&buttons_vector[i])))
         {
             buttons_read.b.b1 |=  (1 << i);
         }
@@ -107,7 +107,7 @@ void buttons_read_isr_10ms(void)
         {
             buttons_read.hold = 1;
 
-            buttons.value = 0; //aki
+            buttons.value = 0; 
 
             //UI8_debounce = BOUNCE;
             buttons_read.debounce = BOUNCE;
@@ -122,10 +122,10 @@ uint8 buttons_check_press(uint8 button_id, uint8 press)
         if(buttons_read.b.b1 == button_id)
         {
             //limpa flag do botao
-            buttons_read.b.b1 ^= (buttons_read.b.b1&button_id);
+        	buttons_read.b.b1 ^= (buttons_read.b.b1 & button_id);
             
             //limpa flag que sinaliza que o botao foi prescionado.
-            buttons_read.press = 0;
+        	buttons_read.press = 0;
 
             //retorna botao pressionado
             return 1;
@@ -138,13 +138,13 @@ uint8 buttons_check_press(uint8 button_id, uint8 press)
     }
     else
     {
-        if((buttons_read.b.b1 == button_id) && buttons_read.press)
+        if((buttons.b.b1 == button_id) && buttons.press)
         {
             //limpa flag do botao
-            buttons_read.b.b1 ^= (buttons_read.b.b1&button_id);
+        	buttons.b.b1 ^= (buttons.b.b1 & button_id);
             
             //limpa flag que sinaliza que o botao foi prescionado.
-            buttons_read.press = 0;
+        	buttons_read.press = 0;
 
             //retorna botao pressionado
             return 1;
@@ -155,24 +155,4 @@ uint8 buttons_check_press(uint8 button_id, uint8 press)
             return 0;
         }
     }
-}
-
-uint8 button_is_press(uint8 button_id)
-{
-    if(tst_bit(buttons.b.b1, button_id))
-    {
-        return(buttons.press);
-    }
-
-    return(0);
-}
-
-uint8 button_is_hold(uint8 button_id)
-{
-    if(tst_bit(buttons.b.b1, button_id))
-    {
-        return(buttons.hold);
-    }
-
-    return(0);
 }

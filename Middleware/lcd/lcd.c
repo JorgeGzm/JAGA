@@ -26,33 +26,39 @@
 #include <string.h> 
 #include <stdarg.h>
 
-
 /** Variavel de configuracao dos pinos do LCD*/
 DisplayLcd display;
-
-/** */
-uint8 lcd_buffer[LCD_MAX_LINES][LCD_MAX_COLUMNS];
 
 /** Buffer que contem a rotina de inicialização do LCD 2x16 e 4x20 */
 int8 const LCD_INIT_STRING[4] =
 {
     0x20 | (2 << 2), // Func set: 4-bit, 2 linhas, caracter 5x8
-    0xC, // Display ligado
-    1, // Limpa display
-    6 // Incrementa cursor
+    0xC, 			// Display ligado
+    1, 				// Limpa display
+    6 				// Incrementa cursor
 };
 
-
-
-void lcd_attach(regPin *pin, regGPIO *reg)
+void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7)
 {
-    //Aloca o pino para o botao
-    //pin->out = reg->port;
-    //pin->pin = reg->numPin;
-    GPIO_pin_attach(pin, reg);
+    GPIO_pin_attach(&display.RS, &RS);  //configura pino RS do lcd
+    GPIO_confDir(&RS, DIR_OUTPUT);      //Configura pino como saida
 
-    //Configura pino do botao como entrada
-    GPIO_confDir(reg, DIR_OUTPUT);
+    GPIO_pin_attach(&display.E, &E);
+    GPIO_confDir(&E, DIR_OUTPUT);
+
+    GPIO_pin_attach(&display.DB4, &DB4);
+    GPIO_confDir(&DB4, DIR_OUTPUT);
+
+    GPIO_pin_attach(&display.DB5, &DB5);
+    GPIO_confDir(&DB5, DIR_OUTPUT);
+
+    GPIO_pin_attach(&display.DB6, &DB6);
+    GPIO_confDir(&DB6, DIR_OUTPUT);
+
+    GPIO_pin_attach(&display.DB7, &DB7);
+    GPIO_confDir(&DB7, DIR_OUTPUT);
+
+    lcd_init();
 }
 
 void lcd_init(void)
@@ -80,11 +86,6 @@ void lcd_init(void)
         
         Delay_ms(5);
     }
-
-    memset((void *)lcd_buffer[0], ' ', LCD_MAX_COLUMNS);
-    memset((void *)lcd_buffer[1], ' ', LCD_MAX_COLUMNS);
-    memset((void *)lcd_buffer[2], ' ', LCD_MAX_COLUMNS);
-    memset((void *)lcd_buffer[3], ' ', LCD_MAX_COLUMNS);
 }
 
 void lcd_send_nibble(int8 nibble)
@@ -94,12 +95,12 @@ void lcd_send_nibble(int8 nibble)
     aux.value = nibble;
 
     //envia niblbe ao lcd
-    GPIO_pin_outputBit(&display.db4, aux.bit0);
-    GPIO_pin_outputBit(&display.db5, aux.bit1);
-    GPIO_pin_outputBit(&display.db6, aux.bit2);
-    GPIO_pin_outputBit(&display.db7, aux.bit3);
+    GPIO_pin_outputBit(&display.DB4, aux.bit0);
+    GPIO_pin_outputBit(&display.DB5, aux.bit1);
+    GPIO_pin_outputBit(&display.DB6, aux.bit2);
+    GPIO_pin_outputBit(&display.DB7, aux.bit3);
 
-    Delay_ms(10);
+    Delay_ms(3);//Delay_ms(10);
 
     GPIO_pin_high(&display.E);
 
@@ -168,7 +169,6 @@ void lcd_gotoxy(int8 coluna, int8 linha)
     
     lcd_send_byte(0, address);
 }
-
 
 void lcd_printf(int8 *c, ...)
 {
@@ -247,7 +247,6 @@ void lcd_printf(int8 *c, ...)
     
     va_end(pa);
 }
-
 
 void lcd_print_uint16(uint16 n)
 {

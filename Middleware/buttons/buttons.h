@@ -2,7 +2,7 @@
  * @file    buttons.h
  * @brief   Biblioteca para o uso de teclas.
  * @details Esta biblioca controla e configura os pinos do microcontrolador para o uso de ate 8 teclas.
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
+ * @author  Rafel lopes, Jorge Guzman (jorge.gzm@gmail.com)
  * @date    27 de Fevereiro de 2015
  * @version 0.1.0.0 (beta) 
  * @section LICENSE
@@ -38,9 +38,9 @@ enum SYS_TECLAS
 
 
 /** @brief Define o intervalo de tempo de espera para eliminar o debouce da tecla.*/
-#define BOUNCE      2
+#define BOUNCE      6
 
-/** Define quantidade maxima de teclas que a biblioteca suporta. */
+/** @brief Define quantidade maxima de teclas que a biblioteca suporta. */
 #define BUTTON_SIZE 8
 
 /** @brief Estrutura usada no controle do estado das teclas. */
@@ -54,6 +54,7 @@ union Buttons_
     {
          /** @brief Parte baixa que contem estados das teclas*/
         uint8 b1;
+
          /** @brief Parte alta que contem temporizador do debouce e se alguma tecla esta ou continua pressioada. */
         uint8 b2;
     }b;
@@ -115,12 +116,13 @@ void buttons_init(void);
 void buttons_read_isr_10ms(void);
 
 /**
- * @brief Verifica e retorna 1 ou 0 se alguma tecla foi pressionado ou nao. \n
+ * @brief Verifica e retorna 1 ou 0 se alguma tecla foi pressionado ou nao. 
+ * @details
  * Ex:                                                          \n
  * if(buttons_check_press(BTN_MENU; 0))...                      \n
  *  ou                                                          \n
  * if(buttons_check_press(BTN_MENU; 1))...                      \n
- * @param UI8_botao Botao que deseja ser verificado.
+ * @param button_id Botoes que deseja ser verificados.
  * @param press 0 = nao precisar soltar o botao para informar que ele foi pressionado. \n
  *              1 = e precisar soltar o botao para informar que ele foi pressionado.
  * @return  
@@ -134,25 +136,8 @@ uint8 buttons_check_press(uint8 button_id, uint8 press);
  * @details A funcao recebe um valor index < BUTTON_SIZE e o pino do microcontrolador que sera usado.
  * TODO: tratar combinacao de teclas.
  * @param index Range: 0 - 7
- * @param port
- * @param tris
+ * @param reg
  */
-void button_attach(uint8 index, regGPIO *reg);
-
-/**
- * 
- * @param button_id
- * @return 
- */
-uint8 button_is_press(uint8 button_id);
-
-/**
- * 
- * @param button_id
- * @return 
- */
-uint8 button_is_hold(uint8 button_id);
-/**  */
-extern regPin buttons_vector[BUTTON_SIZE];
+void button_attach(uint8 index, regGPIO reg);
 
 #endif /** BUTTOHS_H*/

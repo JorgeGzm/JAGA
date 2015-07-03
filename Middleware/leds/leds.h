@@ -83,12 +83,13 @@ typedef struct _LD
 void leds_init(void);
 
 /**
- * Seta os bits das variaveis de controle do acendimento das leds.
- * Exemplo:
- * V_ledsSet(LD1G|LD2G,LED_ON);  Resultado: joga nivel logico 1 nos pinos RB0 e RB1
- * V_ledsSet(LD1G,LED_OFF);      Resultado: joga nivel logico zero no pino RB0
- * V_ledsSet(LD1G,LED_BLINK_SLOW); Resultado: gera um toogle lento no pino RB1
- * V_ledsSet(LD1G,LED_BLINK_FAST); Resultado: gera um toogle rapido no pino RB0
+ * @brief Seta os bits das variaveis de controle do acendimento das leds.
+ * @details 
+ * Exemplo:                                                                         \n
+ * V_ledsSet(LD1G|LD2G,LED_ON);  Resultado: joga nivel logico 1 nos pinos RB0 e RB1 \n
+ * V_ledsSet(LD1G,LED_OFF);      Resultado: joga nivel logico zero no pino RB0      \n
+ * V_ledsSet(LD1G,LED_BLINK_SLOW); Resultado: gera um toogle lento no pino RB1      \n
+ * V_ledsSet(LD1G,LED_BLINK_FAST); Resultado: gera um toogle rapido no pino RB0     \n
  * UI8_InLeds: range:0-255->2^n
  * @param UI8_InLeds: informa quas leds devem ser ligados. Range de 0 a 7(1byte->1Porte inteiro)
  * @param UI8_Action: LED_OFF = devemos apagar as leds em questao
@@ -130,22 +131,15 @@ void leds_write(uint8 out);
 
 /**
  * @brief TODO
- * @param pin
- * @param port
- * @param tris
+ * @param index TODO
+ * @param reg   TODO
  */
-void leds_attach(regPin *pin, regGPIO *reg);
+void leds_attach(uint8 index, regGPIO reg);
 
 /**
  * @brief TODO
- * @return 
+ * @return TODO
  */
 uint8 leds_status(void);
-//void V_presentation(void);
-
-
-//Variaveis globais
-extern regPin leds[NUM_LEDS];
-extern Leds UN_ledsStatus, UN_ledsON, UN_ledsBlinkSlow, UN_ledsBlinkFast;
 
 #endif /* LEDS_H_ */

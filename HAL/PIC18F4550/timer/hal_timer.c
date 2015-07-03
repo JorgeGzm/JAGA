@@ -25,7 +25,7 @@
 
 #include "hal_timer.h"
 
-/** */
+/** @brief TODO*/
 static volatile uint16 timer_counter[4] = {0,0,0,0};
 
 void timer_set_counter(uint8 module, uint16 val)

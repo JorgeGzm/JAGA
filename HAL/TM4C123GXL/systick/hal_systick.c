@@ -19,11 +19,9 @@
  * http://www.gnu.org/copyleft/gpl.html
  *
  * @section DESCRIPTION
-
  */
 
 #include "hal_systick.h"
-
 
 void systick_set_reload(uint32 enable_systick, uint32 enable_interrupt, uint32 reload)
 {

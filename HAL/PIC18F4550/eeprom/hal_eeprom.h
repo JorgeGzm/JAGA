@@ -27,14 +27,14 @@
 #include "device/hal_device.h"
 
 /**
- * Realiza a leitura na memoria EEPROM do pic18f4550.
+ * @brief Realiza a leitura na memoria EEPROM do pic18f4550.
  * @param address Endereco onde o dado sera gravado.
  * @return Retorna o dado lido no endereço passado
  */
 uint8 eeprom_rd(uint8 address);
 
 /**
- * Escrita na memoria EEPROM do pic18f4550
+ * @brief  Escrita na memoria EEPROM do pic18f4550
  * @param address Endereco onde o dado se encontra. Range: 0 - 255.
  * @param data Dado a ser gravado.
  */

@@ -22,8 +22,10 @@
 
 #include "hal_uart.h"
 
-
+/** @brief TODO*/
 regPin pinRX1;
+
+/** @brief TODO*/
 regPin pinTX1;
 
 void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx)
@@ -93,10 +95,8 @@ void uart_set_baudRate(uint8 module, uint8 value)
 
 void uart_attach(regPin *pin, regGPIO *reg)
 {
-    //Aloca o pino para o botao
-    pin->out = reg->port;
-    pin->pin = reg->numPin;
-    //GPIO_attach(pin, reg);
+   
+    GPIO_attach(pin, reg);
 
     //Configura pino do botao como entrada
     GPIO_confDir(reg, DIR_INPUT);//era tris

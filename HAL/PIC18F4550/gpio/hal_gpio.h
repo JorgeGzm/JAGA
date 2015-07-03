@@ -70,41 +70,41 @@ typedef struct _regPin
 }regPin;
 
 /**
- * coloca em 1 o bit x da variável byte. Range(0-7).
+ * @brief Coloca em 1 o bit x da variável byte. Range(0-7).
  * Exemplo:  set_bit(PORTD, 5);
  * Resultado: PORTD = 0b00010000
  */
 #define	set_bit(value,bit_x)	(value |= (1 << bit_x))
 
 /**
- * coloca em 0 no bit_x da variavel variável byte. Range(0-7).
+ * @brief coloca em 0 no bit_x da variavel variável byte. Range(0-7).
  * Exemplo:  lr_bit(PORTD, 5);
  * Resultado: PORTD = 0b00000000
  */
 #define	clr_bit(value,bit_x)	(value &= ~(1 << bit_x))
 
 /**
-* troca o estado lógico do bit x da variável bytex. Range(0-7).
+* @brief Troca o estado lógico do bit x da variável bytex. Range(0-7).
 * Exemplo:   toggle_bit(PORTD, 5);
 * Resultado: PORTD = 0b00000000 ou PORTD = 0b00010000
 */
 #define toggle_bit(value,bit_x)     (value ^= (1 << bit_x))
 
 /**
- * retorna 0 ou !0 conforme leitura do bit. Range(0-7).
+ * @brief Retorna 0 ou !0 conforme leitura do bit. Range(0-7).
  * Exemplo:   tst_bit(PORTD, 5);
  * Resultado: x = 0 ou x = 32
  */
 #define tst_bit(value,bit_x)        (value & (1 << bit_x))
 
 /**
- * retorna 0 ou 1 conforme leitura do bit. Range(0-7).
+ * @brief Retorna 0 ou 1 conforme leitura do bit. Range(0-7).
  * Exemplo:   tst_bit_bool(PORTD, 5);
  * Resultado: x = 0 ou x = 1
  */
 #define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
 
-/** Rotinha de inicializacao das variaveis abstraidas.*/
+/** @brief Rotinha de inicializacao das variaveis abstraidas.*/
 void V_initRefRegisters(void);
 
 /**
@@ -124,84 +124,83 @@ void GPIO_outputBit(volatile uint8 *port, uint8 pino, uint8 UI8_flag);
 
 /**
  * @brief TODO documentar
- * @param reg
- * @param _port
- * @param _tris
+ * @param reg TODO
+ * @param _port TODO
  */
 void GPIO_attach(regGPIO *reg, regGPIO *_port);
 
 /**
  * @brief TODO documentar
- * @param pin
- * @return 
+ * @param pin TODO
+ * @return TODO
  */
 uint8 GPIO_input_state(regPin *pin);
 
 /**
  * @brief TODO documentar
- * @param port
- * @param pino
+ * @param port TODO
+ * @param pino TODO
  */
 void GPIO_output_toggle(volatile uint8 *port, uint8 pino);
 
 /**
  * @brief TODO documentar
- * @param port
- * @param pino
+ * @param port TODO
+ * @param pino TODO
  */
 void GPIO_low(volatile uint8 *port, uint8 pino);
 
 /**
  * @brief TODO
- * @param port
- * @param pino
+ * @param port TODO
+ * @param pino TODO
  */
 void GPIO_high(volatile uint8 *port, uint8 pino);
 
 /**
  * @brief TODO documentar
- * @param pin
- * @param reg
+ * @param pin TODO
+ * @param reg TODO
  */
 void GPIO_pin_attach(regPin *pin, regGPIO *reg);
 
 /**
  * @brief TODO documentar
- * @param pin
+ * @param pin TODO
  */
 void GPIO_pin_high(regPin *pin);
 
 /**
  * @brief TODO documentar
- * @param pin
+ * @param pin TODO
  */
 void GPIO_pin_low(regPin *pin);
 
 /**
  * @brief TODO documentar
- * @param pin
- * @param flag
+ * @param pin TODO
+ * @param flag TODO
  */
 void GPIO_pin_outputBit(regPin *pin, uint8 flag);
 
 /**
  * @brief TODO documentar
- * @param pin
+ * @param pin TODO
  * @return 
  */
 uint8 GPIO_pin_state(regPin *pin);
 
 /**
  * @brief TODO documentar
- * @param pin
- * @param delay_us
+ * @param pin TODO
+ * @param delay_us TODO
  */
 void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us);
 
 /**
  * @brief TODO
- * @param pin
- * @param io
+ * @param pin TODO
+ * @param io IODirection
  */
 void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection);
 

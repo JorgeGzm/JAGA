@@ -22,6 +22,7 @@
 
 #include "leds.h"
 
+ /**@brief */
 regPin leds[NUM_LEDS] = {
     {0, 0},
     {0, 0},
@@ -33,10 +34,17 @@ regPin leds[NUM_LEDS] = {
     {0, 0},
 };
 
-Leds UN_ledsStatus;    /// Controle imediato do estado das leds
-Leds UN_ledsON;        /// Indicação das leds que estão 100% ligadas
-Leds UN_ledsBlinkSlow; /// Indicação das Leds que estão picando lentamnete
-Leds UN_ledsBlinkFast; /// Indicação das Leds que estão piscando rápido
+/** @brief Controle imediato do estado das leds*/
+Leds UN_ledsStatus;
+
+/** @brief Indicação das leds que estão 100% ligadas*/
+Leds UN_ledsON;
+
+/** @brief Indicação das Leds que estão picando lentamnete*/
+Leds UN_ledsBlinkSlow;
+
+/** @brief Indicação das Leds que estão piscando rápido*/
+Leds UN_ledsBlinkFast; 
 
 void leds_init(void)
 {
@@ -131,15 +139,13 @@ void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
     }
 }
 
-void leds_attach(regPin *pin, regGPIO *reg)
+void leds_attach(uint8 index, regGPIO reg)
 {
     //Aloca o pino para o botao
-    //pin->out = reg->port;
-    //pin->pin = reg->numPin;
-    GPIO_pin_attach(pin, reg);
+    GPIO_pin_attach(&leds[index], &reg);
 
     //Configura pino do botao como saida
-    GPIO_confDir(reg, 0);
+    GPIO_confDir(&reg, 0);
 }
 
 void leds_action_isr_10ms(void)

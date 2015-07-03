@@ -18,7 +18,7 @@
  * General Public License for more details at
  * http://www.gnu.org/copyleft/gpl.html
  *
- * @section DESCRIPTION
+ * @section DESCRIPTIONpins1
  */
 
 #ifndef HAL_GPIO_H
@@ -26,15 +26,16 @@
 
 #include "types/types.h"
 
-#define pins1 1
+#define pins1 1 //TODO deletar
 
+/** @brief */
 typedef enum _PIN_DIR
 {
     DIR_OUTPUT = 0,
     DIR_INPUT
 }PIN_DIR;
 
-/** Enum que possui a posicao dos pinos*/
+/** @brief Enum que possui a posicao dos pinos*/
 enum PinosMCU
 {
     PIN_0 = 0x00,
@@ -47,7 +48,7 @@ enum PinosMCU
     PIN_7,
 };
 
-/** */
+/** @brief TODO*/
 typedef struct regGPIO
 {
 	volatile uint32 *port;
@@ -56,69 +57,135 @@ typedef struct regGPIO
     uint32 numPin;
 }regGPIO;
 
+/** @brief TODO*/
 typedef struct _regPin
 {
 	volatile uint32 *out;
-    uint32 pin;
+        uint32 pin;
 }regPin;
 
 /**
- * coloca em 1 o bit x da vari�vel byte. Range(0-7).
- * Exemplo:  set_bit(PORTD, 5);
- * Resultado: PORTD = 0b00010000
+ * @brief coloca em 1 o bit x da vari�vel byte. Range(0-7).
+ * @details Exemplo:  set_bit(PORTD, 5); \n
+ * Resultado: PORTD = 0b00010000         
  */
 #define	set_bit(value,bit_x)	(value |= (1 << bit_x))
 
 /**
- * coloca em 0 no bit_x da variavel vari�vel byte. Range(0-7).
- * Exemplo:  lr_bit(PORTD, 5);
+ * @brief coloca em 0 no bit_x da variavel vari�vel byte. Range(0-7).
+ * @details Exemplo:  lr_bit(PORTD, 5);     \n
  * Resultado: PORTD = 0b00000000
  */
 #define	clr_bit(value,bit_x)	(value &= ~(1 << bit_x))
 
 /**
-* troca o estado l�gico do bit x da vari�vel bytex. Range(0-7).
-* Exemplo:   toggle_bit(PORTD, 5);
+* @brief troca o estado l�gico do bit x da vari�vel bytex. Range(0-7).
+* @details Exemplo:   toggle_bit(PORTD, 5); \n
 * Resultado: PORTD = 0b00000000 ou PORTD = 0b00010000
 */
 #define toggle_bit(value,bit_x)     (value ^= (1 << bit_x))
 
 /**
- * retorna 0 ou !0 conforme leitura do bit. Range(0-7).
- * Exemplo:   tst_bit(PORTD, 5);
+ * @brief retorna 0 ou !0 conforme leitura do bit. Range(0-7).
+ * @details Exemplo:   tst_bit(PORTD, 5);   \n
  * Resultado: x = 0 ou x = 32
  */
 #define tst_bit(value,bit_x)        (value & (1 << bit_x))
 
 /**
- * retorna 0 ou 1 conforme leitura do bit. Range(0-7).
- * Exemplo:   tst_bit_bool(PORTD, 5);
+ * @brief retorna 0 ou 1 conforme leitura do bit. Range(0-7).
+ * @details Exemplo:   tst_bit_bool(PORTD, 5);  \n
  * Resultado: x = 0 ou x = 1
  */
 #define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
 
 
-
+/** @brief TODO */
 void V_initRefRegisters(void);
+
+/**
+ * @brief TODO
+ * @param registrador TODO
+ * @param UI8_value TODO
+ */
 void GPIO_write_data(volatile uint32 *registrador, uint32 UI8_value);
+
+/**
+ * @brief TODO
+ * @param reg TODO
+ * @param _port TODO
+ */
 void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag);
+
+/**
+ * @brief TODO
+ * @param port TODO
+ * @param pino TODO
+ */
 void GPIO_attach(regGPIO *reg, regGPIO *_port);
 
+/**
+ * @brief TODO
+ * @param pin TODO
+ */
 void GPIO_output_toggle(volatile uint32 *port, uint32 pino);
 
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @param reg TODO
+ */
 void GPIO_low(volatile uint32 *port, uint32 pino);
+
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @param IODirection TODO
+ */
 void GPIO_high(volatile uint32 *port, uint32 pino);
 
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @return TODO
+ */
 uint8 GPIO_input_state(regPin *pin);
+
+/**
+ * @brief TODO
+ * @param pin TODO
+ */
 void GPIO_pin_high(regPin *pin);
-void GPIO_pin_low(regPin *pin);
-void GPIO_pin_outputBit(regPin *pin, uint32 flag);
-void GPIO_pin_attach(regPin *pin, regGPIO *reg);
-uint8 GPIO_pin_state(regPin *pin);
+
 /**
  * @brief TODO
  * @param pin
- * @param io
+ */
+void GPIO_pin_low(regPin *pin);
+
+/**
+ * @brief TODO
+ * @param flag
+ */
+void GPIO_pin_outputBit(regPin *pin, uint32 flag);
+
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @param reg TODO
+ */
+void GPIO_pin_attach(regPin *pin, regGPIO *reg);
+
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @return TODO
+ */
+uint8 GPIO_pin_state(regPin *pin);
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @param IODirection
  */
 void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection);
 
@@ -161,10 +228,10 @@ extern regGPIO rB5;
 extern regGPIO rB6;
 extern regGPIO rB7;
 
-extern regGPIO rC0;
-extern regGPIO rC1;
-extern regGPIO rC2;
-extern regGPIO rC3;
+//extern regGPIO rC0;
+//extern regGPIO rC1;
+//extern regGPIO rC2;
+//extern regGPIO rC3;
 extern regGPIO rC4;
 extern regGPIO rC5;
 extern regGPIO rC6;
@@ -185,17 +252,12 @@ extern regGPIO rE2;
 extern regGPIO rE3;
 extern regGPIO rE4;
 extern regGPIO rE5;
-extern regGPIO rE6;
-extern regGPIO rE7;
 
 extern regGPIO rF0;
 extern regGPIO rF1;
 extern regGPIO rF2;
 extern regGPIO rF3;
 extern regGPIO rF4;
-extern regGPIO rF5;
-extern regGPIO rF6;
-extern regGPIO rF7;
 
 #endif	/* HAL_GPIO_H */
 

@@ -41,37 +41,25 @@
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
 
-/** Numero maximo de caracteres, usado na funcao lcd_Anima*/
-#define LCD_MAX_LINES   4
-#define LCD_MAX_COLUMNS 20
-
-#define LINES1  1
-#define LINES2  2
-#define LINES3  3
-#define LINES4  4
-
-#define COLUMNS16 16
-#define COLUMNS20 20
-
 /** Estrutura que contem os pinos do microcontrolador que irao controlar o display-lcd 2x16 ou 4x20*/
 typedef struct _DisplayLcd
 {
-    /**Recebe a configuração de qual pino do pic que controlara o DB4 do CLD */
-    regPin db4;
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o DB4 do CLD */
+    regPin DB4;
     
-    /**Recebe a configuração de qual pino do pic que controlara o DB5 do CLD */
-    regPin db5;
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o DB5 do CLD */
+    regPin DB5;
 
-    /**Recebe a configuração de qual pino do pic que controlara o DB6 do CLD */
-    regPin db6;
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o DB6 do CLD */
+    regPin DB6;
 
-    /**Recebe a configuração de qual pino do pic que controlara o DB7 do CLD */
-    regPin db7;
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o DB7 do CLD */
+    regPin DB7;
 
-    /**Recebe a configuração de qual pino do pic que controlara o E do CLD */
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o E do CLD */
     regPin E;
 
-    /**Recebe a configuração de qual pino do pic que controlara o RS do CLD */
+    /** @brief Recebe a configuracao de qual pino do pic que controlara o RS do CLD */
     regPin RS;
 }DisplayLcd;
 
@@ -79,26 +67,27 @@ typedef struct _DisplayLcd
 //Assinatura das funcoes
 
 /**
- * Inicializa display LCD. Deve ser chamado antes de qualquer função do lcd
+ * @brief Inicializa display LCD. Deve ser chamado antes de qualquer funcao do lcd
  * @param pin
  * @param port
  * @param tris
  */
-void lcd_attach(regPin *pin, regGPIO *reg);
+void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7);
 
 /**
- * função que se encarreca de enviar um dado ou uma instrução ao lcd.
+ * @brief funcaoo que se encarreca de enviar um dado ou uma instrucao ao lcd.
  * @param 0(instrucao), 1(Dado).
  * @param endereco do lcd onde o dado sera escrito.
  */
 void lcd_send_byte(int8 address, int8 n);
 
 /**
- * Escreve o vetor de caracters na próxima posição do LCD.
- * Ex:
- * int8 buff[] = {"12345"};
- * lcd_printf(&buff);
- * lcd_printf((int8 *)"Temperatura = %d", TAMB);
+ * @brief Escreve o vetor de caracters na proxima posicao do LCD.
+ * @details 
+ * Ex:                                              \n
+ * int8 buff[] = {"12345"};                         \n
+ * lcd_printf(&buff);                               \n
+ * lcd_printf((int8 *)"Temperatura = %d", TAMB);    \n
  * lcd_printf((int8 *)"%u/%u/%u-%u:%u:%u", relogio.UI8_Dia, relogio.UI8_Mes, relogio.UI8_Ano, relogio.UI8_Horas, relogio.UI8_Minutos, relogio.UI8_Segundos);
  * @param ponteiro que aponta o vetor de caracteres que vai ser enviado ao lcd.
  */
@@ -106,7 +95,7 @@ void lcd_printf(int8 *c, ...);
 void lcd_send_string(int8 *fmt);
 
 /**
- * funçao que enviara os primeiros 4 bits menos significativos nas saidas db4 a db7 do lcd.
+ * funcao que enviara os primeiros 4 bits menos significativos nas saidas db4 a db7 do lcd.
  * @param dado de 8bits onde somente os 4 primeiros serao usados no envio de comandos do lcd.
  */
 void lcd_send_nibble(int8 nibble);
@@ -115,32 +104,30 @@ void lcd_send_nibble(int8 nibble);
 void lcd_init(void);
 
 /**
- * Posiciona o cursor na posição x , y.  O limite superior é 1, 1 e o limete inferior e 1, 4
-* Explicacao:
-* Endereco para a escrita em LCD 2x16 e 4x20
-*          Col1  Col2 ... Col20
-* Linha 1: 0x80  0x81 ... 0x93
-* Linha 2: 0xC0  0xC1 ... 0xD3
-* Linha 3: 0x94  0x95 ... 0xA7
-* Linha 4: 0xD4  0xD5 ... 0xE7
+* @brief Posiciona o cursor na posicao x , y.  O limite superior 1, 1 e o limete inferior e 1, 4
+* @details Explicacao:                          \n
+* Endereco para a escrita em LCD 2x16 e 4x20    \n
+*          Col1  Col2 ... Col20                 \n
+* Linha 1: 0x80  0x81 ... 0x93                  \n
+* Linha 2: 0xC0  0xC1 ... 0xD3                  \n
+* Linha 3: 0x94  0x95 ... 0xA7                  \n
+* Linha 4: 0xD4  0xD5 ... 0xE7                  
 * @param x: coluna
 * @param y: linha
 */
 void lcd_gotoxy(int8 x, int8 y);
 
 /**
- * Imprime variaveis in16 no display LCD
+ * @brief Imprime variaveis in16 no display LCD
  * @param n Valor que sera impresso no LCD
  */
 void lcd_print_int16(int16 n);
 
 /**
- * Imprime Variaveis uin16 no display LCD
+ * @brief Imprime Variaveis uin16 no display LCD
  * @param n Valor que sera impresso no LCD
  */
 void lcd_print_uint16(uint16 n);
-//void lcd_anima(uint8 flag, uint8 texto[]);
-extern DisplayLcd display;
 
 #endif	/* LCD_H */
 

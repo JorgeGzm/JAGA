@@ -25,21 +25,23 @@
 #ifndef HAL_SYSTICK_H
 #define	HAL_SYSTICK_H
 
-
-//Includes
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 #include "vars/vars.h"
-
 #include "types/types.h"
 
 /**
- * Carregador: usa apenas os primeiros 24 bits
+ * @brief Carregador: usa apenas os primeiros 24 bits
  * @param enable_systick
  * @param enable_interrupt
  * @param reload
 */
 void systick_set_reload(uint32 enable_systick, uint32 enable_interrupt, uint32 reload);
+
+/**
+ * @brief TODO
+ * @param clock TODO
+ */
 void systick_set_clock(uint32 clock);
 
 #endif	/* HAL_SYSTICK_H */

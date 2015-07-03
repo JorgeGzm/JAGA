@@ -22,12 +22,10 @@
 #include "hal_i2c.h"
 
 
-/** timer ?? TODO implementar temporizador*/
+/** @brief timer ?? TODO implementar temporizador*/
 uint8 tmr_i2c1_tout = 0;
 
-/**
- * Funcao para gerar o temporizador timeout das comunicacoes
- */
+/** @brief Funcao para gerar o temporizador timeout das comunicacoes */
 void isr_1ms_i2c1(void)
 {
     //Decrementa temporizador timeout da comunicacao

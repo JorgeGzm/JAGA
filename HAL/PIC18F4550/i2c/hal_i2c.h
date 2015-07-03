@@ -105,7 +105,7 @@ enum _I2C_COMMAND
 
 
 /**
- * @briefConfigura temporizador timeout
+ * @brief Configura temporizador timeout
  * @param valor: valor do timer
  */
 void set_i2c1_timeout(uint8);
