@@ -9,7 +9,7 @@
 #ifndef SYS_SPI_H
     #define SYS_SPI_H
 
-/** Contem a rotina de configuracao e inicializacao da spi. */
+/** @brief Contem a rotina de configuracao e inicializacao da spi. */
 void init_spi(void);
 
 #endif	/* SYS_SPI_H */

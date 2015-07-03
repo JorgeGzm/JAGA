@@ -11,7 +11,6 @@
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
 
-/** */
 void init_gpio(void)
 {
     //Configuracao inicial das I/O do microcontrolador
@@ -31,7 +30,7 @@ void init_gpio(void)
     //Rotinas de inicializacao especiais
 
     //Libera o uso do PORTB como I/O
-    INTCONbits.RBIE = 0; //b3:(0) PORTB(RB4-RB7) desabilita interrupcao por mudanca de estado do
+    INTCONbits.RBIE = 0;  //b3:(0) PORTB(RB4-RB7) desabilita interrupcao por mudanca de estado do
     INTCON2bits.RBIP = 0; //b0:(0) PORTB(RB4-RB7) Interrupcao de mudanca de estado, baixa prioridade:
 
     //Libera o uso do PORTE como I/O

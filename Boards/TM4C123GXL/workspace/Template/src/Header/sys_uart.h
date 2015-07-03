@@ -9,7 +9,7 @@
 #ifndef SYS_UART_H
     #define SYS_UART_H
 
-/** Contem a rotina de configuracao e inicializacao da uart. */
+/** @brief Contem a rotina de configuracao e inicializacao da uart. */
 void init_uart(void);
 
 #endif	/* SYS_UART_H */

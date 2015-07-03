@@ -15,34 +15,44 @@
 
 void run_him(void)
 {
-	if(buttons_check_press(TECLA_UP, ))
+	static uint16 counterA = 0;
+	static uint16 counterB = 0;
+
+	if(buttons_check_press(TECLA_UP, 0))
 	{
 		lcd_gotoxy(1, 1);
-		lcd_printf((int8 *) "\fTECLA UP        ");
-		leds_set(LD1G, LED_OFF);
-		leds_set(LD2G, LED_BLINK_FAST);
+		lcd_printf((int8 *)"\fTECLA UP        ");
+
+		lcd_gotoxy(1, 2);
+		lcd_printf((int8 *)"%u      ", counterA++);
+
+		leds_set(LD1G, LED_BLINK_SLOW);
+		leds_set(LD2G, LED_OFF);
 	}
 
 	if(buttons_check_press(TECLA_DOWN, 1))
 	{
 		lcd_gotoxy(1, 1);
-		lcd_printf((int8 *) "\fTECLA DOWN      ");
-		leds_set(LD1G, LED_BLINK_SLOW);
-		leds_set(LD2G, LED_OFF);
+		lcd_printf((int8 *)"\fTECLA DOWN      ");
+
+		lcd_gotoxy(1, 2);
+		lcd_printf((int8 *)"%u      ", counterB++);
+
+		leds_set(LD1G, LED_OFF);
+		leds_set(LD2G, LED_BLINK_FAST);
 	}
 
-	if(buttons_check_press(TECLA_DOWN|TECLA_UP, 1))
+	if(buttons_check_press(TECLA_DOWN | TECLA_UP, 1))
 	{
 		lcd_gotoxy(1, 1);
-		lcd_printf((int8 *) "\fTECLA DOWN UP   ");
-		leds_set(LD1G|LD2G, LED_BLINK_SLOW);
+		lcd_printf((int8 *)"\fTECLA DOWN UP   ");
+		leds_set(LD1G | LD2G, LED_BLINK_SLOW);
 	}
 
 	Delay_ms(100);
 
 	buttons_read_isr_10ms();
 	leds_action_isr_10ms();
-
 }
 
 

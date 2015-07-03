@@ -9,7 +9,7 @@
 #ifndef SYS_AD_H
     #define SYS_AD_H
 
-/** Configura o modulo AD */
+/** @brief Configura o modulo AD */
 void init_AD(void);
 
 #endif	/* SYS_AD_H */

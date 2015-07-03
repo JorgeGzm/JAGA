@@ -1,28 +1,28 @@
-/* 
- * File: app_info.c
- * Author: Jorge Guzman
- *
- * Created on 10 de Marco de 2015, 20:35
+/**
+ * @file    app_him.c
+ * @brief   TODO
+ * @author  Jorge Guzman
+ * @date    10 de Marco 2015
+ * @version 0.1.0.0 (beta)
  */
 
 #include "../Header/app_info.h"
 
-/** Codigo do equipamento*/
+/** @brief Codigo do equipamento*/
 UWord id_device;
 
-/** Numero de serie do equipamento*/
+/** @brief Numero de serie do equipamento*/
 UWord num_serie;
 
-/** Release do Firmware*/
+/** @brief Release do Firmware*/
 uint16 release;
 
-/** Versao do Firmware*/
+/** @brief Versao do Firmware*/
 uint16 version;
 
-/** Senha usada para configurar ou alterar informacoes de fabrica. */
+/** @brief Senha usada para configurar ou alterar informacoes de fabrica. */
 UWord pwd_device;
 
-/** Inicializa informacoes do equipamento*/
 void info_init(void)
 {
 //    id_device.value = 0;

@@ -7,8 +7,6 @@
  */
 
 #include "../Header/sys_timer.h"
-//#include "buttons/buttons.h"
-//#include "leds/leds.h"
 
 void init_timer0(void)
 {

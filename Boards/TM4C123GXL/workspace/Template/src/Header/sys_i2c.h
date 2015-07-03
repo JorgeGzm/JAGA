@@ -9,7 +9,7 @@
 #ifndef SYS_I2C_H
     #define SYS_I2C_H
 
-/** Contem a rotina de configuracao e inicializacao do i2c. */
+/** @brief Contem a rotina de configuracao e inicializacao do i2c. */
 void init_i2c(void);
 
 #endif	/* SYS_I2C_H */

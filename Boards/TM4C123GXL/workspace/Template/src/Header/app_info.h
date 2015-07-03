@@ -1,8 +1,9 @@
-/*
- * File: app_info.h
- * Author: Jorge Guzman
- *
- * Created on 10 de Marco de 2015, 20:35
+/**
+ * @file    app_info.h
+ * @brief   TODO
+ * @author  Jorge Guzman
+ * @date    10 de Marco 2015
+ * @version 0.1.0.0 (beta)
  */
 
 #ifndef APP_INFO_H
@@ -11,15 +12,16 @@
 #include "vars/vars.h"
 #include "types/types.h"
 
-/** Release do Firmware. Ex: release 1*/
+/** @brief Release do Firmware. Ex: release 1*/
 #define RELEASE_FIRMWARE 1   //
 
-/** Versao do Firmware. Ex: versao 1.0.0*/
+/** @brief Versao do Firmware. Ex: versao 1.0.0*/
 #define VERSION_FIRMWARE 100
 
-/** Codigo de identificacao da linha do equipamento*/
+/** @brief Codigo de identificacao da linha do equipamento*/
 #define ID_DEVICE 1
 
+/** @brief Inicializa informacoes do equipamento*/
 void info_init(void);
 
 #endif	/* INFO_HW_H */

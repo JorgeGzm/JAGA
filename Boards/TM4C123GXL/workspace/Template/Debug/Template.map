@@ -1,7 +1,3 @@
-Archive member included because of file (symbol)
-
-/usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
-                              ./Middleware/lcd/lcd.o (memset)
 
 Allocating common symbols
 Common symbol       size              file
@@ -11,7 +7,6 @@ UN_ledsBlinkSlow    0x4               ./Middleware/leds/leds.o
 buttons_vector      0x40              ./Middleware/buttons/buttons.o
 version             0x2               ./src/Source/app_info.o
 UN_ledsBlinkFast    0x4               ./Middleware/leds/leds.o
-lcd_buffer          0x50              ./Middleware/lcd/lcd.o
 display             0x30              ./Middleware/lcd/lcd.o
 release             0x2               ./src/Source/app_info.o
 pwd_device          0x4               ./src/Source/app_info.o
@@ -26,7 +21,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/Source/app_control.o
  .data          0x00000000        0x0 ./src/Source/app_control.o
  .bss           0x00000000        0x0 ./src/Source/app_control.o
- .group         0x00000000        0x8 ./src/Source/app_him.o
  .group         0x00000000        0x8 ./src/Source/app_him.o
  .group         0x00000000        0x8 ./src/Source/app_him.o
  .group         0x00000000        0x8 ./src/Source/app_him.o
@@ -70,7 +64,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./src/Source/main.o
  .group         0x00000000        0x8 ./src/Source/main.o
  .group         0x00000000        0x8 ./src/Source/main.o
- .group         0x00000000        0x8 ./src/Source/main.o
  .text          0x00000000        0x0 ./src/Source/main.o
  .data          0x00000000        0x0 ./src/Source/main.o
  .bss           0x00000000        0x0 ./src/Source/main.o
@@ -88,7 +81,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x26 ./src/Source/main.o
  .debug_macro   0x00000000      0xd39 ./src/Source/main.o
  .debug_macro   0x00000000      0x330 ./src/Source/main.o
- .debug_macro   0x00000000       0x34 ./src/Source/main.o
  .debug_macro   0x00000000       0x52 ./src/Source/main.o
  .debug_macro   0x00000000       0x10 ./src/Source/main.o
  .group         0x00000000        0x8 ./src/Source/startup_gcc.o
@@ -154,7 +146,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./src/Source/sys_hw.o
  .group         0x00000000        0x8 ./src/Source/sys_hw.o
  .group         0x00000000        0x8 ./src/Source/sys_hw.o
- .group         0x00000000        0x8 ./src/Source/sys_hw.o
  .text          0x00000000        0x0 ./src/Source/sys_hw.o
  .data          0x00000000        0x0 ./src/Source/sys_hw.o
  .bss           0x00000000        0x0 ./src/Source/sys_hw.o
@@ -172,7 +163,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x26 ./src/Source/sys_hw.o
  .debug_macro   0x00000000      0xd39 ./src/Source/sys_hw.o
  .debug_macro   0x00000000      0x330 ./src/Source/sys_hw.o
- .debug_macro   0x00000000       0x34 ./src/Source/sys_hw.o
  .debug_macro   0x00000000       0x52 ./src/Source/sys_hw.o
  .debug_macro   0x00000000       0x16 ./src/Source/sys_hw.o
  .group         0x00000000        0x8 ./src/Source/sys_i2c.o
@@ -394,10 +384,6 @@ Discarded input sections
                 0x00000000        0x4 ./TM4C123GXL/gpio/hal_gpio.o
  .data.ref_TRISC
                 0x00000000        0x4 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rC0      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rC1      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rC2      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rC3      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rC4      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rC5      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rC6      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
@@ -424,16 +410,11 @@ Discarded input sections
  .data.rE3      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rE4      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rE5      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rE6      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rE7      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .data.ref_PORTF
                 0x00000000        0x4 ./TM4C123GXL/gpio/hal_gpio.o
  .data.ref_TRISF
                 0x00000000        0x4 ./TM4C123GXL/gpio/hal_gpio.o
  .data.rF3      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rF5      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rF6      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
- .data.rF7      0x00000000       0x10 ./TM4C123GXL/gpio/hal_gpio.o
  .text.V_initRefRegisters
                 0x00000000        0xc ./TM4C123GXL/gpio/hal_gpio.o
  .text.GPIO_write_data
@@ -536,7 +517,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./Middleware/lcd/lcd.o
  .group         0x00000000        0x8 ./Middleware/lcd/lcd.o
  .group         0x00000000        0x8 ./Middleware/lcd/lcd.o
- .group         0x00000000        0x8 ./Middleware/lcd/lcd.o
  .text          0x00000000        0x0 ./Middleware/lcd/lcd.o
  .data          0x00000000        0x0 ./Middleware/lcd/lcd.o
  .bss           0x00000000        0x0 ./Middleware/lcd/lcd.o
@@ -553,7 +533,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x26 ./Middleware/lcd/lcd.o
  .debug_macro   0x00000000      0xd39 ./Middleware/lcd/lcd.o
  .debug_macro   0x00000000      0x330 ./Middleware/lcd/lcd.o
- .debug_macro   0x00000000       0x34 ./Middleware/lcd/lcd.o
  .group         0x00000000        0x8 ./Middleware/info_hw/info_hw.o
  .text          0x00000000        0x0 ./Middleware/info_hw/info_hw.o
  .data          0x00000000        0x0 ./Middleware/info_hw/info_hw.o
@@ -587,10 +566,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./Middleware/buttons/buttons.o
  .data          0x00000000        0x0 ./Middleware/buttons/buttons.o
  .bss           0x00000000        0x0 ./Middleware/buttons/buttons.o
- .text.button_is_press
-                0x00000000       0x40 ./Middleware/buttons/buttons.o
- .text.button_is_hold
-                0x00000000       0x40 ./Middleware/buttons/buttons.o
  .debug_macro   0x00000000      0x886 ./Middleware/buttons/buttons.o
  .debug_macro   0x00000000     0xb496 ./Middleware/buttons/buttons.o
  .debug_macro   0x00000000       0x2d ./Middleware/buttons/buttons.o
@@ -606,9 +581,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x28 ./Middleware/buttons/buttons.o
  .debug_macro   0x00000000       0x10 ./Middleware/buttons/buttons.o
  .debug_macro   0x00000000       0x10 ./Middleware/buttons/buttons.o
- .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
- .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
- .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
 
 Memory Configuration
 
@@ -658,190 +630,188 @@ END GROUP
 .vtable
  *(.vtable)
 
-.text           0x0000026c     0x10f0
+.text           0x0000026c     0x1140
  CREATE_OBJECT_SYMBOLS
  *(.text)
  *(.text.*)
  .text.run_system
                 0x0000026c        0xc ./src/Source/app_control.o
                 0x0000026c                run_system
- .text.run_him  0x00000278       0x9c ./src/Source/app_him.o
+ .text.run_him  0x00000278       0xe0 ./src/Source/app_him.o
                 0x00000278                run_him
  .text.info_init
-                0x00000314        0xc ./src/Source/app_info.o
-                0x00000314                info_init
- .text.main     0x00000320       0x18 ./src/Source/main.o
-                0x00000320                main
+                0x00000358        0xc ./src/Source/app_info.o
+                0x00000358                info_init
+ .text.main     0x00000364       0x18 ./src/Source/main.o
+                0x00000364                main
  .text.ResetISR
-                0x00000338       0x68 ./src/Source/startup_gcc.o
-                0x00000338                ResetISR
- .text.NmiSR    0x000003a0        0x8 ./src/Source/startup_gcc.o
+                0x0000037c       0x68 ./src/Source/startup_gcc.o
+                0x0000037c                ResetISR
+ .text.NmiSR    0x000003e4        0x8 ./src/Source/startup_gcc.o
  .text.FaultISR
-                0x000003a8        0x8 ./src/Source/startup_gcc.o
+                0x000003ec        0x8 ./src/Source/startup_gcc.o
  .text.IntDefaultHandler
-                0x000003b0        0x8 ./src/Source/startup_gcc.o
- .text.init_AD  0x000003b8        0xc ./src/Source/sys_ad.o
-                0x000003b8                init_AD
+                0x000003f4        0x8 ./src/Source/startup_gcc.o
+ .text.init_AD  0x000003fc        0xc ./src/Source/sys_ad.o
+                0x000003fc                init_AD
  .text.init_gpio
-                0x000003c4       0xd8 ./src/Source/sys_gpio.o
-                0x000003c4                init_gpio
+                0x00000408       0xd8 ./src/Source/sys_gpio.o
+                0x00000408                init_gpio
  .text.init_drivers
-                0x0000049c       0x24 ./src/Source/sys_hw.o
-                0x0000049c                init_drivers
+                0x000004e0       0x24 ./src/Source/sys_hw.o
+                0x000004e0                init_drivers
  .text.init_devices
-                0x000004c0       0xcc ./src/Source/sys_hw.o
-                0x000004c0                init_devices
+                0x00000504       0xd0 ./src/Source/sys_hw.o
+                0x00000504                init_devices
  .text.init_i2c
-                0x0000058c        0xc ./src/Source/sys_i2c.o
-                0x0000058c                init_i2c
+                0x000005d4        0xc ./src/Source/sys_i2c.o
+                0x000005d4                init_i2c
  .text.init_mcu
-                0x00000598       0x90 ./src/Source/sys_mcu.o
-                0x00000598                init_mcu
+                0x000005e0       0x90 ./src/Source/sys_mcu.o
+                0x000005e0                init_mcu
  .text.init_pwm
-                0x00000628        0xc ./src/Source/sys_pwm.o
-                0x00000628                init_pwm
+                0x00000670        0xc ./src/Source/sys_pwm.o
+                0x00000670                init_pwm
  .text.init_timer0
-                0x00000634        0xc ./src/Source/sys_timer.o
-                0x00000634                init_timer0
+                0x0000067c        0xc ./src/Source/sys_timer.o
+                0x0000067c                init_timer0
  .text.init_uart
-                0x00000640        0xc ./src/Source/sys_uart.o
-                0x00000640                init_uart
+                0x00000688        0xc ./src/Source/sys_uart.o
+                0x00000688                init_uart
  .text.GPIO_pin_high
-                0x0000064c       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x0000064c                GPIO_pin_high
+                0x00000694       0x2c ./TM4C123GXL/gpio/hal_gpio.o
+                0x00000694                GPIO_pin_high
  .text.GPIO_pin_low
-                0x00000678       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000678                GPIO_pin_low
+                0x000006c0       0x2c ./TM4C123GXL/gpio/hal_gpio.o
+                0x000006c0                GPIO_pin_low
  .text.GPIO_input_state
-                0x000006a4       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x000006a4                GPIO_input_state
+                0x000006ec       0x2c ./TM4C123GXL/gpio/hal_gpio.o
+                0x000006ec                GPIO_input_state
  .text.GPIO_pin_outputBit
-                0x000006d0       0x50 ./TM4C123GXL/gpio/hal_gpio.o
-                0x000006d0                GPIO_pin_outputBit
+                0x00000718       0x50 ./TM4C123GXL/gpio/hal_gpio.o
+                0x00000718                GPIO_pin_outputBit
  .text.GPIO_pin_attach
-                0x00000720       0x24 ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000720                GPIO_pin_attach
+                0x00000768       0x24 ./TM4C123GXL/gpio/hal_gpio.o
+                0x00000768                GPIO_pin_attach
  .text.GPIO_pin_state
-                0x00000744       0x30 ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000744                GPIO_pin_state
+                0x0000078c       0x30 ./TM4C123GXL/gpio/hal_gpio.o
+                0x0000078c                GPIO_pin_state
  .text.GPIO_confDir
-                0x00000774       0x18 ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000774                GPIO_confDir
- .text.Delay    0x0000078c       0x24 ./TM4C123GXL/delay/hal_delay.o
-                0x0000078c                Delay
+                0x000007bc       0x18 ./TM4C123GXL/gpio/hal_gpio.o
+                0x000007bc                GPIO_confDir
+ .text.Delay    0x000007d4       0x24 ./TM4C123GXL/delay/hal_delay.o
+                0x000007d4                Delay
  .text.Delay_us
-                0x000007b0       0x44 ./TM4C123GXL/delay/hal_delay.o
-                0x000007b0                Delay_us
+                0x000007f8       0x44 ./TM4C123GXL/delay/hal_delay.o
+                0x000007f8                Delay_us
  .text.Delay_ms
-                0x000007f4       0x48 ./TM4C123GXL/delay/hal_delay.o
-                0x000007f4                Delay_ms
+                0x0000083c       0x48 ./TM4C123GXL/delay/hal_delay.o
+                0x0000083c                Delay_ms
  .text.leds_set
-                0x0000083c      0x160 ./Middleware/leds/leds.o
-                0x0000083c                leds_set
+                0x00000884      0x160 ./Middleware/leds/leds.o
+                0x00000884                leds_set
  .text.leds_attach
-                0x0000099c       0x20 ./Middleware/leds/leds.o
-                0x0000099c                leds_attach
+                0x000009e4       0x48 ./Middleware/leds/leds.o
+                0x000009e4                leds_attach
  .text.leds_action_isr_10ms
-                0x000009bc       0x60 ./Middleware/leds/leds.o
-                0x000009bc                leds_action_isr_10ms
+                0x00000a2c       0x60 ./Middleware/leds/leds.o
+                0x00000a2c                leds_action_isr_10ms
  .text.leds_reverse
-                0x00000a1c       0x3c ./Middleware/leds/leds.o
-                0x00000a1c                leds_reverse
- .text.leds_on  0x00000a58       0x3c ./Middleware/leds/leds.o
-                0x00000a58                leds_on
+                0x00000a8c       0x3c ./Middleware/leds/leds.o
+                0x00000a8c                leds_reverse
+ .text.leds_on  0x00000ac8       0x3c ./Middleware/leds/leds.o
+                0x00000ac8                leds_on
  .text.leds_off
-                0x00000a94       0x48 ./Middleware/leds/leds.o
-                0x00000a94                leds_off
+                0x00000b04       0x48 ./Middleware/leds/leds.o
+                0x00000b04                leds_off
  .text.leds_status
-                0x00000adc       0x58 ./Middleware/leds/leds.o
-                0x00000adc                leds_status
+                0x00000b4c       0x58 ./Middleware/leds/leds.o
+                0x00000b4c                leds_status
  .text.leds_write
-                0x00000b34       0x54 ./Middleware/leds/leds.o
-                0x00000b34                leds_write
+                0x00000ba4       0x54 ./Middleware/leds/leds.o
+                0x00000ba4                leds_write
  .text.lcd_attach
-                0x00000b88       0x20 ./Middleware/lcd/lcd.o
-                0x00000b88                lcd_attach
+                0x00000bf8       0xb8 ./Middleware/lcd/lcd.o
+                0x00000bf8                lcd_attach
  .text.lcd_init
-                0x00000ba8       0xbc ./Middleware/lcd/lcd.o
-                0x00000ba8                lcd_init
+                0x00000cb0       0x84 ./Middleware/lcd/lcd.o
+                0x00000cb0                lcd_init
  .text.lcd_send_nibble
-                0x00000c64       0x80 ./Middleware/lcd/lcd.o
-                0x00000c64                lcd_send_nibble
+                0x00000d34       0x80 ./Middleware/lcd/lcd.o
+                0x00000d34                lcd_send_nibble
  .text.lcd_send_byte
-                0x00000ce4       0x6c ./Middleware/lcd/lcd.o
-                0x00000ce4                lcd_send_byte
+                0x00000db4       0x6c ./Middleware/lcd/lcd.o
+                0x00000db4                lcd_send_byte
  .text.lcd_send_string
-                0x00000d50       0x30 ./Middleware/lcd/lcd.o
-                0x00000d50                lcd_send_string
+                0x00000e20       0x30 ./Middleware/lcd/lcd.o
+                0x00000e20                lcd_send_string
  .text.lcd_gotoxy
-                0x00000d80       0x68 ./Middleware/lcd/lcd.o
-                0x00000d80                lcd_gotoxy
+                0x00000e50       0x68 ./Middleware/lcd/lcd.o
+                0x00000e50                lcd_gotoxy
  .text.lcd_printf
-                0x00000de8      0x104 ./Middleware/lcd/lcd.o
-                0x00000de8                lcd_printf
+                0x00000eb8      0x104 ./Middleware/lcd/lcd.o
+                0x00000eb8                lcd_printf
  .text.lcd_print_uint16
-                0x00000eec       0x84 ./Middleware/lcd/lcd.o
-                0x00000eec                lcd_print_uint16
+                0x00000fbc       0x84 ./Middleware/lcd/lcd.o
+                0x00000fbc                lcd_print_uint16
  .text.lcd_print_int16
-                0x00000f70       0xe0 ./Middleware/lcd/lcd.o
-                0x00000f70                lcd_print_int16
+                0x00001040       0xe0 ./Middleware/lcd/lcd.o
+                0x00001040                lcd_print_int16
  .text.buttons_init
-                0x00001050       0x3c ./Middleware/buttons/buttons.o
-                0x00001050                buttons_init
+                0x00001120       0x3c ./Middleware/buttons/buttons.o
+                0x00001120                buttons_init
  .text.button_attach
-                0x0000108c       0x30 ./Middleware/buttons/buttons.o
-                0x0000108c                button_attach
+                0x0000115c       0x48 ./Middleware/buttons/buttons.o
+                0x0000115c                button_attach
  .text.buttons_read_isr_10ms
-                0x000010bc      0x150 ./Middleware/buttons/buttons.o
-                0x000010bc                buttons_read_isr_10ms
+                0x000011a4      0x150 ./Middleware/buttons/buttons.o
+                0x000011a4                buttons_read_isr_10ms
  .text.buttons_check_press
-                0x0000120c       0xb4 ./Middleware/buttons/buttons.o
-                0x0000120c                buttons_check_press
- .text.memset   0x000012c0       0x9c /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
-                0x000012c0                memset
-                0x0000135c                . = ALIGN (0x4)
+                0x000012f4       0xb8 ./Middleware/buttons/buttons.o
+                0x000012f4                buttons_check_press
+                0x000013ac                . = ALIGN (0x4)
  *(.ctors)
-                0x0000135c                . = ALIGN (0x4)
+                0x000013ac                . = ALIGN (0x4)
  *(.dtors)
-                0x0000135c                . = ALIGN (0x4)
-                0x0000135c                __init_array_start = .
+                0x000013ac                . = ALIGN (0x4)
+                0x000013ac                __init_array_start = .
  *(.init_array*)
-                0x0000135c                __init_array_end = .
+                0x000013ac                __init_array_end = .
  *(.init)
  *(.fini*)
-                0x0000135c                PROVIDE (__etext, .)
-                0x0000135c                PROVIDE (_etext, .)
-                0x0000135c                PROVIDE (etext, .)
+                0x000013ac                PROVIDE (__etext, .)
+                0x000013ac                PROVIDE (_etext, .)
+                0x000013ac                PROVIDE (etext, .)
 
-.glue_7         0x0000135c        0x0
+.glue_7         0x000013ac        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x0000135c        0x0
+.glue_7t        0x000013ac        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000135c        0x0
+.vfp11_veneer   0x000013ac        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0000135c        0x0
+.v4_bx          0x000013ac        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0000135c        0x0
+.iplt           0x000013ac        0x0
  .iplt          0x00000000        0x0 ./src/Source/app_control.o
 
-.rodata         0x0000135c       0x54
+.rodata         0x000013ac       0x60
  *(.rodata)
- .rodata        0x0000135c       0x3c ./src/Source/app_him.o
- .rodata        0x00001398       0x14 ./src/Source/sys_hw.o
+ .rodata        0x000013ac       0x48 ./src/Source/app_him.o
+ .rodata        0x000013f4       0x14 ./src/Source/sys_hw.o
  *(.rodata*)
  .rodata.LCD_INIT_STRING
-                0x000013ac        0x4 ./Middleware/lcd/lcd.o
-                0x000013ac                LCD_INIT_STRING
+                0x00001408        0x4 ./Middleware/lcd/lcd.o
+                0x00001408                LCD_INIT_STRING
 
-.rel.dyn        0x000013b0        0x0
+.rel.dyn        0x0000140c        0x0
  .rel.iplt      0x00000000        0x0 ./src/Source/app_control.o
 
-.data           0x20000000       0xa0 load address 0x000013b0
-                0x000013b0                __data_load__ = LOADADDR (.data)
+.data           0x20000000       0xa0 load address 0x0000140c
+                0x0000140c                __data_load__ = LOADADDR (.data)
                 0x20000000                __data_start__ = .
  *(.data)
  *(.data*)
@@ -868,104 +838,107 @@ END GROUP
                 0x200000a0                . = ALIGN (0x4)
                 0x200000a0                __data_end__ = .
 
-.igot.plt       0x200000a0        0x0 load address 0x00001450
+.igot.plt       0x200000a0        0x0 load address 0x000014ac
  .igot.plt      0x00000000        0x0 ./src/Source/app_control.o
 
-.ARM.exidx      0x00001450        0x0
-                0x00001450                __exidx_start = .
+.ARM.exidx      0x000014ac        0x0
+                0x000014ac                __exidx_start = .
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00001450                __exidx_end = .
+                0x000014ac                __exidx_end = .
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.bss            0x200000a0      0x31c
+.bss            0x200000a0      0x2d0
                 0x200000a0                __bss_start__ = .
  *(.shbss)
  *(.bss)
  *(.bss.*)
+ .bss.counterA.6457
+                0x200000a0        0x2 ./src/Source/app_him.o
+ .bss.counterB.6458
+                0x200000a2        0x2 ./src/Source/app_him.o
  .bss.pui32Stack
-                0x200000a0      0x200 ./src/Source/startup_gcc.o
- .bss.leds      0x200002a0       0x40 ./Middleware/leds/leds.o
-                0x200002a0                leds
- .bss.UI8_timerLedSlowReverseCounter.4470
-                0x200002e0        0x1 ./Middleware/leds/leds.o
- .bss.UI8_timerLedFastReverseCounter.4471
-                0x200002e1        0x1 ./Middleware/leds/leds.o
- *fill*         0x200002e2        0x2 
- .bss.buttons   0x200002e4        0x4 ./Middleware/buttons/buttons.o
+                0x200000a4      0x200 ./src/Source/startup_gcc.o
+ .bss.leds      0x200002a4       0x40 ./Middleware/leds/leds.o
+                0x200002a4                leds
+ .bss.UI8_timerLedSlowReverseCounter.4456
+                0x200002e4        0x1 ./Middleware/leds/leds.o
+ .bss.UI8_timerLedFastReverseCounter.4457
+                0x200002e5        0x1 ./Middleware/leds/leds.o
+ *fill*         0x200002e6        0x2 
+ .bss.buttons   0x200002e8        0x4 ./Middleware/buttons/buttons.o
  .bss.buttons_read
-                0x200002e8        0x4 ./Middleware/buttons/buttons.o
+                0x200002ec        0x4 ./Middleware/buttons/buttons.o
  *(COMMON)
- COMMON         0x200002ec       0x10 ./Middleware/leds/leds.o
-                0x200002ec                UN_ledsON
-                0x200002f0                UN_ledsBlinkSlow
-                0x200002f4                UN_ledsBlinkFast
-                0x200002f8                UN_ledsStatus
- COMMON         0x200002fc       0x80 ./Middleware/lcd/lcd.o
-                0x200002fc                lcd_buffer
-                0x2000034c                display
- COMMON         0x2000037c       0x40 ./Middleware/buttons/buttons.o
-                0x2000037c                buttons_vector
-                0x200003bc                . = ALIGN (0x4)
-                0x200003bc                __bss_end__ = .
+ COMMON         0x200002f0       0x10 ./Middleware/leds/leds.o
+                0x200002f0                UN_ledsON
+                0x200002f4                UN_ledsBlinkSlow
+                0x200002f8                UN_ledsBlinkFast
+                0x200002fc                UN_ledsStatus
+ COMMON         0x20000300       0x30 ./Middleware/lcd/lcd.o
+                0x20000300                display
+ COMMON         0x20000330       0x40 ./Middleware/buttons/buttons.o
+                0x20000330                buttons_vector
+                0x20000370                . = ALIGN (0x4)
+                0x20000370                __bss_end__ = .
 
-.heap           0x200003bc        0x0
-                0x200003bc                __heap_start__ = .
-                0x200003bc                end = __heap_start__
-                0x200003bc                _end = end
-                0x200003bc                __end = end
+.heap           0x20000370        0x0
+                0x20000370                __heap_start__ = .
+                0x20000370                end = __heap_start__
+                0x20000370                _end = end
+                0x20000370                __end = end
  *(.heap)
-                0x200003bc                __heap_end__ = .
-                0x200003bc                __HeapLimit = __heap_end__
+                0x20000370                __heap_end__ = .
+                0x20000370                __HeapLimit = __heap_end__
 
-.stack          0x200003c0        0x0
-                0x200003c0                _stack = .
-                0x200003c0                __stack = .
+.stack          0x20000370        0x0
+                0x20000370                _stack = .
+                0x20000370                __stack = .
  *(.stack)
 OUTPUT(Template.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x21df
+.debug_info     0x00000000     0x206a
  .debug_info    0x00000000       0x3b ./src/Source/app_control.o
- .debug_info    0x0000003b       0xed ./src/Source/app_him.o
- .debug_info    0x00000128      0x22e ./src/Source/app_info.o
- .debug_info    0x00000356       0xbd ./src/Source/main.o
- .debug_info    0x00000413      0x16c ./src/Source/startup_gcc.o
- .debug_info    0x0000057f       0x3b ./src/Source/sys_ad.o
- .debug_info    0x000005ba       0xd5 ./src/Source/sys_gpio.o
- .debug_info    0x0000068f      0x258 ./src/Source/sys_hw.o
- .debug_info    0x000008e7       0x3b ./src/Source/sys_i2c.o
- .debug_info    0x00000922       0xaf ./src/Source/sys_mcu.o
- .debug_info    0x000009d1       0x3b ./src/Source/sys_pwm.o
- .debug_info    0x00000a0c       0x73 ./src/Source/sys_timer.o
- .debug_info    0x00000a7f       0x3b ./src/Source/sys_uart.o
- .debug_info    0x00000aba      0x826 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_info    0x000012e0      0x181 ./TM4C123GXL/delay/hal_delay.o
- .debug_info    0x00001461      0x483 ./Middleware/leds/leds.o
- .debug_info    0x000018e4      0x54e ./Middleware/lcd/lcd.o
- .debug_info    0x00001e32      0x3ad ./Middleware/buttons/buttons.o
+ .debug_info    0x0000003b      0x11f ./src/Source/app_him.o
+ .debug_info    0x0000015a      0x22e ./src/Source/app_info.o
+ .debug_info    0x00000388       0xbd ./src/Source/main.o
+ .debug_info    0x00000445      0x16c ./src/Source/startup_gcc.o
+ .debug_info    0x000005b1       0x3b ./src/Source/sys_ad.o
+ .debug_info    0x000005ec       0xd5 ./src/Source/sys_gpio.o
+ .debug_info    0x000006c1      0x1a9 ./src/Source/sys_hw.o
+ .debug_info    0x0000086a       0x3b ./src/Source/sys_i2c.o
+ .debug_info    0x000008a5       0xaf ./src/Source/sys_mcu.o
+ .debug_info    0x00000954       0x3b ./src/Source/sys_pwm.o
+ .debug_info    0x0000098f       0x73 ./src/Source/sys_timer.o
+ .debug_info    0x00000a02       0x3b ./src/Source/sys_uart.o
+ .debug_info    0x00000a3d      0x78d ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_info    0x000011ca      0x181 ./TM4C123GXL/delay/hal_delay.o
+ .debug_info    0x0000134b      0x477 ./Middleware/leds/leds.o
+ .debug_info    0x000017c2      0x551 ./Middleware/lcd/lcd.o
+ .debug_info    0x00001d13      0x357 ./Middleware/buttons/buttons.o
 
-.debug_abbrev   0x00000000      0xc26
+.debug_abbrev   0x00000000      0xc25
  .debug_abbrev  0x00000000       0x2f ./src/Source/app_control.o
- .debug_abbrev  0x0000002f       0x82 ./src/Source/app_him.o
- .debug_abbrev  0x000000b1       0xb9 ./src/Source/app_info.o
- .debug_abbrev  0x0000016a       0x6a ./src/Source/main.o
- .debug_abbrev  0x000001d4       0xd3 ./src/Source/startup_gcc.o
- .debug_abbrev  0x000002a7       0x2f ./src/Source/sys_ad.o
- .debug_abbrev  0x000002d6       0x7b ./src/Source/sys_gpio.o
- .debug_abbrev  0x00000351       0xd4 ./src/Source/sys_hw.o
- .debug_abbrev  0x00000425       0x2f ./src/Source/sys_i2c.o
- .debug_abbrev  0x00000454       0x6a ./src/Source/sys_mcu.o
- .debug_abbrev  0x000004be       0x2f ./src/Source/sys_pwm.o
- .debug_abbrev  0x000004ed       0x3a ./src/Source/sys_timer.o
- .debug_abbrev  0x00000527       0x2f ./src/Source/sys_uart.o
- .debug_abbrev  0x00000556      0x164 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_abbrev  0x000006ba       0x97 ./TM4C123GXL/delay/hal_delay.o
- .debug_abbrev  0x00000751      0x171 ./Middleware/leds/leds.o
- .debug_abbrev  0x000008c2      0x1c5 ./Middleware/lcd/lcd.o
- .debug_abbrev  0x00000a87      0x19f ./Middleware/buttons/buttons.o
+ .debug_abbrev  0x0000002f       0x93 ./src/Source/app_him.o
+ .debug_abbrev  0x000000c2       0xb9 ./src/Source/app_info.o
+ .debug_abbrev  0x0000017b       0x6a ./src/Source/main.o
+ .debug_abbrev  0x000001e5       0xd3 ./src/Source/startup_gcc.o
+ .debug_abbrev  0x000002b8       0x2f ./src/Source/sys_ad.o
+ .debug_abbrev  0x000002e7       0x7b ./src/Source/sys_gpio.o
+ .debug_abbrev  0x00000362       0xc2 ./src/Source/sys_hw.o
+ .debug_abbrev  0x00000424       0x2f ./src/Source/sys_i2c.o
+ .debug_abbrev  0x00000453       0x6a ./src/Source/sys_mcu.o
+ .debug_abbrev  0x000004bd       0x2f ./src/Source/sys_pwm.o
+ .debug_abbrev  0x000004ec       0x3a ./src/Source/sys_timer.o
+ .debug_abbrev  0x00000526       0x2f ./src/Source/sys_uart.o
+ .debug_abbrev  0x00000555      0x164 ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_abbrev  0x000006b9       0x97 ./TM4C123GXL/delay/hal_delay.o
+ .debug_abbrev  0x00000750      0x171 ./Middleware/leds/leds.o
+ .debug_abbrev  0x000008c1      0x1c5 ./Middleware/lcd/lcd.o
+ .debug_abbrev  0x00000a86      0x19f ./Middleware/buttons/buttons.o
 
-.debug_aranges  0x00000000      0x388
+.debug_aranges  0x00000000      0x378
  .debug_aranges
                 0x00000000       0x20 ./src/Source/app_control.o
  .debug_aranges
@@ -1001,9 +974,9 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_aranges
                 0x000002e0       0x60 ./Middleware/lcd/lcd.o
  .debug_aranges
-                0x00000340       0x48 ./Middleware/buttons/buttons.o
+                0x00000340       0x38 ./Middleware/buttons/buttons.o
 
-.debug_ranges   0x00000000      0x268
+.debug_ranges   0x00000000      0x258
  .debug_ranges  0x00000000       0x10 ./src/Source/app_control.o
  .debug_ranges  0x00000010       0x10 ./src/Source/app_him.o
  .debug_ranges  0x00000020       0x10 ./src/Source/app_info.o
@@ -1021,129 +994,128 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_ranges  0x00000168       0x28 ./TM4C123GXL/delay/hal_delay.o
  .debug_ranges  0x00000190       0x50 ./Middleware/leds/leds.o
  .debug_ranges  0x000001e0       0x50 ./Middleware/lcd/lcd.o
- .debug_ranges  0x00000230       0x38 ./Middleware/buttons/buttons.o
+ .debug_ranges  0x00000230       0x28 ./Middleware/buttons/buttons.o
 
-.debug_macro    0x00000000     0xe8f5
+.debug_macro    0x00000000     0xe8ad
  .debug_macro   0x00000000       0x1a ./src/Source/app_control.o
  .debug_macro   0x0000001a      0x886 ./src/Source/app_control.o
  .debug_macro   0x000008a0       0x10 ./src/Source/app_control.o
- .debug_macro   0x000008b0       0xfe ./src/Source/app_him.o
- .debug_macro   0x000009ae     0xb496 ./src/Source/app_him.o
- .debug_macro   0x0000be44       0x2d ./src/Source/app_him.o
- .debug_macro   0x0000be71       0x3b ./src/Source/app_him.o
- .debug_macro   0x0000beac       0x22 ./src/Source/app_him.o
- .debug_macro   0x0000bece       0x44 ./src/Source/app_him.o
- .debug_macro   0x0000bf12       0x1c ./src/Source/app_him.o
- .debug_macro   0x0000bf2e      0x1f7 ./src/Source/app_him.o
- .debug_macro   0x0000c125       0x2d ./src/Source/app_him.o
- .debug_macro   0x0000c152       0x26 ./src/Source/app_him.o
- .debug_macro   0x0000c178      0xd39 ./src/Source/app_him.o
- .debug_macro   0x0000ceb1      0x330 ./src/Source/app_him.o
- .debug_macro   0x0000d1e1       0x2e ./src/Source/app_him.o
- .debug_macro   0x0000d20f       0x10 ./src/Source/app_him.o
- .debug_macro   0x0000d21f       0x52 ./src/Source/app_him.o
- .debug_macro   0x0000d271       0x34 ./src/Source/app_him.o
- .debug_macro   0x0000d2a5       0x34 ./src/Source/app_info.o
- .debug_macro   0x0000d2d9       0x16 ./src/Source/app_info.o
- .debug_macro   0x0000d2ef      0x17e ./src/Source/main.o
- .debug_macro   0x0000d46d       0x16 ./src/Source/main.o
- .debug_macro   0x0000d483       0x51 ./src/Source/startup_gcc.o
- .debug_macro   0x0000d4d4       0x1b ./src/Source/sys_ad.o
- .debug_macro   0x0000d4ef       0xe6 ./src/Source/sys_gpio.o
- .debug_macro   0x0000d5d5       0x58 ./src/Source/sys_gpio.o
- .debug_macro   0x0000d62d       0x28 ./src/Source/sys_gpio.o
- .debug_macro   0x0000d655      0x161 ./src/Source/sys_hw.o
- .debug_macro   0x0000d7b6       0x1b ./src/Source/sys_i2c.o
- .debug_macro   0x0000d7d1       0xb0 ./src/Source/sys_mcu.o
- .debug_macro   0x0000d881       0x1b ./src/Source/sys_pwm.o
- .debug_macro   0x0000d89c       0x25 ./src/Source/sys_timer.o
- .debug_macro   0x0000d8c1       0x24 ./src/Source/sys_uart.o
- .debug_macro   0x0000d8e5       0xc9 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_macro   0x0000d9ae       0xc4 ./TM4C123GXL/delay/hal_delay.o
- .debug_macro   0x0000da72       0x3d ./Middleware/leds/leds.o
- .debug_macro   0x0000daaf       0x4c ./Middleware/leds/leds.o
- .debug_macro   0x0000dafb      0x20b ./Middleware/lcd/lcd.o
- .debug_macro   0x0000dd06       0x58 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000dd5e       0x35 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000dd93       0x9c ./Middleware/lcd/lcd.o
- .debug_macro   0x0000de2f       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000de45       0x97 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000dedc      0x27a ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e156       0xf6 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e24c       0x10 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e25c       0x52 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e2ae       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e2c4       0x43 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e307      0x180 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e487       0x10 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e497       0x22 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e4b9       0xbd ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e576       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e58c      0x196 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e722       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e738       0x35 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e76d       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e783       0x29 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e7ac       0x16 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e7c2       0x52 ./Middleware/lcd/lcd.o
- .debug_macro   0x0000e814       0xe1 ./Middleware/buttons/buttons.o
+ .debug_macro   0x000008b0       0xf9 ./src/Source/app_him.o
+ .debug_macro   0x000009a9     0xb496 ./src/Source/app_him.o
+ .debug_macro   0x0000be3f       0x2d ./src/Source/app_him.o
+ .debug_macro   0x0000be6c       0x3b ./src/Source/app_him.o
+ .debug_macro   0x0000bea7       0x22 ./src/Source/app_him.o
+ .debug_macro   0x0000bec9       0x44 ./src/Source/app_him.o
+ .debug_macro   0x0000bf0d       0x1c ./src/Source/app_him.o
+ .debug_macro   0x0000bf29      0x1f7 ./src/Source/app_him.o
+ .debug_macro   0x0000c120       0x2d ./src/Source/app_him.o
+ .debug_macro   0x0000c14d       0x26 ./src/Source/app_him.o
+ .debug_macro   0x0000c173      0xd39 ./src/Source/app_him.o
+ .debug_macro   0x0000ceac      0x330 ./src/Source/app_him.o
+ .debug_macro   0x0000d1dc       0x2e ./src/Source/app_him.o
+ .debug_macro   0x0000d20a       0x10 ./src/Source/app_him.o
+ .debug_macro   0x0000d21a       0x52 ./src/Source/app_him.o
+ .debug_macro   0x0000d26c       0x34 ./src/Source/app_info.o
+ .debug_macro   0x0000d2a0       0x16 ./src/Source/app_info.o
+ .debug_macro   0x0000d2b6      0x179 ./src/Source/main.o
+ .debug_macro   0x0000d42f       0x16 ./src/Source/main.o
+ .debug_macro   0x0000d445       0x51 ./src/Source/startup_gcc.o
+ .debug_macro   0x0000d496       0x1b ./src/Source/sys_ad.o
+ .debug_macro   0x0000d4b1       0xe6 ./src/Source/sys_gpio.o
+ .debug_macro   0x0000d597       0x58 ./src/Source/sys_gpio.o
+ .debug_macro   0x0000d5ef       0x28 ./src/Source/sys_gpio.o
+ .debug_macro   0x0000d617      0x15c ./src/Source/sys_hw.o
+ .debug_macro   0x0000d773       0x1b ./src/Source/sys_i2c.o
+ .debug_macro   0x0000d78e       0xb0 ./src/Source/sys_mcu.o
+ .debug_macro   0x0000d83e       0x1b ./src/Source/sys_pwm.o
+ .debug_macro   0x0000d859       0x25 ./src/Source/sys_timer.o
+ .debug_macro   0x0000d87e       0x24 ./src/Source/sys_uart.o
+ .debug_macro   0x0000d8a2       0xc9 ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_macro   0x0000d96b       0xc4 ./TM4C123GXL/delay/hal_delay.o
+ .debug_macro   0x0000da2f       0x3d ./Middleware/leds/leds.o
+ .debug_macro   0x0000da6c       0x4c ./Middleware/leds/leds.o
+ .debug_macro   0x0000dab8      0x206 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000dcbe       0x58 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000dd16       0x35 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000dd4b       0x9c ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000dde7       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000ddfd       0x97 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000de94      0x27a ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e10e       0xf6 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e204       0x10 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e214       0x52 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e266       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e27c       0x43 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e2bf      0x180 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e43f       0x10 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e44f       0x22 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e471       0xbd ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e52e       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e544      0x196 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e6da       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e6f0       0x35 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e725       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e73b       0x29 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e764       0x16 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e77a       0x52 ./Middleware/lcd/lcd.o
+ .debug_macro   0x0000e7cc       0xe1 ./Middleware/buttons/buttons.o
 
-.debug_line     0x00000000     0x2af8
+.debug_line     0x00000000     0x2ad6
  .debug_line    0x00000000       0x75 ./src/Source/app_control.o
- .debug_line    0x00000075      0x3dc ./src/Source/app_him.o
- .debug_line    0x00000451       0xc3 ./src/Source/app_info.o
- .debug_line    0x00000514      0x485 ./src/Source/main.o
- .debug_line    0x00000999      0x1f2 ./src/Source/startup_gcc.o
- .debug_line    0x00000b8b       0x6b ./src/Source/sys_ad.o
- .debug_line    0x00000bf6      0x361 ./src/Source/sys_gpio.o
- .debug_line    0x00000f57      0x477 ./src/Source/sys_hw.o
- .debug_line    0x000013ce       0x6d ./src/Source/sys_i2c.o
- .debug_line    0x0000143b      0x291 ./src/Source/sys_mcu.o
- .debug_line    0x000016cc       0x6d ./src/Source/sys_pwm.o
- .debug_line    0x00001739       0x99 ./src/Source/sys_timer.o
- .debug_line    0x000017d2       0xc7 ./src/Source/sys_uart.o
- .debug_line    0x00001899      0x3c6 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_line    0x00001c5f      0x333 ./TM4C123GXL/delay/hal_delay.o
- .debug_line    0x00001f92      0x1d1 ./Middleware/leds/leds.o
- .debug_line    0x00002163      0x580 ./Middleware/lcd/lcd.o
- .debug_line    0x000026e3      0x415 ./Middleware/buttons/buttons.o
+ .debug_line    0x00000075      0x3e0 ./src/Source/app_him.o
+ .debug_line    0x00000455       0xc3 ./src/Source/app_info.o
+ .debug_line    0x00000518      0x485 ./src/Source/main.o
+ .debug_line    0x0000099d      0x1f2 ./src/Source/startup_gcc.o
+ .debug_line    0x00000b8f       0x6b ./src/Source/sys_ad.o
+ .debug_line    0x00000bfa      0x361 ./src/Source/sys_gpio.o
+ .debug_line    0x00000f5b      0x472 ./src/Source/sys_hw.o
+ .debug_line    0x000013cd       0x6d ./src/Source/sys_i2c.o
+ .debug_line    0x0000143a      0x291 ./src/Source/sys_mcu.o
+ .debug_line    0x000016cb       0x6d ./src/Source/sys_pwm.o
+ .debug_line    0x00001738       0x99 ./src/Source/sys_timer.o
+ .debug_line    0x000017d1       0xc7 ./src/Source/sys_uart.o
+ .debug_line    0x00001898      0x3c6 ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_line    0x00001c5e      0x332 ./TM4C123GXL/delay/hal_delay.o
+ .debug_line    0x00001f90      0x1d1 ./Middleware/leds/leds.o
+ .debug_line    0x00002161      0x588 ./Middleware/lcd/lcd.o
+ .debug_line    0x000026e9      0x3ed ./Middleware/buttons/buttons.o
 
-.debug_str      0x00000000    0x4810f
+.debug_str      0x00000000    0x480a2
  .debug_str     0x00000000     0x2549 ./src/Source/app_control.o
- .debug_str     0x00002549    0x4210e ./src/Source/app_him.o
-                              0x44777 (size before relaxing)
- .debug_str     0x00044657       0xf5 ./src/Source/app_info.o
+ .debug_str     0x00002549    0x420bf ./src/Source/app_him.o
+                              0x4472f (size before relaxing)
+ .debug_str     0x00044608       0xf5 ./src/Source/app_info.o
                                0x2691 (size before relaxing)
- .debug_str     0x0004474c       0x92 ./src/Source/main.o
-                              0x44814 (size before relaxing)
- .debug_str     0x000447de       0xcd ./src/Source/startup_gcc.o
+ .debug_str     0x000446fd       0x92 ./src/Source/main.o
+                              0x447b3 (size before relaxing)
+ .debug_str     0x0004478f       0xcd ./src/Source/startup_gcc.o
                                0x30f2 (size before relaxing)
- .debug_str     0x000448ab       0x1f ./src/Source/sys_ad.o
+ .debug_str     0x0004485c       0x1f ./src/Source/sys_ad.o
                                0x2526 (size before relaxing)
- .debug_str     0x000448ca      0x12a ./src/Source/sys_gpio.o
+ .debug_str     0x0004487b      0x12a ./src/Source/sys_gpio.o
                               0x44744 (size before relaxing)
- .debug_str     0x000449f4       0x6d ./src/Source/sys_hw.o
-                              0x4484b (size before relaxing)
- .debug_str     0x00044a61       0x21 ./src/Source/sys_i2c.o
+ .debug_str     0x000449a5       0x4c ./src/Source/sys_hw.o
+                              0x447b7 (size before relaxing)
+ .debug_str     0x000449f1       0x21 ./src/Source/sys_i2c.o
                                0x2529 (size before relaxing)
- .debug_str     0x00044a82       0x21 ./src/Source/sys_mcu.o
+ .debug_str     0x00044a12       0x21 ./src/Source/sys_mcu.o
                               0x444d6 (size before relaxing)
- .debug_str     0x00044aa3       0x21 ./src/Source/sys_pwm.o
+ .debug_str     0x00044a33       0x21 ./src/Source/sys_pwm.o
                                0x2529 (size before relaxing)
- .debug_str     0x00044ac4       0x26 ./src/Source/sys_timer.o
+ .debug_str     0x00044a54       0x26 ./src/Source/sys_timer.o
                                0x25a6 (size before relaxing)
- .debug_str     0x00044aea       0x23 ./src/Source/sys_uart.o
+ .debug_str     0x00044a7a       0x23 ./src/Source/sys_uart.o
                                0x265b (size before relaxing)
- .debug_str     0x00044b0d      0x207 ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_str     0x00044a9d      0x20f ./TM4C123GXL/gpio/hal_gpio.o
                               0x447dd (size before relaxing)
- .debug_str     0x00044d14       0x5d ./TM4C123GXL/delay/hal_delay.o
+ .debug_str     0x00044cac       0x5d ./TM4C123GXL/delay/hal_delay.o
                               0x44504 (size before relaxing)
- .debug_str     0x00044d71      0x151 ./Middleware/leds/leds.o
-                               0x28d7 (size before relaxing)
- .debug_str     0x00044ec2     0x3122 ./Middleware/lcd/lcd.o
-                              0x47a05 (size before relaxing)
- .debug_str     0x00047fe4      0x12b ./Middleware/buttons/buttons.o
-                              0x44771 (size before relaxing)
+ .debug_str     0x00044d09      0x15c ./Middleware/leds/leds.o
+                               0x28dd (size before relaxing)
+ .debug_str     0x00044e65     0x3132 ./Middleware/lcd/lcd.o
+                              0x47999 (size before relaxing)
+ .debug_str     0x00047f97      0x10b ./Middleware/buttons/buttons.o
+                              0x44752 (size before relaxing)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 ./src/Source/app_control.o
@@ -1204,10 +1176,8 @@ OUTPUT(Template.elf elf32-littlearm)
                 0x00000390       0x39 ./Middleware/lcd/lcd.o
  .ARM.attributes
                 0x000003c9       0x39 ./Middleware/buttons/buttons.o
- .ARM.attributes
-                0x00000402       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
 
-.debug_frame    0x00000000      0x998
+.debug_frame    0x00000000      0x944
  .debug_frame   0x00000000       0x30 ./src/Source/app_control.o
  .debug_frame   0x00000030       0x2c ./src/Source/app_him.o
  .debug_frame   0x0000005c       0x30 ./src/Source/app_info.o
@@ -1215,15 +1185,14 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_frame   0x000000b8       0x7c ./src/Source/startup_gcc.o
  .debug_frame   0x00000134       0x30 ./src/Source/sys_ad.o
  .debug_frame   0x00000164       0x34 ./src/Source/sys_gpio.o
- .debug_frame   0x00000198       0x48 ./src/Source/sys_hw.o
- .debug_frame   0x000001e0       0x30 ./src/Source/sys_i2c.o
- .debug_frame   0x00000210       0x30 ./src/Source/sys_mcu.o
- .debug_frame   0x00000240       0x30 ./src/Source/sys_pwm.o
- .debug_frame   0x00000270       0x30 ./src/Source/sys_timer.o
- .debug_frame   0x000002a0       0x30 ./src/Source/sys_uart.o
- .debug_frame   0x000002d0      0x238 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_frame   0x00000508       0xb0 ./TM4C123GXL/delay/hal_delay.o
- .debug_frame   0x000005b8      0x148 ./Middleware/leds/leds.o
- .debug_frame   0x00000700      0x16c ./Middleware/lcd/lcd.o
- .debug_frame   0x0000086c       0xf8 ./Middleware/buttons/buttons.o
- .debug_frame   0x00000964       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libg.a(lib_a-memset.o)
+ .debug_frame   0x00000198       0x54 ./src/Source/sys_hw.o
+ .debug_frame   0x000001ec       0x30 ./src/Source/sys_i2c.o
+ .debug_frame   0x0000021c       0x30 ./src/Source/sys_mcu.o
+ .debug_frame   0x0000024c       0x30 ./src/Source/sys_pwm.o
+ .debug_frame   0x0000027c       0x30 ./src/Source/sys_timer.o
+ .debug_frame   0x000002ac       0x30 ./src/Source/sys_uart.o
+ .debug_frame   0x000002dc      0x238 ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_frame   0x00000514       0xb0 ./TM4C123GXL/delay/hal_delay.o
+ .debug_frame   0x000005c4      0x158 ./Middleware/leds/leds.o
+ .debug_frame   0x0000071c      0x170 ./Middleware/lcd/lcd.o
+ .debug_frame   0x0000088c       0xb8 ./Middleware/buttons/buttons.o

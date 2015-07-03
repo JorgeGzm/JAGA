@@ -9,7 +9,7 @@
 #ifndef SYS_GPIO_H
     #define SYS_GPIO_H
 
-/** Inicializa todas I/O do Microcontrolador segundo as especificaçoes do projeto */
+/** @brief Inicializa todas I/O do Microcontrolador segundo as especificaçoes do projeto */
 void init_gpio(void);
 
 #endif	/* SYS_GPIO_H */

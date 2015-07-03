@@ -10,11 +10,7 @@
 
 void init_drivers(void)
 {
-
-    //Inicializa driver das interrupcoes
-    //interrupt_init();
-
-    //Inicializa as portas do microcontrolador
+	//Inicializa as portas do microcontrolador
     init_gpio();
 
     //inicializa as configuraçoes do micrococontrolador
@@ -34,6 +30,9 @@ void init_drivers(void)
 
     //Inicializa PWM
     init_pwm();
+
+    //Inicializa driver das interrupcoes
+	//interrupt_init();
 }
 
 void init_devices(void)
@@ -43,24 +42,17 @@ void init_devices(void)
 
 	//Inicializa e configura mecanismo de controle das teclas
 	buttons_init();
-	button_attach(1, &rF0);
-	button_attach(2, &rF4);
+	button_attach(1, rF0);
+	button_attach(2, rF4);
 
 	//Configura e inicializa pinos que serao usados pela biblioteca LCD.
-	lcd_attach(&display.RS, &rB5);
-	lcd_attach(&display.E, &rB4);
-	lcd_attach(&display.db4, &rB3);
-	lcd_attach(&display.db5, &rB2);
-	lcd_attach(&display.db6, &rB1);
-	lcd_attach(&display.db7, &rB0);
-	lcd_init();
-
+	lcd_attach(rB5, rB4, rB3, rB2, rB1, rB0);
 	lcd_gotoxy(1, 1);
 	lcd_printf((int8 *)"Modulo JAGA     ");
 
 	//configura mecanismo de controle dos leds
-	leds_attach(&leds[0], &rF1);
-	leds_attach(&leds[1], &rF2);
+	leds_attach(0, rF1);
+	leds_attach(1, rF2);
 	leds_set(LD1G, LED_OFF);
 	leds_set(LD2G, LED_OFF);
 

@@ -77,6 +77,7 @@
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
 
+/** @brief TODO*/
 void init_mcu(void);
  
 #endif	/* SYS_MCU_H */

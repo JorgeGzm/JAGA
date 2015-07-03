@@ -9,7 +9,7 @@
 #ifndef APP_HIM_H
     #define APP_HIM_H
 
-/** Executa as aplicações que controlam a him. */
+/** @brief Executa as aplicações que controlam a him. */
 void run_him(void);
 
 #endif	/* APP_HIM_H */

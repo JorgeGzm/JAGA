@@ -11,7 +11,7 @@
 
 #include "vars/vars.h"
 
-/** Configuracao do TMR0 - Contadores */
+/** @brief Configuracao do TMR0 - Contadores */
 void init_timer0(void);
 
 #endif	/* SYS_TIMER_H */

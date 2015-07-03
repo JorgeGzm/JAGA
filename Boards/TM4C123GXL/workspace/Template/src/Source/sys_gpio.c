@@ -12,7 +12,6 @@
 #include "device/hal_device.h"
 #include "delay/hal_delay.h"
 
-/** */
 void init_gpio(void)
 {
 	//Rotinas de inicializacao especiais

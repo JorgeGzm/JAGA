@@ -14,29 +14,40 @@
 #include "lcd/lcd.h"
 
 void run_him(void)
-{    
-    if(buttons_check_press(TECLA_UP, 1))
+{
+    static uint16 counterA = 0;
+    static uint16 counterB = 0;
+    
+    if(buttons_check_press(TECLA_UP, 0))
     {
         lcd_gotoxy(1, 1);
-        lcd_printf((int8 *) "\fTECLA UP        ");
+        lcd_printf((int8 *)"TECLA UP        ");
+        
+        lcd_gotoxy(1, 2);
+        lcd_printf((int8 *)"%u      ", counterA++);
+        
         leds_set(LD1G, LED_BLINK_SLOW);
         leds_set(LD2G, LED_OFF);
     }
-    
+
     if(buttons_check_press(TECLA_DOWN, 1))
-    {
+    {   
         lcd_gotoxy(1, 1);
-        lcd_printf((int8 *) "\fTECLA DOWN      ");
+        lcd_printf((int8 *)"TECLA DOWN      ");
+        
+        lcd_gotoxy(1, 2);
+        lcd_printf((int8 *)"%u      ", counterB++);
+        
         leds_set(LD1G, LED_OFF);
         leds_set(LD2G, LED_BLINK_FAST);
     }
-    
-    if(buttons_check_press(TECLA_DOWN|TECLA_UP, 1))
-	{
-		lcd_gotoxy(1, 1);
-		lcd_printf((int8 *) "\fTECLA DOWN UP   ");
-		leds_set(LD1G|LD2G, LED_BLINK_SLOW);
-	}
+
+    if(buttons_check_press(TECLA_DOWN | TECLA_UP, 1))
+    {
+        lcd_gotoxy(1, 1);
+        lcd_printf((int8 *)"\fTECLA DOWN UP   ");
+        leds_set(LD1G | LD2G, LED_BLINK_SLOW);
+    }
 }
 
 

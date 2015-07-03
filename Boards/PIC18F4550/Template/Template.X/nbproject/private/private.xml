@@ -8,17 +8,6 @@
     </editor-bookmarks>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.h</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/lcd/lcd.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Header/app_control.h</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/buttons/buttons.c</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/main.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/buttons/buttons.h</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/lcd/lcd.h</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

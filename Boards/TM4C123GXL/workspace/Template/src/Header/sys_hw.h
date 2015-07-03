@@ -26,10 +26,10 @@
 #include "buttons/buttons.h"
 
 
-/** Configura o Hardware segundo as especifica��es do projeto */
+/** @brief Configura o Hardware segundo as especifica��es do projeto */
 void init_drivers(void);
 
-/** Configuracao e inicializacao dos dispositivos externo que serao usados */
+/** @brief Configuracao e inicializacao dos dispositivos externo que serao usados */
 void init_devices(void);
 
 #endif	/* SYS_HW_H */
