@@ -1,14 +1,17 @@
 #   JAGA
 English:
+
 This project has the proposal developing libraries universals to  microcontrolers with architecture 8, 16 and 32bits.
 
 -------------------------------------------------------------------------------------------------------------------
+
 Português:
 
-	O projeto JAGA foi idealizado por Jorge Guzman e Rafael Lopes e tem como objetivos criar bibliotecas universais usando a linguagem C. A construção de cada lib deverá garantir uma boa performance, modularidade,  portabilidade do código para microcontroladores com arquiteturas de 8, 16 e 32 bits e de fácil integração com um RTOS.
+O projeto JAGA foi idealizado por Jorge Guzman e Rafael Lopes e tem como objetivos criar bibliotecas universais usando a linguagem C. A construção de cada lib deverá garantir uma boa performance, modularidade,  portabilidade do código para microcontroladores com arquiteturas de 8, 16 e 32 bits e de fácil integração com um RTOS.
 
-	O desenvolvimento inicial das libs será focado nos periféricos mais usados no ensino de sistemas embarcados e em shields arduinos que podem ser facilmente adquiridos.  
-	A arquitetura do software é baseada na comunicação de 3 camadas: Application, Middleware e HAL. A comunicação entre as camadas se dá por meio da abstração de dados, orientação a eventos e as seguintes regras abaixo:
+O desenvolvimento inicial das libs será focado nos periféricos mais usados no ensino de sistemas embarcados e em shields arduinos que podem ser facilmente adquiridos.  
+	
+A arquitetura do software é baseada na comunicação de 3 camadas: Application, Middleware e HAL. A comunicação entre as camadas se dá por meio da abstração de dados, orientação a eventos e as seguintes regras abaixo:
 
 Camada da Aplicação:
 - Evitar chamadas horizontais na camada de aplicação 
