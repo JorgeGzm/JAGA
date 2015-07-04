@@ -14,20 +14,24 @@ O desenvolvimento inicial das libs será focado nos periféricos mais usados no 
 A arquitetura do software é baseada na comunicação de 3 camadas: Application, Middleware e HAL. A comunicação entre as camadas se dá por meio da abstração de dados, orientação a eventos e as seguintes regras abaixo:
 
 Camada da Aplicação:
-- Evitar chamadas horizontais na camada de aplicação 
-- Somente chamar funções de funcionalidade da camada de Middleware.
+- Evitar chamadas horizontais na camada de aplicação;
+- Somente chamar funções de funcionalidade da camada de Middleware;
 
 Camada de Middleware:
 - Não pode haver, de maneira alguma, chamadas horizontais;
-- Só pode #incluir .h das bibliotecas da camada de HAL
+- Só pode #incluir .h das bibliotecas da camada de HAL;
 
-Camada Hal (Driver):
-- Só existe para permitir portabilidade de plataforma e organizar o acesso a periféricos.
-- Fornecerá funções abstraídas para configurar e acessar os registradores do microcontrolador.
-- É a única camada cujas bibliotecas podem fazer chamadas horizontais.
+Camada Hal(Driver):
+- Só existe para permitir portabilidade de plataforma e organizar o acesso a periféricos;
+- Fornecerá funções abstraídas para configurar e acessar os registradores do microcontrolador;
+- É a única camada cujas bibliotecas podem fazer chamadas horizontais;
 
-O maior intuito deste projeto é criar, ensinar e compartilhar conhecimento para o desenvolvimento de um bom firmware.
+Bibliotecas Independentes(Util):
+-Bibliotecas que não dependem de nenhuma outra podem ser independentes, então podem ser chamadas de qualquer camada. ex: vars.h, crc.h, printf.h;
+
+O maior intuito deste projeto é criar, ensinar e compartilhar conhecimento para o desenvolvimento de um bom firmware;
 
 Referências :
+
 http://www.embarcados.com.br/arquitetura-de-software-em-sistemas-embarcados/
 https://selivre.wordpress.com/2011/10/15/praticas-para-a-qualidade-design-da-firmware/
