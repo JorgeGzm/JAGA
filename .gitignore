@@ -25,4 +25,10 @@
 *.pre
 *.p1
 
+*.mk 
+*.elf 
+*.cmf 
+*.properties 
+*.bash 
+
 /Boards/PIC18F4550/Template/Template.X/build/default/
