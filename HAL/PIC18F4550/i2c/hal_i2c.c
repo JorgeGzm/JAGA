@@ -49,13 +49,13 @@ void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck)
 
     if(enable_i2c)
     {
-        GPIO_pin_high(sda); //TODO erro
-        GPIO_pin_high(sck); //TODO erro
+        GPIO_regPin_outputHigh(sda); //TODO erro
+        GPIO_regPin_outputHigh(sck); //TODO erro
     }
     else
     {
-        GPIO_pin_low(sda);//TODO erro
-        GPIO_pin_low(sck);
+        GPIO_regPin_outputLow(sda);//TODO erro
+        GPIO_regPin_outputLow(sck);
     }
 }
 

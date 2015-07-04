@@ -128,7 +128,7 @@ void GPIO_write_data(volatile uint8 *registrador, uint8 UI8_value)
     *registrador = UI8_value;
 }
 
-void GPIO_attach(regGPIO *reg, regGPIO *_port)
+void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
 {
     reg = _port;    
 }
@@ -160,23 +160,23 @@ void GPIO_output_toggle(volatile uint8 *port, uint8 pino)
     toggle_bit(*port, pino);
 }
 
-void GPIO_pin_attach(regPin *pin, regGPIO *reg)
+void GPIO_regPin_attach(regPin *pin, regGPIO *reg)
 {
     pin->out = reg->port;    
     pin->pin = reg->numPin;    
 }
 
-void GPIO_pin_high(regPin *pin)
+void GPIO_regPin_outputHigh(regPin *pin)
 {
    set_bit(*pin->out, pin->pin);
 }
 
-void GPIO_pin_low(regPin *pin)
+void GPIO_regPin_outputLow(regPin *pin)
 {
     clr_bit(*pin->out, pin->pin);
 }
 
-void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection)
+void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
 {
     if(IODirection)
     {
@@ -190,12 +190,12 @@ void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection)
     }
 }
 
-uint8 GPIO_input_state(regPin *pin)
+uint8 GPIO_regPin_rdBit(regPin *pin)
 {
     return(tst_bit(*pin->out, pin->pin));
 }
 
-uint8 GPIO_pin_state(regPin *pin)
+uint8 GPIO_regPin_inputBit(regPin *pin)
 {
     if(tst_bit(*pin->out, pin->pin))
     {
@@ -207,7 +207,7 @@ uint8 GPIO_pin_state(regPin *pin)
     }
 }
 
-void GPIO_pin_outputBit(regPin *pin, uint8 flag)
+void GPIO_regPin_outputBit(regPin *pin, uint8 flag)
 {
     if(flag)
     {
@@ -221,9 +221,9 @@ void GPIO_pin_outputBit(regPin *pin, uint8 flag)
 
 void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us)
 {
-    GPIO_pin_high(pin);
+    GPIO_regPin_outputHigh(pin);
 
     Delay_us(delay_us);
 
-    GPIO_pin_low(pin);
+    GPIO_regPin_outputLow(pin);
 }

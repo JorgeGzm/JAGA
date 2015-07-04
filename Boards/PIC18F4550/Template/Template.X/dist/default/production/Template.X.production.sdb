@@ -69,26 +69,26 @@ TECLA_BACK 8
 "131
 [v _GPIO_attach GPIO_attach `(v  1 e 0 0 ]
 "163
-[v _GPIO_pin_attach GPIO_pin_attach `(v  1 e 0 0 ]
+[v _GPIO_regPin_attach GPIO_regPin_attach `(v  1 e 0 0 ]
 "169
-[v _GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-[v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
-[v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+[v _GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
+[v i1_GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
+[v i2_GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
 "174
-[v _GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-[v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-[v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+[v _GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
+[v i1_GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
+[v i2_GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
 "179
-[v _GPIO_confDir GPIO_confDir `(v  1 e 0 0 ]
+[v _GPIO_regPin_setDir GPIO_regPin_setDir `(v  1 e 0 0 ]
 "193
-[v _GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-[v i1_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
-[v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+[v _GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
+[v i1_GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
+[v i2_GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
 "198
-[v _GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
-[v i2_GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+[v _GPIO_regPin_inputBit GPIO_regPin_inputBit `(uc  1 e 1 0 ]
+[v i2_GPIO_regPin_inputBit GPIO_regPin_inputBit `(uc  1 e 1 0 ]
 "210
-[v _GPIO_pin_outputBit GPIO_pin_outputBit `(v  1 e 0 0 ]
+[v _GPIO_regPin_outputBit GPIO_regPin_outputBit `(v  1 e 0 0 ]
 "124 /home/jaga/git/JAGA/HAL/PIC18F4550/i2c/hal_i2c.c
 [v _i2c_idle i2c_idle `(v  1 e 0 0 ]
 "134
@@ -1374,22 +1374,22 @@ TECLA_BACK 8
 [v button_attach@index index `uc  1 a 1 45 ]
 "58
 } 0
-"163 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_pin_attach GPIO_pin_attach `(v  1 e 0 0 ]
+"179 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_regPin_setDir GPIO_regPin_setDir `(v  1 e 0 0 ]
+{
+[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
+[v GPIO_regPin_setDir@pin pin `*.39S45  1 p 2 30 ]
+[v GPIO_regPin_setDir@IODirection IODirection `E5453  1 p 1 32 ]
+"191
+} 0
+"163
+[v _GPIO_regPin_attach GPIO_regPin_attach `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_attach@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_regPin_attach@pin pin `*.39S42  1 p 2 30 ]
 [s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v GPIO_pin_attach@reg reg `*.39S45  1 p 2 32 ]
+[v GPIO_regPin_attach@reg reg `*.39S45  1 p 2 32 ]
 "167
-} 0
-"179
-[v _GPIO_confDir GPIO_confDir `(v  1 e 0 0 ]
-{
-[s S45 regGPIO 7 `*.39VEuc 1 port 2 0 `*.39VEuc 1 tris 2 2 `*.39VEuc 1 lat 2 4 `uc 1 numPin 1 6 ]
-[v GPIO_confDir@pin pin `*.39S45  1 p 2 30 ]
-[v GPIO_confDir@IODirection IODirection `E5453  1 p 1 32 ]
-"191
 } 0
 "11 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_control.c
 [v _run_system run_system `(v  1 e 0 0 ]
@@ -1449,10 +1449,10 @@ TECLA_BACK 8
 "249
 } 0
 "193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+[v _GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_input_state@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_regPin_rdBit@pin pin `*.39S42  1 p 2 30 ]
 "196
 } 0
 "218 /home/jaga/git/JAGA/Middleware/leds/leds.c
@@ -1621,27 +1621,27 @@ TECLA_BACK 8
 [v lcd_send_nibble@nibble nibble `uc  1 a 1 39 ]
 "110
 } 0
-"210 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_pin_outputBit GPIO_pin_outputBit `(v  1 e 0 0 ]
+"174 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+[v _GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_outputBit@pin pin `*.39S42  1 p 2 30 ]
-[v GPIO_pin_outputBit@flag flag `uc  1 p 1 32 ]
-"220
-} 0
-"174
-[v _GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
-{
-[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_low@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_regPin_outputLow@pin pin `*.39S42  1 p 2 30 ]
 "177
 } 0
 "169
-[v _GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+[v _GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_high@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_regPin_outputHigh@pin pin `*.39S42  1 p 2 30 ]
 "172
+} 0
+"210
+[v _GPIO_regPin_outputBit GPIO_regPin_outputBit `(v  1 e 0 0 ]
+{
+[s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
+[v GPIO_regPin_outputBit@pin pin `*.39S42  1 p 2 30 ]
+[v GPIO_regPin_outputBit@flag flag `uc  1 p 1 32 ]
+"220
 } 0
 "118 /home/jaga/git/JAGA/Middleware/buttons/buttons.c
 [v _buttons_check_press buttons_check_press `(uc  1 e 1 0 ]
@@ -1752,10 +1752,10 @@ TECLA_BACK 8
 "116
 } 0
 "198 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v _GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+[v _GPIO_regPin_inputBit GPIO_regPin_inputBit `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v GPIO_pin_state@pin pin `*.39S42  1 p 2 0 ]
+[v GPIO_regPin_inputBit@pin pin `*.39S42  1 p 2 0 ]
 "208
 } 0
 "92 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
@@ -1812,10 +1812,10 @@ TECLA_BACK 8
 "249
 } 0
 "193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i1_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+[v i1_GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i1GPIO_input_state@pin pin `*.39S42  1 p 2 0 ]
+[v i1GPIO_regPin_rdBit@pin pin `*.39S42  1 p 2 0 ]
 "196
 } 0
 "218 /home/jaga/git/JAGA/Middleware/leds/leds.c
@@ -1840,17 +1840,17 @@ TECLA_BACK 8
 "266
 } 0
 "174 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i1_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+[v i1_GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i1GPIO_pin_low@pin pin `*.39S42  1 p 2 0 ]
+[v i1GPIO_regPin_outputLow@pin pin `*.39S42  1 p 2 0 ]
 "177
 } 0
 "169
-[v i1_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+[v i1_GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i1GPIO_pin_high@pin pin `*.39S42  1 p 2 0 ]
+[v i1GPIO_regPin_outputHigh@pin pin `*.39S42  1 p 2 0 ]
 "172
 } 0
 "76 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c
@@ -1957,10 +1957,10 @@ TECLA_BACK 8
 "116
 } 0
 "198 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i2_GPIO_pin_state GPIO_pin_state `(uc  1 e 1 0 ]
+[v i2_GPIO_regPin_inputBit GPIO_regPin_inputBit `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_pin_state@pin pin `*.39S42  1 p 2 0 ]
+[v i2GPIO_regPin_inputBit@pin pin `*.39S42  1 p 2 0 ]
 "208
 } 0
 "92 /home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
@@ -2011,10 +2011,10 @@ TECLA_BACK 8
 "249
 } 0
 "193 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i2_GPIO_input_state GPIO_input_state `(uc  1 e 1 0 ]
+[v i2_GPIO_regPin_rdBit GPIO_regPin_rdBit `(uc  1 e 1 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_input_state@pin pin `*.39S42  1 p 2 0 ]
+[v i2GPIO_regPin_rdBit@pin pin `*.39S42  1 p 2 0 ]
 "196
 } 0
 "218 /home/jaga/git/JAGA/Middleware/leds/leds.c
@@ -2039,17 +2039,17 @@ TECLA_BACK 8
 "266
 } 0
 "174 /home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-[v i2_GPIO_pin_low GPIO_pin_low `(v  1 e 0 0 ]
+[v i2_GPIO_regPin_outputLow GPIO_regPin_outputLow `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_pin_low@pin pin `*.39S42  1 p 2 0 ]
+[v i2GPIO_regPin_outputLow@pin pin `*.39S42  1 p 2 0 ]
 "177
 } 0
 "169
-[v i2_GPIO_pin_high GPIO_pin_high `(v  1 e 0 0 ]
+[v i2_GPIO_regPin_outputHigh GPIO_regPin_outputHigh `(v  1 e 0 0 ]
 {
 [s S42 _regPin 3 `*.39VEuc 1 out 2 0 `uc 1 pin 1 2 ]
-[v i2GPIO_pin_high@pin pin `*.39S42  1 p 2 0 ]
+[v i2GPIO_regPin_outputHigh@pin pin `*.39S42  1 p 2 0 ]
 "172
 } 0
 "76 /home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c

@@ -131,34 +131,16 @@ void V_initRefRegisters(void)
 
 }
 
-/**
- *
- * @param registrador
- * @param UI8_value
- */
 void GPIO_write_data(volatile uint32 *registrador, uint32 UI8_value)
 {
     *registrador = UI8_value;
 }
 
-
-/**
- *
- * @param reg
- * @param port
- * @param pino
- */
-void GPIO_attach(regGPIO *reg, regGPIO *_port)
+void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
 {
     reg = _port;
 }
 
-/**
- *
- * @param port
- * @param pino Range(0-31).
- * @param UI8_flag escrever 0 ou 1 na saida
- */
 void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag)
 {
     if(UI8_flag)
@@ -171,63 +153,37 @@ void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag)
     }
 }
 
-
-/**
- *
- * @param reg
- */
 void GPIO_low(volatile uint32 *port, uint32 pino)
 {
     clr_bit(*port, pino);
 }
 
-
-/**
- *
- * @param reg
- */
 void GPIO_high( volatile uint32 *port, uint32 pino)
 {
     set_bit(*port, pino);
 }
 
-/**
- *
- * @param reg
- */
 void GPIO_output_toggle(volatile uint32 *port, uint32 pino)
 {
     toggle_bit(*port, pino);
 }
 
-/**
- *
- * @param pin
- */
-void GPIO_pin_high(regPin *pin)
+void GPIO_regPin_outputHigh(regPin *pin)
 {
    set_bit(*pin->out, pin->pin);
 }
 
-/**
- *
- * @param pin
- */
-void GPIO_pin_low(regPin *pin)
+void GPIO_regPin_outputLow(regPin *pin)
 {
     clr_bit(*pin->out, pin->pin);
 }
 
-/**
- *
- * @param reg
- */
-uint8 GPIO_input_state(regPin *pin)
+uint8 GPIO_regPin_rdBit(regPin *pin)
 {
     return(tst_bit(*pin->out, pin->pin));
 }
 
-void GPIO_pin_outputBit(regPin *pin, uint32 flag)
+void GPIO_regPin_outputBit(regPin *pin, uint32 flag)
 {
     if(flag)
     {
@@ -239,13 +195,13 @@ void GPIO_pin_outputBit(regPin *pin, uint32 flag)
     }
 }
 
-void GPIO_pin_attach(regPin *pin, regGPIO *reg)
+void GPIO_regPin_attach(regPin *pin, regGPIO *reg)
 {
     pin->out = reg->port;
     pin->pin = reg->numPin;
 }
 
-uint8 GPIO_pin_state(regPin *pin)
+uint8 GPIO_regPin_inputBit(regPin *pin)
 {
     if(tst_bit(*pin->out, pin->pin))
     {
@@ -257,7 +213,7 @@ uint8 GPIO_pin_state(regPin *pin)
     }
 }
 
-void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection)
+void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
 {
 	/*
     if(IODirection)

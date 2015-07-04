@@ -142,10 +142,10 @@ void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
 void leds_attach(uint8 index, regGPIO reg)
 {
     //Aloca o pino para o botao
-    GPIO_pin_attach(&leds[index], &reg);
+    GPIO_regPin_attach(&leds[index], &reg);
 
     //Configura pino do botao como saida
-    GPIO_confDir(&reg, 0);
+    GPIO_regPin_setDir(&reg, 0);
 }
 
 void leds_action_isr_10ms(void)
@@ -240,7 +240,7 @@ uint8 leds_status(void)
 
     for(i = 0; i < NUM_LEDS; i++)
     {
-        if(GPIO_input_state(&leds[i]))
+        if(GPIO_regPin_rdBit(&leds[i]))
         {
             status.value|=  (1 << i);
         }
@@ -257,10 +257,10 @@ void leds_write(uint8 out)
 
         if (tst_bit(out, i))
         {
-            GPIO_pin_high(&leds[i]);
+            GPIO_regPin_outputHigh(&leds[i]);
         } else
         {
-            GPIO_pin_low(&leds[i]);
+            GPIO_regPin_outputLow(&leds[i]);
         }
     }
 }

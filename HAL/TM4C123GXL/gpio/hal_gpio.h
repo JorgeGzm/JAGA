@@ -28,7 +28,7 @@
 
 #define pins1 1 //TODO deletar
 
-/** @brief */
+/** @brief TODO*/
 typedef enum _PIN_DIR
 {
     DIR_OUTPUT = 0,
@@ -122,7 +122,7 @@ void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag);
  * @param port TODO
  * @param pino TODO
  */
-void GPIO_attach(regGPIO *reg, regGPIO *_port);
+void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port);
 
 /**
  * @brief TODO
@@ -149,45 +149,47 @@ void GPIO_high(volatile uint32 *port, uint32 pino);
  * @param pin TODO
  * @return TODO
  */
-uint8 GPIO_input_state(regPin *pin);
+uint8 GPIO_regPin_rdBit(regPin *pin);
 
 /**
  * @brief TODO
  * @param pin TODO
  */
-void GPIO_pin_high(regPin *pin);
+void GPIO_regPin_outputHigh(regPin *pin);
 
 /**
  * @brief TODO
  * @param pin
  */
-void GPIO_pin_low(regPin *pin);
+void GPIO_regPin_outputLow(regPin *pin);
 
 /**
  * @brief TODO
  * @param flag
  */
-void GPIO_pin_outputBit(regPin *pin, uint32 flag);
+void GPIO_regPin_outputBit(regPin *pin, uint32 flag);
 
 /**
  * @brief TODO
  * @param pin TODO
  * @param reg TODO
  */
-void GPIO_pin_attach(regPin *pin, regGPIO *reg);
+void GPIO_regPin_attach(regPin *pin, regGPIO *reg);
+
+/**
+ * @brief TODO
+ * @param pin TODO
+ * @param IODirection
+ */
+void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection);
 
 /**
  * @brief TODO
  * @param pin TODO
  * @return TODO
  */
-uint8 GPIO_pin_state(regPin *pin);
-/**
- * @brief TODO
- * @param pin TODO
- * @param IODirection
- */
-void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection);
+uint8 GPIO_regPin_inputBit(regPin *pin);
+
 
 //variaveis externas
 extern volatile uint32 *ref_PORTA;

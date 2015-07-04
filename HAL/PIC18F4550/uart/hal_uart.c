@@ -96,10 +96,10 @@ void uart_set_baudRate(uint8 module, uint8 value)
 void uart_attach(regPin *pin, regGPIO *reg)
 {
    
-    GPIO_attach(pin, reg);
+    GPIO_regGPIO_attach(pin, reg);
 
     //Configura pino do botao como entrada
-    GPIO_confDir(reg, DIR_INPUT);//era tris
+    GPIO_regPin_setDir(reg, DIR_INPUT);//era tris
 }
 
 void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint8 tx9bits,  uint8 bd16bits)

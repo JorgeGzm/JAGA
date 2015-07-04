@@ -419,7 +419,7 @@ Discarded input sections
                 0x00000000        0xc ./TM4C123GXL/gpio/hal_gpio.o
  .text.GPIO_write_data
                 0x00000000       0x1c ./TM4C123GXL/gpio/hal_gpio.o
- .text.GPIO_attach
+ .text.GPIO_regGPIO_attach
                 0x00000000       0x18 ./TM4C123GXL/gpio/hal_gpio.o
  .text.GPIO_outputBit
                 0x00000000       0x44 ./TM4C123GXL/gpio/hal_gpio.o
@@ -678,27 +678,27 @@ END GROUP
  .text.init_uart
                 0x00000688        0xc ./src/Source/sys_uart.o
                 0x00000688                init_uart
- .text.GPIO_pin_high
+ .text.GPIO_regPin_outputHigh
                 0x00000694       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000694                GPIO_pin_high
- .text.GPIO_pin_low
+                0x00000694                GPIO_regPin_outputHigh
+ .text.GPIO_regPin_outputLow
                 0x000006c0       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x000006c0                GPIO_pin_low
- .text.GPIO_input_state
+                0x000006c0                GPIO_regPin_outputLow
+ .text.GPIO_regPin_rdBit
                 0x000006ec       0x2c ./TM4C123GXL/gpio/hal_gpio.o
-                0x000006ec                GPIO_input_state
- .text.GPIO_pin_outputBit
+                0x000006ec                GPIO_regPin_rdBit
+ .text.GPIO_regPin_outputBit
                 0x00000718       0x50 ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000718                GPIO_pin_outputBit
- .text.GPIO_pin_attach
+                0x00000718                GPIO_regPin_outputBit
+ .text.GPIO_regPin_attach
                 0x00000768       0x24 ./TM4C123GXL/gpio/hal_gpio.o
-                0x00000768                GPIO_pin_attach
- .text.GPIO_pin_state
+                0x00000768                GPIO_regPin_attach
+ .text.GPIO_regPin_inputBit
                 0x0000078c       0x30 ./TM4C123GXL/gpio/hal_gpio.o
-                0x0000078c                GPIO_pin_state
- .text.GPIO_confDir
+                0x0000078c                GPIO_regPin_inputBit
+ .text.GPIO_regPin_setDir
                 0x000007bc       0x18 ./TM4C123GXL/gpio/hal_gpio.o
-                0x000007bc                GPIO_confDir
+                0x000007bc                GPIO_regPin_setDir
  .text.Delay    0x000007d4       0x24 ./TM4C123GXL/delay/hal_delay.o
                 0x000007d4                Delay
  .text.Delay_us
@@ -898,7 +898,7 @@ END GROUP
  *(.stack)
 OUTPUT(Template.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x206a
+.debug_info     0x00000000     0x2067
  .debug_info    0x00000000       0x3b ./src/Source/app_control.o
  .debug_info    0x0000003b      0x11f ./src/Source/app_him.o
  .debug_info    0x0000015a      0x22e ./src/Source/app_info.o
@@ -912,13 +912,13 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_info    0x00000954       0x3b ./src/Source/sys_pwm.o
  .debug_info    0x0000098f       0x73 ./src/Source/sys_timer.o
  .debug_info    0x00000a02       0x3b ./src/Source/sys_uart.o
- .debug_info    0x00000a3d      0x78d ./TM4C123GXL/gpio/hal_gpio.o
- .debug_info    0x000011ca      0x181 ./TM4C123GXL/delay/hal_delay.o
- .debug_info    0x0000134b      0x477 ./Middleware/leds/leds.o
- .debug_info    0x000017c2      0x551 ./Middleware/lcd/lcd.o
- .debug_info    0x00001d13      0x357 ./Middleware/buttons/buttons.o
+ .debug_info    0x00000a3d      0x78a ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_info    0x000011c7      0x181 ./TM4C123GXL/delay/hal_delay.o
+ .debug_info    0x00001348      0x477 ./Middleware/leds/leds.o
+ .debug_info    0x000017bf      0x551 ./Middleware/lcd/lcd.o
+ .debug_info    0x00001d10      0x357 ./Middleware/buttons/buttons.o
 
-.debug_abbrev   0x00000000      0xc25
+.debug_abbrev   0x00000000      0xbed
  .debug_abbrev  0x00000000       0x2f ./src/Source/app_control.o
  .debug_abbrev  0x0000002f       0x93 ./src/Source/app_him.o
  .debug_abbrev  0x000000c2       0xb9 ./src/Source/app_info.o
@@ -932,11 +932,11 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_abbrev  0x000004bd       0x2f ./src/Source/sys_pwm.o
  .debug_abbrev  0x000004ec       0x3a ./src/Source/sys_timer.o
  .debug_abbrev  0x00000526       0x2f ./src/Source/sys_uart.o
- .debug_abbrev  0x00000555      0x164 ./TM4C123GXL/gpio/hal_gpio.o
- .debug_abbrev  0x000006b9       0x97 ./TM4C123GXL/delay/hal_delay.o
- .debug_abbrev  0x00000750      0x171 ./Middleware/leds/leds.o
- .debug_abbrev  0x000008c1      0x1c5 ./Middleware/lcd/lcd.o
- .debug_abbrev  0x00000a86      0x19f ./Middleware/buttons/buttons.o
+ .debug_abbrev  0x00000555      0x12c ./TM4C123GXL/gpio/hal_gpio.o
+ .debug_abbrev  0x00000681       0x97 ./TM4C123GXL/delay/hal_delay.o
+ .debug_abbrev  0x00000718      0x171 ./Middleware/leds/leds.o
+ .debug_abbrev  0x00000889      0x1c5 ./Middleware/lcd/lcd.o
+ .debug_abbrev  0x00000a4e      0x19f ./Middleware/buttons/buttons.o
 
 .debug_aranges  0x00000000      0x378
  .debug_aranges
@@ -1080,7 +1080,7 @@ OUTPUT(Template.elf elf32-littlearm)
  .debug_line    0x00002161      0x588 ./Middleware/lcd/lcd.o
  .debug_line    0x000026e9      0x3ed ./Middleware/buttons/buttons.o
 
-.debug_str      0x00000000    0x480a2
+.debug_str      0x00000000    0x480cf
  .debug_str     0x00000000     0x2549 ./src/Source/app_control.o
  .debug_str     0x00002549    0x420bf ./src/Source/app_him.o
                               0x4472f (size before relaxing)
@@ -1106,15 +1106,15 @@ OUTPUT(Template.elf elf32-littlearm)
                                0x25a6 (size before relaxing)
  .debug_str     0x00044a7a       0x23 ./src/Source/sys_uart.o
                                0x265b (size before relaxing)
- .debug_str     0x00044a9d      0x20f ./TM4C123GXL/gpio/hal_gpio.o
-                              0x447dd (size before relaxing)
- .debug_str     0x00044cac       0x5d ./TM4C123GXL/delay/hal_delay.o
+ .debug_str     0x00044a9d      0x23c ./TM4C123GXL/gpio/hal_gpio.o
+                              0x4480a (size before relaxing)
+ .debug_str     0x00044cd9       0x5d ./TM4C123GXL/delay/hal_delay.o
                               0x44504 (size before relaxing)
- .debug_str     0x00044d09      0x15c ./Middleware/leds/leds.o
+ .debug_str     0x00044d36      0x15c ./Middleware/leds/leds.o
                                0x28dd (size before relaxing)
- .debug_str     0x00044e65     0x3132 ./Middleware/lcd/lcd.o
+ .debug_str     0x00044e92     0x3132 ./Middleware/lcd/lcd.o
                               0x47999 (size before relaxing)
- .debug_str     0x00047f97      0x10b ./Middleware/buttons/buttons.o
+ .debug_str     0x00047fc4      0x10b ./Middleware/buttons/buttons.o
                               0x44752 (size before relaxing)
 
 .comment        0x00000000       0x70

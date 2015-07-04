@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtL5nmvu.obj
+$/tmp/cgteqzZdx.obj
 idloc IDLOC 0 200000 200000 8 1
 reset_vec CODE 0 0 0 4 1
 end_init CODE 0 14A 14A 4 1
@@ -50,8 +50,8 @@ text26 CODE 0 1922 1922 AE 1
 text27 CODE 0 2FA4 2FA4 12 1
 text28 CODE 0 268E 268E 50 1
 text29 CODE 0 2A90 2A90 42 1
-text30 CODE 0 2B10 2B10 3A 1
-text31 CODE 0 1704 1704 BA 1
+text30 CODE 0 1704 1704 BA 1
+text31 CODE 0 2B10 2B10 3A 1
 text32 CODE 0 2FEC 2FEC 2 1
 text33 CODE 0 EF6 EF6 122 1
 text34 CODE 0 A3A A3A 136 1
@@ -71,9 +71,9 @@ text47 CODE 0 132C 132C D0 1
 text48 CODE 0 27CA 27CA 4C 1
 text49 CODE 0 1D46 1D46 80 1
 text50 CODE 0 1A7E 1A7E A8 1
-text51 CODE 0 19D0 19D0 AE 1
-text52 CODE 0 239A 239A 56 1
-text53 CODE 0 2816 2816 4C 1
+text51 CODE 0 239A 239A 56 1
+text52 CODE 0 2816 2816 4C 1
+text53 CODE 0 19D0 19D0 AE 1
 text54 CODE 0 24F2 24F2 54 1
 text56 CODE 0 2C66 2C66 2C 1
 text57 CODE 0 2C92 2C92 2C 1
@@ -491,100 +491,100 @@ FF8 text33 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_hi
 1644 text20 CODE >39:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_gpio.c
 1646 text20 CODE >40:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_gpio.c
 1648 text20 CODE >41:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_gpio.c
-164A cinit CODE >8363:/tmp/cgtnHiyGP
-164A cinit CODE >8365:/tmp/cgtnHiyGP
-164A cinit CODE >8368:/tmp/cgtnHiyGP
-164A cinit CODE >8808:/tmp/cgtnHiyGP
-164E cinit CODE >8809:/tmp/cgtnHiyGP
-1650 cinit CODE >8810:/tmp/cgtnHiyGP
-1650 cinit CODE >8811:/tmp/cgtnHiyGP
-1652 cinit CODE >8812:/tmp/cgtnHiyGP
-1654 cinit CODE >8813:/tmp/cgtnHiyGP
-1656 cinit CODE >8816:/tmp/cgtnHiyGP
-165A cinit CODE >8817:/tmp/cgtnHiyGP
-165C cinit CODE >8818:/tmp/cgtnHiyGP
-165C cinit CODE >8819:/tmp/cgtnHiyGP
-165E cinit CODE >8820:/tmp/cgtnHiyGP
-1660 cinit CODE >8821:/tmp/cgtnHiyGP
-1662 cinit CODE >8824:/tmp/cgtnHiyGP
-1666 cinit CODE >8825:/tmp/cgtnHiyGP
-1668 cinit CODE >8826:/tmp/cgtnHiyGP
-1668 cinit CODE >8827:/tmp/cgtnHiyGP
-166A cinit CODE >8828:/tmp/cgtnHiyGP
-166C cinit CODE >8829:/tmp/cgtnHiyGP
-166E cinit CODE >8832:/tmp/cgtnHiyGP
-1672 cinit CODE >8833:/tmp/cgtnHiyGP
-1674 cinit CODE >8834:/tmp/cgtnHiyGP
-1674 cinit CODE >8835:/tmp/cgtnHiyGP
-1676 cinit CODE >8836:/tmp/cgtnHiyGP
-1678 cinit CODE >8837:/tmp/cgtnHiyGP
-167A cinit CODE >8842:/tmp/cgtnHiyGP
-167C cinit CODE >8843:/tmp/cgtnHiyGP
-167E cinit CODE >8844:/tmp/cgtnHiyGP
-1680 cinit CODE >8845:/tmp/cgtnHiyGP
-1682 cinit CODE >8846:/tmp/cgtnHiyGP
-1684 cinit CODE >8847:/tmp/cgtnHiyGP
-1686 cinit CODE >8848:/tmp/cgtnHiyGP
-168A cinit CODE >8849:/tmp/cgtnHiyGP
-168E cinit CODE >8850:/tmp/cgtnHiyGP
-168E cinit CODE >8851:/tmp/cgtnHiyGP
-1690 cinit CODE >8852:/tmp/cgtnHiyGP
-1694 cinit CODE >8853:/tmp/cgtnHiyGP
-1696 cinit CODE >8854:/tmp/cgtnHiyGP
-1698 cinit CODE >8855:/tmp/cgtnHiyGP
-169A cinit CODE >8859:/tmp/cgtnHiyGP
-169C cinit CODE >8860:/tmp/cgtnHiyGP
-169E cinit CODE >8861:/tmp/cgtnHiyGP
-16A0 cinit CODE >8862:/tmp/cgtnHiyGP
-16A2 cinit CODE >8863:/tmp/cgtnHiyGP
-16A4 cinit CODE >8864:/tmp/cgtnHiyGP
-16A6 cinit CODE >8865:/tmp/cgtnHiyGP
-16AA cinit CODE >8866:/tmp/cgtnHiyGP
-16AE cinit CODE >8867:/tmp/cgtnHiyGP
-16AE cinit CODE >8868:/tmp/cgtnHiyGP
-16B0 cinit CODE >8869:/tmp/cgtnHiyGP
-16B4 cinit CODE >8870:/tmp/cgtnHiyGP
-16B6 cinit CODE >8871:/tmp/cgtnHiyGP
-16B8 cinit CODE >8872:/tmp/cgtnHiyGP
-16BA cinit CODE >8876:/tmp/cgtnHiyGP
-16BC cinit CODE >8877:/tmp/cgtnHiyGP
-16BE cinit CODE >8878:/tmp/cgtnHiyGP
-16C0 cinit CODE >8879:/tmp/cgtnHiyGP
-16C2 cinit CODE >8880:/tmp/cgtnHiyGP
-16C4 cinit CODE >8881:/tmp/cgtnHiyGP
-16C6 cinit CODE >8882:/tmp/cgtnHiyGP
-16CA cinit CODE >8883:/tmp/cgtnHiyGP
-16CE cinit CODE >8884:/tmp/cgtnHiyGP
-16CE cinit CODE >8885:/tmp/cgtnHiyGP
-16D0 cinit CODE >8886:/tmp/cgtnHiyGP
-16D4 cinit CODE >8887:/tmp/cgtnHiyGP
-16D6 cinit CODE >8888:/tmp/cgtnHiyGP
-16D8 cinit CODE >8889:/tmp/cgtnHiyGP
-16DA cinit CODE >8893:/tmp/cgtnHiyGP
-16DC cinit CODE >8894:/tmp/cgtnHiyGP
-16DE cinit CODE >8895:/tmp/cgtnHiyGP
-16E0 cinit CODE >8896:/tmp/cgtnHiyGP
-16E2 cinit CODE >8897:/tmp/cgtnHiyGP
-16E4 cinit CODE >8898:/tmp/cgtnHiyGP
-16E6 cinit CODE >8899:/tmp/cgtnHiyGP
-16EA cinit CODE >8900:/tmp/cgtnHiyGP
-16EE cinit CODE >8901:/tmp/cgtnHiyGP
-16EE cinit CODE >8902:/tmp/cgtnHiyGP
-16F0 cinit CODE >8903:/tmp/cgtnHiyGP
-16F4 cinit CODE >8904:/tmp/cgtnHiyGP
-16F6 cinit CODE >8905:/tmp/cgtnHiyGP
-16F8 cinit CODE >8906:/tmp/cgtnHiyGP
-16FA cinit CODE >8912:/tmp/cgtnHiyGP
-16FA cinit CODE >8914:/tmp/cgtnHiyGP
-16FC cinit CODE >8915:/tmp/cgtnHiyGP
-16FE cinit CODE >8916:/tmp/cgtnHiyGP
-1700 cinit CODE >8917:/tmp/cgtnHiyGP
-1704 text31 CODE >179:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-1704 text31 CODE >181:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-170E text31 CODE >184:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-175E text31 CODE >185:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-1760 text31 CODE >189:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-17BC text31 CODE >191:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+164A cinit CODE >8363:/tmp/cgtWmhrKj
+164A cinit CODE >8365:/tmp/cgtWmhrKj
+164A cinit CODE >8368:/tmp/cgtWmhrKj
+164A cinit CODE >8808:/tmp/cgtWmhrKj
+164E cinit CODE >8809:/tmp/cgtWmhrKj
+1650 cinit CODE >8810:/tmp/cgtWmhrKj
+1650 cinit CODE >8811:/tmp/cgtWmhrKj
+1652 cinit CODE >8812:/tmp/cgtWmhrKj
+1654 cinit CODE >8813:/tmp/cgtWmhrKj
+1656 cinit CODE >8816:/tmp/cgtWmhrKj
+165A cinit CODE >8817:/tmp/cgtWmhrKj
+165C cinit CODE >8818:/tmp/cgtWmhrKj
+165C cinit CODE >8819:/tmp/cgtWmhrKj
+165E cinit CODE >8820:/tmp/cgtWmhrKj
+1660 cinit CODE >8821:/tmp/cgtWmhrKj
+1662 cinit CODE >8824:/tmp/cgtWmhrKj
+1666 cinit CODE >8825:/tmp/cgtWmhrKj
+1668 cinit CODE >8826:/tmp/cgtWmhrKj
+1668 cinit CODE >8827:/tmp/cgtWmhrKj
+166A cinit CODE >8828:/tmp/cgtWmhrKj
+166C cinit CODE >8829:/tmp/cgtWmhrKj
+166E cinit CODE >8832:/tmp/cgtWmhrKj
+1672 cinit CODE >8833:/tmp/cgtWmhrKj
+1674 cinit CODE >8834:/tmp/cgtWmhrKj
+1674 cinit CODE >8835:/tmp/cgtWmhrKj
+1676 cinit CODE >8836:/tmp/cgtWmhrKj
+1678 cinit CODE >8837:/tmp/cgtWmhrKj
+167A cinit CODE >8842:/tmp/cgtWmhrKj
+167C cinit CODE >8843:/tmp/cgtWmhrKj
+167E cinit CODE >8844:/tmp/cgtWmhrKj
+1680 cinit CODE >8845:/tmp/cgtWmhrKj
+1682 cinit CODE >8846:/tmp/cgtWmhrKj
+1684 cinit CODE >8847:/tmp/cgtWmhrKj
+1686 cinit CODE >8848:/tmp/cgtWmhrKj
+168A cinit CODE >8849:/tmp/cgtWmhrKj
+168E cinit CODE >8850:/tmp/cgtWmhrKj
+168E cinit CODE >8851:/tmp/cgtWmhrKj
+1690 cinit CODE >8852:/tmp/cgtWmhrKj
+1694 cinit CODE >8853:/tmp/cgtWmhrKj
+1696 cinit CODE >8854:/tmp/cgtWmhrKj
+1698 cinit CODE >8855:/tmp/cgtWmhrKj
+169A cinit CODE >8859:/tmp/cgtWmhrKj
+169C cinit CODE >8860:/tmp/cgtWmhrKj
+169E cinit CODE >8861:/tmp/cgtWmhrKj
+16A0 cinit CODE >8862:/tmp/cgtWmhrKj
+16A2 cinit CODE >8863:/tmp/cgtWmhrKj
+16A4 cinit CODE >8864:/tmp/cgtWmhrKj
+16A6 cinit CODE >8865:/tmp/cgtWmhrKj
+16AA cinit CODE >8866:/tmp/cgtWmhrKj
+16AE cinit CODE >8867:/tmp/cgtWmhrKj
+16AE cinit CODE >8868:/tmp/cgtWmhrKj
+16B0 cinit CODE >8869:/tmp/cgtWmhrKj
+16B4 cinit CODE >8870:/tmp/cgtWmhrKj
+16B6 cinit CODE >8871:/tmp/cgtWmhrKj
+16B8 cinit CODE >8872:/tmp/cgtWmhrKj
+16BA cinit CODE >8876:/tmp/cgtWmhrKj
+16BC cinit CODE >8877:/tmp/cgtWmhrKj
+16BE cinit CODE >8878:/tmp/cgtWmhrKj
+16C0 cinit CODE >8879:/tmp/cgtWmhrKj
+16C2 cinit CODE >8880:/tmp/cgtWmhrKj
+16C4 cinit CODE >8881:/tmp/cgtWmhrKj
+16C6 cinit CODE >8882:/tmp/cgtWmhrKj
+16CA cinit CODE >8883:/tmp/cgtWmhrKj
+16CE cinit CODE >8884:/tmp/cgtWmhrKj
+16CE cinit CODE >8885:/tmp/cgtWmhrKj
+16D0 cinit CODE >8886:/tmp/cgtWmhrKj
+16D4 cinit CODE >8887:/tmp/cgtWmhrKj
+16D6 cinit CODE >8888:/tmp/cgtWmhrKj
+16D8 cinit CODE >8889:/tmp/cgtWmhrKj
+16DA cinit CODE >8893:/tmp/cgtWmhrKj
+16DC cinit CODE >8894:/tmp/cgtWmhrKj
+16DE cinit CODE >8895:/tmp/cgtWmhrKj
+16E0 cinit CODE >8896:/tmp/cgtWmhrKj
+16E2 cinit CODE >8897:/tmp/cgtWmhrKj
+16E4 cinit CODE >8898:/tmp/cgtWmhrKj
+16E6 cinit CODE >8899:/tmp/cgtWmhrKj
+16EA cinit CODE >8900:/tmp/cgtWmhrKj
+16EE cinit CODE >8901:/tmp/cgtWmhrKj
+16EE cinit CODE >8902:/tmp/cgtWmhrKj
+16F0 cinit CODE >8903:/tmp/cgtWmhrKj
+16F4 cinit CODE >8904:/tmp/cgtWmhrKj
+16F6 cinit CODE >8905:/tmp/cgtWmhrKj
+16F8 cinit CODE >8906:/tmp/cgtWmhrKj
+16FA cinit CODE >8912:/tmp/cgtWmhrKj
+16FA cinit CODE >8914:/tmp/cgtWmhrKj
+16FC cinit CODE >8915:/tmp/cgtWmhrKj
+16FE cinit CODE >8916:/tmp/cgtWmhrKj
+1700 cinit CODE >8917:/tmp/cgtWmhrKj
+1704 text30 CODE >179:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+1704 text30 CODE >181:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+170E text30 CODE >184:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+175E text30 CODE >185:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+1760 text30 CODE >189:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+17BC text30 CODE >191:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 17BE text46 CODE >8:/opt/microchip/xc8/v1.34/sources/common/awmod.c
 17BE text46 CODE >13:/opt/microchip/xc8/v1.34/sources/common/awmod.c
 17C4 text46 CODE >14:/opt/microchip/xc8/v1.34/sources/common/awmod.c
@@ -620,12 +620,12 @@ FF8 text33 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_hi
 19B6 text26 CODE >87:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 19C8 text26 CODE >83:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 19CE text26 CODE >89:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
-19D0 text51 CODE >210:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-19D0 text51 CODE >212:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-19DA text51 CODE >214:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-1A24 text51 CODE >215:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-1A26 text51 CODE >218:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-1A7C text51 CODE >220:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+19D0 text53 CODE >210:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+19D0 text53 CODE >212:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+19DA text53 CODE >214:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+1A24 text53 CODE >215:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+1A26 text53 CODE >218:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+1A7C text53 CODE >220:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 1A7E text50 CODE >91:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 1A82 text50 CODE >95:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 1A86 text50 CODE >98:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
@@ -883,9 +883,9 @@ FF8 text33 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_hi
 2344 text37 CODE >193:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2344 text37 CODE >195:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2398 text37 CODE >196:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-239A text52 CODE >174:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-239A text52 CODE >176:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-23EE text52 CODE >177:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+239A text51 CODE >174:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+239A text51 CODE >176:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+23EE text51 CODE >177:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 23F0 text62 CODE >39:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 23F0 text62 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
 23FE text62 CODE >51:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c
@@ -1031,9 +1031,9 @@ FF8 text33 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_hi
 2802 text48 CODE >168:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 280A text48 CODE >170:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
 2814 text48 CODE >171:/home/jaga/git/JAGA/Middleware/lcd/lcd.c
-2816 text53 CODE >169:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2816 text53 CODE >171:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2860 text53 CODE >172:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2816 text52 CODE >169:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2816 text52 CODE >171:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2860 text52 CODE >172:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2862 text103 CODE >169:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2862 text103 CODE >171:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 28AC text103 CODE >172:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
@@ -1081,10 +1081,10 @@ FF8 text33 CODE >48:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_hi
 2AD2 text78 CODE >169:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2AD2 text78 CODE >171:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2B0E text78 CODE >172:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2B10 text30 CODE >163:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2B10 text30 CODE >165:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2B28 text30 CODE >166:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
-2B48 text30 CODE >167:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2B10 text31 CODE >163:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2B10 text31 CODE >165:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2B28 text31 CODE >166:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
+2B48 text31 CODE >167:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.c
 2B4A text70 CODE >151:/home/jaga/git/JAGA/Middleware/leds/leds.c
 2B4A text70 CODE >157:/home/jaga/git/JAGA/Middleware/leds/leds.c
 2B4C text70 CODE >158:/home/jaga/git/JAGA/Middleware/leds/leds.c
@@ -1335,7 +1335,6 @@ __Hspace_1 28C 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _leds_action_isr_10ms 2B4A 0 CODE 0 text70 dist/default/production/Template.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__size_of_GPIO_pin_high 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/Template.X.production.obj
 __HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production/Template.X.production.obj
 __HidataBANK2 0 0 ABS 0 idataBANK2 dist/default/production/Template.X.production.obj
@@ -1347,9 +1346,8 @@ __size_of_init_pwm 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _counter_1_ms 2FF0 0 CODE 0 text65 dist/default/production/Template.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/Template.X.production.obj
 i2_buttons_read_isr_10ms 1240 0 CODE 0 text92 dist/default/production/Template.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtL5nmvu.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgteqzZdx.obj
 __size_of_leds_on 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__size_of_GPIO_pin_attach 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _timer0_isr 2D42 0 CODE 0 text61 dist/default/production/Template.X.production.obj
 _timer1_isr 2D16 0 CODE 0 text60 dist/default/production/Template.X.production.obj
 __size_of_leds_off 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -1361,15 +1359,16 @@ _TBLPTRH FF7 0 ABS 0 - dist/default/production/Template.X.production.obj
 _TBLPTRL FF6 0 ABS 0 - dist/default/production/Template.X.production.obj
 _TBLPTRU FF8 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_timer_set_counter 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_setDir 17BE 0 CODE 0 text30 dist/default/production/Template.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_ofi2_buttons_read_isr_10ms 132C 0 CODE 0 text92 dist/default/production/Template.X.production.obj
 __size_ofi1_leds_status 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 leds_write@i 88 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+__size_ofi2_GPIO_regPin_inputBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_leds_status 2164 0 CODE 0 text36 dist/default/production/Template.X.production.obj
 __size_ofi1_leds_off 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_isr_low_interrupt 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-i1_GPIO_pin_low 2986 0 CODE 0 text77 dist/default/production/Template.X.production.obj
 buttons_check_press@button_id 7F 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_leds_reverse 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_run_system 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -1377,13 +1376,14 @@ __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/Template.X.p
 _TMR1 FCE 0 ABS 0 - dist/default/production/Template.X.production.obj
 _TMR2 FCC 0 ABS 0 - dist/default/production/Template.X.production.obj
 _TMR3 FB2 0 ABS 0 - dist/default/production/Template.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/cgtL5nmvu.obj
+___sp 0 0 STACK 2 stack /tmp/cgteqzZdx.obj
 _leds 1E3 0 BANK1 1 bssBANK1 dist/default/production/Template.X.production.obj
 _main 2F76 0 CODE 0 text0 dist/default/production/Template.X.production.obj
 lcd_print_uint16@buffer 249 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 timer_setup_clock@source 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 leds_set@UI8_Action 8C 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-start 14A 0 CODE 0 init /tmp/cgtL5nmvu.obj
+__size_ofi1_GPIO_regPin_outputLow 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+start 14A 0 CODE 0 init /tmp/cgteqzZdx.obj
 i2timer_set_counter@aux_value 63 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_ofi2_leds_off 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 i2_uart_rx_isr 2D9A 0 CODE 0 text82 dist/default/production/Template.X.production.obj
@@ -1395,18 +1395,19 @@ _lcd_printf 844 0 CODE 0 text40 dist/default/production/Template.X.production.ob
 __size_of_main 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of___lwmod 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__end_ofi2_GPIO_regPin_outputHigh 28AE 0 CODE 0 text103 dist/default/production/Template.X.production.obj
 __end_of_counter_10_ms 2FD2 0 CODE 0 text66 dist/default/production/Template.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/Template.X.production.obj
-_GPIO_input_state 2344 0 CODE 0 text37 dist/default/production/Template.X.production.obj
 leds_set@UI8_LedsTemp 8D 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _lcd_print_uint16 13FC 0 CODE 0 text42 dist/default/production/Template.X.production.obj
 i2_uart_tx_isr 2D6E 0 CODE 0 text81 dist/default/production/Template.X.production.obj
+_GPIO_regPin_outputHigh 2816 0 CODE 0 text52 dist/default/production/Template.X.production.obj
+__size_ofi1_GPIO_regPin_outputHigh 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 timer_start@module 7F 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i1timer_set_counter@module 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
-__end_of_GPIO_pin_high 2862 0 CODE 0 text53 dist/default/production/Template.X.production.obj
+_GPIO_regPin_inputBit 26DE 0 CODE 0 text68 dist/default/production/Template.X.production.obj
 i2timer_set_counter@val 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_counter_1_s 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-GPIO_pin_outputBit@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/Template.X.production.obj
 __LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production/Template.X.production.obj
 __LidataBANK2 0 0 ABS 0 idataBANK2 dist/default/production/Template.X.production.obj
@@ -1425,12 +1426,13 @@ __end_ofi1_leds_status 27CA 0 CODE 0 text73 dist/default/production/Template.X.p
 __size_of_counter_1_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/Template.X.production.obj
 __size_of_setupHardware 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+_GPIO_regPin_setDir 1704 0 CODE 0 text30 dist/default/production/Template.X.production.obj
 __size_ofi2_counter_1_s 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/cgtL5nmvu.obj
-intlevel0 0 0 CODE 0 text /tmp/cgtL5nmvu.obj
-intlevel1 0 0 CODE 0 text /tmp/cgtL5nmvu.obj
-intlevel2 0 0 CODE 0 text /tmp/cgtL5nmvu.obj
-intlevel3 0 0 CODE 0 text /tmp/cgtL5nmvu.obj
+__accesstop 60 0 ABS 0 - /tmp/cgteqzZdx.obj
+intlevel0 0 0 CODE 0 text /tmp/cgteqzZdx.obj
+intlevel1 0 0 CODE 0 text /tmp/cgteqzZdx.obj
+intlevel2 0 0 CODE 0 text /tmp/cgteqzZdx.obj
+intlevel3 0 0 CODE 0 text /tmp/cgteqzZdx.obj
 __ptext100 2C0C 0 CODE 0 text100 dist/default/production/Template.X.production.obj
 __ptext101 1E44 0 CODE 0 text101 dist/default/production/Template.X.production.obj
 __ptext102 249C 0 CODE 0 text102 dist/default/production/Template.X.production.obj
@@ -1466,12 +1468,12 @@ __end_of_init_mcu 2FCC 0 CODE 0 text18 dist/default/production/Template.X.produc
 __end_of_init_pwm 2FE8 0 CODE 0 text17 dist/default/production/Template.X.production.obj
 sys_timer@timer_counter@tmr_100_ms 4D 0 COMRAM 1 dataCOMRAM dist/default/production/Template.X.production.obj
 __end_of_run_him 1018 0 CODE 0 text33 dist/default/production/Template.X.production.obj
-__end_ofi1_GPIO_pin_low 29CA 0 CODE 0 text77 dist/default/production/Template.X.production.obj
 i1leds_off@UI8_LedsMask E 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 i1leds_off@UI8_LedsTemp C 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 timer_setup_interrupt@module 84 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __pidataCOMRAM 2F8E 0 CODE 0 idataCOMRAM dist/default/production/Template.X.production.obj
 __CFG_WDTPS$256 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+i2GPIO_regPin_outputLow@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_counter_1_ms 2FF2 0 CODE 0 text65 dist/default/production/Template.X.production.obj
 __end_of_leds_off 2C0C 0 CODE 0 text38 dist/default/production/Template.X.production.obj
 __end_of_leds_set B70 0 CODE 0 text34 dist/default/production/Template.X.production.obj
@@ -1482,22 +1484,20 @@ __size_of_interrupt_set_callback 0 0 ABS 0 - dist/default/production/Template.X.
 i2interrupt_is_enable@_interrupt 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 ___awdiv@dividend 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_setupHardware 2F04 0 CODE 0 text1 dist/default/production/Template.X.production.obj
-___inthi_sp 0 0 STACK 2 stack /tmp/cgtL5nmvu.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/cgteqzZdx.obj
 __end_of_lcd_printf A3A 0 CODE 0 text40 dist/default/production/Template.X.production.obj
-___intlo_sp 0 0 STACK 2 stack /tmp/cgtL5nmvu.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/cgteqzZdx.obj
 i1leds_on@UI8_LedsMask C 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __end_ofi1_leds_on 2F76 0 CODE 0 text72 dist/default/production/Template.X.production.obj
 __end_ofi2_timer_set_counter 263E 0 CODE 0 text88 dist/default/production/Template.X.production.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/Template.X.production.obj
 __end_ofi2_counter_1_s 2FF4 0 CODE 0 text89 dist/default/production/Template.X.production.obj
 _EECON1bits FA6 0 ABS 0 - dist/default/production/Template.X.production.obj
-GPIO_pin_outputBit@flag 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_ofi1_timer_set_counter 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _CCPR1L FBE 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_init_AD 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_ofi1_leds_on 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 lcd_printf@pa 25E 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
-__size_ofi2_GPIO_input_state 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _display B1 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/Template.X.production.obj
 _counter_100_ms 2FD2 0 CODE 0 text69 dist/default/production/Template.X.production.obj
@@ -1531,9 +1531,9 @@ __size_of_timer_start 0 0 ABS 0 - dist/default/production/Template.X.production.
 lcd_print_uint16@n 8C 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of___lwdiv 1D46 0 CODE 0 text44 dist/default/production/Template.X.production.obj
 __end_of___lwmod 20FA 0 CODE 0 text43 dist/default/production/Template.X.production.obj
-__end_of_GPIO_input_state 239A 0 CODE 0 text37 dist/default/production/Template.X.production.obj
 __end_of_lcd_print_uint16 14C2 0 CODE 0 text42 dist/default/production/Template.X.production.obj
 i1_leds_on 2F5C 0 CODE 0 text72 dist/default/production/Template.X.production.obj
+__end_ofi1_GPIO_regPin_outputHigh 2B10 0 CODE 0 text78 dist/default/production/Template.X.production.obj
 __size_ofi2_uart_rx_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_timer_set_counter 25EC 0 CODE 0 text11 dist/default/production/Template.X.production.obj
 __end_ofi2_counter_10_ms 2FDE 0 CODE 0 text91 dist/default/production/Template.X.production.obj
@@ -1541,7 +1541,6 @@ i1_leds_write 228E 0 CODE 0 text76 dist/default/production/Template.X.production
 i2_interrupt_is_enable 1EC2 0 CODE 0 text104 dist/default/production/Template.X.production.obj
 lcd_print_uint16@cnt 254 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 __size_of_interrupt_set_priority 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__size_of_GPIO_input_state 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_isr_low_interrupt 14A 0 CODE 0 intcodelo dist/default/production/Template.X.production.obj
 _id_device 30 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
 i2interrupt_is_enable@priority_status 66 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
@@ -1549,12 +1548,11 @@ __size_ofi2_uart_tx_isr 0 0 ABS 0 - dist/default/production/Template.X.productio
 leds_attach@index 8D 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_lcd_print_uint16 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_leds_write 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-i2_GPIO_pin_low 249C 0 CODE 0 text102 dist/default/production/Template.X.production.obj
-__size_ofi1_GPIO_input_state 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_outputBit 1A7E 0 CODE 0 text53 dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_outputLow 23F0 0 CODE 0 text51 dist/default/production/Template.X.production.obj
 leds_status@i 88 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 leds_off@UI8_LedsMask 8B 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 leds_off@UI8_LedsTemp 89 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-__end_ofi2_GPIO_pin_high 28AE 0 CODE 0 text103 dist/default/production/Template.X.production.obj
 __size_ofi2_counter_1_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 ___lwdiv@quotient 83 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/Template.X.production.obj
@@ -1565,6 +1563,7 @@ interrupt_set_callback@_interrupt 7E 0 BANK0 1 cstackBANK0 dist/default/producti
 _INTCON2bits FF1 0 ABS 0 - dist/default/production/Template.X.production.obj
 timer_priority_interrupt@module 84 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 ___lwmod@dividend 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i1GPIO_regPin_rdBit@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production/Template.X.production.obj
 lcd_print_int16@flag_negativo 249 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -1573,20 +1572,26 @@ start_initialization 164A 0 CODE 0 cinit dist/default/production/Template.X.prod
 _setupDevices 1018 0 CODE 0 text23 dist/default/production/Template.X.production.obj
 __size_of_leds_status 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _timer_set_callbak 1BBA 0 CODE 0 text12 dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_attach 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/Template.X.production.obj
 __end_of_timer_setup_clock 28F8 0 CODE 0 text9 dist/default/production/Template.X.production.obj
+__size_ofi2_GPIO_regPin_rdBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_timer_setup_scale 1240 0 CODE 0 text6 dist/default/production/Template.X.production.obj
 timer_setup_scale@prescale 7F 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_counter_100_ms 2FD8 0 CODE 0 text69 dist/default/production/Template.X.production.obj
+_GPIO_regPin_outputBit 19D0 0 CODE 0 text53 dist/default/production/Template.X.production.obj
+_GPIO_regPin_outputLow 239A 0 CODE 0 text51 dist/default/production/Template.X.production.obj
 interrupt_is_enable@enable_status 6 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
+i1GPIO_regPin_outputHigh@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __end_of_lcd_print_int16 DCE 0 CODE 0 text45 dist/default/production/Template.X.production.obj
 timer_setup_bits@bits 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_ofi2_uart_rx_isr 2DC6 0 CODE 0 text82 dist/default/production/Template.X.production.obj
 ___rparam_used 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-i1GPIO_pin_low@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 i2_leds_action_isr_10ms 2B7C 0 CODE 0 text95 dist/default/production/Template.X.production.obj
 lcd_gotoxy@address 8E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+GPIO_regPin_setDir@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+GPIO_regPin_outputBit@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _timer_setup_bits 263E 0 CODE 0 text10 dist/default/production/Template.X.production.obj
 _ref_PORTA CA 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.obj
 _ref_PORTB CC 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.obj
@@ -1599,8 +1604,7 @@ _ref_TRISC D8 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.
 _ref_TRISD DA 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.obj
 _ref_TRISE DC 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.obj
 __size_ofi2_leds_status 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-GPIO_pin_attach@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-GPIO_pin_attach@reg 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i2_GPIO_regPin_outputLow 249C 0 CODE 0 text102 dist/default/production/Template.X.production.obj
 __size_of_interrupt_init 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _SPBRGH FB0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
@@ -1610,20 +1614,17 @@ _IPR1bits F9F 0 ABS 0 - dist/default/production/Template.X.production.obj
 _SSPADD FC8 0 ABS 0 - dist/default/production/Template.X.production.obj
 _SSPBUF FC9 0 ABS 0 - dist/default/production/Template.X.production.obj
 _IPR2bits FA2 0 ABS 0 - dist/default/production/Template.X.production.obj
-i2_GPIO_pin_state 21CE 0 CODE 0 text93 dist/default/production/Template.X.production.obj
 _buttons_vector 1CB 0 BANK1 1 bssBANK1 dist/default/production/Template.X.production.obj
-GPIO_input_state@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _TABLAT FF5 0 ABS 0 - dist/default/production/Template.X.production.obj
+__end_ofi2_GPIO_regPin_outputLow 24F2 0 CODE 0 text102 dist/default/production/Template.X.production.obj
 __size_ofi1_leds_write 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_lcd_attach 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 i2_counter_10_ms 2FD8 0 CODE 0 text91 dist/default/production/Template.X.production.obj
-GPIO_pin_state@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_outputHigh 2862 0 CODE 0 text52 dist/default/production/Template.X.production.obj
 __end_of_timer_init_regs 208E 0 CODE 0 text16 dist/default/production/Template.X.production.obj
 i2leds_off@UI8_aux 6C 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_init_AD 2FEC 0 CODE 0 text22 dist/default/production/Template.X.production.obj
-__end_ofi2_GPIO_pin_low 24F2 0 CODE 0 text102 dist/default/production/Template.X.production.obj
 __end_of_timer_priority_interrupt 2022 0 CODE 0 text14 dist/default/production/Template.X.production.obj
-i2_GPIO_pin_high 2862 0 CODE 0 text103 dist/default/production/Template.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production/Template.X.production.obj
 __Hbank1 0 0 ABS 0 bank1 dist/default/production/Template.X.production.obj
 __Hbank2 0 0 ABS 0 bank2 dist/default/production/Template.X.production.obj
@@ -1637,6 +1638,7 @@ __Hconst 0 0 CODE 0 const dist/default/production/Template.X.production.obj
 buttons_check_press@press 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __Hidata 0 0 CODE 0 idata dist/default/production/Template.X.production.obj
 __Hidloc 200008 0 IDLOC 0 idloc dist/default/production/Template.X.production.obj
+GPIO_regPin_outputLow@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/Template.X.production.obj
 __Hparam 0 0 BANK0 1 param0 dist/default/production/Template.X.production.obj
 __Hrdata 0 0 COMRAM 1 rdata dist/default/production/Template.X.production.obj
@@ -1652,25 +1654,29 @@ __Htext7 0 0 ABS 0 text7 dist/default/production/Template.X.production.obj
 __Htext8 0 0 ABS 0 text8 dist/default/production/Template.X.production.obj
 __Htext9 0 0 ABS 0 text9 dist/default/production/Template.X.production.obj
 ___lwdiv@counter 82 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i2GPIO_regPin_outputHigh@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_setupDevices 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 interrupt_is_enable@priority 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 lcd_attach@RS 249 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/Template.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production/Template.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst /tmp/cgtL5nmvu.obj
+__smallconst 800 0 SMALLCONST 0 smallconst /tmp/cgteqzZdx.obj
+GPIO_regPin_rdBit@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i2_GPIO_regPin_inputBit 21CE 0 CODE 0 text93 dist/default/production/Template.X.production.obj
 __size_of_buttons_read_isr_10ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _counter_1_s 2FEE 0 CODE 0 text64 dist/default/production/Template.X.production.obj
 leds_off@UI8_aux 8A 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i2GPIO_regPin_inputBit@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_lcd_init 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_ofi1_leds_write 22EC 0 CODE 0 text76 dist/default/production/Template.X.production.obj
 __end_of_interrupt_setup 2A0C 0 CODE 0 text8 dist/default/production/Template.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production/Template.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production/Template.X.production.obj
-__size_of_GPIO_pin_state 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_lcd_gotoxy 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_ofi2_leds_status 21CE 0 CODE 0 text98 dist/default/production/Template.X.production.obj
 _init_timer0 1C40 0 CODE 0 text4 dist/default/production/Template.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+i2_GPIO_regPin_rdBit 2446 0 CODE 0 text99 dist/default/production/Template.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production/Template.X.production.obj
 __Lbank1 0 0 ABS 0 bank1 dist/default/production/Template.X.production.obj
 __Lbank2 0 0 ABS 0 bank2 dist/default/production/Template.X.production.obj
@@ -1698,6 +1704,7 @@ __Ltext7 0 0 ABS 0 text7 dist/default/production/Template.X.production.obj
 __Ltext8 0 0 ABS 0 text8 dist/default/production/Template.X.production.obj
 __Ltext9 0 0 ABS 0 text9 dist/default/production/Template.X.production.obj
 leds_on@UI8_aux 8A 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+GPIO_regPin_outputBit@flag 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _timer_set_counter 259A 0 CODE 0 text11 dist/default/production/Template.X.production.obj
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production/Template.X.production.obj
 _lcd_print_int16 CA2 0 CODE 0 text45 dist/default/production/Template.X.production.obj
@@ -1722,6 +1729,7 @@ __Lrbss 0 0 COMRAM 1 rbss dist/default/production/Template.X.production.obj
 __Ltemp 0 0 COMRAM 1 temp dist/default/production/Template.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production/Template.X.production.obj
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_rdBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 interrupt_setup@setup 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/Template.X.production.obj
 __LcstackBANK2 0 0 ABS 0 cstackBANK2 dist/default/production/Template.X.production.obj
@@ -1731,6 +1739,7 @@ __size_of_timer1_isr 0 0 ABS 0 - dist/default/production/Template.X.production.o
 __size_of_timer2_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_timer3_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_setDir 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _leds_attach 2A4E 0 CODE 0 text24 dist/default/production/Template.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production/Template.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production/Template.X.production.obj
@@ -1795,12 +1804,12 @@ __size_ofi2_buttons_read_isr_10ms 0 0 ABS 0 - dist/default/production/Template.X
 interrupt_set_priority@_interrupt 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_timer_setup_bits 268E 0 CODE 0 text10 dist/default/production/Template.X.production.obj
 i2buttons_read_isr_10ms@i 69 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+GPIO_regPin_inputBit@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/Template.X.production.obj
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/Template.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/Template.X.production.obj
 _run_him EF6 0 CODE 0 text33 dist/default/production/Template.X.production.obj
 _POSTINC0 FEE 0 ABS 0 - dist/default/production/Template.X.production.obj
-__end_ofi2_GPIO_pin_state 2230 0 CODE 0 text93 dist/default/production/Template.X.production.obj
 __size_of_leds_action_isr_10ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 ?_lcd_printf 92 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __Hparam0 0 0 BANK0 1 param0 dist/default/production/Template.X.production.obj
@@ -1808,7 +1817,8 @@ _interrupt_setup 29CA 0 CODE 0 text8 dist/default/production/Template.X.producti
 int_func DCE 0 CODE 0 intcode_body dist/default/production/Template.X.production.obj
 i2_interrupt_is_enable$1944 67 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_timer_setup_bits 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__end_of_GPIO_pin_outputBit 1A7E 0 CODE 0 text51 dist/default/production/Template.X.production.obj
+GPIO_regPin_attach@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+GPIO_regPin_attach@reg 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i2leds_write@i 6A 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _lcd_init 1922 0 CODE 0 text26 dist/default/production/Template.X.production.obj
 i1timer_set_counter@aux_value 4 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
@@ -1817,12 +1827,10 @@ __size_ofsys_timer@timer_counter 0 0 ABS 0 - dist/default/production/Template.X.
 __size_ofi2_leds_write 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _uart_rx_isr 2C92 0 CODE 0 text57 dist/default/production/Template.X.production.obj
 _button_attach 2A90 0 CODE 0 text29 dist/default/production/Template.X.production.obj
-__size_ofi2_GPIO_pin_state 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Hramtop 800 0 RAM 0 ramtop dist/default/production/Template.X.production.obj
 __end_of_lcd_send_nibble 1B26 0 CODE 0 text50 dist/default/production/Template.X.production.obj
-_GPIO_pin_low 239A 0 CODE 0 text52 dist/default/production/Template.X.production.obj
+i1_GPIO_regPin_outputLow 2986 0 CODE 0 text77 dist/default/production/Template.X.production.obj
 __size_ofi2_counter_10_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-i1GPIO_input_state@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __pdataBANK0 C3 0 BANK0 1 dataBANK0 dist/default/production/Template.X.production.obj
 __pdataBANK1 100 0 BANK1 1 dataBANK1 dist/default/production/Template.X.production.obj
 __pdataBANK2 200 0 BANK2 1 dataBANK2 dist/default/production/Template.X.production.obj
@@ -1925,12 +1933,12 @@ __Htext96 0 0 ABS 0 text96 dist/default/production/Template.X.production.obj
 __Htext97 0 0 ABS 0 text97 dist/default/production/Template.X.production.obj
 __Htext98 0 0 ABS 0 text98 dist/default/production/Template.X.production.obj
 __Htext99 0 0 ABS 0 text99 dist/default/production/Template.X.production.obj
+__end_ofi1_GPIO_regPin_outputLow 29CA 0 CODE 0 text77 dist/default/production/Template.X.production.obj
 _timer_start 2230 0 CODE 0 text5 dist/default/production/Template.X.production.obj
 __end_of_leds_action_isr_10ms 2B7C 0 CODE 0 text70 dist/default/production/Template.X.production.obj
 _interrupt_callback 97 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 i2interrupt_is_enable@enable_status 65 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _version 32 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
-__size_ofi2_GPIO_pin_high 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 ___awmod@counter 82 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _spi_device 1AF 0 BANK1 1 bssBANK1 dist/default/production/Template.X.production.obj
 _RCSTAbits FAB 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -1940,7 +1948,6 @@ _lcd_send_byte 1D46 0 CODE 0 text49 dist/default/production/Template.X.productio
 __end_of_init_gpio 164A 0 CODE 0 text20 dist/default/production/Template.X.production.obj
 __end_of_init_uart 2FE6 0 CODE 0 text3 dist/default/production/Template.X.production.obj
 i1_leds_off 2F04 0 CODE 0 text75 dist/default/production/Template.X.production.obj
-__size_ofi1_GPIO_pin_low 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _isr_high_interrupt 8 0 CODE 0 intcode dist/default/production/Template.X.production.obj
 __ptext10 263E 0 CODE 0 text10 dist/default/production/Template.X.production.obj
 __ptext11 259A 0 CODE 0 text11 dist/default/production/Template.X.production.obj
@@ -1962,8 +1969,8 @@ __ptext26 1922 0 CODE 0 text26 dist/default/production/Template.X.production.obj
 __ptext27 2FA4 0 CODE 0 text27 dist/default/production/Template.X.production.obj
 __ptext28 268E 0 CODE 0 text28 dist/default/production/Template.X.production.obj
 __ptext29 2A90 0 CODE 0 text29 dist/default/production/Template.X.production.obj
-__ptext30 2B10 0 CODE 0 text30 dist/default/production/Template.X.production.obj
-__ptext31 1704 0 CODE 0 text31 dist/default/production/Template.X.production.obj
+__ptext30 1704 0 CODE 0 text30 dist/default/production/Template.X.production.obj
+__ptext31 2B10 0 CODE 0 text31 dist/default/production/Template.X.production.obj
 __ptext32 2FEC 0 CODE 0 text32 dist/default/production/Template.X.production.obj
 __ptext33 EF6 0 CODE 0 text33 dist/default/production/Template.X.production.obj
 __ptext34 A3A 0 CODE 0 text34 dist/default/production/Template.X.production.obj
@@ -1983,9 +1990,9 @@ __ptext47 132C 0 CODE 0 text47 dist/default/production/Template.X.production.obj
 __ptext48 27CA 0 CODE 0 text48 dist/default/production/Template.X.production.obj
 __ptext49 1D46 0 CODE 0 text49 dist/default/production/Template.X.production.obj
 __ptext50 1A7E 0 CODE 0 text50 dist/default/production/Template.X.production.obj
-__ptext51 19D0 0 CODE 0 text51 dist/default/production/Template.X.production.obj
-__ptext52 239A 0 CODE 0 text52 dist/default/production/Template.X.production.obj
-__ptext53 2816 0 CODE 0 text53 dist/default/production/Template.X.production.obj
+__ptext51 239A 0 CODE 0 text51 dist/default/production/Template.X.production.obj
+__ptext52 2816 0 CODE 0 text52 dist/default/production/Template.X.production.obj
+__ptext53 19D0 0 CODE 0 text53 dist/default/production/Template.X.production.obj
 __ptext54 24F2 0 CODE 0 text54 dist/default/production/Template.X.production.obj
 __ptext56 2C66 0 CODE 0 text56 dist/default/production/Template.X.production.obj
 __ptext57 2C92 0 CODE 0 text57 dist/default/production/Template.X.production.obj
@@ -2038,6 +2045,7 @@ __size_of_init_uart 0 0 ABS 0 - dist/default/production/Template.X.production.ob
 GPIO_write_data@registrador 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 ___awdiv 132C 0 CODE 0 text47 dist/default/production/Template.X.production.obj
 ___awmod 17BE 0 CODE 0 text46 dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_inputBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __pintcode_body DCE 0 CODE 0 intcode_body dist/default/production/Template.X.production.obj
 ___lwdiv 1CC4 0 CODE 0 text44 dist/default/production/Template.X.production.obj
 ___lwmod 208E 0 CODE 0 text43 dist/default/production/Template.X.production.obj
@@ -2054,15 +2062,14 @@ _pinRX1 28 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.ob
 _pinTX1 2B 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production/Template.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production/Template.X.production.obj
-_GPIO_pin_outputBit 19D0 0 CODE 0 text51 dist/default/production/Template.X.production.obj
+__end_ofi2_GPIO_regPin_rdBit 249C 0 CODE 0 text99 dist/default/production/Template.X.production.obj
 leds_action_isr_10ms@UI8_timerLedFastReverseCounter 38 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
+__size_ofi1_GPIO_regPin_rdBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_lcd_print_int16 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_interrupt_is_enable 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 i1timer_set_counter@val 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 _leds_status 20FA 0 CODE 0 text36 dist/default/production/Template.X.production.obj
 __end_ofi2_leds_action_isr_10ms 2BAE 0 CODE 0 text95 dist/default/production/Template.X.production.obj
-__end_ofi1_GPIO_pin_high 2B10 0 CODE 0 text78 dist/default/production/Template.X.production.obj
-GPIO_confDir@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 lcd_send_nibble@aux 88 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i2_timer0_isr 2E4A 0 CODE 0 text86 dist/default/production/Template.X.production.obj
 __end_of_info_init 2FB6 0 CODE 0 text27 dist/default/production/Template.X.production.obj
@@ -2070,22 +2077,23 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/default/production/Template.X.production.obj
 i2_timer1_isr 2E1E 0 CODE 0 text85 dist/default/production/Template.X.production.obj
 i2_timer2_isr 2DF2 0 CODE 0 text84 dist/default/production/Template.X.production.obj
 i2_timer3_isr 2DC6 0 CODE 0 text83 dist/default/production/Template.X.production.obj
+i2_GPIO_regPin_outputHigh 2862 0 CODE 0 text103 dist/default/production/Template.X.production.obj
 _interrupt_set_priority 2A0C 0 CODE 0 text15 dist/default/production/Template.X.production.obj
 ___lwdiv@divisor 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_ofi2_leds_on 2EE2 0 CODE 0 text97 dist/default/production/Template.X.production.obj
 _init_gpio 1588 0 CODE 0 text20 dist/default/production/Template.X.production.obj
 _init_uart 2FE4 0 CODE 0 text3 dist/default/production/Template.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_inputBit 272E 0 CODE 0 text68 dist/default/production/Template.X.production.obj
 __size_of_info_init 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_GPIO_write_data 2FC4 0 CODE 0 text21 dist/default/production/Template.X.production.obj
-__size_of_GPIO_pin_low 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_ofi2_leds_on 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 i2_leds_reverse 2BAE 0 CODE 0 text96 dist/default/production/Template.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-stackhi 7FF 0 ABS 0 - /tmp/cgtL5nmvu.obj
-stacklo 28C 0 ABS 0 - /tmp/cgtL5nmvu.obj
+GPIO_regPin_setDir@IODirection 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+stackhi 7FF 0 ABS 0 - /tmp/cgteqzZdx.obj
+stacklo 28C 0 ABS 0 - /tmp/cgteqzZdx.obj
 _lcd_send_nibble 1A7E 0 CODE 0 text50 dist/default/production/Template.X.production.obj
-i2GPIO_pin_high@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _buttons_check_press 24F2 0 CODE 0 text54 dist/default/production/Template.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production/Template.X.production.obj
 __size_ofi2_interrupt_is_enable 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2099,6 +2107,7 @@ __size_of_timer_init_regs 0 0 ABS 0 - dist/default/production/Template.X.product
 timer_setup_clock@transition 7F 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 button_attach@index 8D 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 GPIO_write_data@UI8_value 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_rdBit 239A 0 CODE 0 text37 dist/default/production/Template.X.production.obj
 __CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 lcd_gotoxy@coluna 8D 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i2_counter_100_ms 2FDE 0 CODE 0 text94 dist/default/production/Template.X.production.obj
@@ -2106,6 +2115,7 @@ interrupt_set_priority@priority 80 0 BANK0 1 cstackBANK0 dist/default/production
 __Lspace_0 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Lspace_2 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_outputHigh 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __pbssCOMRAM 22 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
 _ref_LATA 41 0 COMRAM 1 dataCOMRAM dist/default/production/Template.X.production.obj
 _ref_LATB 43 0 COMRAM 1 dataCOMRAM dist/default/production/Template.X.production.obj
@@ -2119,17 +2129,15 @@ timer_setup_scale@module 82 0 BANK0 1 cstackBANK0 dist/default/production/Templa
 _PIR1bits F9E 0 ABS 0 - dist/default/production/Template.X.production.obj
 i2_leds_on 2EBE 0 CODE 0 text97 dist/default/production/Template.X.production.obj
 _PIR2bits FA1 0 ABS 0 - dist/default/production/Template.X.production.obj
-_GPIO_confDir 1704 0 CODE 0 text31 dist/default/production/Template.X.production.obj
 __Lend_init 14A 0 CODE 0 end_init dist/default/production/Template.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/Template.X.production.obj
 lcd_send_nibble@nibble 87 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _buttons A6 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__end_ofi2_GPIO_regPin_inputBit 2230 0 CODE 0 text93 dist/default/production/Template.X.production.obj
 _lcd_send_string 2C3A 0 CODE 0 text41 dist/default/production/Template.X.production.obj
 end_of_initialization 16FA 0 CODE 0 cinit dist/default/production/Template.X.production.obj
 __end_of_LCD_INIT_STRING 805 0 SMALLCONST 0 smallconst dist/default/production/Template.X.production.obj
-__end_of_GPIO_pin_attach 2B4A 0 CODE 0 text30 dist/default/production/Template.X.production.obj
-__end_of_GPIO_pin_low 23F0 0 CODE 0 text52 dist/default/production/Template.X.production.obj
 timer_setup_scale@on_off 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_interrupt_setup 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/Template.X.production.obj
@@ -2143,13 +2151,15 @@ ___awdiv@quotient 84 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.pr
 __end_of_run_system 2FEE 0 CODE 0 text32 dist/default/production/Template.X.production.obj
 ?___awdiv 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 ?___awmod 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+i1_GPIO_regPin_rdBit 2942 0 CODE 0 text74 dist/default/production/Template.X.production.obj
 ___lwdiv@dividend 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 leds_status@status 87 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __Lparam0 0 0 BANK0 1 param0 dist/default/production/Template.X.production.obj
 _interrupt_is_enable 2546 0 CODE 0 text79 dist/default/production/Template.X.production.obj
 ?___lwdiv 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 ?___lwmod 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-i1GPIO_pin_high@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_outputBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+__size_of_GPIO_regPin_outputLow 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 lcd_print_int16@cnt 255 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 __size_ofi2_timer0_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_ofi2_timer1_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2157,6 +2167,7 @@ __end_ofi2_leds_off 2C3A 0 CODE 0 text100 dist/default/production/Template.X.pro
 __size_ofi2_timer2_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_ofi2_timer3_isr 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/Template.X.production.obj
+i2GPIO_regPin_rdBit@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __size_of_button_attach 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/Template.X.production.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production/Template.X.production.obj
@@ -2169,9 +2180,7 @@ ___awmod@dividend 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.pr
 __Lramtop 800 0 RAM 0 ramtop dist/default/production/Template.X.production.obj
 _UN_ledsBlinkFast AE 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 _UN_ledsBlinkSlow AF 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
-i1_GPIO_pin_high 2AD2 0 CODE 0 text78 dist/default/production/Template.X.production.obj
 __size_of_counter_100_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__end_ofi2_GPIO_input_state 249C 0 CODE 0 text99 dist/default/production/Template.X.production.obj
 __pcinit 164A 0 CODE 0 cinit dist/default/production/Template.X.production.obj
 i1leds_status@i B 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 _interrupt_is_enable$1944 8 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
@@ -2279,7 +2288,7 @@ __Ltext96 0 0 ABS 0 text96 dist/default/production/Template.X.production.obj
 __Ltext97 0 0 ABS 0 text97 dist/default/production/Template.X.production.obj
 __Ltext98 0 0 ABS 0 text98 dist/default/production/Template.X.production.obj
 __Ltext99 0 0 ABS 0 text99 dist/default/production/Template.X.production.obj
-__ramtop 800 0 RAM 0 ramtop /tmp/cgtL5nmvu.obj
+__ramtop 800 0 RAM 0 ramtop /tmp/cgteqzZdx.obj
 i2leds_reverse@UI8_LedsMask 6F 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i2leds_reverse@UI8_LedsTemp 6E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_ofi2_leds_reverse 2BDE 0 CODE 0 text96 dist/default/production/Template.X.production.obj
@@ -2293,8 +2302,6 @@ lcd_init@i 8D 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.productio
 _interrupt_init 2F24 0 CODE 0 text2 dist/default/production/Template.X.production.obj
 leds_attach@reg 86 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/Template.X.production.obj
-__size_of_GPIO_confDir 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-_GPIO_pin_high 2816 0 CODE 0 text53 dist/default/production/Template.X.production.obj
 _timer_counter 284 0 BANK2 1 bssBANK2 dist/default/production/Template.X.production.obj
 __end_ofi2_timer0_isr 2E76 0 CODE 0 text86 dist/default/production/Template.X.production.obj
 __end_ofi2_timer1_isr 2E4A 0 CODE 0 text85 dist/default/production/Template.X.production.obj
@@ -2310,31 +2317,29 @@ sys_timer@timer_counter@tmr_10_ms 4E 0 COMRAM 1 dataCOMRAM dist/default/producti
 __end_of_counter_1_s 2FF0 0 CODE 0 text64 dist/default/production/Template.X.production.obj
 timer_priority_interrupt@value 83 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_init_timer0 1CC4 0 CODE 0 text4 dist/default/production/Template.X.production.obj
-__size_ofi2_GPIO_pin_low 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 ___param_bank 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_button_attach 2AD2 0 CODE 0 text29 dist/default/production/Template.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/Template.X.production.obj
 _leds_write 1DC6 0 CODE 0 text39 dist/default/production/Template.X.production.obj
 __end_of__initialization 16FA 0 CODE 0 cinit dist/default/production/Template.X.production.obj
-__end_ofi1_GPIO_input_state 2986 0 CODE 0 text74 dist/default/production/Template.X.production.obj
 ___awmod@divisor 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 i1_leds_status 277C 0 CODE 0 text73 dist/default/production/Template.X.production.obj
+__size_ofi2_GPIO_regPin_outputLow 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _LCD_INIT_STRING 801 0 SMALLCONST 0 smallconst dist/default/production/Template.X.production.obj
-_GPIO_pin_attach 2B10 0 CODE 0 text30 dist/default/production/Template.X.production.obj
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production/Template.X.production.obj
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 timer_set_callbak@func 84 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
+i1_GPIO_regPin_outputHigh 2AD2 0 CODE 0 text78 dist/default/production/Template.X.production.obj
 __pidataBANK0 2F40 0 CODE 0 idataBANK0 dist/default/production/Template.X.production.obj
 __pidataBANK1 1872 0 CODE 0 idataBANK1 dist/default/production/Template.X.production.obj
 __pidataBANK2 28F8 0 CODE 0 idataBANK2 dist/default/production/Template.X.production.obj
-i2_GPIO_input_state 2446 0 CODE 0 text99 dist/default/production/Template.X.production.obj
 _interrupts_enable 22 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
 i1leds_write@out A 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __end_ofi2_counter_1_ms 2FF6 0 CODE 0 text90 dist/default/production/Template.X.production.obj
@@ -2347,19 +2352,20 @@ __CFG_FOSC$HSPLL_HS 0 0 ABS 0 - dist/default/production/Template.X.production.ob
 _spi_setup A8 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 __size_of_buttons_init 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_of_lcd_send_byte 1DC6 0 CODE 0 text49 dist/default/production/Template.X.production.obj
-__end_of_GPIO_confDir 17BE 0 CODE 0 text31 dist/default/production/Template.X.production.obj
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __end_ofi2_counter_100_ms 2FE4 0 CODE 0 text94 dist/default/production/Template.X.production.obj
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/production/Template.X.production.obj
 __end_of_interrupt_set_callback 1BBA 0 CODE 0 text13 dist/default/production/Template.X.production.obj
-_GPIO_pin_state 26DE 0 CODE 0 text68 dist/default/production/Template.X.production.obj
+__end_of_GPIO_regPin_attach 2B4A 0 CODE 0 text31 dist/default/production/Template.X.production.obj
 __end_of_buttons_check_press 2546 0 CODE 0 text54 dist/default/production/Template.X.production.obj
+GPIO_regPin_outputHigh@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+_GPIO_regPin_rdBit 2344 0 CODE 0 text37 dist/default/production/Template.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 __end_of_leds_attach 2A90 0 CODE 0 text24 dist/default/production/Template.X.production.obj
 _TXSTAbits FAC 0 ABS 0 - dist/default/production/Template.X.production.obj
 _T3CONbits FB1 0 ABS 0 - dist/default/production/Template.X.production.obj
 i1leds_on@UI8_aux D 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
-i2GPIO_input_state@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+__size_ofi2_GPIO_regPin_outputHigh 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _tmr_i2c1_tout 37 0 COMRAM 1 bssCOMRAM dist/default/production/Template.X.production.obj
 __Hend_init 14E 0 CODE 0 end_init dist/default/production/Template.X.production.obj
 __size_ofi2_counter_100_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2367,7 +2373,6 @@ __size_ofi2_timer_set_counter 0 0 ABS 0 - dist/default/production/Template.X.pro
 lcd_send_byte@n 8B 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 leds_write@out 87 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 i2interrupt_is_enable@priority 62 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-GPIO_pin_high@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_main 2F8E 0 CODE 0 text0 dist/default/production/Template.X.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production/Template.X.production.obj
 __size_of_timer_set_callbak 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2381,7 +2386,6 @@ _EEADR FA9 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_lcd_send_string 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 _FSR0H FEA 0 ABS 0 - dist/default/production/Template.X.production.obj
 _FSR0L FE9 0 ABS 0 - dist/default/production/Template.X.production.obj
-i2GPIO_pin_low@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 _PORTA F80 0 ABS 0 - dist/default/production/Template.X.production.obj
 _PORTB F81 0 ABS 0 - dist/default/production/Template.X.production.obj
 _PORTC F82 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2416,7 +2420,6 @@ __Lram 0 0 ABS 0 ram dist/default/production/Template.X.production.obj
 __Lsfr 0 0 ABS 0 sfr dist/default/production/Template.X.production.obj
 __CFG_CP2$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __CFG_CP3$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-i1_GPIO_input_state 2942 0 CODE 0 text74 dist/default/production/Template.X.production.obj
 _setupHardware 2EE2 0 CODE 0 text1 dist/default/production/Template.X.production.obj
 __CFG_CPB$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/Template.X.production.obj
@@ -2431,14 +2434,12 @@ _SSPSTATbits FC7 0 ABS 0 - dist/default/production/Template.X.production.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production/Template.X.production.obj
 __HdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production/Template.X.production.obj
 __HdataBANK2 0 0 ABS 0 dataBANK2 dist/default/production/Template.X.production.obj
-i2GPIO_pin_state@pin 60 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+__end_ofi1_GPIO_regPin_rdBit 2986 0 CODE 0 text74 dist/default/production/Template.X.production.obj
 __end_of_interrupt_is_enable 259A 0 CODE 0 text79 dist/default/production/Template.X.production.obj
 lcd_print_int16@buffer 24A 0 BANK2 1 cstackBANK2 dist/default/production/Template.X.production.obj
 _UN_ledsON B0 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
 buttons_read_isr_10ms@i A 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
-__size_ofi1_GPIO_pin_high 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __initialization 164A 0 CODE 0 cinit dist/default/production/Template.X.production.obj
-GPIO_pin_low@pin 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_uart_rx_isr 2CBE 0 CODE 0 text57 dist/default/production/Template.X.production.obj
 _leds_reverse 2E9A 0 CODE 0 text71 dist/default/production/Template.X.production.obj
 __pbssBANK0 97 0 BANK0 1 bssBANK0 dist/default/production/Template.X.production.obj
@@ -2448,12 +2449,12 @@ __end_of_buttons_read_isr_10ms 1588 0 CODE 0 text67 dist/default/production/Temp
 __end_of_interrupt_set_priority 2A4E 0 CODE 0 text15 dist/default/production/Template.X.production.obj
 __pdataCOMRAM 3A 0 COMRAM 1 dataCOMRAM dist/default/production/Template.X.production.obj
 interrupt_setup@_interrupt 7E 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
+_GPIO_regPin_attach 2B10 0 CODE 0 text31 dist/default/production/Template.X.production.obj
 _T2CONbits FCA 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_isr_high_interrupt 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_ofi2_leds_action_isr_10ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __size_of_GPIO_write_data 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production/Template.X.production.obj
-GPIO_confDir@IODirection 80 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
 __end_of_leds_write 1E44 0 CODE 0 text39 dist/default/production/Template.X.production.obj
 __Hsmallconst 844 0 SMALLCONST 0 smallconst dist/default/production/Template.X.production.obj
 __end_of_uart_tx_isr 2C92 0 CODE 0 text56 dist/default/production/Template.X.production.obj
@@ -2468,9 +2469,8 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/Template.X.pro
 _timer_priority_interrupt 1FB4 0 CODE 0 text14 dist/default/production/Template.X.production.obj
 __Hintcode 18 0 CODE 0 intcode dist/default/production/Template.X.production.obj
 __size_of_counter_10_ms 0 0 ABS 0 - dist/default/production/Template.X.production.obj
-__size_of_GPIO_pin_outputBit 0 0 ABS 0 - dist/default/production/Template.X.production.obj
 leds_on@UI8_LedsMask 89 0 BANK0 1 cstackBANK0 dist/default/production/Template.X.production.obj
-__end_of_GPIO_pin_state 272E 0 CODE 0 text68 dist/default/production/Template.X.production.obj
+i1GPIO_regPin_outputLow@pin 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Template.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.

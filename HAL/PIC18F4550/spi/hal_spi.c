@@ -42,23 +42,23 @@ void spi_init(void)
 
 void spi_attach(regGPIO *_sdi, regGPIO *_sdo, regGPIO *_sck, regGPIO *_ss)
 {
-    GPIO_attach(&spi_device.sdi_tris, _sdi);
-    GPIO_attach(&spi_device.sdo_tris, _sdo);
-    GPIO_attach(&spi_device.sck_tris, _sck);
-    GPIO_attach(&spi_device.ss_tris, _ss);
+    GPIO_regGPIO_attach(&spi_device.sdi_tris, _sdi);
+    GPIO_regGPIO_attach(&spi_device.sdo_tris, _sdo);
+    GPIO_regGPIO_attach(&spi_device.sck_tris, _sck);
+    GPIO_regGPIO_attach(&spi_device.ss_tris, _ss);
 
-    GPIO_confDir(&spi_device.sdi_tris, DIR_INPUT);
-    GPIO_confDir(&spi_device.sdo_tris, DIR_OUTPUT);
-    GPIO_confDir(&spi_device.ss_tris, DIR_INPUT);
+    GPIO_regPin_setDir(&spi_device.sdi_tris, DIR_INPUT);
+    GPIO_regPin_setDir(&spi_device.sdo_tris, DIR_OUTPUT);
+    GPIO_regPin_setDir(&spi_device.ss_tris, DIR_INPUT);
 
     /** Se SPI configurada para operar como SLAVE */
     if(spi_setup.type == SPI_SLAVE_SS_DISABLE || spi_setup.type == SPI_SLAVE_SS_ENABLE)
     {
-        GPIO_confDir(&spi_device.sck_tris, DIR_INPUT);
+        GPIO_regPin_setDir(&spi_device.sck_tris, DIR_INPUT);
     }
     else
     {
-        GPIO_confDir(&spi_device.sck_tris, DIR_OUTPUT);
+        GPIO_regPin_setDir(&spi_device.sck_tris, DIR_OUTPUT);
     }
 }
 

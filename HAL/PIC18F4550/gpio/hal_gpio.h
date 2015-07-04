@@ -124,20 +124,6 @@ void GPIO_outputBit(volatile uint8 *port, uint8 pino, uint8 UI8_flag);
 
 /**
  * @brief TODO documentar
- * @param reg TODO
- * @param _port TODO
- */
-void GPIO_attach(regGPIO *reg, regGPIO *_port);
-
-/**
- * @brief TODO documentar
- * @param pin TODO
- * @return TODO
- */
-uint8 GPIO_input_state(regPin *pin);
-
-/**
- * @brief TODO documentar
  * @param port TODO
  * @param pino TODO
  */
@@ -159,36 +145,50 @@ void GPIO_high(volatile uint8 *port, uint8 pino);
 
 /**
  * @brief TODO documentar
+ * @param reg TODO
+ * @param _port TODO
+ */
+void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port);
+
+/**
+ * @brief TODO documentar
+ * @param pin TODO
+ * @return TODO
+ */
+uint8 GPIO_regPin_rdBit(regPin *pin);
+
+/**
+ * @brief TODO documentar
  * @param pin TODO
  * @param reg TODO
  */
-void GPIO_pin_attach(regPin *pin, regGPIO *reg);
+void GPIO_regPin_attach(regPin *pin, regGPIO *reg);
 
 /**
  * @brief TODO documentar
  * @param pin TODO
  */
-void GPIO_pin_high(regPin *pin);
+void GPIO_regPin_outputHigh(regPin *pin);
 
 /**
  * @brief TODO documentar
  * @param pin TODO
  */
-void GPIO_pin_low(regPin *pin);
+void GPIO_regPin_outputLow(regPin *pin);
 
 /**
  * @brief TODO documentar
  * @param pin TODO
  * @param flag TODO
  */
-void GPIO_pin_outputBit(regPin *pin, uint8 flag);
+void GPIO_regPin_outputBit(regPin *pin, uint8 flag);
 
 /**
  * @brief TODO documentar
  * @param pin TODO
  * @return 
  */
-uint8 GPIO_pin_state(regPin *pin);
+uint8 GPIO_regPin_inputBit(regPin *pin);
 
 /**
  * @brief TODO documentar
@@ -202,7 +202,7 @@ void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us);
  * @param pin TODO
  * @param io IODirection
  */
-void GPIO_confDir(regGPIO *pin, PIN_DIR IODirection);
+void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection);
 
 //variaveis externas
 extern volatile uint8 *ref_PORTA;

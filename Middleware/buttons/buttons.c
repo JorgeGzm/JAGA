@@ -36,7 +36,6 @@ static volatile Buttons buttons_read;
 /** Vetor que informa quais pinos do microcontrolador sao usados para cada tecla.*/
 regPin buttons_vector[BUTTON_SIZE];
 
-
 void buttons_init(void)
 {
     uint8 i;
@@ -51,10 +50,10 @@ void buttons_init(void)
 void button_attach(uint8 index, regGPIO reg)
 {
     //indica o pino do microcontrolador que sera usado para o botao
-    GPIO_pin_attach(&buttons_vector[index], &reg);
+    GPIO_regPin_attach(&buttons_vector[index], &reg);
 
     //Configura pino do microcontrolador como entrada
-    GPIO_confDir(&reg, DIR_INPUT);
+    GPIO_regPin_setDir(&reg, DIR_INPUT);
 }
 
 void buttons_read_isr_10ms(void)
@@ -66,7 +65,7 @@ void buttons_read_isr_10ms(void)
     //Leitura instantanea das teclas
     for(i = 0; i < 8; i++)
     {
-        if (buttons_vector[i].out && (configButton_pullUP ^ GPIO_pin_state(&buttons_vector[i])))
+        if (buttons_vector[i].out && (configButton_pullUP ^ GPIO_regPin_inputBit(&buttons_vector[i])))
         {
             buttons_read.b.b1 |=  (1 << i);
         }
