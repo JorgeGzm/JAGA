@@ -1,4 +1,7 @@
-#   JAGA
+![JAGA logo](https://github.com/JorgeGzm/JAGA/blob/master/docs/logo.jpg)
+
+# JAGA 
+
 English:
 
 This project has the proposal developing libraries universals to  microcontrolers with architecture 8, 16 and 32bits.
