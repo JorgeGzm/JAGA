@@ -9,8 +9,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/gpio/hal_gpio.h</file>
+            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_uart.c</file>
             <file>file:/home/jaga/git/JAGA/Middleware/buttons/buttons.c</file>
+            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c</file>
+            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c</file>
+            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.h</file>
+            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/uart/hal_uart.c</file>
+            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c</file>
+            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c</file>
+            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/uart/hal_uart.h</file>
+            <file>file:/home/jaga/git/JAGA/Middleware/serial/serial.c</file>
+            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c</file>
         </group>
     </open-files>
 </project-private>

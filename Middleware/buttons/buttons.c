@@ -24,31 +24,28 @@
 #include "app_control.h"
 
 #ifndef configButton_pullUP
-    #error "configButton_pullUP no defined in app_control.h"
+#error "configButton_pullUP no defined in app_control.h"
 #endif
 
 /** Variavel que recebe a atualizacao do estado das teclas a cada 10ms*/
-static volatile Buttons buttons;        
+static volatile Buttons buttons;
 
 /** Variavel que informa quais teclas foram pressionadas. */
-static volatile Buttons buttons_read;   
+static volatile Buttons buttons_read;
 
 /** Vetor que informa quais pinos do microcontrolador sao usados para cada tecla.*/
 regPin buttons_vector[BUTTON_SIZE];
 
-void buttons_init(void)
-{
+void buttons_init(void) {
     uint8 i;
-    
-    for(i=0; i<sizeof(BUTTON_SIZE); i++)
-    {
+
+    for (i = 0; i<sizeof (BUTTON_SIZE); i++) {
         buttons_vector[i].out = 0;
         buttons_vector[i].pin = 0;
     }
 }
 
-void button_attach(uint8 index, regGPIO reg)
-{
+void button_attach(uint8 index, regGPIO reg) {
     //indica o pino do microcontrolador que sera usado para o botao
     GPIO_regPin_attach(&buttons_vector[index], &reg);
 
@@ -56,35 +53,27 @@ void button_attach(uint8 index, regGPIO reg)
     GPIO_regPin_setDir(&reg, DIR_INPUT);
 }
 
-void buttons_read_isr_10ms(void)
-{
+void buttons_read_isr_10ms(void) {
     uint8 i;
 
     buttons_read.b.b1 = 0;
-    
+
     //Leitura instantanea das teclas
-    for(i = 0; i < 8; i++)
-    {
-        if (buttons_vector[i].out && (configButton_pullUP ^ GPIO_regPin_inputBit(&buttons_vector[i])))
-        {
-            buttons_read.b.b1 |=  (1 << i);
+    for (i = 0; i < 8; i++) {
+        if (buttons_vector[i].out && (configButton_pullUP ^ GPIO_regPin_inputBit(&buttons_vector[i]))) {
+            buttons_read.b.b1 |= (1 << i);
         }
     }
 
     //Verfica se alguma tecla esta pressionada
-    if(buttons_read.b.b1)
-    {
-        if(buttons_read.hold && !buttons_read.press)
-        {
+    if (buttons_read.b.b1) {
+        if (buttons_read.hold && !buttons_read.press) {
             //Espera o tempo de debounce acabar para saber se a tecla foi realmente precionada
-            if(buttons_read.debounce)
-            {
+            if (buttons_read.debounce) {
                 buttons_read.debounce--;
             }
-            
-            //Debouce quando a tecla e prescionada
-            else
-            {
+                //Debouce quando a tecla e prescionada
+            else {
                 buttons_read.hold = 0;
                 buttons_read.press = 1;
 
@@ -94,19 +83,16 @@ void buttons_read_isr_10ms(void)
                 buttons_read.debounce = BOUNCE;
             }
         }
-    }
-    else
-    {
-        if(buttons_read.debounce && !buttons_read.hold)
-        {
+    } else {
+        if (buttons_read.debounce && !buttons_read.hold) {
             //decremtenta tempo de debaunce
             buttons_read.debounce--;
-        }        
+        }
         else //Debouce quando a tecla e solta
         {
             buttons_read.hold = 1;
 
-            buttons.value = 0; 
+            buttons.value = 0;
 
             //UI8_debounce = BOUNCE;
             buttons_read.debounce = BOUNCE;
@@ -114,41 +100,41 @@ void buttons_read_isr_10ms(void)
     }
 }
 
-uint8 buttons_check_press(uint8 button_id, uint8 press)
+uint8 buttons_check_press(BTN_TYPE button_id, BTN_STATES press) 
 {
-    if(!press)
+    if (press == BTN_PULSE) 
     {
-        if(buttons_read.b.b1 == button_id)
+        if (buttons_read.b.b1 == button_id) 
         {
             //limpa flag do botao
-        	buttons_read.b.b1 ^= (buttons_read.b.b1 & button_id);
-            
+            buttons_read.b.b1 ^= (buttons_read.b.b1 & button_id);
+
             //limpa flag que sinaliza que o botao foi prescionado.
-        	buttons_read.press = 0;
+            buttons_read.press = 0;
 
             //retorna botao pressionado
             return 1;
-        }
+        } 
         else
         {
             //retorna botao nao pressionado
             return 0;
         }
     }
-    else
+    else 
     {
-        if((buttons.b.b1 == button_id) && buttons.press)
+        if ((buttons.b.b1 == button_id) && buttons.press) 
         {
             //limpa flag do botao
-        	buttons.b.b1 ^= (buttons.b.b1 & button_id);
-            
+            buttons.b.b1 ^= (buttons.b.b1 & button_id);
+
             //limpa flag que sinaliza que o botao foi prescionado.
-        	buttons_read.press = 0;
+            buttons_read.press = 0;
 
             //retorna botao pressionado
             return 1;
-        }
-        else
+        } 
+        else 
         {
             //retorna botao nao pressionado
             return 0;

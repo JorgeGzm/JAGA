@@ -37,6 +37,9 @@ void setupHardware(void)
 
 void setupDevices(void)
 {
+    serial_init();
+    serial_attach(0, uart_putc);
+    
     //inicializa informaçoes do equipamento.
     info_init();
 

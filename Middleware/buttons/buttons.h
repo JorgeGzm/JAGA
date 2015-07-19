@@ -28,14 +28,19 @@
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 
-enum SYS_TECLAS
+typedef enum 
 {
-    TECLA_MENU = 1,
-    TECLA_UP = 2,
-    TECLA_DOWN = 4,
-    TECLA_BACK = 8
-};
+    BTN_MENU = 1,
+    BTN_UP = 2,
+    BTN_DOWN = 4,
+    BTN_BACK = 8
+}BTN_TYPE;
 
+typedef enum 
+{
+    BTN_PULSE = 0,
+    BTN_CONTINUOS    
+} BTN_STATES;
 
 /** @brief Define o intervalo de tempo de espera para eliminar o debouce da tecla.*/
 #define BOUNCE      6
@@ -129,7 +134,7 @@ void buttons_read_isr_10ms(void);
  * 0 = botao nao foi prescionado.                               \n
  * 1 = botao foi prescionado.
  */
-uint8 buttons_check_press(uint8 button_id, uint8 press);
+uint8 buttons_check_press(BTN_TYPE button_id, BTN_STATES press);
 
 /**
  * @brief Esta funcao configura uma nova tecla.

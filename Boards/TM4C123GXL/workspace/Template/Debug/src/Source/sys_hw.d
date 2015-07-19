@@ -18,7 +18,9 @@ src/Source/sys_hw.o: ../src/Source/sys_hw.c \
  /home/jaga/git/JAGA/HAL/TM4C123GXL/device/core_cm4_simd.h \
  /home/jaga/git/JAGA/HAL/TM4C123GXL/device/system_TM4C123.h \
  /home/jaga/git/JAGA/Middleware/leds/leds.h \
- /home/jaga/git/JAGA/Middleware/buttons/buttons.h
+ /home/jaga/git/JAGA/Middleware/buttons/buttons.h \
+ /home/jaga/git/JAGA/Middleware/serial/serial.h \
+ /home/jaga/git/JAGA/HAL/TM4C123GXL/uart/hal_uart.h
 
 ../src/Source/../Header/sys_hw.h:
 
@@ -71,3 +73,7 @@ src/Source/sys_hw.o: ../src/Source/sys_hw.c \
 /home/jaga/git/JAGA/Middleware/leds/leds.h:
 
 /home/jaga/git/JAGA/Middleware/buttons/buttons.h:
+
+/home/jaga/git/JAGA/Middleware/serial/serial.h:
+
+/home/jaga/git/JAGA/HAL/TM4C123GXL/uart/hal_uart.h:

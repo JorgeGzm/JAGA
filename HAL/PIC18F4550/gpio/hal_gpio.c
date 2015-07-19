@@ -219,11 +219,3 @@ void GPIO_regPin_outputBit(regPin *pin, uint8 flag)
     }
 }
 
-void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us)
-{
-    GPIO_regPin_outputHigh(pin);
-
-    Delay_us(delay_us);
-
-    GPIO_regPin_outputLow(pin);
-}

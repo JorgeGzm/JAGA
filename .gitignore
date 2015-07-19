@@ -32,3 +32,4 @@
 *.bash 
 
 /Boards/PIC18F4550/Template/Template.X/build/default/
+/.project

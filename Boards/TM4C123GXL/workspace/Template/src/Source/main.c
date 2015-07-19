@@ -22,7 +22,7 @@ void main(void)
         //Executa rotinas da funcionalidade
         run_system();
         
-        //Executa rotina que trata a HIM
+        //Executa rotina que trata a HIM'
         run_him();
     }
 }

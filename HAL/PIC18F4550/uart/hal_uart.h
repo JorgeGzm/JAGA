@@ -120,7 +120,7 @@
  * @param port TODO
  * @param tris TODO
  */
-void uart_attach(regPin *reg, regGPIO *port);
+void uart_attach(regPin reg, regGPIO port);
 
 /**
  * @brief

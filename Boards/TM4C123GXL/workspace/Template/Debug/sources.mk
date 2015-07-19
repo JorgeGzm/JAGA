@@ -23,6 +23,7 @@ TM4C123GXL/uart \
 TM4C123GXL/systick \
 TM4C123GXL/gpio \
 TM4C123GXL/delay \
+Middleware/serial \
 Middleware/leds \
 Middleware/lcd \
 Middleware/info_hw \

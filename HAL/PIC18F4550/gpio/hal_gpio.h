@@ -191,13 +191,6 @@ void GPIO_regPin_outputBit(regPin *pin, uint8 flag);
 uint8 GPIO_regPin_inputBit(regPin *pin);
 
 /**
- * @brief TODO documentar
- * @param pin TODO
- * @param delay_us TODO
- */
-void GPIO_pin_pulse(regGPIO *pin, uint16 delay_us);
-
-/**
  * @brief TODO
  * @param pin TODO
  * @param io IODirection

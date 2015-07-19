@@ -23,11 +23,14 @@
 #include "lcd/lcd.h"
 #include "leds/leds.h"
 #include "buttons/buttons.h"
+#include "serial/serial.h"
 
 /** Initialize the main hardware parameters. */
 void setupHardware(void);
 
 /** Configuracao e inicializacao dos dispositivos externo que serao usados */
 void setupDevices(void);
+
+extern Serial u1;
 
 #endif	/* SYS_HW_H */

@@ -47,16 +47,16 @@ void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck)
 {
     SSPEN = enable_i2c;
 
-    if(enable_i2c)
-    {
-        GPIO_regPin_outputHigh(sda); //TODO erro
-        GPIO_regPin_outputHigh(sck); //TODO erro
-    }
-    else
-    {
-        GPIO_regPin_outputLow(sda);//TODO erro
-        GPIO_regPin_outputLow(sck);
-    }
+//    if(enable_i2c)
+//    {
+//        GPIO_regPin_outputHigh(sda); //TODO erro
+//        GPIO_regPin_outputHigh(sck); //TODO erro
+//    }
+//    else
+//    {
+//        GPIO_regPin_outputLow(sda);//TODO erro
+//        GPIO_regPin_outputLow(sck);
+//    }
 }
 
 void i2c_setup_master(uint8 modo, uint8 speed, uint8 clock_master)

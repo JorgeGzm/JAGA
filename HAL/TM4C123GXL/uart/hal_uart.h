@@ -30,6 +30,7 @@
 
 #include "types/types.h"
 
+#define _UART0   0x0000
 #define _UART1   0x0001
 #define _UART2   0x0002
 
@@ -163,7 +164,7 @@ void uart_set_baudRate(uint8 module, uint8 value);
  * @param module TODO
  * @param func TODO
  */
-void uart_rx_set_callbak(uint8 module, void (*func)(void));
+void uart_rx_set_callbak(uint8 module, void (*func)(uint8));
 
 /**
  * @brief TODO
@@ -176,14 +177,14 @@ void uart_tx_set_callbak(uint8 module, void (*func)(void));
  * @brief TODO
  * @param UI8_caracter TODO
  */
-void uart_putc(uint8 UI8_caracter);
+void uart0_putc(uint8 UI8_caracter);
 //__inline uint8 uart_get_data(void);
 
 /**
  * @brief TODO
  * @return TODO
  */
-uint8 uart_get_data(void);
+uint8 uart0_get_data(void);
 
 
 #endif	/* HAL_UART_H */

@@ -24,7 +24,7 @@
 #include "lcd/lcd.h"
 #include "leds/leds.h"
 #include "buttons/buttons.h"
-
+#include "serial/serial.h"
 
 /** @brief Configura o Hardware segundo as especifica��es do projeto */
 void init_drivers(void);

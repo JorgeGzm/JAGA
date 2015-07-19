@@ -7,6 +7,7 @@
  */
 
 #include "../Header/sys_hw.h"
+#include "uart/hal_uart.h"
 
 void init_drivers(void)
 {
@@ -37,6 +38,9 @@ void init_drivers(void)
 
 void init_devices(void)
 {
+	serial_init();
+	serial_attach(0, uart0_putc);
+
 	//inicializa informaçoes do equipamento.
 	info_init();
 

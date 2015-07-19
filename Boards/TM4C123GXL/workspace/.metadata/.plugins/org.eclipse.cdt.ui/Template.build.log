@@ -1,0 +1,25 @@
+13:53:37 **** Incremental Build of configuration Debug for project Template ****
+make all 
+Building file: /home/jaga/git/JAGA/HAL/TM4C123GXL/uart/hal_uart.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/home/jaga/git/JAGA/Boards/TM4C123GXL/workspace/Template/src/Header" -I/home/jaga/git/JAGA/Middleware -I"/home/jaga/git/JAGA/Boards/TM4C123GXL/workspace/Template/src/Source" -I/home/jaga/git/JAGA/Util -I/home/jaga/git/JAGA/HAL/TM4C123GXL -std=gnu11 -MMD -MP -MF"TM4C123GXL/uart/hal_uart.d" -MT"TM4C123GXL/uart/hal_uart.o" -c -o "TM4C123GXL/uart/hal_uart.o" "/home/jaga/git/JAGA/HAL/TM4C123GXL/uart/hal_uart.c"
+Finished building: /home/jaga/git/JAGA/HAL/TM4C123GXL/uart/hal_uart.c
+ 
+Building target: Template.elf
+Invoking: Cross ARM C Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/home/jaga/git/JAGA/Boards/TM4C123GXL/workspace/Template/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template.map" -o "Template.elf"  ./src/Source/app_control.o ./src/Source/app_him.o ./src/Source/app_info.o ./src/Source/main.o ./src/Source/startup_gcc.o ./src/Source/sys_ad.o ./src/Source/sys_gpio.o ./src/Source/sys_hw.o ./src/Source/sys_i2c.o ./src/Source/sys_mcu.o ./src/Source/sys_pwm.o ./src/Source/sys_spi.o ./src/Source/sys_timer.o ./src/Source/sys_uart.o  ./Util/crc/crc.o  ./TM4C123GXL/uart/hal_uart.o  ./TM4C123GXL/systick/hal_systick.o  ./TM4C123GXL/gpio/hal_gpio.o  ./TM4C123GXL/delay/hal_delay.o  ./Middleware/serial/serial.o  ./Middleware/leds/leds.o  ./Middleware/lcd/lcd.o  ./Middleware/info_hw/info_hw.o  ./Middleware/buttons/buttons.o   
+Finished building target: Template.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "Template.elf"  "Template.hex"
+Finished building: Template.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Template.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6748	    160	    752	   7660	   1dec	Template.elf
+Finished building: Template.siz
+ 
+
+13:53:37 Build Finished (took 206ms)
+

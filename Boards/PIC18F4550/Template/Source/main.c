@@ -7,6 +7,7 @@
  */
 //noovo
 #include "../Header/main.h"
+#include "device/hal_device.h"
 
 void main(void)
 {

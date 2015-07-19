@@ -14,6 +14,7 @@ RM := rm -rf
 -include TM4C123GXL/systick/subdir.mk
 -include TM4C123GXL/gpio/subdir.mk
 -include TM4C123GXL/delay/subdir.mk
+-include Middleware/serial/subdir.mk
 -include Middleware/leds/subdir.mk
 -include Middleware/lcd/subdir.mk
 -include Middleware/info_hw/subdir.mk
