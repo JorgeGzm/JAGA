@@ -31,5 +31,9 @@
 *.properties 
 *.bash 
 
-/Boards/PIC18F4550/Template/Template.X/build/default/
+build/
+[Bb]in/
+[Ob]bj/
 /.project
+[Dd]ebug/
+[Rr]elease/
