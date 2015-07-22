@@ -145,7 +145,7 @@ void leds_attach(uint8 index, regGPIO reg)
     GPIO_regPin_attach(&leds[index], &reg);
 
     //Configura pino do botao como saida
-    GPIO_regPin_setDir(&reg, 0);
+    GPIO_regPin_setDir(&reg, DIR_OUTPUT);
 }
 
 void leds_action_isr_10ms(void)
