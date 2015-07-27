@@ -28,6 +28,8 @@ Independent Libraries (Util):
 
 - Libraries that do not depend on any other may be independent, so they can be called from any layer. eg vars.h, crc.h, printf.h;
 
+Layer "Init hardware" is different for each project, it's responsible for configuring peripherals and microcontroller interrupts, also initialize and configure the middleware layer libraries.
+
 The major purpose of this project is to create, teach and share knowledge for the development of a good firmware.
 
 -------------------------------------------------------------------------------------------------------------------
@@ -57,6 +59,8 @@ Camada HAL (Driver):
 Bibliotecas Independentes(Util):
 
 - Bibliotecas que não dependem de nenhuma outra podem ser independentes, então podem ser chamadas de qualquer camada. ex: vars.h, crc.h, printf.h;
+
+A Camada “Init hardware” é diferente para cada projeto, ela é responsável por configurar os periféricos e interrupções do microcontrolador, também inicializar e configura as bibliotecas da camada middleware.
 
 O maior intuito deste projeto é criar, ensinar e compartilhar conhecimento para o desenvolvimento de um bom firmware.
 
