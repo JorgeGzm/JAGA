@@ -213,6 +213,14 @@
       <SubType>compile</SubType>
       <Link>src\hal_gpio.h</Link>
     </Compile>
+    <Compile Include="..\..\..\..\HAL\ArduinoUno\uart\hal_uart.c">
+      <SubType>compile</SubType>
+      <Link>src\hal_uart.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\HAL\ArduinoUno\uart\hal_uart.h">
+      <SubType>compile</SubType>
+      <Link>src\hal_uart.h</Link>
+    </Compile>
     <Compile Include="..\..\..\..\Middleware\buttons\buttons.c">
       <SubType>compile</SubType>
       <Link>src\buttons.c</Link>
@@ -236,6 +244,14 @@
     <Compile Include="..\..\..\..\Middleware\leds\leds.h">
       <SubType>compile</SubType>
       <Link>src\leds.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Middleware\serial\serial.c">
+      <SubType>compile</SubType>
+      <Link>src\serial.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Middleware\serial\serial.h">
+      <SubType>compile</SubType>
+      <Link>src\serial.h</Link>
     </Compile>
     <Compile Include="src\Header\app_control.h">
       <SubType>compile</SubType>

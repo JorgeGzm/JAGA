@@ -13,13 +13,14 @@
  * @brief 0 = PULL UP
  *        1 = PULL DOWN
  */
-#define configButton_pullUP 0
-#define configMUC_dir 
+#define configButton_pullUP 1
+
 /**
  * @brief number of the serial ports
  */
 #define configSerial_numSerial 1
-/** Rotinas principais do sistemas */
+
+/** @brief Rotinas principais do sistemas */
 void run_system(void);
 
 #endif	/* APP_CONTROL_H */

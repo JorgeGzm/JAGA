@@ -15,11 +15,10 @@
  */
 #define configButton_pullUP 0
 
-/**
- * @brief number of the serial ports
- */
+/** @brief number of the serial ports */
 #define configSerial_numSerial 1
-/** Rotinas principais do sistemas */
+
+/** @brief Rotinas principais do sistemas */
 void run_system(void);
 
 #endif	/* APP_CONTROL_H */

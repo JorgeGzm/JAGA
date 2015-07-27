@@ -71,10 +71,13 @@ volatile uint8 *ref_TRISD = &DDRD;
 /** vvariavel abstraida para acessar o LATD*/
 volatile uint8 *ref_LATD = 0;
 
+//PORTD:usado para escrever nos pinos do PORTD; 
+//PIND:usado para ler o conteudo dos pinos do PORTD; 
+//DDRD: usado para definir se os pinos do PORTD sao entrada ou saida.
 regGPIO rD0 = { &PORTD, &DDRD, 0, PIN_0};
 regGPIO rD1 = { &PORTD, &DDRD, 0, PIN_1};
-regGPIO rD2 = { &PORTD, &DDRD, 0, PIN_2};
-regGPIO rD3 = { &PORTD, &DDRD, 0, PIN_3};
+regGPIO rD2 = { &PIND, &DDRD, 0, PIN_2};  //TODO revisar possivel conflito, em outras microcontroladores(PIC e ARM) existe apenas um PORTX para ler e escrever.
+regGPIO rD3 = { &PIND, &DDRD, 0, PIN_3};  //TODO revisar possivel conflito, em outras microcontroladores(PIC e ARM) existe apenas um PORTX para ler e escrever.
 regGPIO rD4 = { &PORTD, &DDRD, 0, PIN_4};
 regGPIO rD5 = { &PORTD, &DDRD, 0, PIN_5};
 regGPIO rD6 = { &PORTD, &DDRD, 0, PIN_6};

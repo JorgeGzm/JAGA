@@ -15,7 +15,7 @@
  */
 #define configButton_pullUP 1
 
-/**@brief numbers of uarts used */
+/** @brief numbers of uarts used */
 #define configSerial_numSerial 1
 
 /** @brief Rotinas principais do sistemas */

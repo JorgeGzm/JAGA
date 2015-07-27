@@ -84,16 +84,6 @@ void UART0_Handler(void)
 
 		uart0_rx_callback(c);
 
-		//uart_putc(c);
-		/*
-		if (decode(c, buf))
-		{
-			lcd_gotoxy(1, 1);
-			lcd_printf((int8 *)"\fUART Message:  ");
-			lcd_gotoxy(1, 2);
-			lcd_printf((int8 *)"%s", &buf);
-			serial_printf(0, (int8 *)"\r\n%s", &buf);
-		}*/
 		//-------------------------
 
 		UART0->ICR = 0x0010;        /* clear Rx interrupt flag */
