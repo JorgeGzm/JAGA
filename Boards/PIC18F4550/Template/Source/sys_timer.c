@@ -92,7 +92,7 @@ inline static void counter_10_ms(void)
 inline static void counter_100_ms(void)
 {
     //varredura dos leds
-    leds_action_isr_10ms();
+    leds_action_isr_100ms();
 }
 
 /** Contadores de 1 segundo */

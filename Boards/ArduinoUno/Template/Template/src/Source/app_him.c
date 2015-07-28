@@ -64,6 +64,6 @@ void run_him(void)
 	}
 	
 	Delay_ms(10); 
-	leds_action_isr_10ms(); //TODO passar para interrupcao do timer
+	leds_action_isr_100ms(); //TODO passar para interrupcao do timer
 	buttons_read_isr_10ms(); //TODO passar para interrupcao do timer
 }

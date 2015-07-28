@@ -59,10 +59,10 @@ void run_him(void)
 		serial_printf(0, (int8 *)"\r\nButtons DOWN + UP pressed %u times", counterC);
 	}
 
-	Delay_ms(100);
+	Delay_ms(100); //
 
-	buttons_read_isr_10ms();
-	leds_action_isr_10ms();
+	buttons_read_isr_10ms(); //TODO passar para interrupcao do timer
+	leds_action_isr_10ms();  //TODO passar para interrupcao do timer
 }
 
 

@@ -37,13 +37,13 @@ regPin leds[NUM_LEDS] = {
 /** @brief Controle imediato do estado das leds*/
 Leds UN_ledsStatus;
 
-/** @brief Indicação das leds que estão 100% ligadas*/
+/** @brief Indicaï¿½ï¿½o das leds que estï¿½o 100% ligadas*/
 Leds UN_ledsON;
 
-/** @brief Indicação das Leds que estão picando lentamnete*/
+/** @brief Indicaï¿½ï¿½o das Leds que estï¿½o picando lentamnete*/
 Leds UN_ledsBlinkSlow;
 
-/** @brief Indicação das Leds que estão piscando rápido*/
+/** @brief Indicaï¿½ï¿½o das Leds que estï¿½o piscando rï¿½pido*/
 Leds UN_ledsBlinkFast; 
 
 void leds_init(void)
@@ -58,9 +58,9 @@ void leds_init(void)
 void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
 {
     // Variaveis locais
-    uint8 UI8_LedsTemp; /// auxiliar para operações logicas
+    uint8 UI8_LedsTemp; /// auxiliar para operaï¿½ï¿½es logicas
 
-    // verifica qual acão que as leds em questão deve executar
+    // verifica qual acï¿½o que as leds em questï¿½o deve executar
     switch (UI8_Action)
     {
         case LED_OFF:
@@ -148,7 +148,7 @@ void leds_attach(uint8 index, regGPIO reg)
     GPIO_regPin_setDir(&reg, DIR_OUTPUT);
 }
 
-void leds_action_isr_10ms(void)
+void leds_action_isr_100ms(void)
 {
     static uint8 UI8_timerLedSlowReverseCounter = 0; /// variavel de controle do blink lento
     static uint8 UI8_timerLedFastReverseCounter = 0; /// controle do blink rapido
@@ -157,23 +157,23 @@ void leds_action_isr_10ms(void)
     UI8_timerLedSlowReverseCounter++;
     UI8_timerLedFastReverseCounter++;
 
-    // verifica se devemos fazer a reversão para os slow blinks
+    // verifica se devemos fazer a reversï¿½o para os slow blinks
     if (UI8_timerLedSlowReverseCounter == LED_BLINK_SLOW_STEP)
     {
-        // sim, o contador do slow estourou, fazemos a reversão
+        // sim, o contador do slow estourou, fazemos a reversï¿½o
         leds_reverse(UN_ledsBlinkSlow.UI8_value);
 
-        // zera o valor do contador apos a reversão
+        // zera o valor do contador apos a reversï¿½o
         UI8_timerLedSlowReverseCounter = 0;
     }
 
-    // verifica se devemos fazer a reversão para os fast blinks
+    // verifica se devemos fazer a reversï¿½o para os fast blinks
     if (UI8_timerLedFastReverseCounter == LED_BLINK_FAST_STEP)
     {
-        // sim, o contador do slow estourou, fazemos a reversão
+        // sim, o contador do slow estourou, fazemos a reversï¿½o
         leds_reverse(UN_ledsBlinkFast.UI8_value);
 
-        // zera o valor do contador apos a reversão
+        // zera o valor do contador apos a reversï¿½o
         UI8_timerLedFastReverseCounter = 0;
     }
 }
@@ -181,22 +181,22 @@ void leds_action_isr_10ms(void)
 void leds_reverse(uint8 UI8_LedsMask)
 {
     // Variaveis locais
-    uint8 UI8_LedsTemp; /// auxiliar para operações logicas
+    uint8 UI8_LedsTemp; /// auxiliar para operaï¿½ï¿½es logicas
 
     // verifica se a mascara tem algum bit ativo
     if (UI8_LedsMask)
     {
-        // Tem, então executa a operação de inversão
+        // Tem, entï¿½o executa a operaï¿½ï¿½o de inversï¿½o
         // copia o status para var temp
         UI8_LedsTemp = UN_ledsStatus.UI8_value;
 
         // ativa os bits definidos na mascara
         leds_on(UI8_LedsMask);
 
-        // verifica se o valor é igual ao anterior, isso significa que os bits já estava ligados
+        // verifica se o valor ï¿½ igual ao anterior, isso significa que os bits jï¿½ estava ligados
         if (UI8_LedsTemp == UN_ledsStatus.UI8_value)
         {
-            // então devemos desligar os bits, pois eles ja estavam ativos
+            // entï¿½o devemos desligar os bits, pois eles ja estavam ativos
             leds_off(UI8_LedsMask);
         }
     }
@@ -219,7 +219,7 @@ void leds_off(uint8 UI8_LedsMask)
 {
     // Variaveis locais
     uint8 UI8_aux;
-    uint8 UI8_LedsTemp; /// auxiliar para operações logicas
+    uint8 UI8_LedsTemp; /// auxiliar para operaï¿½ï¿½es logicas
 
     // devemos desligar os bits
     UI8_LedsTemp = UN_ledsStatus.UI8_value ^ UI8_LedsMask;

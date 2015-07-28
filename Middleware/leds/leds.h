@@ -28,7 +28,7 @@
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 
-//Definições
+//Definiï¿½ï¿½es
 #define LD1G 0x01   
 #define LD2G 0x02   
 #define LD3G 0x04   
@@ -106,10 +106,10 @@ void leds_set(uint8 UI16_InLeds, uint8 UI8_Action);
 void leds_reverse(uint8 UI16_LedsMask);
 
 /**
- * @brief verifica se o timer para a reversão dos leds estourou tanto no slow como no fast
+ * @brief verifica se o timer para a reversï¿½o dos leds estourou tanto no slow como no fast
  * deve ser chamado dentrao da interrucao de timer de 100mS.
  */
-void leds_action_isr_10ms(void);
+void leds_action_isr_100ms(void);
 
 /**
  * @brief Verifica quals leds serao ligados
