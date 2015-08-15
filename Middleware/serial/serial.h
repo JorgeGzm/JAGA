@@ -65,21 +65,21 @@ void serial_printf(uint8 index, uint8 *fmt, ...);
  * @param index TODO
  * @param fmt pinteiro para a string que sera enviada.
  */
-void serial_printString(uint8 index, uint8 *fmt);
+void serial_print_string(uint8 index, uint8 *fmt);
 
 /**
  * Envia uma variavel unsigned int pela UART
  * @param index TODO
  * @param value valor que sera enviado
  */
-void serial_printUINT16(uint8 index, uint16 value);
+void serial_print_UINT16(uint8 index, uint16 value);
 
 /**
  * Envia uma variavel int pela UART
  * @param index TODO
  * @param value
  */
-void serial_printINT16(uint8 index, int16 value);
+void serial_print_INT16(uint8 index, int16 value);
 
 
 #endif	/* PRINT_H */

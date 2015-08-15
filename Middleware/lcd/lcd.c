@@ -40,22 +40,22 @@ int8 const LCD_INIT_STRING[4] =
 
 void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7)
 {
-    GPIO_regPin_attach(&display.RS, &RS);  //configura pino RS do lcd
+    GPIO_regPin_attach(&display.rs, &RS);  //configura pino RS do lcd
     GPIO_regPin_setDir(&RS, DIR_OUTPUT);      //Configura pino como saida
 
-    GPIO_regPin_attach(&display.E, &E);
+    GPIO_regPin_attach(&display.e, &E);
     GPIO_regPin_setDir(&E, DIR_OUTPUT);
 
-    GPIO_regPin_attach(&display.DB4, &DB4);
+    GPIO_regPin_attach(&display.db4, &DB4);
     GPIO_regPin_setDir(&DB4, DIR_OUTPUT);
 
-    GPIO_regPin_attach(&display.DB5, &DB5);
+    GPIO_regPin_attach(&display.db5, &DB5);
     GPIO_regPin_setDir(&DB5, DIR_OUTPUT);
 
-    GPIO_regPin_attach(&display.DB6, &DB6);
+    GPIO_regPin_attach(&display.db6, &DB6);
     GPIO_regPin_setDir(&DB6, DIR_OUTPUT);
 
-    GPIO_regPin_attach(&display.DB7, &DB7);
+    GPIO_regPin_attach(&display.db7, &DB7);
     GPIO_regPin_setDir(&DB7, DIR_OUTPUT);
 
     lcd_init();
@@ -66,8 +66,8 @@ void lcd_init(void)
     int8 i;
 
 
-    GPIO_regPin_outputLow(&display.RS);
-    GPIO_regPin_outputLow(&display.E);
+    GPIO_regPin_outputLow(&display.rs);
+    GPIO_regPin_outputLow(&display.e);
     
     Delay_ms(15);
 
@@ -95,38 +95,38 @@ void lcd_send_nibble(int8 nibble)
     aux.value = nibble;
 
     //envia niblbe ao lcd
-    GPIO_regPin_outputBit(&display.DB4, aux.bit0);
-    GPIO_regPin_outputBit(&display.DB5, aux.bit1);
-    GPIO_regPin_outputBit(&display.DB6, aux.bit2);
-    GPIO_regPin_outputBit(&display.DB7, aux.bit3);
+    GPIO_regPin_outputBit(&display.db4, aux.bit0);
+    GPIO_regPin_outputBit(&display.db5, aux.bit1);
+    GPIO_regPin_outputBit(&display.db6, aux.bit2);
+    GPIO_regPin_outputBit(&display.db7, aux.bit3);
 
     Delay_ms(3);//Delay_ms(10);
 
-    GPIO_regPin_outputHigh(&display.E);
+    GPIO_regPin_outputHigh(&display.e);
 
     Delay_us(2);
 
-    GPIO_regPin_outputLow(&display.E);
+    GPIO_regPin_outputLow(&display.e);
 }
 
 void lcd_send_byte(int8 n, int8 address)
 {
-    GPIO_regPin_outputLow(&display.RS);
+    GPIO_regPin_outputLow(&display.rs);
     
     Delay_us(60);
 
     if(n)
     {
-        GPIO_regPin_outputHigh(&display.RS);
+        GPIO_regPin_outputHigh(&display.rs);
     }
     else
     {
-        GPIO_regPin_outputLow(&display.RS);
+        GPIO_regPin_outputLow(&display.rs);
     }
     
     Delay_ms(1);
 
-    GPIO_regPin_outputLow(&display.E);
+    GPIO_regPin_outputLow(&display.e);
 
     lcd_send_nibble(address >> 4);  //envia os primeiros 4 bits mais significativos
     lcd_send_nibble(address & 0xf); //envia os primeiros 4 bits menis significativos

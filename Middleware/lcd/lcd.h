@@ -42,25 +42,25 @@
 #include "delay/hal_delay.h"
 
 /** Estrutura que contem os pinos do microcontrolador que irao controlar o display-lcd 2x16 ou 4x20*/
-typedef struct _DisplayLcd
+typedef struct 
 {
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB4 do CLD */
-    regPin DB4;
+    regPin db4;
     
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB5 do CLD */
-    regPin DB5;
+    regPin db5;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB6 do CLD */
-    regPin DB6;
+    regPin db6;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB7 do CLD */
-    regPin DB7;
+    regPin db7;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o E do CLD */
-    regPin E;
+    regPin e;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o RS do CLD */
-    regPin RS;
+    regPin rs;
 }DisplayLcd;
 
 

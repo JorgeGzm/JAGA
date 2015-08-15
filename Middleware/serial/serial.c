@@ -50,7 +50,7 @@ void serial_attach(uint8 index, void (*function)(uint8))
     }
 }
 
-void serial_printPutc(uint8 index, uint8 c)
+void serial_print_putc(uint8 index, uint8 c)
 {
     serial->putc(c);
     //uart_putc(c);
@@ -63,12 +63,12 @@ void serial_printString(uint8 index, uint8 *fmt)
 
     while((c = *fmt) != '\0')
     {
-        serial_printPutc(index, c);
+        serial_print_putc(index, c);
         fmt++;
     }
 }
 
-void serial_printUINT16(uint8 index, uint16 value)
+void serial_print_UINT16(uint8 index, uint16 value)
 {
     unsigned cnt = 0;
     uint8 buffer[11];
@@ -83,11 +83,11 @@ void serial_printUINT16(uint8 index, uint16 value)
 
     for(; cnt; cnt--)
     {
-        serial_printPutc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
+        serial_print_putc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
     }
 }
 
-void serial_printINT16(uint8 index, int16 value)
+void serial_print_INT16(uint8 index, int16 value)
 {
         unsigned cnt = 0;
     uint8 flag_negativo;
@@ -119,11 +119,11 @@ void serial_printINT16(uint8 index, int16 value)
     {
         if(buffer[cnt] == 0x2D)
         {
-            serial_printPutc(index, 0x2D);
+            serial_print_putc(index, 0x2D);
         }
         else
         {
-            serial_printPutc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
+            serial_print_putc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
         }
     }
 }
@@ -145,12 +145,12 @@ void serial_printf(uint8 index, uint8 *fmt, ...)
             {
                 switch(*++fmt)
                 {
-                    case '%': serial_printPutc(index, '%');
+                    case '%': serial_print_putc(index, '%');
                     break;
 
                     case 'c': /* uint8*/
                         c = va_arg(pa, int);
-                        serial_printPutc(index, (int8)c);
+                        serial_print_putc(index, (int8)c);
                     break;
 
                     case 's': /* string */
@@ -160,12 +160,12 @@ void serial_printf(uint8 index, uint8 *fmt, ...)
 
                     case 'd': /* int16*/
                         d = va_arg(pa, int);
-                        serial_printINT16(index, (int16)d);
+                        serial_print_INT16(index, (int16)d);
                     break;
 
                     case 'u': /* uint16*/
                         u = va_arg(pa, int);
-                        serial_printUINT16(index, (uint16)u);
+                        serial_print_UINT16(index, (uint16)u);
                     break;
 
     //                case 'f': /* float*/
@@ -177,7 +177,7 @@ void serial_printf(uint8 index, uint8 *fmt, ...)
             }
             else
             {
-                serial_printPutc(index, *fmt);
+                serial_print_putc(index, *fmt);
             }
 
             /*incrementa o ponteiro*/

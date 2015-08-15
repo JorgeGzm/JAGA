@@ -41,61 +41,61 @@ Leds UN_ledsStatus;
 Leds UN_ledsON;
 
 /** @brief Indica��o das Leds que est�o picando lentamnete*/
-Leds UN_ledsBlinkSlow;
+Leds leds_blink_slow;
 
 /** @brief Indica��o das Leds que est�o piscando r�pido*/
-Leds UN_ledsBlinkFast; 
+Leds leds_blink_fast; 
 
 void leds_init(void)
 {
     // Zera os valores das variaveis auxiliares
     UN_ledsStatus.UI8_value = 0;
     UN_ledsON.UI8_value = 0;
-    UN_ledsBlinkSlow.UI8_value = 0;
-    UN_ledsBlinkFast.UI8_value = 0;
+    leds_blink_slow.UI8_value = 0;
+    leds_blink_fast.UI8_value = 0;
 }
 
-void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
+void leds_set(uint8 in_leds, uint8 action)
 {
     // Variaveis locais
-    uint8 UI8_LedsTemp; /// auxiliar para opera��es logicas
+    uint8 leds_temp; /// auxiliar para opera��es logicas
 
     // verifica qual ac�o que as leds em quest�o deve executar
-    switch (UI8_Action)
+    switch (action)
     {
         case LED_OFF:
         {
             // devemos apagar as leds em questao
             // XOR seguido de um AND para desligar os bits
             // Apaga as leds 100% ligadas
-            UI8_LedsTemp = UN_ledsON.UI8_value ^ UI8_InLeds;
-            UN_ledsON.UI8_value = UN_ledsON.UI8_value & UI8_LedsTemp;
+            leds_temp = UN_ledsON.UI8_value ^ in_leds;
+            UN_ledsON.UI8_value = UN_ledsON.UI8_value & leds_temp;
 
             // apaga as leds com blink lento
-            UI8_LedsTemp = UN_ledsBlinkSlow.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkSlow.UI8_value = UN_ledsBlinkSlow.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_slow.UI8_value ^ in_leds;
+            leds_blink_slow.UI8_value = leds_blink_slow.UI8_value & leds_temp;
 
             // apaga as leds com blink rapido
-            UI8_LedsTemp = UN_ledsBlinkFast.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkFast.UI8_value = UN_ledsBlinkFast.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_fast.UI8_value ^ in_leds;
+            leds_blink_fast.UI8_value = leds_blink_fast.UI8_value & leds_temp;
 
             // apaga as leds da mascara
-            leds_off(UI8_InLeds);
+            leds_off(in_leds);
 
             break;
         }
         case LED_ON:
         {
             // devemos ascender as leds em questao
-            UN_ledsON.UI8_value = UN_ledsON.UI8_value | UI8_InLeds;
+            UN_ledsON.UI8_value = UN_ledsON.UI8_value | in_leds;
 
             // desliga as leds com blink lento
-            UI8_LedsTemp = UN_ledsBlinkSlow.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkSlow.UI8_value = UN_ledsBlinkSlow.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_slow.UI8_value ^ in_leds;
+            leds_blink_slow.UI8_value = leds_blink_slow.UI8_value & leds_temp;
 
             // desliga as leds com blink rapido
-            UI8_LedsTemp = UN_ledsBlinkFast.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkFast.UI8_value = UN_ledsBlinkFast.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_fast.UI8_value ^ in_leds;
+            leds_blink_fast.UI8_value = leds_blink_fast.UI8_value & leds_temp;
 
             // acende as leds definidas
             leds_on(UN_ledsON.UI8_value);
@@ -107,15 +107,15 @@ void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
             // devemos fazer as leds piscarem lentamente
 
             // Apaga as leds 100% ligadas
-            UI8_LedsTemp = UN_ledsON.UI8_value ^ UI8_InLeds;
-            UN_ledsON.UI8_value = UN_ledsON.UI8_value & UI8_LedsTemp;
+            leds_temp = UN_ledsON.UI8_value ^ in_leds;
+            UN_ledsON.UI8_value = UN_ledsON.UI8_value & leds_temp;
 
             // ativa as leds com blink lento
-            UN_ledsBlinkSlow.UI8_value = UN_ledsBlinkSlow.UI8_value | UI8_InLeds;
+            leds_blink_slow.UI8_value = leds_blink_slow.UI8_value | in_leds;
 
             // apaga as leds com blink rapido
-            UI8_LedsTemp = UN_ledsBlinkFast.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkFast.UI8_value = UN_ledsBlinkFast.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_fast.UI8_value ^ in_leds;
+            leds_blink_fast.UI8_value = leds_blink_fast.UI8_value & leds_temp;
 
             break;
         }
@@ -124,15 +124,15 @@ void leds_set(uint8 UI8_InLeds, uint8 UI8_Action)
             // devemos fazer as leds piscarem rapidamente
 
             // Apaga as leds 100% ligadas
-            UI8_LedsTemp = UN_ledsON.UI8_value ^ UI8_InLeds;
-            UN_ledsON.UI8_value = UN_ledsON.UI8_value & UI8_LedsTemp;
+            leds_temp = UN_ledsON.UI8_value ^ in_leds;
+            UN_ledsON.UI8_value = UN_ledsON.UI8_value & leds_temp;
 
             // apaga as leds com blink lento
-            UI8_LedsTemp = UN_ledsBlinkSlow.UI8_value ^ UI8_InLeds;
-            UN_ledsBlinkSlow.UI8_value = UN_ledsBlinkSlow.UI8_value & UI8_LedsTemp;
+            leds_temp = leds_blink_slow.UI8_value ^ in_leds;
+            leds_blink_slow.UI8_value = leds_blink_slow.UI8_value & leds_temp;
 
             // ativa as leds com blink rapido
-            UN_ledsBlinkFast.UI8_value = UN_ledsBlinkFast.UI8_value | UI8_InLeds;
+            leds_blink_fast.UI8_value = leds_blink_fast.UI8_value | in_leds;
 
             break;
         }
@@ -150,99 +150,99 @@ void leds_attach(uint8 index, regGPIO reg)
 
 void leds_action_isr_100ms(void)
 {
-    static uint8 UI8_timerLedSlowReverseCounter = 0; /// variavel de controle do blink lento
-    static uint8 UI8_timerLedFastReverseCounter = 0; /// controle do blink rapido
+    static uint8 timer_led_slow_reverse_counter = 0; /// variavel de controle do blink lento
+    static uint8 timer_led_fast_reverse_counter = 0; /// controle do blink rapido
 
     // soma 1 nos contadores
-    UI8_timerLedSlowReverseCounter++;
-    UI8_timerLedFastReverseCounter++;
+    timer_led_slow_reverse_counter++;
+    timer_led_fast_reverse_counter++;
 
     // verifica se devemos fazer a revers�o para os slow blinks
-    if (UI8_timerLedSlowReverseCounter == LED_BLINK_SLOW_STEP)
+    if (timer_led_slow_reverse_counter == LED_BLINK_SLOW_STEP)
     {
         // sim, o contador do slow estourou, fazemos a revers�o
-        leds_reverse(UN_ledsBlinkSlow.UI8_value);
+        leds_reverse(leds_blink_slow.UI8_value);
 
         // zera o valor do contador apos a revers�o
-        UI8_timerLedSlowReverseCounter = 0;
+        timer_led_slow_reverse_counter = 0;
     }
 
     // verifica se devemos fazer a revers�o para os fast blinks
-    if (UI8_timerLedFastReverseCounter == LED_BLINK_FAST_STEP)
+    if (timer_led_fast_reverse_counter == LED_BLINK_FAST_STEP)
     {
         // sim, o contador do slow estourou, fazemos a revers�o
-        leds_reverse(UN_ledsBlinkFast.UI8_value);
+        leds_reverse(leds_blink_fast.UI8_value);
 
         // zera o valor do contador apos a revers�o
-        UI8_timerLedFastReverseCounter = 0;
+        timer_led_fast_reverse_counter = 0;
     }
 }
 
-void leds_reverse(uint8 UI8_LedsMask)
+void leds_reverse(uint8 leds_mask)
 {
     // Variaveis locais
-    uint8 UI8_LedsTemp; /// auxiliar para opera��es logicas
+    uint8 leds_temp; /// auxiliar para opera��es logicas
 
     // verifica se a mascara tem algum bit ativo
-    if (UI8_LedsMask)
+    if (leds_mask)
     {
         // Tem, ent�o executa a opera��o de invers�o
         // copia o status para var temp
-        UI8_LedsTemp = UN_ledsStatus.UI8_value;
+        leds_temp = UN_ledsStatus.UI8_value;
 
         // ativa os bits definidos na mascara
-        leds_on(UI8_LedsMask);
+        leds_on(leds_mask);
 
         // verifica se o valor � igual ao anterior, isso significa que os bits j� estava ligados
-        if (UI8_LedsTemp == UN_ledsStatus.UI8_value)
+        if (leds_temp == UN_ledsStatus.UI8_value)
         {
             // ent�o devemos desligar os bits, pois eles ja estavam ativos
-            leds_off(UI8_LedsMask);
+            leds_off(leds_mask);
         }
     }
 }
 
-void leds_on(uint8 UI8_LedsMask)
+void leds_on(uint8 leds_mask)
 {
-    uint8 UI8_aux;
+    uint8 aux;
     // executa um OU para ativar os bits
-    UN_ledsStatus.UI8_value = UN_ledsStatus.UI8_value | UI8_LedsMask;
+    UN_ledsStatus.UI8_value = UN_ledsStatus.UI8_value | leds_mask;
 
     //Atualiza os LEDs no frontal
-    UI8_aux = leds_status();
-    UI8_aux |= UN_ledsStatus.UI8_value;
+    aux = leds_status();
+    aux |= UN_ledsStatus.UI8_value;
 
-    leds_write(UI8_aux);
+    leds_write(aux);
 }
 
-void leds_off(uint8 UI8_LedsMask)
+void leds_off(uint8 leds_mask)
 {
     // Variaveis locais
-    uint8 UI8_aux;
-    uint8 UI8_LedsTemp; /// auxiliar para opera��es logicas
+    uint8 aux;
+    uint8 leds_temp; /// auxiliar para opera��es logicas
 
     // devemos desligar os bits
-    UI8_LedsTemp = UN_ledsStatus.UI8_value ^ UI8_LedsMask;
-    UN_ledsStatus.UI8_value = UN_ledsStatus.UI8_value & UI8_LedsTemp;
+    leds_temp = UN_ledsStatus.UI8_value ^ leds_mask;
+    UN_ledsStatus.UI8_value = UN_ledsStatus.UI8_value & leds_temp;
 
-    UI8_aux = UN_ledsStatus.UI8_value;
-    UI8_aux &= ~UI8_LedsMask;
+    aux = UN_ledsStatus.UI8_value;
+    aux &= ~leds_mask;
 
     //Atualiza os LEDs no frontal
-    leds_write(UI8_aux);
+    leds_write(aux);
 }
 
 uint8 leds_status(void)
 {
-    uint8 i;
+    uint8 index;
     UByte status;
     status.value = 0;
 
-    for(i = 0; i < NUM_LEDS; i++)
+    for(index = 0; index < NUM_LEDS; index++)
     {
-        if(GPIO_regPin_rdBit(&leds[i]))
+        if(GPIO_regPin_rdBit(&leds[index]))
         {
-            status.value|=  (1 << i);
+            status.value|=  (1 << index);
         }
     }
     return(status.value);
@@ -250,17 +250,17 @@ uint8 leds_status(void)
 
 void leds_write(uint8 out)
 {
-    uint8 i;
+    uint8 index;
 
-    for (i = 0; i < NUM_LEDS; i++)
+    for (index = 0; index < NUM_LEDS; index++)
     {
 
-        if (tst_bit(out, i))
+        if (tst_bit(out, index))
         {
-            GPIO_regPin_outputHigh(&leds[i]);
+            GPIO_regPin_outputHigh(&leds[index]);
         } else
         {
-            GPIO_regPin_outputLow(&leds[i]);
+            GPIO_regPin_outputLow(&leds[index]);
         }
     }
 }

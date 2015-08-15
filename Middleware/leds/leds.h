@@ -46,7 +46,7 @@
 #define LED_BLINK_FAST_STEP 3
 
 /** @brief TODO*/
-union _Leds
+typedef union
 {
     uint8 UI8_value;
 
@@ -61,11 +61,10 @@ union _Leds
         unsigned  L7 : 1;
         unsigned  L8 : 1;
     };
-};
-typedef union _Leds Leds;
+}Leds;
 
 /** @brief TODO*/
-typedef struct _LD
+typedef struct 
 {
    regGPIO ld1;
    regGPIO ld2;
@@ -97,13 +96,13 @@ void leds_init(void);
  *                    LED_BLINK_SLOW = devemos fazer as leds piscarem lentamente
  *                    LED_BLINK_FAST = devemos fazer as leds piscarem rapidamente
  */
-void leds_set(uint8 UI16_InLeds, uint8 UI8_Action);
+void leds_set(uint8 in_leds, uint8 action);
 
 /**
  * @brief Inverte as leds representadas pelos bits 1 da mascara de entrada
  * @param UI8_LedsMask: mascara que contem quais leds serao invertidos
  */
-void leds_reverse(uint8 UI16_LedsMask);
+void leds_reverse(uint8 leds_mask);
 
 /**
  * @brief verifica se o timer para a revers�o dos leds estourou tanto no slow como no fast
@@ -115,13 +114,13 @@ void leds_action_isr_100ms(void);
  * @brief Verifica quals leds serao ligados
  * @param UI8_LedsMask: mascara que contem quais leds serao ligados.
  */
-void leds_on(uint8 UI16_LedsMask);
+void leds_on(uint8 leds_mask);
 
 /**
  * @brief Verifica quals leds serao desligados
  * @param UI8_LedsMask: mascara que contem quais leds serao desligados
  */
-void leds_off(uint8 UI16_LedsMask);
+void leds_off(uint8 leds_mask);
 
 /**
  * @brief TODO
