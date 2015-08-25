@@ -1,33 +1,38 @@
 /**
- * @file    hal_spi.c
- * @author  Rafael Lopes
- * @date    3 de Marco de 2015
- * @version 0.1.0.0 
- * @brief   Driver SPI para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
-  
+  * @file    hal_spi.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Mar 3, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver SPI para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/ 
+
 #ifndef HAL_SPI_H
     #define HAL_SPI_H
 
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
+#include "types/types.h"
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 
-#include "types/types.h"
-
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 /**
 *@link http://dlnware.com/theory/SPI-Transfer-Modes
@@ -75,18 +80,19 @@
 #define SPI_CHIPSELECT_DISABLE  0
 #define SPI_CHIPSELECT_ENABLE   1
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
 
-struct _SpiDevice
+typedef struct
 {
     regGPIO sdi_tris;
     regGPIO sdo_tris;
     regGPIO sck_tris;
     regGPIO ss_tris;
-};
+}SpiDevice;
 
-typedef struct _SpiDevice SpiDevice;
-
-union _SpiSetup
+typedef union
 {
     uint16 value;
 
@@ -99,9 +105,15 @@ union _SpiSetup
         unsigned transmit       : 1;
         unsigned sampled_time   : 1;
     };
-};
+}SpiSetup;
 
-typedef union _SpiSetup SpiSetup;
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief Funcao para inicializar a SPI. \n

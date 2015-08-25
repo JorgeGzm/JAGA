@@ -1,28 +1,43 @@
 /**
- * @file    lib_leds.c
- * @brief   Bibliteoca para o uso dos Leds
- * @author  Alexandre Bader; Jorge Guzman
- * @date    23 de Abril de 2014
- * @version 0.2.0.0 (beta)
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    leds.c
+  * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Apr 23, 2014
+  * @version 0.2.0.0 (beta)
+  * @brief   Bibliteoca para o uso dos Leds
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "leds.h"
 
- /**@brief */
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+/**@brief TODO */
 regPin leds[NUM_LEDS] = {
     {0, 0},
     {0, 0},
@@ -34,17 +49,25 @@ regPin leds[NUM_LEDS] = {
     {0, 0},
 };
 
-/** @brief Controle imediato do estado das leds*/
+/** @brief Controle imediato do estado das leds */
 Leds UN_ledsStatus;
 
-/** @brief Indica��o das leds que est�o 100% ligadas*/
+/** @brief Indicao das leds que estao 100% ligadas */
 Leds UN_ledsON;
 
-/** @brief Indica��o das Leds que est�o picando lentamnete*/
+/** @brief Indicao das Leds que estao picando lentamnete */
 Leds leds_blink_slow;
 
-/** @brief Indica��o das Leds que est�o piscando r�pido*/
+/** @brief Indicao das Leds que estao piscando rapido */
 Leds leds_blink_fast; 
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 void leds_init(void)
 {

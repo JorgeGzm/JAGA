@@ -262,6 +262,9 @@
     <Compile Include="src\Header\app_info.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\Header\config_buttons.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\Header\main.h">
       <SubType>compile</SubType>
     </Compile>

@@ -1,47 +1,45 @@
 /**
- * @file    lcd.h
- * @brief   Bibliteoca para o uso do display LCD 2x16 ou 4x20.
- * @details Esta biblioca usa ...          \n
- * Exemplo de uso:                         \n
- * variavel que controla o display.        \n
- * lcd_attach(&display.RS, &lRD0, &tRD0);  \n
- * lcd_attach(&display.E, &pRD1, &tRD1);   \n
- * lcd_attach(&display.db4, &pRD4, &tRD4); \n
- * lcd_attach(&display.db5, &pRD5, &tRD5); \n
- * lcd_attach(&display.db6, &pRD6, &tRD6); \n
- * lcd_attach(&display.db7, &pRD7, &tRD7); \n
- * lcd_init();                             \n
- * lcd_gotoxy(1, 1);                       \n
- * static int8 buff[] = {"Modulo Embarcado"};\n
- * lcd_putc(&buff);                        \n 
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    9 de Julho de 2014
- * @version 0.1.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    lcd.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jul 9, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para o uso do display LCD 2x16 ou 4x20.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef LCD_H
-#define	LCD_H
+	#define	LCD_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "vars/vars.h"
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
 
-/** Estrutura que contem os pinos do microcontrolador que irao controlar o display-lcd 2x16 ou 4x20*/
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+/** @brief Estrutura que contem os pinos do microcontrolador que irao controlar o display-lcd 2x16 ou 4x20*/
 typedef struct 
 {
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB4 do CLD */
@@ -63,8 +61,13 @@ typedef struct
     regPin rs;
 }DisplayLcd;
 
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
 
-//Assinatura das funcoes
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief Inicializa display LCD. Deve ser chamado antes de qualquer funcao do lcd
@@ -129,5 +132,5 @@ void lcd_print_int16(int16 n);
  */
 void lcd_print_uint16(uint16 n);
 
-#endif	/* LCD_H */
+#endif	
 

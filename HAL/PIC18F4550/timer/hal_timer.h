@@ -1,39 +1,40 @@
 /**
- * @file    hal_timer.h
- * @author  Rafael Lopes
- * @date    12 de Fevereiro de 2015
- * @version 0.1.0.0 
- * @brief   Driver Timer para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_timer.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 12, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver Timer para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_TIMER_H
-#define	HAL_TIMER_H
+	#define	HAL_TIMER_H
 
-/**
- *  Includes
- */
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "vars/vars.h"
 #include "interrupt/hal_interrupts.h"
 
-/**
- *  Defines
- */
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
 #define TMR_ON                  1
 #define TMR_OFF                 0
 
@@ -88,6 +89,18 @@
 #define TMR3_PRESCALE_1_2       0x01
 #define TMR3_PRESCALE_1_4       0x02
 #define TMR3_PRESCALE_1_8       0x03
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief
@@ -158,5 +171,5 @@ void timer_start(uint8 module, uint8 value);
  */
 void timer_set_callbak(uint8 module, void (*func)(void));
 
-#endif	/* HAL_TIMER_H */
+#endif
 

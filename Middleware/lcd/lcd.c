@@ -1,24 +1,27 @@
 /**
- * @file    lcd.c
- * @brief   Bibliteoca para o uso do display LCD 2x16 ou 4x20.
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    9 de Julho de 2014
- * @version 0.1.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    lcd.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jul 9, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para o uso do display LCD 2x16 ou 4x20.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "lcd.h"
 #include <stdio.h>
@@ -26,10 +29,22 @@
 #include <string.h> 
 #include <stdarg.h>
 
-/** Variavel de configuracao dos pinos do LCD*/
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+/** @brief Variavel de configuracao dos pinos do LCD*/
 DisplayLcd display;
 
-/** Buffer que contem a rotina de inicialização do LCD 2x16 e 4x20 */
+/** @brief Buffer que contem a rotina de inicialização do LCD 2x16 e 4x20 */
 int8 const LCD_INIT_STRING[4] =
 {
     0x20 | (2 << 2), // Func set: 4-bit, 2 linhas, caracter 5x8
@@ -37,6 +52,14 @@ int8 const LCD_INIT_STRING[4] =
     1, 				// Limpa display
     6 				// Incrementa cursor
 };
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7)
 {

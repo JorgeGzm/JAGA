@@ -1,31 +1,54 @@
-/** 
- * @file    hal_flash.c
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    10 de Fevereiro de 2015
- * @version 0.1.0.0 
- * @brief   Codigo da memoria flash do microcontrolador PIC18f4550.\n
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- * Referencias:
- * @link http://www.ccsinfo.com/forum/viewtopic.php?t=43278
- * @link https://github.com/krumboeck/pic18f-dfu-bootloader/blob/master/bootloader/flash.c
- * @link http://www.kae-systems.com/CodeExamples/PIC18/Drivers/FLASH_Driver/FLASH_Drv.c
- * @link http://78.20.169.44:8080/posts/Updating%20VSCP%20firmware/
- */
+/**
+  * @file    hal_flash.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 10, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Codigo da memoria flash do microcontrolador PIC18f4550.\n
+  * @details Referencias:
+  * @link http://www.ccsinfo.com/forum/viewtopic.php?t=43278
+  * @link https://github.com/krumboeck/pic18f-dfu-bootloader/blob/master/bootloader/flash.c
+  * @link http://www.kae-systems.com/CodeExamples/PIC18/Drivers/FLASH_Driver/FLASH_Drv.c
+  * @link http://78.20.169.44:8080/posts/Updating%20VSCP%20firmware/
+  *
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "hal_flash.h"
+
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 uint16 flash_rd(int16 address)
 {

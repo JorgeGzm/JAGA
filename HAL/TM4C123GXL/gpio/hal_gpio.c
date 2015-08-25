@@ -1,38 +1,49 @@
 /**
- * @file    hal_gpio.c
- * @brief   Codigo da lib driver GPIO para o uso e acesso aos pinos de I/O do TM4C123GH6PM
- * @details Esta biblioca faz o uso da comunicacao I2C para a traca de dados com o CI.
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    29 de Junho de 2015
- * @version 0.1.0.0 (beta)
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_gpio.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 26, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Codigo da lib driver GPIO para o uso e acesso aos pinos de I/O do TM4C123GH6PM
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "hal_gpio.h"
 #include "device/hal_device.h"
 
 //------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
 
-/** variavel abstrair para trarar com o PORTA*/
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+/** @brief variavel abstrair para trarar com o PORTA*/
 volatile uint32 *ref_PORTA = &GPIO_PORTA_DATA_R;
 
-/** variavel abstrair para trarar com o TRISA*/
+/** @brief variavel abstrair para trarar com o TRISA*/
 volatile uint32 *ref_TRISA = &GPIO_PORTA_DIR_R;
 
-/** */
 regGPIO rA0 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_0};	//Virtual COM Port Signals - U0RX
 regGPIO rA1 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_1};	//Virtual COM Port Signals - U0TX
 regGPIO rA2 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_2};
@@ -42,12 +53,12 @@ regGPIO rA5 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_5};
 regGPIO rA6 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_6};
 regGPIO rA7 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_7};
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/** variavel abstrair para trarar com o PORTB*/
+/** @brief variavel abstrair para trarar com o PORTB*/
 volatile uint32 *ref_PORTB = &GPIO_PORTB_DATA_R;
 
-/** variavel abstrair para trarar com o TRISB*/
+/** @brief variavel abstrair para trarar com o TRISB*/
 volatile uint32 *ref_TRISB = &GPIO_PORTB_DIR_R;
 
 regGPIO rB0 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_0};
@@ -59,12 +70,12 @@ regGPIO rB5 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_5};
 regGPIO rB6 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_6};
 regGPIO rB7 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_7};
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/** variavel abstrair para trarar com o PORTC*/
+/** @brief variavel abstrair para trarar com o PORTC*/
 volatile uint32 *ref_PORTC = &GPIO_PORTC_DATA_R;
 
-/** variavel abstrair para trarar com o TRISC*/
+/** @brief variavel abstrair para trarar com o TRISC*/
 volatile uint32 *ref_TRISC = &GPIO_PORTC_DIR_R;
 
 //regGPIO rC0 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_0}; //In-Circuit Debug
@@ -77,11 +88,11 @@ regGPIO rC6 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_6};
 regGPIO rC7 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_7};
 
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 /** variavel abstrair para trarar com PORTD*/
 volatile uint32 *ref_PORTD = &GPIO_PORTD_DATA_R;
 
-/** variavel abstrair para trarar com o TRISD*/
+/** @brief variavel abstrair para trarar com o TRISD*/
 volatile uint32 *ref_TRISD = &GPIO_PORTD_DIR_R;
 
 regGPIO rD0 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_0};
@@ -93,12 +104,12 @@ regGPIO rD5 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_5};	//USB0DP
 regGPIO rD6 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_6};
 regGPIO rD7 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_7};
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/** variavel abstrair para trarar com o PORTE*/
+/** @brief variavel abstrair para trarar com o PORTE*/
 volatile uint32 *ref_PORTE = &GPIO_PORTE_DATA_R;
 
-/** variavel abstrair para trarar com o TRISE*/
+/** @brief variavel abstrair para trarar com o TRISE*/
 volatile uint32 *ref_TRISE = &GPIO_PORTE_DIR_R;
 
 regGPIO rE0 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_0};
@@ -108,13 +119,12 @@ regGPIO rE3 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_3};
 regGPIO rE4 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_4};
 regGPIO rE5 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_5};
 
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-//------------------------------------------------------------------------------
-
-/** variavel abstrair para trarar com o PORTF*/
+/** @brief variavel abstrair para trarar com o PORTF*/
 volatile uint32 *ref_PORTF = &GPIO_PORTF_DATA_R;
 
-/** variavel abstrair para trarar com o TRISF*/
+/** @brief variavel abstrair para trarar com o TRISF*/
 volatile uint32 *ref_TRISF = &GPIO_PORTF_DIR_R;
 
 regGPIO rF0 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_0};
@@ -123,9 +133,14 @@ regGPIO rF2 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_2};
 regGPIO rF3 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_3};
 regGPIO rF4 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_4};
 
-/**
- * Rotinha de inicializacao das variaveis abstraidas.
- */
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
+
 void V_initRefRegisters(void)
 {
 

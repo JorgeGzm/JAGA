@@ -1,29 +1,53 @@
 /**
- * @file    hal_i2c.c
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    14 de Junho de 2014
- * @version 0.1.0.0 
- * @brief   Codigo do Driver I2C para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_i2c.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 14, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Codigo do Driver I2C para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "hal_i2c.h"
 
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
 
 /** @brief timer ?? TODO implementar temporizador*/
 uint8 tmr_i2c1_tout = 0;
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 /** @brief Funcao para gerar o temporizador timeout das comunicacoes */
 void isr_1ms_i2c1(void)
@@ -222,8 +246,6 @@ int8 i2c_write(uint8 UI8_dado)
 
     }
 }
-
-
 
 uint8 i2c_read(void)
 {

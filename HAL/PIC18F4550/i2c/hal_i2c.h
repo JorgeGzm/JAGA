@@ -1,47 +1,38 @@
 /**
- * @file    hal_i2c.h
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    14 de Junho de 2014
- * @version 0.1.0.0 
- * @brief   Driver i2c para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_i2c.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 14, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver i2c para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_I2C_H
     #define HAL_I2C_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
 
-/** Comandos I2C */
-enum _I2C_COMMAND
-{  
-    EN_I2C_START = 0,
-    EN_I2C_REPET_START,
-    EN_I2C_STOP,
-    EN_I2C_ACK,
-    EN_I2C_NACK,
-    EN_I2C_WAIT_ACK,
-    EN_I2C_ACK_STAT,
-    EN_I2C_WRITE,
-    EN_I2C_READ,
-    EN_I2C_IDLE,
-};
-
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
  /** habilita porta serial sincrona e configura SCL e SDA respectivamente como pinos de clock e dado */
 #define I2C_EN_PIN_I2C 1
@@ -103,6 +94,34 @@ enum _I2C_COMMAND
 /**@brief */
 #define TOUT_I2C1       50
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+/** @brief Comandos I2C */
+typedef enum 
+{  
+    EN_I2C_START = 0,
+    EN_I2C_REPET_START,
+    EN_I2C_STOP,
+    EN_I2C_ACK,
+    EN_I2C_NACK,
+    EN_I2C_WAIT_ACK,
+    EN_I2C_ACK_STAT,
+    EN_I2C_WRITE,
+    EN_I2C_READ,
+    EN_I2C_IDLE,
+}I2C_COMMAND;
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+extern uint8 tmr_i2c1_tout;
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief Configura temporizador timeout
@@ -112,7 +131,6 @@ void set_i2c1_timeout(uint8);
 
 /** @brief retorna valor do timer*/
 uint8 get_i2c1_timeout(void);
-
 
 /**
  * @brief Porta serial concrona habilitada(quando habilitada, pos pinos SDA e SCL, precisam
@@ -233,11 +251,5 @@ uint8 i2c_ack_stat(void);
  * @return Dado recebido.
  */
 uint8 i2c(uint8 UI8_tipo, uint8 UI8_data);
-
-
-extern uint8 tmr_i2c1_tout;
-
-
-
 
 #endif

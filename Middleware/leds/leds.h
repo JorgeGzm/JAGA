@@ -1,34 +1,38 @@
 /**
- * @file    leds.h
- * @brief   Bibliteoca para o uso dos Leds
- * @details Esta biblioca usa ...         
- * @author  Alexandre Bader; Jorge Guzman
- * @date    23 de Abril de 2014
- * @version 0.2.0.0 (beta)
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    leds.h
+  * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Apr 23, 2014
+  * @version 0.2.0.0 (beta)
+  * @brief   Bibliteoca para o uso dos Leds
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef LEDS_H_
 #define LEDS_H_
 
-//Includes
-#include "types/types.h"
-#include "gpio/hal_gpio.h"
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
-//Defini��es
+#include "types/types.h"
+    #include "gpio/hal_gpio.h"
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
 #define LD1G 0x01   
 #define LD2G 0x02   
 #define LD3G 0x04   
@@ -44,6 +48,10 @@
 
 #define LED_BLINK_SLOW_STEP 10
 #define LED_BLINK_FAST_STEP 3
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
 
 /** @brief TODO*/
 typedef union
@@ -75,6 +83,15 @@ typedef struct
    regGPIO ld7;
    regGPIO ld8;
 }LD;
+
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief TODO
@@ -141,4 +158,4 @@ void leds_attach(uint8 index, regGPIO reg);
  */
 uint8 leds_status(void);
 
-#endif /* LEDS_H_ */
+#endif 

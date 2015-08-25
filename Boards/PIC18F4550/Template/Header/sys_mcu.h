@@ -1,13 +1,34 @@
 /**
- * @file    sys_mcu.h
- * @brief   configura fuses dos microcontrolador, TODO: nao esta generico para o arm, este arquivo so foi criado para usar o _XTAL_FREQ na funcao Delay_ms e Delay_us
- * @author  Rafael Lopes
- * @date    24 de Junho de 2015
- * @version 0.1.0.0 (beta)
- */
+  * @file    sys_mcu.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 24, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   configura fuses dos microcontrolador, TODO: nao esta generico para o arm, este arquivo so foi criado para usar o _XTAL_FREQ na funcao Delay_ms e Delay_us
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef SYS_MCU_H
     #define SYS_MCU_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 //Frequencia usada pelo microcontrolador para gerar os clicos de maquina. resposavel pela base de tempo de __delay_us e __delay_ms.
 #define _XTAL_FREQ 48000000UL
@@ -77,7 +98,19 @@
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
 /** @brief TODO*/
 void init_mcu(void);
  
-#endif	/* SYS_MCU_H */
+#endif	

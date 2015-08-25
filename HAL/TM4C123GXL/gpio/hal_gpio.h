@@ -1,68 +1,36 @@
 /**
- * @file   	hal_gpio.h
- * @brief   Bibliteoca para o uso e acesso aos pinos de I/O do TM4C123GH6PM.
- * @details Esta biblioca faz o uso da comunicacao I2C para a traca de dados com o CI.
- * @author 	Jorge Guzman (jorge.gzm@gmail.com)
- * @date 	26 de Junho de 2015
- * @version 0.1.0.0 (beta)
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTIONpins1
- */
+  * @file    hal_gpio.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 26, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para o uso e acesso aos pinos de I/O do TM4C123GH6PM.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_GPIO_H
-#define	HAL_GPIO_H
+	#define	HAL_GPIO_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "types/types.h"
 
-#define pins1 1 //TODO deletar
-
-/** @brief TODO*/
-typedef enum _PIN_DIR
-{
-    DIR_OUTPUT = 0,
-    DIR_INPUT
-}PIN_DIR;
-
-/** @brief Enum que possui a posicao dos pinos*/
-enum PinosMCU
-{
-    PIN_0 = 0x00,
-    PIN_1,
-    PIN_2,
-    PIN_3,
-    PIN_4,
-    PIN_5,
-    PIN_6,
-    PIN_7,
-};
-
-/** @brief TODO*/
-typedef struct regGPIO
-{
-	volatile uint32 *port;
-	volatile uint32 *tris;
-	volatile uint32 *lat;
-    uint32 numPin;
-}regGPIO;
-
-/** @brief TODO*/
-typedef struct _regPin
-{
-	volatile uint32 *out;
-        uint32 pin;
-}regPin;
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 /**
  * @brief coloca em 1 o bit x da vari�vel byte. Range(0-7).
@@ -99,8 +67,71 @@ typedef struct _regPin
  */
 #define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
 
-/** @brief TODO */
+/** @brief TODO*/
+typedef enum
+{
+	/** @brief TODO Documentar*/
+    DIR_OUTPUT = 0,
+    
+	/** @brief TODO Documentar*/
+	DIR_INPUT
+	
+}PIN_DIR;
+
+/** @brief Enum que possui a posicao dos pinos*/
+typedef enum 
+{
+    PIN_0 = 0x00,
+    PIN_1,
+    PIN_2,
+    PIN_3,
+    PIN_4,
+    PIN_5,
+    PIN_6,
+    PIN_7,
+}PinosMCU;
+
+/** @brief TODO*/
+typedef struct
+{
+	/** @brief TODO Documentar*/
+	volatile uint32 *port;
+	
+	/** @brief TODO Documentar*/
+	volatile uint32 *tris;
+	
+	/** @brief TODO Documentar*/
+	volatile uint32 *lat;
+	
+	/** @brief TODO Documentar*/
+    uint32 numPin;
+	
+}regGPIO;
+
+/** @brief TODO Documentar*/
+typedef struct
+{
+	/** @brief TODO Documentar*/
+	volatile uint32 *out;
+	
+	/** @brief TODO Documentar*/
+    uint32 pin;
+	
+}regPin;
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
+/** @brief Rotinha de inicializacao das variaveis abstraidas. */
 void V_initRefRegisters(void);
 
 /**
@@ -261,5 +292,4 @@ extern regGPIO rF2;
 extern regGPIO rF3;
 extern regGPIO rF4;
 
-#endif	/* HAL_GPIO_H */
-
+#endif	

@@ -1,33 +1,43 @@
 /**
- * @file  types.h
- * @brief   Bibliteoca para de variaveis especiais.
- * @details ...
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    13 de Fev de 2014
- * @version 0.2.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    types.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 13, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para de variaveis especiais.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef TYPES_H
-#define	TYPES_H
+	#define	TYPES_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "vars/vars.h"
 
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
 /** @brief Estrutura para acessar bits individuais de um byte */
-typedef union _UByte
+typedef union 
 {
     uint8 value;
 
@@ -45,7 +55,7 @@ typedef union _UByte
 }UByte;
 
 /** @brief TODO*/
-typedef union _Byte
+typedef union 
 {
     int8 value;
 
@@ -63,7 +73,7 @@ typedef union _Byte
 }Byte;
 
 /** @brief Estrutura de 16 bits que pode ser quebrada em bytes ou bits */
-typedef union _UWord
+typedef union 
 {
     uint16 value;
 
@@ -96,7 +106,7 @@ typedef union _UWord
 }UWord;
 
 /** @brief TODO*/
-typedef union _UDWord
+typedef union 
 {
     uint32 value;
 
@@ -155,7 +165,7 @@ typedef union _UDWord
 }UDWord;
 
 /** @brief Estrutura para manipular variaveis grandes */
-typedef union _UQWord
+typedef union 
 {
     uint64 value;
     
@@ -263,4 +273,12 @@ typedef union _UQWord
     
 }UQWord;
 
-#endif	/* TYPES_H */
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
+#endif	

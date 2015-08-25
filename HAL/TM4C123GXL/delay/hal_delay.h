@@ -1,31 +1,49 @@
 /**
- * @file    hal_delay.h
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    29 de Janeiro de 2014
- * @version 0.1.0.0 
- * @brief   Driver de Delay para o microcontrolador TM4C123GXL.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_delay.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jan 29, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver de Delay para o microcontrolador TM4C123GXL.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_DELAY_H
     #define HAL_DELAY_H
 
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "device/hal_device.h"
 #include "types/types.h"
 
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 /**
  * @brief TODO
  */
@@ -48,19 +66,4 @@ void Delay_us(uint16 delay);
  */
 void Delay_ms(uint16 delay);
 
-// /**
-// * @brief TODO
-// */
-//#define Delay_ms(x) __delay_ms(x)
-
-
-
-
-
-
-
-
-
-
-
-#endif	/* HAL_DELAY_H */
+#endif	

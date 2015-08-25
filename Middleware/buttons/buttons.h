@@ -1,115 +1,61 @@
 /**
- * @file    buttons.h
- * @brief   Biblioteca para o uso de teclas.
- * @details Esta biblioca controla e configura os pinos do microcontrolador para o uso de ate 8 teclas.
- * @author  Rafel lopes, Jorge Guzman (jorge.gzm@gmail.com)
- * @date    27 de Fevereiro de 2015
- * @version 0.1.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    buttons.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 27, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Biblioteca para o uso de teclas.
+  * @details Esta biblioca controla e configura os pinos do microcontrolador para o uso de ate 8 teclas.
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef BUTTONS_H
     #define BUTTONS_H
 
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
+#include "config_buttons.h"
 
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+/** @brief TODO */
 typedef enum 
 {
-    BTN_MENU = 1,
-    BTN_UP = 2,
-    BTN_DOWN = 4,
-    BTN_BACK = 8
-}BTN_TYPE;
-
-typedef enum 
-{
+    /** @brief TODO */
     BTN_PULSE = 0,
-    BTN_CONTINUOS    
-} BTN_STATES;
+    
+    /** @brief TODO */
+    BTN_CONTINUOS  
+            
+} BUTTON_CHECK_TYPE; 
 
-/** @brief Define o intervalo de tempo de espera para eliminar o debouce da tecla.*/
-#define BOUNCE      6
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
 
-/** @brief Define quantidade maxima de teclas que a biblioteca suporta. */
-#define BUTTON_SIZE 8
-
-/** @brief Estrutura usada no controle do estado das teclas. */
-union Buttons_
-{
-    /** @brief Varivel de 16bits usada no controle geral das teclas. */
-    uint16 value;
-
-    /** @brief Estrutura que quebra a variavel de "value" de 16 bits em 2 de 8bits. */
-    struct
-    {
-         /** @brief Parte baixa que contem estados das teclas*/
-        uint8 b1;
-
-         /** @brief Parte alta que contem temporizador do debouce e se alguma tecla esta ou continua pressioada. */
-        uint8 b2;
-    }b;
-
-    /** @brief Estrutura que quebra a variavel "value" de 16bits para acesso bit a bit. */
-    struct
-    {
-        /** @brief Bit para controle de estado do botao 1. */
-        unsigned button_1   : 1;
-        
-        /** @brief Bit para controle de estado do botao 2. */
-        unsigned button_2   : 1;
-        
-        /** @brief Bit para controle de estado do botao 3. */
-        unsigned button_3   : 1;
-        
-        /** @brief Bit para controle de estado do botao 4. */
-        unsigned button_4   : 1;
-        
-        /** @brief Bit para controle de estado do botao 5. */
-        unsigned button_5   : 1;
-        
-        /** @brief Bit para controle de estado do botao 6. */
-        unsigned button_6   : 1;
-        
-        /** @brief Bit para controle de estado do botao 7. */
-        unsigned button_7   : 1;
-        
-        /** @brief Bit para controle de estado do botao 8. */
-        unsigned button_8   : 1;
-        
-        /** @brief Bit para indica se alguma tecla foi pressionada. */
-        unsigned press      : 1; 
-        
-        /** @brief Bit para indicar se a tecla continua pressionada. */
-        unsigned hold       : 1; 
-        
-        /** @brief Bit nao usado. */
-        unsigned            : 1;
-        
-        /** @brief Bit nao usado. */
-        unsigned            : 1;
-
-        /** @brief Nibble usado como temporizador para elimidar o ruido(debounce) ao pressionar a tecla. */
-        unsigned debounce : 4;
-    };
-};
-
-/** @brief Define um novo nome a union Buttons_*/
-typedef union Buttons_ Buttons;
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
  
 /** @brief Inicializa com zero todo o vetor que contem a configuracao das teclas. */
 void buttons_init(void);
@@ -134,7 +80,7 @@ void buttons_read_isr_10ms(void);
  * 0 = botao nao foi prescionado.                               \n
  * 1 = botao foi prescionado.
  */
-uint8 buttons_check_press(BTN_TYPE button_id, BTN_STATES press);
+uint8 buttons_check_press(BUTTON_NAME button_id, BUTTON_CHECK_TYPE press);
 
 /**
  * @brief Esta funcao configura uma nova tecla.
@@ -145,4 +91,4 @@ uint8 buttons_check_press(BTN_TYPE button_id, BTN_STATES press);
  */
 void button_attach(uint8 index, regGPIO reg);
 
-#endif /** BUTTOHS_H*/
+#endif 

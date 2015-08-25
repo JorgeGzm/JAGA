@@ -1,32 +1,38 @@
 /**
- * @file    hal_pwm.h
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    6 de Julho de 2014
- * @version 0.1.0.0 
- * @brief   Driver de PWM para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_pwm.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jul 6, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver de PWM para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_PWM_H
     #define	HAL_PWM_H
 
-//Includes
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "sys_mcu.h"
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 #define PWM_COUNTER_OFF 0
 #define PWM_COUNTER_ON 1
@@ -65,6 +71,18 @@
 #define PWM_TRM2_PRESCALE_1     0
 #define PWM_TRM2_PRESCALE_4     1
 #define PWM_TRM2_PRESCALE_16    2
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
  * @brief
@@ -114,5 +132,5 @@ void pwmMCU_set_fduty(float duty);
  */
 void pwmMCU_set_duty(uint8 duty);
 
-#endif	/* HAL_PWM_H */
+#endif
 

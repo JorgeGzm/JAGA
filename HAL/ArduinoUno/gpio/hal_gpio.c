@@ -1,34 +1,48 @@
 /**
- * @file    hal_gpio.c
- * @brief   Codigo da lib driver GPIO para o uso e acesso aos pinos de I/O do Arduino Uno(ATMEGA328P).
- * @details Esta biblioca faz o uso da comunicacao I2C para a traca de dados com o CI.
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    21 de Julho de 2015
- * @version 0.1.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_gpio.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jul 21, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Codigo da lib driver GPIO para o uso e acesso aos pinos de I/O do Arduino Uno(ATMEGA328P).
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "hal_gpio.h"
 
-/** variavel abstraida para acessar o PORTB*/
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+/** @brief variavel abstraida para acessar o PORTB*/
 volatile uint8 *ref_PORTB = &PORTB;
 //volatile uint8_t * ref_PORTB =  &(*(volatile uint8_t *)((0x05) + 0x20));
 volatile uint8 *ref_TRISB = &DDRB;
 
-/** variavel abstraida para acessar o LATB*/
+/** @brief variavel abstraida para acessar o LATB*/
 volatile uint8 *ref_LATB = 0;
 
 regGPIO rB0 = { &PORTB, &DDRB, 0, PIN_0};
@@ -40,15 +54,15 @@ regGPIO rB5 = { &PORTB, &DDRB, 0, PIN_5};
 regGPIO rB6 = { &PORTB, &DDRB, 0, PIN_6};
 regGPIO rB7 = { &PORTB, &DDRB, 0, PIN_7};
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/** variavel abstraida para acessar o PORTC*/
+/** @brief variavel abstraida para acessar o PORTC*/
 volatile uint8 *ref_PORTC = &PORTC;
 
-/** variavel abstraida para acessar o DDRC*/
+/** @brief variavel abstraida para acessar o DDRC*/
 volatile uint8 *ref_TRISC = &DDRC;
 
-/** variavel abstraida para acessar o LATC*/
+/** @brief variavel abstraida para acessar o LATC*/
 volatile uint8 *ref_LATC = 0;
 
 regGPIO rC0 = { &PORTC, &DDRC, 0, PIN_0};
@@ -60,15 +74,15 @@ regGPIO rC5 = { &PORTC, &DDRC, 0, PIN_5};
 regGPIO rC6 = { &PORTC, &DDRC, 0, PIN_6};
 regGPIO rC7 = { &PORTC, &DDRC, 0, PIN_7};
 
-//------------------------------------------------------------------------------
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/** variavel abstraida para acessar o PORTC*/
+/** @brief variavel abstraida para acessar o PORTC*/
 volatile uint8 *ref_PORTD = &PORTD;
 
-/** variavel abstraida para acessar o DDRD*/
+/** @brief variavel abstraida para acessar o DDRD*/
 volatile uint8 *ref_TRISD = &DDRD;
 
-/** vvariavel abstraida para acessar o LATD*/
+/** @brief variavel abstraida para acessar o LATD*/
 volatile uint8 *ref_LATD = 0;
 
 //PORTD:usado para escrever nos pinos do PORTD; 
@@ -82,6 +96,14 @@ regGPIO rD4 = { &PORTD, &DDRD, 0, PIN_4};
 regGPIO rD5 = { &PORTD, &DDRD, 0, PIN_5};
 regGPIO rD6 = { &PORTD, &DDRD, 0, PIN_6};
 regGPIO rD7 = { &PORTD, &DDRD, 0, PIN_7};
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 void V_initRefRegisters(void)
 {

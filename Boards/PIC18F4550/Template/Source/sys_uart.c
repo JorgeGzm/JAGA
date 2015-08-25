@@ -1,10 +1,27 @@
 /**
- * @file    sys_uart.c
- * @brief   TODO
- * @author  Rafael Lopes
- * @date    12 de Marco de 2015
- * @version 0.1.0.0 (beta)
- */
+  * @file    sys_uart.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Mar 12, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   TODO documentar
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include <stdarg.h>
 
@@ -14,12 +31,42 @@
 #include "serial/serial.h"
 #include "lcd/lcd.h"
 
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+/**@brief TODO documentar*/
 typedef enum 
 {
     ST_START,
     ST_MSG,
     ST_END
 } RX_STATES;
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+/** @brief TODO documentar */
+int decode(uint8 data, uint8 buf[]);
+
+/** @brief Funcao callback da interrupcao do RX da UART1*/
+void uart_rx(void);
+
+/** @brief Funcao callback da interrupcao do TX da UART1*/
+void uart_tx(void);
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 int decode(uint8 data, uint8 buf[])
 {
@@ -59,7 +106,6 @@ int decode(uint8 data, uint8 buf[])
 	return ret;
 }
 
-/**  */
 void uart_rx(void)
 { 
     uint8 c;
@@ -78,7 +124,6 @@ void uart_rx(void)
     
 }
  
-/** Funcao callback da interrupcao do TX da UART1*/
 void uart_tx(void)
 {
    

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1">
         <file>
             <url>file:/C:/CloudSvnDevGzm/Firmwares/All_Projects/Conexao/Lib_nr24l01/lib_nrf24l01.c</url>
@@ -6,22 +7,18 @@
         </file>
     </editor-bookmarks>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Source/main.c</file>
-    </open-files>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_uart.c</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/buttons/buttons.c</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.c</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/timer/hal_timer.c</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/interrupt/hal_interrupts.h</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/uart/hal_uart.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/sys_timer.c</file>
-            <file>file:/home/jaga/git/JAGA/HAL/PIC18F4550/uart/hal_uart.h</file>
-            <file>file:/home/jaga/git/JAGA/Middleware/serial/serial.c</file>
-            <file>file:/home/jaga/git/JAGA/Boards/PIC18F4550/Template/Source/app_him.c</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Source/app_him.c</file>
+            <file>file:/C:/JAGA/Middleware/buttons/buttons.h</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Source/sys_uart.c</file>
+            <file>file:/C:/JAGA/Middleware/buttons/buttons.c</file>
+            <file>file:/C:/JAGA/Middleware/leds/leds.c</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Header/app_control.h</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Source/app_control.c</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Header/config_buttons.h</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Source/main.c</file>
+            <file>file:/C:/JAGA/Boards/PIC18F4550/Template/Header/sys_pwm.h</file>
         </group>
     </open-files>
 </project-private>

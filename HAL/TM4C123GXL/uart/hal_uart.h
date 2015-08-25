@@ -1,34 +1,39 @@
 /**
- * @file    hal_uart.h
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    26 de Abril de 2015
- * @version 0.1.0.0 
+  * @file    hal_uart.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Apr 26, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver UART para o microcontrolador TM4C123GXL.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
- * @brief   Driver UART para o microcontrolador TM4C123GXL.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
- 
 #ifndef HAL_UART_H
-#define	HAL_UART_H
+	#define	HAL_UART_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 #include "vars/vars.h"
-
 #include "types/types.h"
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 #define _UART0   0x0000
 #define _UART1   0x0001
@@ -109,6 +114,18 @@
 /** @brief TODO */
 #define BAUD_115200 4
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
 /**
  * @brief TODO
  * @param pin
@@ -187,5 +204,4 @@ void uart0_putc(uint8 UI8_caracter);
 uint8 uart0_get_data(void);
 
 
-#endif	/* HAL_UART_H */
-
+#endif	

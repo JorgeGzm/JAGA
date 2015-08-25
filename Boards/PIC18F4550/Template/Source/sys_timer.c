@@ -1,21 +1,66 @@
 /**
- * @file    sys_timer.c
- * @brief   TODO
- * @author  Rafael Lopes
- * @date    27 de Fevereiro de 2015
- * @version 0.1.0.0 (beta)
- */
+  * @file    sys_timer.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 27, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   TODO documentar
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "../Header/sys_timer.h"
 #include "buttons/buttons.h"
 #include "leds/leds.h"
 
-/** Internal functions prototype*/
+//------------------------------------------------------------------------------
+// Private Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Variable Declaration			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Private Prototypes
+//------------------------------------------------------------------------------
+
+/** @brief Funcao callback da interrupcao do TMR0 */
 static void timer_counter(void);
+
+/** @brief Contadores de 1 milisegundo */
 inline static void counter_1_ms(void);
+
+/** @brief Contadores de 10 milisegundos */
 inline static void counter_10_ms(void);
+
+/** @brief Contadores de 100 milisegundos */
 inline static void counter_100_ms(void);
+
+/** @brief Contadores de 1 segundo */
 inline static void counter_1_s(void);
+
+//------------------------------------------------------------------------------
+// Functions Source
+//------------------------------------------------------------------------------
 
 void init_timer0(void)
 {
@@ -35,7 +80,6 @@ void init_timer0(void)
     timer_start(_TMR0, TMR_ON);
 }
 
-/** Funcao callback da interrupcao do TMR0*/
 static void timer_counter(void)
 {
     // --- Temporizadores das bases de tempo 1ms, 10ms, 100ms, 1s ---
@@ -75,27 +119,23 @@ static void timer_counter(void)
     }
 }
 
-/** Contadores de 1 milisegundo */
 inline static void counter_1_ms(void)
 {
 
 }
 
-/** Contadores de 10 milisegundos */
 inline static void counter_10_ms(void)
 {
     //Leitura das teclas
     buttons_read_isr_10ms();
 }
 
-/** Contadores de 100 milisegundos */
 inline static void counter_100_ms(void)
 {
     //varredura dos leds
     leds_action_isr_100ms();
 }
 
-/** Contadores de 1 segundo */
 inline static void counter_1_s(void)
 {
 

@@ -1,32 +1,39 @@
 /**
- * @file    hal_interrupts.h
- * @author  Rafael Lopes
- * @date    15 de Janeiro de 2015
- * @version 0.1.0.0 
- * @brief   Driver interrupts para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_interrupts.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jan 15, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver interrupts para o microcontrolador PIC18f4550.
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_INTERRUPTS_H
-#define	HAL_INTERRUPTS_H
+	#define	HAL_INTERRUPTS_H
+
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
 
 #include "device/hal_device.h"
 #include "vars/vars.h"
 #include "uart/hal_uart.h"
 #include "device/hal_device.h"
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
 
 /** @brief TODO */
 #define _NULL       (0)
@@ -48,21 +55,31 @@
 
 /** @brief TODO */
 #define _TMR0       0x0001
+
 /** @brief TODO */
 #define _TMR1       0x0002
+
 /** @brief TODO */
 #define _TMR2       0x0004
+
 /** @brief TODO */
 #define _TMR3       0x0008
+
 /** @brief TODO */
 #define _UART_RX    0x0010
+
 /** @brief TODO */
 #define _UART_TX    0x0020
+
 /** @brief TODO */
 #define _ALL    0xFFFF
 
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
 /** @brief TODO */
-typedef union _Interrupts
+typedef union 
 {
     uint16 value;
 
@@ -95,28 +112,43 @@ typedef union _Interrupts
 
         unsigned COMP : 1;      //Habilita interrupcao de mudanca da entrada do comparador
     };
-};
-
-typedef union _Interrupts Interrupts;
+}Interrupts;
 
 /** @brief TODO */
-struct _InterruptsCallBack
+typedef struct 
 {
+    /** @brief TODO */
     Interrupts call_back_ctrl;
 
+    /** @brief TODO */
     void (*tmr0_callback)();
+    
+    /** @brief TODO */
     void (*tmr1_callback)();
+    
+    /** @brief TODO */
     void (*tmr2_callback)();
+    
+    /** @brief TODO */
     void (*tmr3_callback)();
+    
+    /** @brief TODO */
     void (*uart_rx_callback)();
+    
+    /** @brief TODO */
     void (*uart_tx_callback)();
-};
+    
+}InterruptsCallBack;
 
-typedef struct _InterruptsCallBack InterruptsCallBack;
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
 
-/**
- * @berif TODO
- */
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
+/** @berif TODO */
 void interrupt_init(void);
 
 /**
@@ -157,5 +189,4 @@ inline static void uart_rx_isr(void);
 /** @brief TODO */
 inline static void uart_tx_isr(void);
 
-#endif	/* CNX_INTERRUPTS_H */
-
+#endif	

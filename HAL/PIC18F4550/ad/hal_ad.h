@@ -1,51 +1,55 @@
 /**
- * @file    hal_ad.h
- * @brief   Bibliteoca para o do conversor analogico do PIC18f4550
- * @details Esta biblioca usa ...           \n
- * Exemplo de uso:                          \n
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    6 de Julho de 2014
- * @version 0.1.0.0 (beta) 
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_ad.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jul 6, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para o do conversor analogico do PIC18f4550
+  * @details
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_AD_H
     #define HAL_AD_H
 
-//Includes
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
 
-/** Conversor A/D desligado*/
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+/** @brief Conversor A/D desligado*/
 #define AD_DISABLE      0
 
-/**Conversor A/D esta em operacao*/
+/** @brief Conversor A/D esta em operacao*/
 #define AD_ENABLE       1
 
-/** Seleciona VCC como tensao de refencia de VREF+. */
+/** @brief Seleciona VCC como tensao de refencia de VREF+. */
 #define AD_VREF_POS_VDD     0
 
-/** Seleciona GND como tensao de refencia de VREF-. */
+/** @brief Seleciona GND como tensao de refencia de VREF-. */
 #define AD_VREF_NEG_GND     0
 
-/** Seleciona o pino AN3 como tensao de refencia de VREF+. */
+/** @brief Seleciona o pino AN3 como tensao de refencia de VREF+. */
 #define AD_VREF_POS_AN3     1
 
-/** Seleciona o pino AN2 como tensao de refencia de VREF-. */
+/** @brief Seleciona o pino AN2 como tensao de refencia de VREF-. */
 #define AD_VREF_NEG_AN2    1
 
 /** Bits de selecao de tempo*/
@@ -73,6 +77,10 @@
 #define NO_ERROR 0
 #define OVER_FLOW 1
 #define UNDER_FLOW 2
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
 
 /** Seleciona os canais AD que serao usados iniciando de AD_CH0 ate AD_CHX. */
 enum AD_CH
@@ -115,21 +123,26 @@ enum AD_AN
     AD_AN_SIZE,
 };
 
-/** Estrutura que configura o uso do convesor AD para qualquer sensor*/
-struct _Analog
+/** @brif Estrutura que configura o uso do convesor AD para qualquer sensor*/
+typedef struct 
 {
     regGPIO reg;
     uint8 channel;
     //void (*set1)(uint8);//configura canal que vai ser usado.  Responsabilidade do AD agora
     uint16(*read1)(uint8);    
     uint8 error;    
-};
-typedef struct _Analog Analog;
+}Analog;
 
-//Protótipos
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
 
 /**
- * Configura tensoes de referencia Vref+ e Vref-.
+ * @brief Configura tensoes de referencia Vref+ e Vref-.
  * @param p_vref                                                            \n    
  *  AD_VREF_POS_VDD: Seleciona VCC como tensao de refencia de VREF+         \n
  *  AD_VREF_POS_AN3: Seleciona o pino AN3 como tensao de refencia de VREF+. \n
@@ -140,7 +153,7 @@ typedef struct _Analog Analog;
 void ad_setup_vref(uint8 pVref, uint8 nVref);
 
 /**
- *
+ * @brief TODO documentar
  * @param bit de selecao do canal analogico, iniciando de AD_CH0 ate AD_CHX. \n
  *  AD_CH0: seleciona canal 0               \n
  *  AD_CH1: seleciona canais 0 e 1          \n
@@ -176,7 +189,7 @@ void ad_setup_vref(uint8 pVref, uint8 nVref);
 void ad_setup_enable(uint8 chanel, uint8 analog_in, uint8 enable);
 
 /**
- *
+ * @brief TODO documentar
  * @param tad Bits de selecao de tempo de aquisicao. \n
  *  AD_TAD_0:                               \n
  *  AD_TAD_2:                               \n
@@ -199,10 +212,10 @@ void ad_setup_enable(uint8 chanel, uint8 analog_in, uint8 enable);
 void ad_setup_clock(uint8 tad, uint8 clock);
 
 /**
- *
- * @param channel
- * @return
+ * @brief TODO documentar
+ * @param channel TODO documentar
+ * @return TODO documentar
  */
 uint16 ad_read(uint8 channel);
 
-#endif	/* HAL_AD_H */
+#endif	

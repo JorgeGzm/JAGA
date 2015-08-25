@@ -1,30 +1,50 @@
 /**
- * @file    hal_flash.h
- * @author  Jorge Guzman (jorge.gzm@gmail.com)
- * @date    10 de Fevereiro de 2015
- * @version 0.1.0.0 
- * @brief   Driver para a memoria flash para o microcontrolador PIC18f4550.
- * @section LICENSE
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details at
- * http://www.gnu.org/copyleft/gpl.html
- *
- * @section DESCRIPTION
- */
+  * @file    hal_flash.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Feb 10, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Driver para a memoria flash para o microcontrolador PIC18f4550.
+  * @details 
+  * @section LICENSE
+  *
+  * This program is free software; you can redistribute it and/or
+  * modify it under the terms of the GNU General Public License as
+  * published by the Free Software Foundation; either version 2 of
+  * the License, or (at your option) any later version.
+  *
+  * This program is distributed in the hope that it will be useful, but
+  * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * General Public License for more details at
+  * http://www.gnu.org/copyleft/gpl.html
+*/
 
 #ifndef HAL_FLASH_H
     #define HAL_FLASH_H
 
+//------------------------------------------------------------------------------
+// Included Files
+//------------------------------------------------------------------------------
+
 #include "types/types.h"
 #include "device/hal_device.h"
+
+//------------------------------------------------------------------------------
+// Public Definitions
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public structs, unions and enums
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Global Variable 			
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Public Prototype  
+//------------------------------------------------------------------------------
+
 /*
  * @brief Realiza a leitura da memoria flash do PIC18f4550.
  * @details Cada instrucao tem o tamanho de 16 bits, mas cada endereco contem apenas a uma
@@ -64,4 +84,4 @@ void flash_erasing(int16 UI16_address);
  */
 void flash_wr(UWord UI16_buffer[], int16 UI16_address);
 
-#endif	/* HAL_FLASH_H */
+#endif	
