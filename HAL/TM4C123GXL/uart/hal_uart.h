@@ -203,5 +203,17 @@ void uart0_putc(uint8 UI8_caracter);
  */
 uint8 uart0_get_data(void);
 
+/**
+ * @brief TODO
+ * @param UI8_caracter TODO
+ */
+void uart1_putc(uint8 UI8_caracter);
+
+/**
+ * @brief TODO
+ * @return TODO
+ */
+uint8 uart1_get_data(void);
+
 
 #endif	

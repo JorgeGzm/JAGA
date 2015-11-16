@@ -95,6 +95,9 @@ void lcd_send_byte(int8 address, int8 n);
  * @param ponteiro que aponta o vetor de caracteres que vai ser enviado ao lcd.
  */
 void lcd_printf(int8 *c, ...);
+
+void lcd_putc(uint8 c);
+
 void lcd_send_string(int8 *fmt);
 
 /**

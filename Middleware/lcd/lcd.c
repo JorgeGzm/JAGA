@@ -271,6 +271,30 @@ void lcd_printf(int8 *c, ...)
     va_end(pa);
 }
 
+
+void lcd_putc(uint8 c)
+{
+	switch(c)
+	{
+		case '\f': //Limpa LCD
+			lcd_send_byte(0, 1);
+			Delay_ms(2);
+		break;
+
+		case '\n': // Pula Linha
+			lcd_gotoxy(1, 2);
+		break;
+
+		case '\b': // Volta um caracter
+			lcd_send_byte(0, 0x10);
+		break;
+
+		default: // Escreve o caracter
+			lcd_send_byte(1, c);
+		break;
+	}
+}
+
 void lcd_print_uint16(uint16 n)
 {
     unsigned cnt = 0;

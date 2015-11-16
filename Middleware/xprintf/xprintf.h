@@ -1,7 +1,7 @@
 /**
-  * @file    serial.h
-  * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
-  * @date    Jul 6, 2015
+  * @file    xprintf.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Set 26, 2015
   * @version 0.2.0.0 (beta)
   * @brief   TODO documentar
   * @details
@@ -19,8 +19,8 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef PRINT_H
-	#define	PRINT_H
+#ifndef XPRINT_H
+	#define	XPRINT_H
 
 //------------------------------------------------------------------------------
 // Included Files
@@ -38,13 +38,6 @@
 // Public structs, unions and enums
 //------------------------------------------------------------------------------
 
-/** @brief TODO */
-typedef struct 
-{
-    /** @brief TODO documentar*/
-    void (*putc)(uint8);
-}Serial;
-
 //------------------------------------------------------------------------------
 // Global Variable 			
 //------------------------------------------------------------------------------
@@ -53,17 +46,6 @@ typedef struct
 // Public Prototype  
 //------------------------------------------------------------------------------
 
-/**
- * @brief TODO documentar
- */
-void serial_init(void);
-
-/**
- * @brief TODO documentar
- * @param index TODO documentar
- * @param function TODO documentar
- */
-void serial_attach(uint8 index, void (*function)(uint8));
 
 /**
  * @brief Emvia strings pela serial.
@@ -78,27 +60,8 @@ void serial_attach(uint8 index, void (*function)(uint8));
  * @param fmt TODO documentar
  * @param ... TODO documentar
  */
-void serial_printf(uint8 index, uint8 *fmt, ...);
+void xprintf(void (*func)(uint8), uint8 *fmt, ...);
 
-/**
- * @brief Envia uma string pela UART
- * @param index TODO documentar
- * @param fmt pinteiro para a string que sera enviada.
- */
-void serial_print_string(uint8 index, uint8 *fmt);
-
-/**
- * @brief Envia uma variavel unsigned int pela UART
- * @param index TODO documentar
- * @param value valor que sera enviado
- */
-void serial_print_UINT16(uint8 index, uint16 value);
-
-/**
- * @brief Envia uma variavel int pela UART
- * @param index TODO documentar
- * @param value TODO documentar
- */
-void serial_print_INT16(uint8 index, int16 value);
 
 #endif	/* PRINT_H */
+

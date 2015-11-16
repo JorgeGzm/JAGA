@@ -1,7 +1,7 @@
 /**
-  * @file    serial.c
-  * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
-  * @date    Jul 6, 2015
+  * @file    xprintf.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Set 26, 2015
   * @version 0.2.0.0 (beta)
   * @brief   TODO documentar
   * @details
@@ -23,17 +23,13 @@
 // Included Files
 //------------------------------------------------------------------------------
 
-#include "serial.h"
+#include "xprintf.h"
 #include "uart/hal_uart.h"
 #include "app_control.h"
 
 //------------------------------------------------------------------------------
 // Private Definitions
 //------------------------------------------------------------------------------
-
-#ifndef configSerial_numSerial
-#error "configButton_numSerial no defined in app_control.h"
-#endif
 
 //------------------------------------------------------------------------------
 // Private structs, unions and enums
@@ -43,51 +39,52 @@
 // Variable Declaration			
 //------------------------------------------------------------------------------
 
-/** @brief Callback para a funcao i2c usada pela biblioteca.*/
-Serial serial[configSerial_numSerial];
-
 //------------------------------------------------------------------------------
 // Private Prototypes
 //------------------------------------------------------------------------------
+
+/**
+ * @brief Envia uma string pela UART
+ * @param index TODO documentar
+ * @param fmt pinteiro para a string que sera enviada.
+ */
+void xprint_string(void (*func)(uint8), uint8 *fmt);
+
+/**
+ * @brief Envia uma variavel unsigned int pela UART
+ * @param index TODO documentar
+ * @param value valor que sera enviado
+ */
+void xprint_UINT16(void (*func)(uint8), uint16 value);
+
+/**
+ * @brief Envia uma variavel int pela UART
+ * @param index TODO documentar
+ * @param value TODO documentar
+ */
+void xprint_INT16(void (*func)(uint8), int16 value);
 
 //------------------------------------------------------------------------------
 // Functions Source
 //------------------------------------------------------------------------------
 
-void serial_init(void)
+void xprint_putc(void (*func)(uint8), uint8 c)
 {
-    uint8 i;
-    for(i=0;i<configSerial_numSerial;i++)
-    {
-        serial[i].putc = 0;
-    }
+	func(c);
 }
 
-void serial_attach(uint8 index, void (*function)(uint8))
-{
-    if (index < configSerial_numSerial) 
-    {
-        serial[index].putc = function;
-    }
-}
-
-void serial_print_putc(uint8 index, uint8 c)
-{
-    serial->putc(c);
-}
-
-void serial_printString(uint8 index, uint8 *fmt)
+void xprint_string(void (*func)(uint8), uint8 *fmt)
 {
     uint8 c;
 
     while((c = *fmt) != '\0')
     {
-        serial_print_putc(index, c);
+        xprint_putc(func, c);
         fmt++;
     }
 }
 
-void serial_print_UINT16(uint8 index, uint16 value)
+void xprint_UINT16(void (*func)(uint8), uint16 value)
 {
     unsigned cnt = 0;
     uint8 buffer[11];
@@ -102,13 +99,13 @@ void serial_print_UINT16(uint8 index, uint16 value)
 
     for(; cnt; cnt--)
     {
-        serial_print_putc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
+        xprint_putc(func, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
     }
 }
 
-void serial_print_INT16(uint8 index, int16 value)
+void xprint_INT16(void (*func)(uint8), int16 value)
 {
-        unsigned cnt = 0;
+	unsigned cnt = 0;
     uint8 flag_negativo;
     volatile uint8 buffer[11];
 
@@ -138,16 +135,16 @@ void serial_print_INT16(uint8 index, int16 value)
     {
         if(buffer[cnt] == 0x2D)
         {
-            serial_print_putc(index, 0x2D);
+            xprint_putc(func, 0x2D);
         }
         else
         {
-            serial_print_putc(index, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
+            xprint_putc(func, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
         }
     }
 }
 
-void serial_printf(uint8 index, uint8 *fmt, ...)
+void xprintf(void (*func)(uint8), uint8 *fmt, ...)
 {
     va_list pa;
     uint8 *s, c;
@@ -156,53 +153,51 @@ void serial_printf(uint8 index, uint8 *fmt, ...)
 
     va_start(pa, fmt);
     
-    if(index < configSerial_numSerial)
-    {
-        while(*fmt != '\0')
-        {
-            if(*fmt == '%')
-            {
-                switch(*++fmt)
-                {
-                    case '%': serial_print_putc(index, '%');
-                    break;
+	while(*fmt != '\0')
+	{
+		if(*fmt == '%')
+		{
+			switch(*++fmt)
+			{
+				case '%': xprint_putc(func, '%');
+				break;
 
-                    case 'c': /* uint8*/
-                        c = va_arg(pa, int);
-                        serial_print_putc(index, (int8)c);
-                    break;
+				case 'c': /* uint8*/
+					c = va_arg(pa, int);
+					xprint_putc(func, (int8)c);
+				break;
 
-                    case 's': /* string */
-                        s = va_arg(pa, uint8 *);
-                        serial_printString(index, s);
-                    break;
+				case 's': /* string */
+					s = va_arg(pa, uint8 *);
+					xprint_string(func, s);
+				break;
 
-                    case 'd': /* int16*/
-                        d = va_arg(pa, int);
-                        serial_print_INT16(index, (int16)d);
-                    break;
+				case 'd': /* int16*/
+					d = va_arg(pa, int);
+					xprint_INT16(func, (int16)d);
+				break;
 
-                    case 'u': /* uint16*/
-                        u = va_arg(pa, int);
-                        serial_print_UINT16(index, (uint16)u);
-                    break;
+				case 'u': /* uint16*/
+					u = va_arg(pa, int);
+					xprint_UINT16(func, (uint16)u);
+				break;
 
-    //                case 'f': /* float*/
-    //                    f = va_arg(pa, float);
-    //                    print_uint16(f);
-    //                break;
+//                case 'f': /* float*/
+//                    f = va_arg(pa, float);
+//                    xprint_float(f);
+//                break;
 
-                }
-            }
-            else
-            {
-                serial_print_putc(index, *fmt);
-            }
+			}
+		}
+		else
+		{
+			xprint_putc(func, *fmt);
+		}
 
-            /*incrementa o ponteiro*/
-            fmt++;
-        }
-    }
+		/*incrementa o ponteiro*/
+		fmt++;
+	}
+
    
     va_end(pa);
 }
