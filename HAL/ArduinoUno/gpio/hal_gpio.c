@@ -19,31 +19,31 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_gpio.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief variavel abstraida para acessar o PORTB*/
-volatile uint8 *ref_PORTB = &PORTB;
+volatile uint8_t *ref_PORTB = &PORTB;
 //volatile uint8_t * ref_PORTB =  &(*(volatile uint8_t *)((0x05) + 0x20));
-volatile uint8 *ref_TRISB = &DDRB;
+volatile uint8_t *ref_TRISB = &DDRB;
 
 /** @brief variavel abstraida para acessar o LATB*/
-volatile uint8 *ref_LATB = 0;
+volatile uint8_t *ref_LATB = 0;
 
 regGPIO rB0 = { &PORTB, &DDRB, 0, PIN_0};
 regGPIO rB1 = { &PORTB, &DDRB, 0, PIN_1};
@@ -57,13 +57,13 @@ regGPIO rB7 = { &PORTB, &DDRB, 0, PIN_7};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstraida para acessar o PORTC*/
-volatile uint8 *ref_PORTC = &PORTC;
+volatile uint8_t *ref_PORTC = &PORTC;
 
 /** @brief variavel abstraida para acessar o DDRC*/
-volatile uint8 *ref_TRISC = &DDRC;
+volatile uint8_t *ref_TRISC = &DDRC;
 
 /** @brief variavel abstraida para acessar o LATC*/
-volatile uint8 *ref_LATC = 0;
+volatile uint8_t *ref_LATC = 0;
 
 regGPIO rC0 = { &PORTC, &DDRC, 0, PIN_0};
 regGPIO rC1 = { &PORTC, &DDRC, 0, PIN_1};
@@ -77,13 +77,13 @@ regGPIO rC7 = { &PORTC, &DDRC, 0, PIN_7};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstraida para acessar o PORTC*/
-volatile uint8 *ref_PORTD = &PORTD;
+volatile uint8_t *ref_PORTD = &PORTD;
 
 /** @brief variavel abstraida para acessar o DDRD*/
-volatile uint8 *ref_TRISD = &DDRD;
+volatile uint8_t *ref_TRISD = &DDRD;
 
 /** @brief variavel abstraida para acessar o LATD*/
-volatile uint8 *ref_LATD = 0;
+volatile uint8_t *ref_LATD = 0;
 
 //PORTD:usado para escrever nos pinos do PORTD; 
 //PIND:usado para ler o conteudo dos pinos do PORTD; 
@@ -97,20 +97,20 @@ regGPIO rD5 = { &PORTD, &DDRD, 0, PIN_5};
 regGPIO rD6 = { &PORTD, &DDRD, 0, PIN_6};
 regGPIO rD7 = { &PORTD, &DDRD, 0, PIN_7};
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void V_initRefRegisters(void)
 {
 
 }
 
-void GPIO_write_data(volatile uint8 *registrador, uint8 UI8_value)
+void GPIO_write_data(volatile uint8_t *registrador, uint8_t UI8_value)
 {
     *registrador = UI8_value;
 }
@@ -120,7 +120,7 @@ void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
     reg = _port;    
 }
 
-void GPIO_outputBit(volatile uint8 *port, uint8 pino, uint8 UI8_flag)
+void GPIO_outputBit(volatile uint8_t *port, uint8_t pino, uint8_t UI8_flag)
 {
     if(UI8_flag)
     {
@@ -132,17 +132,17 @@ void GPIO_outputBit(volatile uint8 *port, uint8 pino, uint8 UI8_flag)
     }
 }
 
-void GPIO_low(volatile uint8 *port, uint8 pino)
+void GPIO_low(volatile uint8_t *port, uint8_t pino)
 {
     clr_bit(*port, pino);
 }
 
-void GPIO_high( volatile uint8 *port, uint8 pino)
+void GPIO_high( volatile uint8_t *port, uint8_t pino)
 {
     set_bit(*port, pino);
 }
 
-void GPIO_output_toggle(volatile uint8 *port, uint8 pino)
+void GPIO_output_toggle(volatile uint8_t *port, uint8_t pino)
 {
     toggle_bit(*port, pino);
 }
@@ -177,12 +177,12 @@ void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
     }
 }
 
-uint8 GPIO_regPin_rdBit(regPin *pin)
+uint8_t GPIO_regPin_rdBit(regPin *pin)
 {
     return(tst_bit(*pin->out, pin->pin));
 }
 
-uint8 GPIO_regPin_inputBit(regPin *pin)
+uint8_t GPIO_regPin_inputBit(regPin *pin)
 {
     if(tst_bit(*pin->out, pin->pin))
     {
@@ -194,7 +194,7 @@ uint8 GPIO_regPin_inputBit(regPin *pin)
     }
 }
 
-void GPIO_regPin_outputBit(regPin *pin, uint8 flag)
+void GPIO_regPin_outputBit(regPin *pin, uint8_t flag)
 {
     if(flag)
     {

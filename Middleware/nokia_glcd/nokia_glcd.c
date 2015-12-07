@@ -19,15 +19,15 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 #include "nokia_glcd.h"
 #include <string.h>
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
 /**@brief TODO*/
 #define LCD_CMD      0
@@ -53,9 +53,9 @@
 /**@brief TODO*/
 #define nokia_clear() nokia_fill( 0x00 )
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
 typedef struct _GLCD_nokia
 {
@@ -75,12 +75,12 @@ typedef struct _GLCD_nokia
 	regPin sce;
 }GLCD_nokia;
 
-//------------------------------------------------------------------------------
-// Variable Declaration
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES
+//==============================================================================
 
 /** */
-const uint8 ASCII_TABLE[][5] =
+const uint8_t ASCII_TABLE[][5] =
 {
  {0x00, 0x00, 0x00, 0x00, 0x00} // 20
 ,{0x00, 0x00, 0x5f, 0x00, 0x00} // 21 !
@@ -180,7 +180,7 @@ const uint8 ASCII_TABLE[][5] =
 };
 
 /** */
-uint8 const MediumNumbers[][24] =
+uint8_t const MediumNumbers[][24] =
 {
 {0x00, 0xfc, 0x7a, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x7a, 0xfc, 0x00, 0x00, 0x7e, 0xbc, 0xc0, 0xc0, 0xc0, 0xc0, 0xc0, 0xc0, 0xbc, 0x7e, 0x00},   // 0
 {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x78, 0xfc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3c, 0x7e, 0x00},   // 1
@@ -198,7 +198,7 @@ uint8 const MediumNumbers[][24] =
 };
 
 /** */
-uint8 const BigNumbers[][42] =
+uint8_t const BigNumbers[][42] =
 {
 {0x00, 0xfc, 0xfa, 0xf6, 0x0e, 0x0e, 0x0e, 0x0e, 0x0e, 0x0e, 0xf6, 0xfa, 0xfc, 0x00, 0x00, 0xef, 0xc7, 0x83, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x83, 0xc7, 0xef, 0x00, 0x00, 0x7f, 0xbf, 0xdf, 0xe0, 0xe0, 0xe0, 0xe0, 0xe0, 0xe0, 0xdf, 0xbf, 0x7f, 0x00},   // 0
 {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf8, 0xfc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x83, 0xc7, 0xef, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0x3f, 0x7f, 0x00},   // 1
@@ -227,16 +227,32 @@ GLCD_nokia nokia =
 	{ 0, 0}
 };
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 /** @brief Inicializa o glcd nokia */
 void nokia_init(void);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
+
+void nokia_init(void)
+{
+    //Reset
+	GPIO_regPin_outputLow(&nokia.rst);
+    Delay_ms(1);
+    GPIO_regPin_outputHigh(&nokia.rst);
+
+    nokia_write(LCD_CMD, 0x21); // LCD Extended Commands.
+    nokia_write(LCD_CMD, 0xBC); // Set LCD Vop (Contrast).
+    nokia_write(LCD_CMD, 0x04); // Set Temp coefficent. //0x04
+    nokia_write(LCD_CMD, 0x14); // LCD bias mode 1:48. //0x13
+    nokia_write(LCD_CMD, 0x0C); // LCD in normal mode.
+    nokia_write(LCD_CMD, 0x20);
+    nokia_write(LCD_CMD, 0x0C);
+}
 
 void nokia_attach(regGPIO clk, regGPIO data, regGPIO dc, regGPIO rst, regGPIO sce)
 {
@@ -258,10 +274,10 @@ void nokia_attach(regGPIO clk, regGPIO data, regGPIO dc, regGPIO rst, regGPIO sc
 	nokia_init();
 }
 
-static void nokia_spi_wr(uint8 data)
+static void nokia_spi_wr(uint8_t data)
 {
     Byte aux_data;
-    uint8 i;
+    uint8_t i;
     aux_data.value = data;
     
     for(i = 0; i < 8; i++)
@@ -273,7 +289,7 @@ static void nokia_spi_wr(uint8 data)
     }
 }
 
-void nokia_write(uint8 dc, uint8 _data )
+void nokia_write(uint8_t dc, uint8_t _data )
 {
   Byte aux_dc;
 
@@ -284,31 +300,15 @@ void nokia_write(uint8 dc, uint8 _data )
   GPIO_regPin_outputHigh(&nokia.sce); //Desabilita escrita no lcd
 }
 
-void nokia_init(void)
-{
-    //Reset
-	GPIO_regPin_outputLow(&nokia.rst);
-    Delay_ms(1);
-    GPIO_regPin_outputHigh(&nokia.rst);
-
-    nokia_write(LCD_CMD, 0x21); // LCD Extended Commands.
-    nokia_write(LCD_CMD, 0xBC); // Set LCD Vop (Contrast).
-    nokia_write(LCD_CMD, 0x04); // Set Temp coefficent. //0x04
-    nokia_write(LCD_CMD, 0x14); // LCD bias mode 1:48. //0x13
-    nokia_write(LCD_CMD, 0x0C); // LCD in normal mode.
-    nokia_write(LCD_CMD, 0x20);
-    nokia_write(LCD_CMD, 0x0C);
-}
-
-void nokia_set_cursor(uint8 x, uint8 y)
+void nokia_set_cursor(uint8_t x, uint8_t y)
 {
     nokia_write(LCD_CMD, 0x40 | y); //  linha  (0 - 5)
     nokia_write(LCD_CMD, 0x80 | x); //  coluna (0 - 83)
 }
 
-void nokia_chr(uint8 caracter, uint8 color )
+void nokia_chr(uint8_t caracter, uint8_t color )
 {
-    uint8 i, chr;
+    uint8_t i, chr;
 
     for(i = 0; i < 5; i++)
     {
@@ -321,20 +321,9 @@ void nokia_chr(uint8 caracter, uint8 color )
     }
 }
 
-void nokia_putc(uint8 caracter)
+void nokia_custom_char(uint8_t *map)
 {
-    uint8 i, chr;
-
-    for(i = 0; i < 5; i++)
-    {
-        chr = ASCII_TABLE[caracter - 0x20][i];
-        nokia_write(LCD_DATA, chr);
-    }
-}
-
-void nokia_custom_char(uint8 *map)
-{
-  uint8 i;
+  uint8_t i;
 
   for(i = 0; i < 5; i++)
   {
@@ -342,7 +331,7 @@ void nokia_custom_char(uint8 *map)
   }
 }
 
-void nokia_fill( uint8 Buffer )
+void nokia_fill(uint8_t Buffer )
 {
   unsigned index;
   nokia_set_cursor( 0, 0 );
@@ -353,7 +342,7 @@ void nokia_fill( uint8 Buffer )
   }
 }
 
-void nokia_out(uint8 row, uint8 col, uint8 *string, uint8 color)
+void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color)
 {
   nokia_set_cursor(col, row );
 
@@ -363,7 +352,7 @@ void nokia_out(uint8 row, uint8 col, uint8 *string, uint8 color)
   }
 }
 
-void nokia_out_cp(uint8 *String, uint8 Color)
+void nokia_out_cp(uint8_t *String, uint8_t Color)
 {
   while(*String)
   {
@@ -371,7 +360,7 @@ void nokia_out_cp(uint8 *String, uint8 Color)
   }
 }
 
-void nokia_image(const uint8 *Bmp )
+void nokia_image(const uint8_t *Bmp )
 {
   unsigned i;
   nokia_set_cursor(0, 0);
@@ -382,9 +371,9 @@ void nokia_image(const uint8 *Bmp )
   }
 }
 
-void nokia_write_big_number( uint8 x, uint8 y, uint8 n, uint8 Color )
+void nokia_write_big_number( uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
 {
-  uint8 i, chr;
+  uint8_t i, chr;
   for(i = 0; i < 42; i++)
   {
      if(i % 14 == 0)
@@ -403,9 +392,9 @@ void nokia_write_big_number( uint8 x, uint8 y, uint8 n, uint8 Color )
     }
 }
 
-void nokia_write_med_number( uint8 x, uint8 y, uint8 n, uint8 Color )
+void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
 {
-    uint8 i, chr;
+    uint8_t i, chr;
     for (i = 0; i < 24; i++) 
     {
         if (i % 12 == 0) 
@@ -420,6 +409,17 @@ void nokia_write_med_number( uint8 x, uint8 y, uint8 n, uint8 Color )
             chr = ~chr;
         }
 
+        nokia_write(LCD_DATA, chr);
+    }
+}
+
+void nokia_putc(uint8_t caracter)
+{
+    uint8_t i, chr;
+
+    for(i = 0; i < 5; i++)
+    {
+        chr = ASCII_TABLE[caracter - 0x20][i];
         nokia_write(LCD_DATA, chr);
     }
 }

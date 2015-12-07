@@ -19,9 +19,9 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "lcd.h"
 #include <stdio.h>
@@ -29,23 +29,23 @@
 #include <string.h> 
 #include <stdarg.h>
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief Variavel de configuracao dos pinos do LCD*/
 DisplayLcd display;
 
 /** @brief Buffer que contem a rotina de inicialização do LCD 2x16 e 4x20 */
-int8 const LCD_INIT_STRING[4] =
+const uint8_t LCD_INIT_STRING[4] =
 {
     0x20 | (2 << 2), // Func set: 4-bit, 2 linhas, caracter 5x8
     0xC, 			// Display ligado
@@ -53,13 +53,57 @@ int8 const LCD_INIT_STRING[4] =
     6 				// Incrementa cursor
 };
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+
+/** @brief Rotina de inicializacao do Display*/
+static void lcd_init(void);
+
+/**
+ * @brief funcaoo que se encarreca de enviar um dado ou uma instrucao ao lcd.
+ * @param 0(instrucao), 1(Dado).
+ * @param endereco do lcd onde o dado sera escrito.
+ */
+static void lcd_send_byte(uint8_t address, uint8_t n);
+
+/**
+ * @brief funcao que enviara os primeiros 4 bits menos significativos nas saidas db4 a db7 do lcd.
+ * @param dado de 8bits onde somente os 4 primeiros serao usados no envio de comandos do lcd.
+ */
+static void lcd_send_nibble(uint8_t nibble);
+
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
+
+static void lcd_init(void)
+{
+    uint8_t i;
+
+
+    GPIO_regPin_outputLow(&display.rs);
+    GPIO_regPin_outputLow(&display.e);
+
+    Delay_ms(15);
+
+    for(i = 0; i < 3; i++)
+    {
+        lcd_send_nibble(0x03);
+
+        Delay_ms(5);
+    }
+
+    lcd_send_nibble(0x02);
+
+    for(i = 0; i < sizeof (LCD_INIT_STRING); i++)
+    {
+        lcd_send_byte(0, LCD_INIT_STRING[i]);
+
+        Delay_ms(5);
+    }
+}
 
 void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7)
 {
@@ -84,34 +128,35 @@ void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, re
     lcd_init();
 }
 
-void lcd_init(void)
-{   
-    int8 i;
+void lcd_gotoxy(uint8_t coluna, uint8_t linha)
+{
+    int8_t address;
 
-
-    GPIO_regPin_outputLow(&display.rs);
-    GPIO_regPin_outputLow(&display.e);
-    
-    Delay_ms(15);
-
-    for(i = 0; i < 3; i++)
+    switch(linha)
     {
-        lcd_send_nibble(0x03);
+        case 1:
+            address = 0x80; //linha 1
+        break;
+
+        case 2:
+            address = 0xC0; //linha 2
+        break;
+
+        case 3:
+            address = 0x94; //linha 3
+        break;
         
-        Delay_ms(5);
+        case 4:
+            address = 0xD4; //linha 4
+        break;
     }
 
-    lcd_send_nibble(0x02);
+    address += coluna - 1;
 
-    for(i = 0; i < sizeof (LCD_INIT_STRING); i++)
-    {
-        lcd_send_byte(0, LCD_INIT_STRING[i]);
-        
-        Delay_ms(5);
-    }
+    lcd_send_byte(0, address);
 }
 
-void lcd_send_nibble(int8 nibble)
+static void lcd_send_nibble(uint8_t nibble)
 {
     Byte aux;
 
@@ -132,7 +177,7 @@ void lcd_send_nibble(int8 nibble)
     GPIO_regPin_outputLow(&display.e);
 }
 
-void lcd_send_byte(int8 n, int8 address)
+static void lcd_send_byte(uint8_t n, uint8_t address)
 {
     GPIO_regPin_outputLow(&display.rs);
     
@@ -155,9 +200,9 @@ void lcd_send_byte(int8 n, int8 address)
     lcd_send_nibble(address & 0xf); //envia os primeiros 4 bits menis significativos
 }
 
-void lcd_send_string(int8 *fmt)
+void lcd_print(const uint8_t *fmt)
 {
-    uint8 c;
+    uint8_t c;
     while((c = *fmt) != '\0')
     {
         lcd_send_byte(1, c);
@@ -165,114 +210,7 @@ void lcd_send_string(int8 *fmt)
     }
 }
 
-void lcd_gotoxy(int8 coluna, int8 linha)
-{
-    int8 address;
-
-    switch(linha)
-    {
-        case 1:
-            address = 0x80; //linha 1
-        break;
-
-        case 2:
-            address = 0xC0; //linha 2
-        break;
-
-        case 3:
-            address = 0x94; //linha 3
-        break;
-        
-        case 4:
-            address = 0xD4; //linha 4
-        break;
-    }
-    
-    address += coluna - 1;
-    
-    lcd_send_byte(0, address);
-}
-
-void lcd_printf(int8 *c, ...)
-{
-    va_list pa;
-    int8 a;    
-    int16 d;
-    uint16 u;
-    int8 *s;
-
-    va_start(pa, c);
-
-    while(*c != '\0')
-    {
-        if(*c == '%')
-        {
-            switch(*++c)
-            {
-                case '%': lcd_send_byte(1, '%');
-                break;
-
-                case 'c': /* int8 caracter*/
-
-                	a = va_arg(pa, int);
-                    lcd_send_byte(1, (int8)a);
-
-                break;
-                
-                case 's': /* string */
-
-                    s = va_arg(pa, int8 *);
-                    lcd_send_string(s);
-
-                break;
-
-                case 'd': /* int16*/
-
-                    d = va_arg(pa, int);
-                    lcd_print_int16((int16)d);
-
-                break;
-
-                case 'u': /* uint16*/
-
-                    u = va_arg(pa, int);
-                    lcd_print_uint16((uint16)u);
-
-                break;
-
-            }
-        }
-        else
-        {
-            switch(*c)
-            {
-                case '\f': //Limpa LCD
-                    lcd_send_byte(0, 1);
-                    Delay_ms(2);
-                break;
-
-                case '\n': // Pula Linha
-                    lcd_gotoxy(1, 2);
-                break;
-
-                case '\b': // Volta um caracter
-                    lcd_send_byte(0, 0x10);
-                break;
-
-                default: // Escreve o caracter
-                    lcd_send_byte(1, *c);
-                break;
-            }
-        }
-
-        c++;
-    }
-    
-    va_end(pa);
-}
-
-
-void lcd_putc(uint8 c)
+void lcd_putc(uint8_t c)
 {
 	switch(c)
 	{
@@ -294,61 +232,3 @@ void lcd_putc(uint8 c)
 		break;
 	}
 }
-
-void lcd_print_uint16(uint16 n)
-{
-    unsigned cnt = 0;
-    int8 buffer[11];
-
-    do
-    {
-        buffer[cnt] = n % 10; // Resto da divisao, sempre o primeiro digito
-        n = n / 10; //exclui o digito fazendo a divisao
-        cnt++; //incrementa contador
-    }while (n); // repete ate valor n==0
-
-    for (; cnt; cnt--)
-    {
-        lcd_send_byte(1, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
-    }
-}
-
-void lcd_print_int16(int16 n)
-{
-	unsigned cnt = 0;
-    uint8 flag_negativo;
-    volatile int8 buffer[11];
-    flag_negativo = 0;
-    if(n < 0)
-    {
-        n = -n;
-        flag_negativo = 1;
-    }
-    do
-    {
-        buffer[cnt] = n % 10; // Resto da divisao, sempre o primeiro digito
-        n = n / 10; //exclui o digito fazendo a divisao
-        cnt++; //incrementa contador
-    }
-    while(n); // repete ate valor n==0
-
-    if(flag_negativo)
-    {
-        //cnt++;
-        buffer[++cnt] = 0x2D;
-    }
-
-    for(; cnt; cnt--)
-    {
-        if(buffer[cnt] == 0x2D)
-        {
-            lcd_send_byte(1, 0x2D);
-        }
-        else
-        {
-            lcd_send_byte(1, buffer[cnt - 1] + '0'); //soma o valor do buffer com o valor do caracter zero 0x30.
-        }
-    }
-}
-
-

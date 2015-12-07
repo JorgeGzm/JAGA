@@ -19,29 +19,29 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include <stdarg.h>
 #include <avr/interrupt.h>
 
-#include "../Header/sys_uart.h"
+#include "sys_uart.h"
 #include "gpio/hal_gpio.h"
 #include "uart/hal_uart.h"
-#include "serial/serial.h"
 #include "lcd/lcd.h"
+#include "xprintf/xprintf.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
 #define UART_BAUD 9600
 #define MYUBRR (((F_CPU / (UART_BAUD * 16UL))) - 1)
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
 /**@brief TODO documentar*/
 typedef enum
@@ -51,16 +51,16 @@ typedef enum
 	ST_END
 } RX_STATES;
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 /** @brief TODO documentar */
-int decode(uint8 data, uint8 buf[]);
+int decode(uint8_t data, uint8_t buf[]);
 
 /** @brief Funcao callback da interrupcao do RX da UART1*/
 void uart_rx(void);
@@ -68,11 +68,11 @@ void uart_rx(void);
 /** @brief Funcao callback da interrupcao do TX da UART1*/
 void uart_tx(void);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
-int decode(uint8 data, uint8 buf[])
+int decode(uint8_t data, uint8_t buf[])
 {
 
 	static int ind = 0;
@@ -110,23 +110,28 @@ int decode(uint8 data, uint8 buf[])
 	return ret;
 }
 
-void uart0_rx(uint8 c)
+void uart0_rx(uint8_t c)
 {
 	static unsigned char buf[5];
 
 	if (decode(c, buf))
 	{
 		lcd_gotoxy(1, 1);
-		lcd_printf((int8 *)"\fUART Message:  ");
+		xprintf(lcd_putc, (uint8_t *)"\fUART Message:  ");
 		lcd_gotoxy(1, 2);
-		lcd_printf((int8 *)"%s", &buf);
-		serial_printf(0, (int8 *)"\r\n%s", &buf);
+		xprintf(lcd_putc, (uint8_t *)"%s", &buf);
+		xprintf(callback_uart0_putc, (uint8_t *)"\r\n%s", &buf);
 	}
 }
 
 void uart0_tx(void)
 {
 	
+}
+
+void callback_uart0_putc(uint8_t value)
+{
+	uart0_putc(value);
 }
 
 void init_uart(void)

@@ -22,17 +22,18 @@
 #ifndef HAL_UART_H
 	#define	HAL_UART_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 #include "types/types.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 /** @brief TODO*/
 #define _UART0   0x0000
@@ -116,17 +117,17 @@
 /** @brief TODO*/
 #define BAUD_115200 4
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief TODO
@@ -143,7 +144,7 @@ void uart_attach(regPin reg, regGPIO port);
  * @param rx Habilita ou Desabilita a interrupcao modulo receptor da porta serial
  * @param tx Habilita ou Desabilita a interrupcao modulo transmissao da porta serial
  */
-void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx);
+void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
@@ -156,7 +157,7 @@ void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx);
  *  ENABLE: Habilita transmissao de dados como interrupcao de alta prioridade \n
  *  DISABLE: Habilita transmissao de dados como interrupcao de baixa prioridade \n
  */
-void uart_priority_interrupt(uint8 module, uint8 rx, uint8 tx);
+void uart_priority_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
@@ -172,7 +173,7 @@ void uart_priority_interrupt(uint8 module, uint8 rx, uint8 tx);
  *  UART_ENABLE_TX: Habilita transmissao. \n
  *  UART_DISABLE_TX: Desabilita transmissao.
  */
-void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 enable_tx);
+void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx);
 
 /**
  * @brief TODO
@@ -194,7 +195,7 @@ void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 ena
  *  UART_BD_8BITS: Gerador de baud rate de 8 bits. \n
  *  UART_BD_16BITS: Gerador de baud rate de 16 bits.
  */
-void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint8 tx9bits, uint8 bd16bits);
+void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits, uint8_t bd16bits);
 
 /**
  * @brief TODO
@@ -205,7 +206,7 @@ void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint
  *  BAUD_19200: \n
  *  BAUD_115200: \n
  */
-void uart_set_baudRate(uint8 module, uint8 value);
+void uart_set_baudRate(uint8_t module, uint8_t value);
 
 /**
  * @brief TODO
@@ -213,7 +214,7 @@ void uart_set_baudRate(uint8 module, uint8 value);
  *  _UART1: UART 1.  \n
  * @param func
  */
-void uart_rx_set_callbak(uint8 module, void (*func)(uint8));
+void uart_rx_set_callbak(uint8_t module, void (*func)(uint8_t));
 
 /**
  * @brief TODO
@@ -221,18 +222,18 @@ void uart_rx_set_callbak(uint8 module, void (*func)(uint8));
  *  _UART1: UART 1. \n
  * @param func
  */
-void uart_tx_set_callbak(uint8 module, void (*func)(void));
+void uart_tx_set_callbak(uint8_t module, void (*func)(void));
 
 /**
  * @brief A funcao envia um  byte  pela porta serial.
  * @param UI8_caracter recebe o byte que sera enviado pela serial.
  */
-void uart0_putc(uint8 UI8_caracter);
+void uart0_putc(uint8_t UI8_caracter);
 
 /**
  * @brief TODO
  * @return Retorna dado recebido pela serial.
  */
-inline uint8 uart0_get_data(void);
+inline uint8_t uart0_getc(void);
 
 #endif	

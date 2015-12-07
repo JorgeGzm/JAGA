@@ -19,36 +19,36 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_pwm.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void pwmMCU_set_frequencia(float frequencia)
 {
     float aux_PR2;    
-    uint8 retry = 0;
+    uint8_t retry = 0;
     float aux_prescaler = 1.00;
     
     //Estes bits são os dois bits menos significativos do ciclo PWM 10 bits.
@@ -65,7 +65,7 @@ void pwmMCU_set_frequencia(float frequencia)
         //verifia se o calculo nao gerou o estouro da variavel PR2
         if (aux_PR2 <= 255.00 && aux_PR2 >= 0.00) 
         {
-             PR2 = (uint8)aux_PR2;
+             PR2 = (uint8_t)aux_PR2;
              break;
         }
         //tenta deixar o valor de PR2 calculo dentro do range alterando o Prescaler.
@@ -94,14 +94,14 @@ void pwmMCU_set_frequencia(float frequencia)
     }while(retry <= 2);
 }
 
-void pwmMCU_setup_tmr(uint8 enable, float frequencia)
+void pwmMCU_setup_tmr(uint8_t enable, float frequencia)
 {
     //habilitar TIMER2 do pwm
     T2CONbits.TMR2ON = enable;
     pwmMCU_set_frequencia(frequencia);
 }
 
-void pwmMCU_setup_conf(uint8 func, uint8 ccp)
+void pwmMCU_setup_conf(uint8_t func, uint8_t ccp)
 {
     //Bits de configuração de saída PWM Aprimorado
     CCP1CONbits.P1M = func;
@@ -113,7 +113,7 @@ void pwmMCU_set_fduty(float duty)
 {
     UWord aux_10bts;
     float aux_duty;
-    uint16 np; //numero de passos
+    uint16_t np; //numero de passos
 
     //verifica se a porcentagem passada esta dentro do range
     if (duty <= 100.00 && duty >= 0.00)
@@ -123,7 +123,7 @@ void pwmMCU_set_fduty(float duty)
         
         //Calculo para o valor de saida do duty cicle em porcentagem
         aux_duty = (np * duty) / 100.00;
-        aux_10bts.value = (uint16) aux_duty;
+        aux_10bts.value = (uint16_t) aux_duty;
 
         //passagem do duty cycle calculado aos registradores do Microcontrolador.
         //CPPR1L+<DC1B1:DC1B0>(10bits)
@@ -135,7 +135,7 @@ void pwmMCU_set_fduty(float duty)
 }
 
 
-void pwmMCU_set_duty(uint8 duty)
+void pwmMCU_set_duty(uint8_t duty)
 {
     UWord aux_10bts;
     aux_10bts.b.b1 = duty;

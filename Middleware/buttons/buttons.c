@@ -19,16 +19,16 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
  
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "buttons.h"
 #include "config_buttons.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
 #ifndef BUTTON_PRESSED_STATE
 #error "BUTTON_PRESSED_STATE no defined in config_buttons.h"
@@ -38,24 +38,24 @@
 #error "BOUNCE no defined in config_buttons.h"
 #endif
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
 /** @brief Estrutura usada no controle do estado das teclas. */
 typedef union 
 {
     /** @brief Varivel de 16bits usada no controle geral das teclas. */
-    uint16 value;
+    uint16_t value;
 
     /** @brief Estrutura que quebra a variavel de "value" de 16 bits em 2 de 8bits. */
     struct
     {
          /** @brief Parte baixa que contem estados das teclas*/
-        uint8 status;
+        uint8_t status;
 
          /** @brief Parte alta que contem temporizador do debouce e se alguma tecla esta ou continua pressioada. */
-        uint8 control;
+        uint8_t control;
     }b;
 
     /** @brief Estrutura que quebra a variavel "value" de 16bits para acesso bit a bit. */
@@ -102,9 +102,9 @@ typedef union
     };
 }Buttons;
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief Variavel que recebe a atualizacao do estado das teclas a cada 10ms*/
 static volatile Buttons buttons;
@@ -115,17 +115,17 @@ static volatile Buttons buttons_instant_read;
 /** @brief Vetor que informa quais pinos do microcontrolador sao usados para cada tecla.*/
 regPin buttons_pin[BUTTON_SIZE];
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void buttons_init(void)
 {
-    uint8 i;
+    uint8_t i;
 
     for (i = 0; i<sizeof (BUTTON_SIZE); i++)
     {
@@ -134,9 +134,9 @@ void buttons_init(void)
     }
 }
 
-void button_attach(uint8 index, regGPIO reg) 
+void button_attach(uint8_t index, regGPIO reg)
 {
-    //indica o pino do microcontrolador que sera usado para o botao
+    //Indica o pino do microcontrolador que sera usado para o botao
     GPIO_regPin_attach(&buttons_pin[index], &reg);
 
     //Configura pino do microcontrolador como entrada
@@ -145,7 +145,7 @@ void button_attach(uint8 index, regGPIO reg)
 
 void buttons_read_isr_10ms(void) 
 {
-    uint8 i;
+    uint8_t i;
 
     buttons_instant_read.b.status = 0;
 
@@ -182,7 +182,7 @@ void buttons_read_isr_10ms(void)
     }
 }
 
-uint8 buttons_check_press(BUTTON_NAME button_mask, BUTTON_CHECK_TYPE press) 
+uint8_t buttons_check_press(BUTTON_NAME button_mask, BUTTON_CHECK_TYPE press)
 {
     if (press == BTN_PULSE) 
     {

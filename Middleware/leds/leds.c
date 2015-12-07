@@ -19,23 +19,23 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "leds.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /**@brief TODO */
 regPin leds[NUM_LEDS] = {
@@ -61,13 +61,37 @@ Leds leds_blink_slow;
 /** @brief Indicao das Leds que estao piscando rapido */
 Leds leds_blink_fast; 
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+/**
+ * @brief Verifica quals leds serao ligados
+ * @param UI8_LedsMask: mascara que contem quais leds serao ligados.
+ */
+static void leds_on(uint8_t leds_mask);
+
+/**
+ * @brief Verifica quals leds serao desligados
+ * @param UI8_LedsMask: mascara que contem quais leds serao desligados
+ */
+static void leds_off(uint8_t leds_mask);
+
+/**
+ * @brief Inverte as leds representadas pelos bits 1 da mascara de entrada
+ * @param UI8_LedsMask: mascara que contem quais leds serao invertidos
+ */
+static void leds_reverse(uint8_t leds_mask);
+
+/**
+ * @brief TODO
+ * @param out
+ */
+static void leds_write(uint8_t out);
+
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void leds_init(void)
 {
@@ -78,12 +102,12 @@ void leds_init(void)
     leds_blink_fast.UI8_value = 0;
 }
 
-void leds_set(uint8 in_leds, uint8 action)
+void leds_set(uint8_t in_leds, uint8_t action)
 {
     // Variaveis locais
-    uint8 leds_temp; /// auxiliar para opera��es logicas
+    uint8_t leds_temp; /// auxiliar para operacoes logicas
 
-    // verifica qual ac�o que as leds em quest�o deve executar
+    // verifica qual acao que as leds em questao deve executar
     switch (action)
     {
         case LED_OFF:
@@ -162,7 +186,7 @@ void leds_set(uint8 in_leds, uint8 action)
     }
 }
 
-void leds_attach(uint8 index, regGPIO reg)
+void leds_attach(uint8_t index, regGPIO reg)
 {
     //Aloca o pino para o botao
     GPIO_regPin_attach(&leds[index], &reg);
@@ -173,8 +197,8 @@ void leds_attach(uint8 index, regGPIO reg)
 
 void leds_action_isr_100ms(void)
 {
-    static uint8 timer_led_slow_reverse_counter = 0; /// variavel de controle do blink lento
-    static uint8 timer_led_fast_reverse_counter = 0; /// controle do blink rapido
+    static uint8_t timer_led_slow_reverse_counter = 0; /// variavel de controle do blink lento
+    static uint8_t timer_led_fast_reverse_counter = 0; /// controle do blink rapido
 
     // soma 1 nos contadores
     timer_led_slow_reverse_counter++;
@@ -201,10 +225,10 @@ void leds_action_isr_100ms(void)
     }
 }
 
-void leds_reverse(uint8 leds_mask)
+static void leds_reverse(uint8_t leds_mask)
 {
     // Variaveis locais
-    uint8 leds_temp; /// auxiliar para opera��es logicas
+    uint8_t leds_temp; /// auxiliar para opera��es logicas
 
     // verifica se a mascara tem algum bit ativo
     if (leds_mask)
@@ -225,9 +249,9 @@ void leds_reverse(uint8 leds_mask)
     }
 }
 
-void leds_on(uint8 leds_mask)
+static void leds_on(uint8_t leds_mask)
 {
-    uint8 aux;
+    uint8_t aux;
     // executa um OU para ativar os bits
     UN_ledsStatus.UI8_value = UN_ledsStatus.UI8_value | leds_mask;
 
@@ -238,11 +262,11 @@ void leds_on(uint8 leds_mask)
     leds_write(aux);
 }
 
-void leds_off(uint8 leds_mask)
+static void leds_off(uint8_t leds_mask)
 {
     // Variaveis locais
-    uint8 aux;
-    uint8 leds_temp; /// auxiliar para opera��es logicas
+    uint8_t aux;
+    uint8_t leds_temp; /// auxiliar para opera��es logicas
 
     // devemos desligar os bits
     leds_temp = UN_ledsStatus.UI8_value ^ leds_mask;
@@ -255,9 +279,9 @@ void leds_off(uint8 leds_mask)
     leds_write(aux);
 }
 
-uint8 leds_status(void)
+uint8_t leds_status(void)
 {
-    uint8 index;
+    uint8_t index;
     UByte status;
     status.value = 0;
 
@@ -271,9 +295,9 @@ uint8 leds_status(void)
     return(status.value);
 }
 
-void leds_write(uint8 out)
+static void leds_write(uint8_t out)
 {
-    uint8 index;
+    uint8_t index;
 
     for (index = 0; index < NUM_LEDS; index++)
     {

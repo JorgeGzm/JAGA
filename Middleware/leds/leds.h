@@ -22,16 +22,17 @@
 #ifndef LEDS_H_
 #define LEDS_H_
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
 #include "types/types.h"
-    #include "gpio/hal_gpio.h"
+#include "gpio/hal_gpio.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 #define LD1G 0x01   
 #define LD2G 0x02   
@@ -49,14 +50,14 @@
 #define LED_BLINK_SLOW_STEP 10
 #define LED_BLINK_FAST_STEP 3
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** @brief TODO*/
 typedef union
 {
-    uint8 UI8_value;
+    uint8_t UI8_value;
 
     struct
     {
@@ -85,13 +86,13 @@ typedef struct
 }LD;
 
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief TODO
@@ -113,13 +114,7 @@ void leds_init(void);
  *                    LED_BLINK_SLOW = devemos fazer as leds piscarem lentamente
  *                    LED_BLINK_FAST = devemos fazer as leds piscarem rapidamente
  */
-void leds_set(uint8 in_leds, uint8 action);
-
-/**
- * @brief Inverte as leds representadas pelos bits 1 da mascara de entrada
- * @param UI8_LedsMask: mascara que contem quais leds serao invertidos
- */
-void leds_reverse(uint8 leds_mask);
+void leds_set(uint8_t in_leds, uint8_t action);
 
 /**
  * @brief verifica se o timer para a revers�o dos leds estourou tanto no slow como no fast
@@ -128,34 +123,16 @@ void leds_reverse(uint8 leds_mask);
 void leds_action_isr_100ms(void);
 
 /**
- * @brief Verifica quals leds serao ligados
- * @param UI8_LedsMask: mascara que contem quais leds serao ligados.
- */
-void leds_on(uint8 leds_mask);
-
-/**
- * @brief Verifica quals leds serao desligados
- * @param UI8_LedsMask: mascara que contem quais leds serao desligados
- */
-void leds_off(uint8 leds_mask);
-
-/**
- * @brief TODO
- * @param out
- */
-void leds_write(uint8 out);
-
-/**
  * @brief TODO
  * @param index TODO
  * @param reg   TODO
  */
-void leds_attach(uint8 index, regGPIO reg);
+void leds_attach(uint8_t index, regGPIO reg);
 
 /**
  * @brief TODO
  * @return TODO
  */
-uint8 leds_status(void);
+uint8_t leds_status(void);
 
 #endif 

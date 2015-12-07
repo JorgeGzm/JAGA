@@ -19,35 +19,35 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_i2c.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief timer ?? TODO implementar temporizador*/
-uint8 tmr_i2c1_tout = 0;
+uint8_t tmr_i2c1_tout = 0;
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 /** @brief Funcao para gerar o temporizador timeout das comunicacoes */
 void isr_1ms_i2c1(void)
@@ -57,17 +57,17 @@ void isr_1ms_i2c1(void)
         tmr_i2c1_tout--;
 }
 
-void set_i2c1_timeout(uint8 valor)
+void set_i2c1_timeout(uint8_t valor)
 {
     tmr_i2c1_tout = valor;
 }
 
-uint8 get_i2c1_timeout(void)
+uint8_t get_i2c1_timeout(void)
 {
     return (tmr_i2c1_tout);
 }
 
-void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck)
+void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck)
 {
     SSPEN = enable_i2c;
 
@@ -83,7 +83,7 @@ void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck)
 //    }
 }
 
-void i2c_setup_master(uint8 modo, uint8 speed, uint8 clock_master)
+void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)
 {
     //bit de controle do slow rate
     SSPSTATbits.SMP = speed;
@@ -101,7 +101,7 @@ void i2c_setup_master(uint8 modo, uint8 speed, uint8 clock_master)
     SSPCON1bits.WCOL = 0; //
 }
 
-void i2c_setup_slave(uint8 modo, int8 speed, uint8 clock_slave)
+void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave)
 {
     //bit de controle do slow rate
     SSPSTATbits.SMP = speed;
@@ -201,7 +201,7 @@ void i2c_ack(void)//I2C_ACK
     while (SSPCON2bits.ACKEN);
 }
 
-uint8 i2c_ack_stat(void)//I2C_TESTA_ACK
+uint8_t i2c_ack_stat(void)//I2C_TESTA_ACK
 {
     return (SSPCON2bits.ACKSTAT);
 }
@@ -223,7 +223,7 @@ void i2c_wait_ack(void)//I2C_TESTA_ACK
         Nop();
 }
 
-int8 i2c_write(uint8 UI8_dado)
+int8_t i2c_write(uint8_t UI8_dado)
 {
     i2c_idle();
     SSPBUF = UI8_dado; //carrega dado a ser transmitido no registrador SSPBUF
@@ -247,7 +247,7 @@ int8 i2c_write(uint8 UI8_dado)
     }
 }
 
-uint8 i2c_read(void)
+uint8_t i2c_read(void)
 {
     //Carrega temporizador timeout
     // set_i2c1_timeout(TOUT_I2C1);
@@ -265,14 +265,14 @@ uint8 i2c_read(void)
     return(SSPBUF);
 }
 
-uint8 i2c(uint8 tipo, uint8 data)
+uint8_t i2c(uint8_t tipo, uint8_t data)
 {
-    uint8 feedback = 0;
+    uint8_t feedback = 0;
 
     switch(tipo)
     {
         case EN_I2C_WRITE:
-            feedback = (uint8)i2c_write(data);
+            feedback = (uint8_t)i2c_write(data);
             break;
 
         case EN_I2C_READ:

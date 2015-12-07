@@ -22,29 +22,30 @@
 #ifndef nOKIAGLCD_H
 #define nOKIAGLCD_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
-#include "types/types.h"
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
+#include "types/types.h"
 #include "delay/hal_delay.h"
 #include "gpio/hal_gpio.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
+//==============================================================================
 // Global Variable
-//------------------------------------------------------------------------------
+//==============================================================================
 
-//------------------------------------------------------------------------------
+//==============================================================================
 // Public Prototype
-//------------------------------------------------------------------------------
+//==============================================================================
 
 /**
  * @brief TODO
@@ -60,46 +61,46 @@ void nokia_attach(regGPIO clk, regGPIO data, regGPIO dc, regGPIO rst, regGPIO sc
  * @brief Envia um dado de forma serial, nao usa a SPI no microcontrolador
  * @param data Valor a ser enviado;
  */
-static void nokia_spi_wr(uint8 data);
+static void nokia_spi_wr(uint8_t data);
 
 /**
  * @brief TODO
  * @param dc Define se o valor enviado é um comando(0) ou um dado(1).
  * @param _data Valor a ser enviado;
  */
-void nokia_write(uint8 dc, uint8 _data);
+void nokia_write(uint8_t dc, uint8_t _data);
 
 /**
  * @brief Define a posicao do cursor no glcd.
  * @param x Posicao horizontal (0 - 83).
  * @param y Pagina situada, posicao vertical ( 0 - 5).
  */
-void nokia_set_cursor(uint8 x, uint8 y);
+void nokia_set_cursor(uint8_t x, uint8_t y);
 
 /**
  * @brief Escreve um caracter no glcd.
  * @param Caracter Caracter a ser escrito.
  * @param Color Fundo invertido, 1 = fundo nao invertido
  */
-void nokia_chr(uint8 caracter, uint8 color);
+void nokia_chr(uint8_t caracter, uint8_t color);
 
 /**
  * @brief Escreve um caracter no glcd.
  * @param Caracter Caracter a ser escrito.
  */
-void nokia_putc(uint8 caracter);
+void nokia_putc(uint8_t caracter);
 
 /**
  * @brief Escreve um caracter no lcd seguindo a tabela ASCII
  * @param map
  */
-void nokia_custom_char(uint8 *map);
+void nokia_custom_char(uint8_t *map);
 
 /**
  * @brief Preenche o display com um conteudo do buffer;
  * @param Buffer Valor, quando for 0x00, limpa a tela;
  */
-void nokia_fill(uint8 Buffer);
+void nokia_fill(uint8_t Buffer);
 
 /**
  * @brif Escreve um texto no lcd;
@@ -108,20 +109,20 @@ void nokia_fill(uint8 Buffer);
  * @param String
  * @param Color
  */
-void nokia_out(uint8 row, uint8 col, uint8 *string, uint8 color);
+void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color);
 
 /**
  * @brief Escreve um texto
  * @param String Ponteiro para o buffer a ser escrito no LCD.
  * @param Color 0 fundo invertido, 1 fundo nao invertido
  */
-void nokia_out_cp(uint8 *String, uint8 Color);
+void nokia_out_cp(uint8_t *String, uint8_t Color);
 
 /**
  * @brief Desenha uma imagem.
  * @param Bmp
  */
-void nokia_image(const uint8 *Bmp);
+void nokia_image(const uint8_t *Bmp);
 
 /**
  * @brief Escreve um numero de tamanho grande.
@@ -130,7 +131,7 @@ void nokia_image(const uint8 *Bmp);
  * @param n
  * @param Color
  */
-void nokia_write_big_number(uint8 x, uint8 y, uint8 n, uint8 Color);
+void nokia_write_big_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color);
 
 /**
  * @brief Escreve um numero de tamanho grande.
@@ -139,6 +140,6 @@ void nokia_write_big_number(uint8 x, uint8 y, uint8 n, uint8 Color);
  * @param n
  * @param Color
  */
-void nokia_write_med_number(uint8 x, uint8 y, uint8 n, uint8 Color);
+void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color);
 
 #endif

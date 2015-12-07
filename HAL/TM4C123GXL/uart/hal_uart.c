@@ -19,45 +19,45 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_uart.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
-
-/**@brief TODO documentar*/
-void (*uart0_rx_callback)(uint8);
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 /**@brief TODO documentar*/
-void (*uart0_tx_callback)();
+void (*uart0_rx_callback)(uint8_t);
 
 /**@brief TODO documentar*/
-void (*uart1_rx_callback)(uint8);
+void (*uart0_tx_callback)(void);
 
 /**@brief TODO documentar*/
-void (*uart1_tx_callback)();
+void (*uart1_rx_callback)(uint8_t);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+/**@brief TODO documentar*/
+void (*uart1_tx_callback)(void);
 
-void uart_rx_set_callbak(uint8 module, void (*func)(uint8))
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
+
+void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t))
 {
 	switch(module)
 	{
@@ -75,7 +75,7 @@ void uart_rx_set_callbak(uint8 module, void (*func)(uint8))
 	}
 }
 
-void uart_tx_set_callbak(uint8 module, void (*func)(void))
+void uart_tx_set_callback(uint8_t module, void (*func)(void))
 {
 	switch(module)
 	{
@@ -94,7 +94,7 @@ void uart_tx_set_callbak(uint8 module, void (*func)(void))
 	}
 }
 
-void uart0_putc(uint8 UI8_caracter)
+void uart0_putc(uint8_t UI8_caracter)
 {
 	// as part of Lab 11, modify this program to use UART0 instead of UART1
 	while((UART0_FR_R&UART_FR_TXFF) != 0);
@@ -103,7 +103,7 @@ void uart0_putc(uint8 UI8_caracter)
 
 
 //__inline uint8 uart_get_data(void)
-uint8 uart0_get_data(void)
+uint8_t uart0_get_data(void)
 {	
 	while((UART0_FR_R&0x0010) != 0);      // wait until RXFE is 0
 	return((unsigned char)(UART0_DR_R&0xFF));
@@ -136,7 +136,7 @@ void UART0_Handler(void)
 	}
 }
 
-void uart1_putc(uint8 UI8_caracter)
+void uart1_putc(uint8_t UI8_caracter)
 {
 	// as part of Lab 11, modify this program to use UART0 instead of UART1
 	while((UART1_FR_R&UART_FR_TXFF) != 0);
@@ -144,7 +144,7 @@ void uart1_putc(uint8 UI8_caracter)
 
 }
 
-uint8 uart1_get_data(void)
+uint8_t uart1_get_data(void)
 {
 	while((UART1_FR_R&0x0010) != 0);      // wait until RXFE is 0
 	return((unsigned char)(UART1_DR_R&0xFF));

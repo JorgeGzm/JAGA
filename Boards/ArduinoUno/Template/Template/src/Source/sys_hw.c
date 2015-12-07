@@ -19,40 +19,49 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
-#include "../Header/sys_hw.h"
-#include "gpio/hal_gpio.h"
-#include "buttons/buttons.h"
-#include "leds/leds.h"
+#include "sys_hw.h"
+#include "app_info.h"
+#include "sys_mcu.h"
+#include "sys_timer.h"
+#include "sys_i2c.h"
+#include "sys_spi.h"
+#include "sys_ad.h"
+#include "sys_pwm.h"
+#include "sys_uart.h"
+#include "sys_gpio.h"
+
 #include "lcd/lcd.h"
-#include "uart/hal_uart.h"
+#include "leds/leds.h"
+#include "buttons/buttons.h"
+#include "xprintf/xprintf.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void setupHardware(void)
 {
-	//inicializa as configuraçoes do micrococontrolador
+	//inicializa as configuracoes do micrococontrolador
 	init_mcu();
 
 	//Inicializa driver das interrupcoes
@@ -79,11 +88,8 @@ void setupHardware(void)
 
 void setupDevices(void)
 {
-	//inicializa informaçoes do equipamento.
+	//inicializa informacoes do equipamento.
 	info_init();
-
-	serial_init();
-	serial_attach(0, uart0_putc);
 	
 	//Inicializa e configura mecanismo de controle das teclas
 	buttons_init();
@@ -93,8 +99,8 @@ void setupDevices(void)
 	//Configura e inicializa pinos que serao usados pela biblioteca LCD.
 	lcd_attach(rB0, rB1, rD4, rD5, rD6, rD7);
 	lcd_gotoxy(1, 1);
-	int8 buff[] = {"Modulo JAGA     "};
-	lcd_printf(&buff);
+	int8_t buff[] = {"Modulo JAGA     "};
+	lcd_print(&buff);
 	
 	//configura mecanismo de controle dos leds
 	leds_init();

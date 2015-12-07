@@ -22,61 +22,21 @@
 #ifndef HAL_GPIO_H
     #define HAL_GPIO_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "delay/hal_delay.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
-#ifndef NULL
-    /** @brief TODO documentar */
-    #define NULL ((*void)0)
-#endif
-
-/**
- * @brief Coloca em 1 o bit x da variável byte. Range(0-7).
- * Exemplo:  set_bit(PORTD, 5);
- * Resultado: PORTD = 0b00010000
- */
-#define	set_bit(value,bit_x)	(value |= (1 << bit_x))
-
-/**
- * @brief coloca em 0 no bit_x da variavel variável byte. Range(0-7).
- * Exemplo:  lr_bit(PORTD, 5);
- * Resultado: PORTD = 0b00000000
- */
-#define	clr_bit(value,bit_x)	(value &= ~(1 << bit_x))
-
-/**
-* @brief Troca o estado lógico do bit x da variável bytex. Range(0-7).
-* Exemplo:   toggle_bit(PORTD, 5);
-* Resultado: PORTD = 0b00000000 ou PORTD = 0b00010000
-*/
-#define toggle_bit(value,bit_x)     (value ^= (1 << bit_x))
-
-/**
- * @brief Retorna 0 ou !0 conforme leitura do bit. Range(0-7).
- * Exemplo:   tst_bit(PORTD, 5);
- * Resultado: x = 0 ou x = 32
- */
-#define tst_bit(value,bit_x)        (value & (1 << bit_x))
-
-/**
- * @brief Retorna 0 ou 1 conforme leitura do bit. Range(0-7).
- * Exemplo:   tst_bit_bool(PORTD, 5);
- * Resultado: x = 0 ou x = 1
- */
-#define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
-
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** @brief Enum que possui a posicao dos pinos*/
 typedef enum
@@ -107,13 +67,13 @@ typedef enum
 typedef struct
 {
     /** @brief TODO*/
-    volatile uint8 *port;
+    volatile uint8_t *port;
     
     /** @brief TODO*/
-    volatile uint8 *tris;
+    volatile uint8_t *tris;
     
     /** @brief TODO*/
-    volatile uint8 *lat;
+    volatile uint8_t *lat;
     
     /** @brief TODO*/
     PinosMCU numPin;
@@ -124,34 +84,34 @@ typedef struct
 typedef struct 
 {
     /** @brief TODO*/
-    volatile uint8 *out;
+    volatile uint8_t *out;
     
     /** @brief TODO*/
-    uint8 pin;
+    uint8_t pin;
     
 }regPin;
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-extern volatile uint8 *ref_PORTA;
-extern volatile uint8 *ref_PORTB;
-extern volatile uint8 *ref_PORTC;
-extern volatile uint8 *ref_PORTD;
-extern volatile uint8 *ref_PORTE;
+extern volatile uint8_t *ref_PORTA;
+extern volatile uint8_t *ref_PORTB;
+extern volatile uint8_t *ref_PORTC;
+extern volatile uint8_t *ref_PORTD;
+extern volatile uint8_t *ref_PORTE;
 
-extern volatile uint8 *ref_TRISA;
-extern volatile uint8 *ref_TRISB;
-extern volatile uint8 *ref_TRISC;
-extern volatile uint8 *ref_TRISD;
-extern volatile uint8 *ref_TRISE;
+extern volatile uint8_t *ref_TRISA;
+extern volatile uint8_t *ref_TRISB;
+extern volatile uint8_t *ref_TRISC;
+extern volatile uint8_t *ref_TRISD;
+extern volatile uint8_t *ref_TRISE;
 
-extern volatile uint8 *ref_LATA;
-extern volatile uint8 *ref_LATB;
-extern volatile uint8 *ref_LATC;
-extern volatile uint8 *ref_LATD;
-extern volatile uint8 *ref_LATE;
+extern volatile uint8_t *ref_LATA;
+extern volatile uint8_t *ref_LATB;
+extern volatile uint8_t *ref_LATC;
+extern volatile uint8_t *ref_LATD;
+extern volatile uint8_t *ref_LATE;
 
 extern regGPIO rA0;
 extern regGPIO rA1;
@@ -193,9 +153,9 @@ extern regGPIO rE0;
 extern regGPIO rE1;
 extern regGPIO rE2;
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /** @brief Rotinha de inicializacao das variaveis abstraidas.*/
 void V_initRefRegisters(void);
@@ -205,7 +165,7 @@ void V_initRefRegisters(void);
  * @param registrador
  * @param UI8_value
  */
-void GPIO_write_data(volatile uint8 *registrador, uint8 UI8_value);
+void GPIO_write_data(volatile uint8_t *registrador, uint8_t UI8_value);
 
 /**
  * @brief TODO documentar
@@ -213,28 +173,28 @@ void GPIO_write_data(volatile uint8 *registrador, uint8 UI8_value);
  * @param pino
  * @param UI8_flag
  */
-void GPIO_outputBit(volatile uint8 *port, uint8 pino, uint8 UI8_flag);
+void GPIO_outputBit(volatile uint8_t *port, uint8_t pino, uint8_t UI8_flag);
 
 /**
  * @brief TODO documentar
  * @param port TODO
  * @param pino TODO
  */
-void GPIO_output_toggle(volatile uint8 *port, uint8 pino);
+void GPIO_output_toggle(volatile uint8_t *port, uint8_t pino);
 
 /**
  * @brief TODO documentar
  * @param port TODO
  * @param pino TODO
  */
-void GPIO_low(volatile uint8 *port, uint8 pino);
+void GPIO_low(volatile uint8_t *port, uint8_t pino);
 
 /**
  * @brief TODO
  * @param port TODO
  * @param pino TODO
  */
-void GPIO_high(volatile uint8 *port, uint8 pino);
+void GPIO_high(volatile uint8_t *port, uint8_t pino);
 
 /**
  * @brief TODO documentar
@@ -248,7 +208,7 @@ void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port);
  * @param pin TODO
  * @return TODO
  */
-uint8 GPIO_regPin_rdBit(regPin *pin);
+uint8_t GPIO_regPin_rdBit(regPin *pin);
 
 /**
  * @brief TODO documentar
@@ -274,14 +234,14 @@ void GPIO_regPin_outputLow(regPin *pin);
  * @param pin TODO
  * @param flag TODO
  */
-void GPIO_regPin_outputBit(regPin *pin, uint8 flag);
+void GPIO_regPin_outputBit(regPin *pin, uint8_t flag);
 
 /**
  * @brief TODO documentar
  * @param pin TODO
  * @return 
  */
-uint8 GPIO_regPin_inputBit(regPin *pin);
+uint8_t GPIO_regPin_inputBit(regPin *pin);
 
 /**
  * @brief TODO

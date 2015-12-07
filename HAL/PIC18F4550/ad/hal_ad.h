@@ -22,17 +22,17 @@
 #ifndef HAL_AD_H
     #define HAL_AD_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 /** @brief Conversor A/D desligado*/
 #define AD_DISABLE      0
@@ -78,9 +78,9 @@
 #define OVER_FLOW 1
 #define UNDER_FLOW 2
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** Seleciona os canais AD que serao usados iniciando de AD_CH0 ate AD_CHX. */
 enum AD_CH
@@ -127,19 +127,19 @@ enum AD_AN
 typedef struct 
 {
     regGPIO reg;
-    uint8 channel;
+    uint8_t channel;
     //void (*set1)(uint8);//configura canal que vai ser usado.  Responsabilidade do AD agora
-    uint16(*read1)(uint8);    
-    uint8 error;    
+    uint16_t(*read1)(uint8_t);    
+    uint8_t error;    
 }Analog;
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Configura tensoes de referencia Vref+ e Vref-.
@@ -150,7 +150,7 @@ typedef struct
  *  AD_VREF_NEG_GND: Seleciona GND como tensao de refencia de VREF-.        \n
  *  AD_VREF_NEG_AN2: Seleciona o pino AN2 como tensao de refencia de VREF-. \n
  */
-void ad_setup_vref(uint8 pVref, uint8 nVref);
+void ad_setup_vref(uint8_t pVref, uint8_t nVref);
 
 /**
  * @brief TODO documentar
@@ -186,7 +186,7 @@ void ad_setup_vref(uint8 pVref, uint8 nVref);
  *  AD_ENABLE:                              \n
  *  AD_DISABLE                              
  */
-void ad_setup_enable(uint8 chanel, uint8 analog_in, uint8 enable);
+void ad_setup_enable(uint8_t chanel, uint8_t analog_in, uint8_t enable);
 
 /**
  * @brief TODO documentar
@@ -209,13 +209,13 @@ void ad_setup_enable(uint8 chanel, uint8 analog_in, uint8 enable);
  *  AD_CK_FOSC_DIV_8:                       \n
  *  AD_CK_FOSC_DIV_2:                       \n
  */
-void ad_setup_clock(uint8 tad, uint8 clock);
+void ad_setup_clock(uint8_t tad, uint8_t clock);
 
 /**
  * @brief TODO documentar
  * @param channel TODO documentar
  * @return TODO documentar
  */
-uint16 ad_read(uint8 channel);
+uint16_t ad_read(uint8_t channel);
 
 #endif	

@@ -22,17 +22,17 @@
 #ifndef HAL_SPI_H
     #define HAL_SPI_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 /**
 *@link http://dlnware.com/theory/SPI-Transfer-Modes
@@ -80,9 +80,9 @@
 #define SPI_CHIPSELECT_DISABLE  0
 #define SPI_CHIPSELECT_ENABLE   1
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 typedef struct
 {
@@ -94,7 +94,7 @@ typedef struct
 
 typedef union
 {
-    uint16 value;
+    uint16_t value;
 
     struct
     {
@@ -107,13 +107,13 @@ typedef union
     };
 }SpiSetup;
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Funcao para inicializar a SPI. \n
@@ -137,54 +137,54 @@ void spi_attach(regGPIO *_sdi, regGPIO *_sdo, regGPIO *_sck, regGPIO *_ss);
  * @param cs
  * @param status
  */
-void spi_set_chipselect(regGPIO chipselect, uint8 status);
+void spi_set_chipselect(regGPIO chipselect, uint8_t status);
 
 /**
  * @brief Funcao para configurar o modo de operacao da SPI.
  * Ex.: spi_set_mode(SPI_MODE_1);
  * @param mode  - Seleciona o modo de operacao da SPI
  */
-void spi_set_mode(uint8 mode);
+void spi_set_mode(uint8_t mode);
 /**
  * @brief Configura o momento da amostragem do dado de entrada.
  * Ex.: spi_set_sampled_time(SPI_SAMPLED_MIDDLE);
  * @param sampled_time
  */
-void spi_set_sampled_time(uint8 sampled_time);
+void spi_set_sampled_time(uint8_t sampled_time);
 
 /**
  * @brief Configura os pinos do microcontrolador como porta serial.
  * Ex.: spi_enalbe(SPI_ENABLE);
  * @param value
  */
-void spi_enable(uint8 value);
+void spi_enable(uint8_t value);
 
 /**
  * @brief Confiura o tipo da comunicao serial (Mestre/Escravo).
  * Ex.: spi_type(SPI_MASTER_FOSC_4);
  * @param type
  */
-void spi_set_type(uint8 type);
+void spi_set_type(uint8_t type);
 
 /**
  * @brief Transmite um dado pela SPI e retorna o dado recebido pela mesma.
  * @param dado: dado a enviar
  * @return dado a recebido
  */
-uint8 spi_wr_rd(uint8 UI8_dado);
+uint8_t spi_wr_rd(uint8_t UI8_dado);
 
 /**
  * @brief Transmite um dado pela SPI 1
  * @param dado: dado a ser transmitido
  * @return
  */
-uint8 spi_write(uint8 dado);
+uint8_t spi_write(uint8_t dado);
 
 /**
  * @brief Recebe um dado pela SPI 1
  * @return dado recebido
  */
-uint8 spi_read(void);
+uint8_t spi_read(void);
 
 #endif
 

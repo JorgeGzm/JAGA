@@ -19,83 +19,85 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
-#include "../Header/app_him.h"
-#include "vars/vars.h"
+#include <stdint.h>
+#include "app_him.h"
+#include "sys_hw.h"
+#include "sys_uart.h"
 #include "types/types.h"
 #include "buttons/buttons.h"
 #include "leds/leds.h"
 #include "lcd/lcd.h"
-#include "serial/serial.h"
-#include "sys_hw.h"
+#include "xprintf/xprintf.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void run_him(void)
 {
-    static uint16 counterA = 0;
-    static uint16 counterB = 0;
-    static uint16 counterC = 0;
+    static uint16_t counterA = 0;
+    static uint16_t counterB = 0;
+    static uint16_t counterC = 0;
     
     if(buttons_check_press(BTN_UP, BTN_PULSE))
     {
         lcd_gotoxy(1, 1);
-        lcd_printf((int8 *)"BUTTON UP       ");
+        xprintf(lcd_putc, (uint8_t *)"BUTTON UP       ");
         
         lcd_gotoxy(1, 2);
-        lcd_printf((int8 *)"%u      ", ++counterA);
+        xprintf(lcd_putc, (uint8_t *)"%u      ", ++counterA);
         
         leds_set(LD1G, LED_BLINK_SLOW);
         leds_set(LD2G, LED_OFF);       
         
-        serial_printf(0, (int8 *)"\r\nButton UP pressed %u times", counterA);
+        xprintf(callback_uart_putc, (uint8_t *)"\r\nButton UP pressed %u times", counterA);
     }
     
     if(buttons_check_press(BTN_DOWN, BTN_CONTINUOS))
     {   
         lcd_gotoxy(1, 1);
-        lcd_printf((int8 *)"BUTTON DOWN     ");
+        xprintf(lcd_putc, (uint8_t *)"BUTTON DOWN     ");
         
         lcd_gotoxy(1, 2);
-        lcd_printf((int8 *)"%u      ", ++counterB);
+        xprintf(lcd_putc, (uint8_t *)"%u      ", ++counterB);
         
         leds_set(LD1G, LED_OFF);
         leds_set(LD2G, LED_BLINK_FAST);
         
-        serial_printf(0, (int8 *)"\r\nButton DOWN pressed %u times", counterB);
+        xprintf(callback_uart_putc, (uint8_t *)"\r\nButton DOWN pressed %u times", counterB);
     }
     
     if(buttons_check_press(BTN_DOWN | BTN_UP, BTN_CONTINUOS))
     {
         lcd_gotoxy(1, 1);
-        lcd_printf((int8 *)"\fBUTTON DOWN + UP");
+        xprintf(lcd_putc, (uint8_t *)"\fBUTTON DOWN + UP");
         
         lcd_gotoxy(1, 2);
-        lcd_printf((int8 *)"%u      ", ++counterC);
+        xprintf(lcd_putc, (uint8_t *)"%u      ", ++counterC);
         
-        leds_set(LD1G | LD2G, LED_BLINK_SLOW);     
-        serial_printf(0, (int8 *)"\r\nButtons DOWN + UP pressed %u times", counterC);
+        leds_set(LD1G | LD2G, LED_BLINK_SLOW);    
+        
+        xprintf(callback_uart_putc, (uint8_t *)"\r\nButtons DOWN + UP pressed %u times", counterC);
     }
 }
 

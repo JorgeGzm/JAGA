@@ -19,48 +19,48 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_spi.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 static SpiDevice spi_device;
 static SpiSetup spi_setup;
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Configura a polaridade do clock da SPI.
  * Ex.: spi_set_cpol(SPI_IDLE_HIGH);
  * @param polaridade
  */
-void spi_set_cpol(uint8 polaridade);
+void spi_set_cpol(uint8_t polaridade);
 
 /**
  * @brief Configura o momento da transmissao do dado pela SPI.
  * Ex.: spi_set_cke(SPI_TRANS_RISING);
  * @param transmissao
  */
-void spi_set_cke(uint8 transmissao);
+void spi_set_cke(uint8_t transmissao);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void spi_init(void)
 {
@@ -94,26 +94,26 @@ void spi_attach(regGPIO *_sdi, regGPIO *_sdo, regGPIO *_sck, regGPIO *_ss)
     }
 }
 
-void spi_set_chipselect(regGPIO chipselect, uint8 status)
+void spi_set_chipselect(regGPIO chipselect, uint8_t status)
 {
     //GPIO_pin_outputBit(chipselect->port, status);
 }
 
-void spi_set_cpol(uint8 polaridade)
+void spi_set_cpol(uint8_t polaridade)
 {
     spi_setup.polarity = polaridade;
 
     SSPCON1bits.CKP = polaridade;
 }
 
-void spi_set_cke(uint8 transmissao)
+void spi_set_cke(uint8_t transmissao)
 {
     spi_setup.transmit = transmissao;
 
     SSPSTATbits.CKE = transmissao;
 }
 
-void spi_set_mode(uint8 mode)
+void spi_set_mode(uint8_t mode)
 {
     spi_setup.mode = mode;
 
@@ -155,7 +155,7 @@ void spi_set_mode(uint8 mode)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-void spi_set_sampled_time(uint8 sampled_time)
+void spi_set_sampled_time(uint8_t sampled_time)
 {
     spi_setup.sampled_time = sampled_time;
 
@@ -168,14 +168,14 @@ void spi_set_sampled_time(uint8 sampled_time)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-void spi_enable(uint8 value)
+void spi_enable(uint8_t value)
 {
     spi_setup.enable = value;
 
     SSPCON1bits.SSPEN = value;
 }
 
-void spi_set_type(uint8 type)
+void spi_set_type(uint8_t type)
 {
     spi_setup.type = type;
 
@@ -194,9 +194,9 @@ void spi_set_type(uint8 type)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-uint8 spi_wr_rd(uint8 UI8_dado)
+uint8_t spi_wr_rd(uint8_t UI8_dado)
 {
-    uint8 temp;
+    uint8_t temp;
 
     // Verifica write collision 
     if(SSPCON1bits.WCOL)
@@ -239,7 +239,7 @@ uint8 spi_wr_rd(uint8 UI8_dado)
     }
 }
 
-uint8 spi_write(uint8 dado)
+uint8_t spi_write(uint8_t dado)
 {   
     if(SSPCON1bits.WCOL)                            //Verifica write collision
     {
@@ -247,7 +247,7 @@ uint8 spi_write(uint8 dado)
     }
     else
     {
-        uint8 temp;
+        uint8_t temp;
          
         // Limpa o buffer
         temp = SSPBUF;
@@ -268,7 +268,7 @@ uint8 spi_write(uint8 dado)
     return (0);
 }
 
-uint8 spi_read(void)
+uint8_t spi_read(void)
 {
     SSPBUF = 0xFF; // initiate bus cycle
     

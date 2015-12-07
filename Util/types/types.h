@@ -22,24 +22,60 @@
 #ifndef TYPES_H
 	#define	TYPES_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
-#include "vars/vars.h"
+#include <stdint.h>
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+/**
+ * @brief coloca em 1 o bit x da variavel byte.
+ * @details Exemplo:  set_bit(PORTD, 5); \n
+ * Resultado: PORTD = 0b00010000
+ */
+#define	set_bit(value,bit_x)	(value |= (1 << bit_x))
+
+/**
+ * @brief coloca em 0 no bit_x da variavel variavel byte.
+ * @details Exemplo:  lr_bit(PORTD, 5);     \n
+ * Resultado: PORTD = 0b00000000
+ */
+#define	clr_bit(value,bit_x)	(value &= ~(1 << bit_x))
+
+/**
+* @brief troca o estado logico do bit x da variavel bytex.
+* @details Exemplo:   toggle_bit(PORTD, 5); \n
+* Resultado: PORTD = 0b00000000 ou PORTD = 0b00010000
+*/
+#define toggle_bit(value,bit_x)     (value ^= (1 << bit_x))
+
+/**
+ * @brief retorna 0 ou !0 conforme leitura do bit.
+ * @details Exemplo:   tst_bit(PORTD, 5);   \n
+ * Resultado: x = 0 ou x = 32
+ */
+#define tst_bit(value,bit_x)        (value & (1 << bit_x))
+
+/**
+ * @brief retorna 0 ou 1 conforme leitura do bit. Range(0-7).
+ * @details Exemplo:   tst_bit_bool(PORTD, 5);  \n
+ * Resultado: x = 0 ou x = 1
+ */
+#define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
+
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** @brief Estrutura para acessar bits individuais de um byte */
+#ifdef UINT8_MAX
 typedef union 
 {
-    uint8 value;
+    uint8_t value;
 
     struct
     {
@@ -53,11 +89,13 @@ typedef union
         unsigned bit7   :1;
     };
 }UByte;
+#endif
 
 /** @brief TODO*/
+#ifdef INT8_MAX
 typedef union 
 {
-    int8 value;
+    int8_t value;
 
     struct
     {
@@ -71,16 +109,18 @@ typedef union
         unsigned bit7   :1;
     };
 }Byte;
+#endif
 
 /** @brief Estrutura de 16 bits que pode ser quebrada em bytes ou bits */
+#ifdef UINT16_MAX
 typedef union 
 {
-    uint16 value;
+    uint16_t value;
 
     struct
     {
-        uint8 b1;
-        uint8 b2;
+        uint8_t b1;
+        uint8_t b2;
     }b;
 
     struct
@@ -104,24 +144,26 @@ typedef union
         unsigned bit15  : 1;
     };
 }UWord;
+#endif
 
 /** @brief TODO*/
+#ifdef UINT32_MAX
 typedef union 
 {
-    uint32 value;
+    uint32_t value;
 
     struct
     {
-        uint8 b1;
-        uint8 b2;
-        uint8 b3;
-        uint8 b4;
+        uint8_t b1;
+        uint8_t b2;
+        uint8_t b3;
+        uint8_t b4;
     }b;
     
     struct
     {
-        uint16 w1;
-        uint16 w2;
+        uint16_t w1;
+        uint16_t w2;
     }w;
 
     struct
@@ -163,36 +205,38 @@ typedef union
         unsigned bit31  : 1;
     };
 }UDWord;
+#endif
 
 /** @brief Estrutura para manipular variaveis grandes */
+#ifdef UINT64_MAX
 typedef union 
 {
-    uint64 value;
+    uint64_t value;
     
     struct
     {
-        uint8 b1;
-        uint8 b2;
-        uint8 b3;
-        uint8 b4;
-        uint8 b5;
-        uint8 b6;
-        uint8 b7;
-        uint8 b8;
+        uint8_t b1;
+        uint8_t b2;
+        uint8_t b3;
+        uint8_t b4;
+        uint8_t b5;
+        uint8_t b6;
+        uint8_t b7;
+        uint8_t b8;
     }b;
     
     struct
     {
-        uint16 w1;
-        uint16 w2;
-        uint16 w3;
-        uint16 w4;
+        uint16_t w1;
+        uint16_t w2;
+        uint16_t w3;
+        uint16_t w4;
     } w;
     
     struct
     {
-        uint32 dw1;
-        uint32 dw2;
+        uint32_t dw1;
+        uint32_t dw2;
     } dw;
     
     struct
@@ -272,13 +316,13 @@ typedef union
 
     
 }UQWord;
+#endif
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
-
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 #endif	

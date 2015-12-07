@@ -22,19 +22,19 @@
 #ifndef INFO_HW_H
     #define INFO_HW_H
 
-#include "vars/vars.h"
+#include <stdint.h>
 #include "types/types.h"
 
 /**
  *  Extern Functions
  */
-void set_num_serie(uint16 num_serie_h, uint16 num_serie_l);
-void set_release(uint16 _release);
-void set_version(uint16 _version);
-void set_id_device(uint16 _id);
-void set_pwd_device(uint8 celula);
-uint16 get_pwd_device(void);
-void set_data_active(uint16 high,uint16 middle, uint16 low);
+void set_num_serie(uint16_t num_serie_h, uint16_t num_serie_l);
+void set_release(uint16_t _release);
+void set_version(uint16_t _version);
+void set_id_device(uint16_t _id);
+void set_pwd_device(uint8_t celula);
+uint16_t get_pwd_device(void);
+void set_data_active(uint16_t high, uint16_t middle, uint16_t low);
 //Timestamp get_data_active(void);
 
 //Variaveis externas

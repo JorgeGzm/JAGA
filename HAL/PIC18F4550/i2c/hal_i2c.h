@@ -22,17 +22,17 @@
 #ifndef HAL_I2C_H
     #define HAL_I2C_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
  /** habilita porta serial sincrona e configura SCL e SDA respectivamente como pinos de clock e dado */
 #define I2C_EN_PIN_I2C 1
@@ -94,9 +94,9 @@
 /**@brief */
 #define TOUT_I2C1       50
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** @brief Comandos I2C */
 typedef enum 
@@ -113,24 +113,24 @@ typedef enum
     EN_I2C_IDLE,
 }I2C_COMMAND;
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-extern uint8 tmr_i2c1_tout;
+extern uint8_t tmr_i2c1_tout;
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Configura temporizador timeout
  * @param valor: valor do timer
  */
-void set_i2c1_timeout(uint8);
+void set_i2c1_timeout(uint8_t);
 
 /** @brief retorna valor do timer*/
-uint8 get_i2c1_timeout(void);
+uint8_t get_i2c1_timeout(void);
 
 /**
  * @brief Porta serial concrona habilitada(quando habilitada, pos pinos SDA e SCL, precisam
@@ -140,7 +140,7 @@ uint8 get_i2c1_timeout(void);
  * @param sda   pino configurado para dado da i2c
  * @param sck   Pino configurado para o clock da I2C
  */
-void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck);
+void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck);
 
 /**
  * @brief Configura i2c para funcionar como mestre
@@ -153,7 +153,7 @@ void i2c_setup_enable(uint8 enable_i2c, regGPIO *sda, regGPIO *sck);
  * @param clock_master Clock = Fosc/[4x(SSPAD+1)], apenas para I2C_MASTER_CLOCK \n
  *  I2C_CK_240KHz: configura clock em 240kHz    \n
  */
-void i2c_setup_master(uint8 modo, uint8 speed, uint8 clock_master);
+void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master);
 
 /**
  * @brief Configura i2c para funcionar como slave
@@ -167,7 +167,7 @@ void i2c_setup_master(uint8 modo, uint8 speed, uint8 clock_master);
  *  I2C_SPEED_SLOW: \n
  * @param clock_slave   \n
  */
-void i2c_setup_slave(uint8 modo, int8 speed, uint8 clock_slave);
+void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave);
 
 //void i2c_setup();
 /**
@@ -228,13 +228,13 @@ void i2c_wait_ack(void);
  * @param UI8_dado
  * @return
  */
-int8 i2c_write(uint8 UI8_dado);
+int8_t i2c_write(uint8_t UI8_dado);
 
 /**
  * @brief Le um byte do barramento I2C
  * @return dado lido
  */
-uint8 i2c_read(void);
+uint8_t i2c_read(void);
 
 /**
  * @brief Depois de cada byte e transmitido o dispositivo mestre precisa
@@ -242,7 +242,7 @@ uint8 i2c_read(void);
  * recebido no nono pulso de clock. O bit ACKSTAT indica se o dispositivo escravo
  * recebeu ou nao o byte transmito.
  */
-uint8 i2c_ack_stat(void);
+uint8_t i2c_ack_stat(void);
 
 /**
  * @brief Funcao que contem todos os camandos da comunicacao i2c habstraidas.
@@ -250,6 +250,6 @@ uint8 i2c_ack_stat(void);
  * @param UI8_data Dado que deseja ser enviado.
  * @return Dado recebido.
  */
-uint8 i2c(uint8 UI8_tipo, uint8 UI8_data);
+uint8_t i2c(uint8_t UI8_tipo, uint8_t UI8_data);
 
 #endif

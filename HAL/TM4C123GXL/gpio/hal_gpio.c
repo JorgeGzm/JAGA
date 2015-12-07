@@ -19,30 +19,30 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_gpio.h"
 #include "device/hal_device.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief variavel abstrair para trarar com o PORTA*/
-volatile uint32 *ref_PORTA = &GPIO_PORTA_DATA_R;
+volatile uint32_t *ref_PORTA = &GPIO_PORTA_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISA*/
-volatile uint32 *ref_TRISA = &GPIO_PORTA_DIR_R;
+volatile uint32_t *ref_TRISA = &GPIO_PORTA_DIR_R;
 
 regGPIO rA0 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_0};	//Virtual COM Port Signals - U0RX
 regGPIO rA1 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_1};	//Virtual COM Port Signals - U0TX
@@ -56,10 +56,10 @@ regGPIO rA7 = { &GPIO_PORTA_DATA_R, &GPIO_PORTA_DIR_R, 0, PIN_7};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstrair para trarar com o PORTB*/
-volatile uint32 *ref_PORTB = &GPIO_PORTB_DATA_R;
+volatile uint32_t *ref_PORTB = &GPIO_PORTB_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISB*/
-volatile uint32 *ref_TRISB = &GPIO_PORTB_DIR_R;
+volatile uint32_t *ref_TRISB = &GPIO_PORTB_DIR_R;
 
 regGPIO rB0 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_0};
 regGPIO rB1 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_1};
@@ -73,10 +73,10 @@ regGPIO rB7 = { &GPIO_PORTB_DATA_R, &GPIO_PORTB_DIR_R, 0, PIN_7};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstrair para trarar com o PORTC*/
-volatile uint32 *ref_PORTC = &GPIO_PORTC_DATA_R;
+volatile uint32_t *ref_PORTC = &GPIO_PORTC_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISC*/
-volatile uint32 *ref_TRISC = &GPIO_PORTC_DIR_R;
+volatile uint32_t *ref_TRISC = &GPIO_PORTC_DIR_R;
 
 //regGPIO rC0 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_0}; //In-Circuit Debug
 //regGPIO rC1 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_1}; //In-Circuit Debug
@@ -90,10 +90,10 @@ regGPIO rC7 = { &GPIO_PORTC_DATA_R, &GPIO_PORTC_DIR_R, 0, PIN_7};
 
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 /** variavel abstrair para trarar com PORTD*/
-volatile uint32 *ref_PORTD = &GPIO_PORTD_DATA_R;
+volatile uint32_t *ref_PORTD = &GPIO_PORTD_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISD*/
-volatile uint32 *ref_TRISD = &GPIO_PORTD_DIR_R;
+volatile uint32_t *ref_TRISD = &GPIO_PORTD_DIR_R;
 
 regGPIO rD0 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_0};
 regGPIO rD1 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_1};
@@ -107,10 +107,10 @@ regGPIO rD7 = { &GPIO_PORTD_DATA_R, &GPIO_PORTD_DIR_R, 0, PIN_7};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstrair para trarar com o PORTE*/
-volatile uint32 *ref_PORTE = &GPIO_PORTE_DATA_R;
+volatile uint32_t *ref_PORTE = &GPIO_PORTE_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISE*/
-volatile uint32 *ref_TRISE = &GPIO_PORTE_DIR_R;
+volatile uint32_t *ref_TRISE = &GPIO_PORTE_DIR_R;
 
 regGPIO rE0 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_0};
 regGPIO rE1 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_1};
@@ -122,10 +122,10 @@ regGPIO rE5 = { &GPIO_PORTE_DATA_R, &GPIO_PORTE_DIR_R, 0, PIN_5};
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 /** @brief variavel abstrair para trarar com o PORTF*/
-volatile uint32 *ref_PORTF = &GPIO_PORTF_DATA_R;
+volatile uint32_t *ref_PORTF = &GPIO_PORTF_DATA_R;
 
 /** @brief variavel abstrair para trarar com o TRISF*/
-volatile uint32 *ref_TRISF = &GPIO_PORTF_DIR_R;
+volatile uint32_t *ref_TRISF = &GPIO_PORTF_DIR_R;
 
 regGPIO rF0 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_0};
 regGPIO rF1 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_1};
@@ -133,20 +133,20 @@ regGPIO rF2 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_2};
 regGPIO rF3 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_3};
 regGPIO rF4 = { &GPIO_PORTF_DATA_R, &GPIO_PORTF_DIR_R, 0, PIN_4};
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
 void V_initRefRegisters(void)
 {
 
 }
 
-void GPIO_write_data(volatile uint32 *registrador, uint32 UI8_value)
+void GPIO_write_data(volatile uint32_t *registrador, uint32_t UI8_value)
 {
     *registrador = UI8_value;
 }
@@ -156,7 +156,7 @@ void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
     reg = _port;
 }
 
-void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag)
+void GPIO_outputBit(volatile uint32_t *port, uint32_t pino, uint32_t UI8_flag)
 {
     if(UI8_flag)
     {
@@ -168,17 +168,17 @@ void GPIO_outputBit(volatile uint32 *port, uint32 pino, uint32 UI8_flag)
     }
 }
 
-void GPIO_low(volatile uint32 *port, uint32 pino)
+void GPIO_low(volatile uint32_t *port, uint32_t pino)
 {
     clr_bit(*port, pino);
 }
 
-void GPIO_high( volatile uint32 *port, uint32 pino)
+void GPIO_high( volatile uint32_t *port, uint32_t pino)
 {
     set_bit(*port, pino);
 }
 
-void GPIO_output_toggle(volatile uint32 *port, uint32 pino)
+void GPIO_output_toggle(volatile uint32_t *port, uint32_t pino)
 {
     toggle_bit(*port, pino);
 }
@@ -193,12 +193,12 @@ void GPIO_regPin_outputLow(regPin *pin)
     clr_bit(*pin->out, pin->pin);
 }
 
-uint8 GPIO_regPin_rdBit(regPin *pin)
+uint8_t GPIO_regPin_rdBit(regPin *pin)
 {
     return(tst_bit(*pin->out, pin->pin));
 }
 
-void GPIO_regPin_outputBit(regPin *pin, uint32 flag)
+void GPIO_regPin_outputBit(regPin *pin, uint32_t flag)
 {
     if(flag)
     {
@@ -216,7 +216,7 @@ void GPIO_regPin_attach(regPin *pin, regGPIO *reg)
     pin->pin = reg->numPin;
 }
 
-uint8 GPIO_regPin_inputBit(regPin *pin)
+uint8_t GPIO_regPin_inputBit(regPin *pin)
 {
     if(tst_bit(*pin->out, pin->pin))
     {

@@ -20,17 +20,17 @@
 */
 
 //------------------------------------------------------------------------------
-// Private Definitions
+// PRIVATE DEFINITIONS
 //------------------------------------------------------------------------------
 
 #include "HCSR04.h"
 
 //------------------------------------------------------------------------------
-// Private structs, unions and enums
+// PRIVATE TYPEDEFS
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
-// Variable Declaration			
+// PRIVATE VARIABLES			
 //------------------------------------------------------------------------------
 
 /** */
@@ -43,20 +43,20 @@ HCSR04 ultrason[4] =
 };
 
 /** */
-uint8 timerM = 0;
+uint8_t timerM = 0;
 
 /** constante*/
 float k = 0.0;
 
 //------------------------------------------------------------------------------
-// Private Prototypes
+// PRIVATE FUNCTIONS
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
-// Functions Source
+// SOURCE CODE
 //------------------------------------------------------------------------------
 
-void HCSR04_set_const(float clock, uint8 prescaler)
+void HCSR04_set_const(float clock, uint8_t prescaler)
 {
     float aux;
 
@@ -66,12 +66,12 @@ void HCSR04_set_const(float clock, uint8 prescaler)
     k = k/2.0;
 }
 
-void HCSR04_attach_Timer(uint8 modulo)
+void HCSR04_attach_Timer(uint8_t modulo)
 {
     timerM = modulo;
 }
 
-void HCSR04_attach(uint8 index, regGPIO trig, regGPIO eco)
+void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco)
 {
     //Aloca o pino para o botao
     GPIO_regPin_attach(&ultrason[index].trig, &trig);
@@ -81,7 +81,7 @@ void HCSR04_attach(uint8 index, regGPIO trig, regGPIO eco)
     GPIO_regPin_setDir(&eco, DIR_INPUT);
 }
 
-uint16 HCSR04_read(HCSR04 sonar)
+uint16_t HCSR04_read(HCSR04 sonar)
 {
     float fl_distancia = 0.0;
     UWord count_timer;
@@ -108,5 +108,6 @@ uint16 HCSR04_read(HCSR04 sonar)
     //fl_distancia = (float)distancia.value*0.011328;
     fl_distancia = (float)count_timer.value*k;
 
-    return (uint16)(fl_distancia*100);
+    return (uint16_t)(fl_distancia*100);
 }
+

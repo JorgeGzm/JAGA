@@ -22,18 +22,19 @@
 #ifndef HAL_UART_H
 	#define	HAL_UART_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
 #include "vars/vars.h"
 #include "types/types.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 #define _UART0   0x0000
 #define _UART1   0x0001
@@ -114,17 +115,17 @@
 /** @brief TODO */
 #define BAUD_115200 4
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief TODO
@@ -139,7 +140,7 @@ void uart_attach(regPin *pin, regGPIO *reg);
  * @param rx TODO
  * @param tx TODO
  */
-void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx);
+void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
@@ -147,7 +148,7 @@ void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx);
  * @param rx TODO
  * @param tx TODO
  */
-void uart_priority_interrupt(uint8 module, uint8 rx, uint8 tx);
+void uart_priority_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
@@ -156,7 +157,7 @@ void uart_priority_interrupt(uint8 module, uint8 rx, uint8 tx);
  * @param enable_rx  TODO
  * @param enable_tx TODO
  */
-void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 enable_tx);
+void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx);
 
 /**
  * @brief TODO
@@ -167,53 +168,53 @@ void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 ena
  * @param tx9bits TODO
  * @param bd16bits TODO
  */
-void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint8 tx9bits, uint8 bd16bits);
+void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits, uint8_t bd16bits);
 
 /**
  * @brief TODO
  * @param module TODO
  * @param value TODO
  */
-void uart_set_baudRate(uint8 module, uint8 value);
+void uart_set_baudRate(uint8_t module, uint8_t value);
 
 /**
  * @brief TODO
  * @param module TODO
  * @param func TODO
  */
-void uart_rx_set_callbak(uint8 module, void (*func)(uint8));
+void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t));
 
 /**
  * @brief TODO
  * @param module TODO
  * @param func TODO
  */
-void uart_tx_set_callbak(uint8 module, void (*func)(void));
+void uart_tx_set_callback(uint8_t module, void (*func)(void));
 
 /**
  * @brief TODO
  * @param UI8_caracter TODO
  */
-void uart0_putc(uint8 UI8_caracter);
+void uart0_putc(uint8_t UI8_caracter);
 //__inline uint8 uart_get_data(void);
 
 /**
  * @brief TODO
  * @return TODO
  */
-uint8 uart0_get_data(void);
+uint8_t uart0_get_data(void);
 
 /**
  * @brief TODO
  * @param UI8_caracter TODO
  */
-void uart1_putc(uint8 UI8_caracter);
+void uart1_putc(uint8_t UI8_caracter);
 
 /**
  * @brief TODO
  * @return TODO
  */
-uint8 uart1_get_data(void);
+uint8_t uart1_get_data(void);
 
 
 #endif	

@@ -19,63 +19,61 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "xprintf.h"
-#include "uart/hal_uart.h"
-#include "app_control.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Envia uma string pela UART
  * @param index TODO documentar
  * @param fmt pinteiro para a string que sera enviada.
  */
-void xprint_string(void (*func)(uint8), uint8 *fmt);
+void xprint_string(void (*func)(uint8_t), const uint8_t *fmt);
 
 /**
  * @brief Envia uma variavel unsigned int pela UART
  * @param index TODO documentar
  * @param value valor que sera enviado
  */
-void xprint_UINT16(void (*func)(uint8), uint16 value);
+void xprint_UINT16(void (*func)(uint8_t), uint16_t value);
 
 /**
  * @brief Envia uma variavel int pela UART
  * @param index TODO documentar
  * @param value TODO documentar
  */
-void xprint_INT16(void (*func)(uint8), int16 value);
+void xprint_INT16(void (*func)(uint8_t), int16_t value);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
 
-void xprint_putc(void (*func)(uint8), uint8 c)
+void xprint_putc(void (*func)(uint8_t), uint8_t c)
 {
 	func(c);
 }
 
-void xprint_string(void (*func)(uint8), uint8 *fmt)
+void xprint_string(void (*func)(uint8_t), const uint8_t *fmt)
 {
-    uint8 c;
+    uint8_t c;
 
     while((c = *fmt) != '\0')
     {
@@ -84,10 +82,10 @@ void xprint_string(void (*func)(uint8), uint8 *fmt)
     }
 }
 
-void xprint_UINT16(void (*func)(uint8), uint16 value)
+void xprint_UINT16(void (*func)(uint8_t), uint16_t value)
 {
     unsigned cnt = 0;
-    uint8 buffer[11];
+    uint8_t buffer[11];
 
     do
     {
@@ -103,11 +101,11 @@ void xprint_UINT16(void (*func)(uint8), uint16 value)
     }
 }
 
-void xprint_INT16(void (*func)(uint8), int16 value)
+void xprint_INT16(void (*func)(uint8_t), int16_t value)
 {
 	unsigned cnt = 0;
-    uint8 flag_negativo;
-    volatile uint8 buffer[11];
+    uint8_t flag_negativo;
+    volatile uint8_t buffer[11];
 
     flag_negativo = 0;
 
@@ -144,12 +142,12 @@ void xprint_INT16(void (*func)(uint8), int16 value)
     }
 }
 
-void xprintf(void (*func)(uint8), uint8 *fmt, ...)
+void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...)
 {
     va_list pa;
-    uint8 *s, c;
-    int16 d;
-    uint16 u;
+    uint8_t *s, c;
+    int16_t d;
+    uint16_t u;
 
     va_start(pa, fmt);
     
@@ -164,22 +162,22 @@ void xprintf(void (*func)(uint8), uint8 *fmt, ...)
 
 				case 'c': /* uint8*/
 					c = va_arg(pa, int);
-					xprint_putc(func, (int8)c);
+					xprint_putc(func, (int8_t)c);
 				break;
 
 				case 's': /* string */
-					s = va_arg(pa, uint8 *);
+					s = va_arg(pa, uint8_t *);
 					xprint_string(func, s);
 				break;
 
 				case 'd': /* int16*/
 					d = va_arg(pa, int);
-					xprint_INT16(func, (int16)d);
+					xprint_INT16(func, (int16_t)d);
 				break;
 
 				case 'u': /* uint16*/
 					u = va_arg(pa, int);
-					xprint_UINT16(func, (uint16)u);
+					xprint_UINT16(func, (uint16_t)u);
 				break;
 
 //                case 'f': /* float*/

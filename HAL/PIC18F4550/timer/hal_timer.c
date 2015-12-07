@@ -19,36 +19,50 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_timer.h"
+#include "device/hal_device.h"
+#include "interrupt/hal_interrupts.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief TODO*/
-static volatile uint16 timer_counter[4] = {0,0,0,0};
+static volatile uint16_t timer_counter[4] = {0,0,0,0};
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
+ 
+/** @brief TODO */
+void (*tmr0_callback)(void);
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+/** @brief TODO */
+void (*tmr1_callback)(void);
 
-void timer_set_counter(uint8 module, uint16 val)
+/** @brief TODO */
+void (*tmr2_callback)(void);
+
+/** @brief TODO */
+void (*tmr3_callback)(void);
+    
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
+
+void timer_set_counter(uint8_t module, uint16_t val)
 {
     UWord aux_value;
     
@@ -78,7 +92,7 @@ void timer_set_counter(uint8 module, uint16 val)
     }
 }
 
-uint16 timer_get_counter(uint8 module)
+uint16_t timer_get_counter(uint8_t module)
 {   
      UWord timer = {0};
     
@@ -102,7 +116,7 @@ uint16 timer_get_counter(uint8 module)
     return(0);
 }
 
-void timer_init_regs(uint8 module)
+void timer_init_regs(uint8_t module)
 {
     switch(module)
     {
@@ -145,7 +159,7 @@ void timer_init_regs(uint8 module)
     }
 }
 
-void timer_setup_clock(uint8 module, uint8 source, uint8 transition)
+void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition)
 {
     switch(module)
     {
@@ -166,7 +180,7 @@ void timer_setup_clock(uint8 module, uint8 source, uint8 transition)
     }
 }
 
-void timer_setup_scale(uint8 module, uint8 on_off, uint8 prescale, uint8 postscale)
+void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t postscale)
 {
     switch(module)
     {
@@ -208,7 +222,7 @@ void timer_setup_scale(uint8 module, uint8 on_off, uint8 prescale, uint8 postsca
     }
 }
 
-void timer_setup_bits(uint8 module, uint8 bits)
+void timer_setup_bits(uint8_t module, uint8_t bits)
 {
     //TMR0 = 1 - 8 bits
     //TMR1 = 1 - 16 bits
@@ -233,7 +247,7 @@ void timer_setup_bits(uint8 module, uint8 bits)
     }
 }
 
-void timer_start(uint8 module, uint8 value)
+void timer_start(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -255,7 +269,7 @@ void timer_start(uint8 module, uint8 value)
     }
 }
 
-void timer_setup_interrupt(uint8 module, uint8 value)
+void timer_setup_interrupt(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -280,10 +294,10 @@ void timer_setup_interrupt(uint8 module, uint8 value)
         break;
     }
 
-    interrupt_setup(module, value);
+    //interrupt_setup(module, value);
 }
 
-void timer_priority_interrupt(uint8 module, uint8 value)
+void timer_priority_interrupt(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -304,27 +318,72 @@ void timer_priority_interrupt(uint8 module, uint8 value)
         break;
     }
 
-    interrupt_set_priority(module, value);
+  //  interrupt_set_priority(module, value);
 }
 
-void timer_set_callbak(uint8 module, void (*func)(void))
+void timer_set_callbak(uint8_t module, void (*func)(void))
 {
     switch(module)
     {
         case _TMR0:
-            interrupt_set_callback(_TMR0, func);
+            tmr0_callback = func;
         break;
 
         case _TMR1:
-            interrupt_set_callback(_TMR1, func);
+            tmr1_callback = func;
         break;
 
         case _TMR2:
-            interrupt_set_callback(_TMR2, func);
+            tmr2_callback = func;
         break;
 
         case _TMR3:
-            interrupt_set_callback(_TMR3, func);
+            tmr3_callback = func;
         break;
+    }
+}
+
+inline void timer0_isr(void)
+{
+    if(INTCONbits.TMR0IF)
+    {
+        
+        tmr0_callback();
+        
+        //Limpa flag da interrupcao
+        INTCONbits.TMR0IF = 0;
+    }
+}
+
+inline void timer1_isr(void)
+{
+    if(PIR1bits.TMR1IF)
+    {
+        tmr1_callback();
+        
+        //Limpa flag da interrupcao
+        PIR1bits.TMR1IF = 0;
+    }
+}
+
+inline void timer2_isr(void)
+{
+    if(PIR1bits.TMR2IF)
+    {
+        tmr2_callback();
+        
+        //Limpa flag da interrupcao
+        PIR1bits.TMR2IF = 0;
+    }
+}
+
+inline void timer3_isr(void)
+{
+    if(PIR2bits.TMR3IF)
+    {
+        tmr3_callback();
+        
+        //Limpa flag da interrupcao
+        PIR2bits.TMR3IF = 0;
     }
 }

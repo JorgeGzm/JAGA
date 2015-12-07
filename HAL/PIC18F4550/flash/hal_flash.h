@@ -22,28 +22,28 @@
 #ifndef HAL_FLASH_H
     #define HAL_FLASH_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
 #include "types/types.h"
-#include "device/hal_device.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /*
  * @brief Realiza a leitura da memoria flash do PIC18f4550.
@@ -60,7 +60,7 @@
  * PIC18F4550 each have 32 Kbytes of Flash memory \n
  * @param UI16_address A leitura dos endereos deve ser feita Range de enderecos da memoria de programa: 0x19h - 0x8000.
  */
-uint16 flash_rd(int16 UI16_address);
+uint16_t flash_rd(int16_t UI16_address);
 
 /**
  * @brief Apaga regiao da memoria flash
@@ -71,7 +71,7 @@ uint16 flash_rd(int16 UI16_address);
  * @param UI16_address Indica endereco de inicio para comeca a apagar os proximos 64 bytes.
  *  Range da memoria de programa: 0x0019 ate 0x7FFF,
  */
-void flash_erasing(int16 UI16_address);
+void flash_erasing(int16_t UI16_address);
 
 /**
  * @brief Escreve na memorias flash do PIC18f4550
@@ -82,6 +82,6 @@ void flash_erasing(int16 UI16_address);
  * @param UI16_buffer
  * @param UI16_address Indica endereco de inicio para comeca a escrever 32 bytes de dados.
  */
-void flash_wr(UWord UI16_buffer[], int16 UI16_address);
+void flash_wr(UWord UI16_buffer[], int16_t UI16_address);
 
 #endif	

@@ -48,18 +48,19 @@
 #ifndef HCSR04_H
 #define	HCSR04_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
+#include <stdint.h>
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
 #include "timer/hal_timer.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
 /** */
 typedef struct
@@ -70,17 +71,17 @@ typedef struct
     regPin eco;
 }HCSR04;
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Calcula o valor da constante usando o Fosc e prescaler passados pelo programador
@@ -93,7 +94,7 @@ typedef struct
  *  2: prescaler igual a 2 \n
  *  ...etc
  */
-void HCSR04_set_const(float clock, uint8 prescaler);
+void HCSR04_set_const(float clock, uint8_t prescaler);
 
 /**
  * @brief Funcao que indica qual timer sera usado para medicao de tempo de duracao do eco.
@@ -104,7 +105,7 @@ void HCSR04_set_const(float clock, uint8 prescaler);
  *  _TMR3: referencia ao timer 3                        \n
  *  ...etc.                                             \n
  */
-void HCSR04_attach_Timer(uint8 modulo);
+void HCSR04_attach_Timer(uint8_t modulo);
 
 /**
  * @brief TODO
@@ -112,14 +113,14 @@ void HCSR04_attach_Timer(uint8 modulo);
  * @param trig
  * @param eco
  */
-void HCSR04_attach(uint8 index, regGPIO trig, regGPIO eco);
+void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco);
 
 /**
  * @brief A funcao abaixo realiza a leitura da distancia em centimetros
  * @param sonar Variavel que contem as configuracoes do sensor.
  * @return Retorna a distancia em centimetros com resolucao de 2 casas decimais.
  */
-uint16 HCSR04_read(HCSR04 sonar);
+uint16_t HCSR04_read(HCSR04 sonar);
 
 extern HCSR04 ultrason[4];
 

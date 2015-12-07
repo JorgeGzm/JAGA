@@ -22,22 +22,22 @@
 #ifndef LCD_H
 	#define	LCD_H
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
-#include "vars/vars.h"
+#include <stdint.h>
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
 
-//------------------------------------------------------------------------------
-// Public Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC TYPEDEFS
+//==============================================================================
 
 /** @brief Estrutura que contem os pinos do microcontrolador que irao controlar o display-lcd 2x16 ou 4x20*/
 typedef struct 
@@ -61,13 +61,13 @@ typedef struct
     regPin rs;
 }DisplayLcd;
 
-//------------------------------------------------------------------------------
-// Global Variable 			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC VARIABLES			
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Public Prototype  
-//------------------------------------------------------------------------------
+//==============================================================================
+// PUBLIC FUNCTIONS
+//==============================================================================
 
 /**
  * @brief Inicializa display LCD. Deve ser chamado antes de qualquer funcao do lcd
@@ -78,36 +78,9 @@ typedef struct
 void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7);
 
 /**
- * @brief funcaoo que se encarreca de enviar um dado ou uma instrucao ao lcd.
- * @param 0(instrucao), 1(Dado).
- * @param endereco do lcd onde o dado sera escrito.
+ * @brief Todo Documentar
  */
-void lcd_send_byte(int8 address, int8 n);
-
-/**
- * @brief Escreve o vetor de caracters na proxima posicao do LCD.
- * @details 
- * Ex:                                              \n
- * int8 buff[] = {"12345"};                         \n
- * lcd_printf(&buff);                               \n
- * lcd_printf((int8 *)"Temperatura = %d", TAMB);    \n
- * lcd_printf((int8 *)"%u/%u/%u-%u:%u:%u", relogio.UI8_Dia, relogio.UI8_Mes, relogio.UI8_Ano, relogio.UI8_Horas, relogio.UI8_Minutos, relogio.UI8_Segundos);
- * @param ponteiro que aponta o vetor de caracteres que vai ser enviado ao lcd.
- */
-void lcd_printf(int8 *c, ...);
-
-void lcd_putc(uint8 c);
-
-void lcd_send_string(int8 *fmt);
-
-/**
- * funcao que enviara os primeiros 4 bits menos significativos nas saidas db4 a db7 do lcd.
- * @param dado de 8bits onde somente os 4 primeiros serao usados no envio de comandos do lcd.
- */
-void lcd_send_nibble(int8 nibble);
-
-/** Rotina de inicializacao do Display*/
-void lcd_init(void);
+void lcd_putc(uint8_t c);
 
 /**
 * @brief Posiciona o cursor na posicao x , y.  O limite superior 1, 1 e o limete inferior e 1, 4
@@ -121,19 +94,12 @@ void lcd_init(void);
 * @param x: coluna
 * @param y: linha
 */
-void lcd_gotoxy(int8 x, int8 y);
+void lcd_gotoxy(uint8_t x, uint8_t y);
 
 /**
- * @brief Imprime variaveis in16 no display LCD
- * @param n Valor que sera impresso no LCD
+ * @brief Todo Documentar
  */
-void lcd_print_int16(int16 n);
-
-/**
- * @brief Imprime Variaveis uin16 no display LCD
- * @param n Valor que sera impresso no LCD
- */
-void lcd_print_uint16(uint16 n);
+void lcd_print(const uint8_t *fmt);
 
 #endif	
 

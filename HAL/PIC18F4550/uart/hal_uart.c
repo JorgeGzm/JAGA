@@ -19,23 +19,25 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-//------------------------------------------------------------------------------
-// Included Files
-//------------------------------------------------------------------------------
+//==============================================================================
+// INCLUDE FILES
+//==============================================================================
 
 #include "hal_uart.h"
+#include "device/hal_device.h"
+#include "interrupt/hal_interrupts.h"
 
-//------------------------------------------------------------------------------
-// Private Definitions
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE DEFINITIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Private structs, unions and enums
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE TYPEDEFS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Variable Declaration			
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE VARIABLES			
+//==============================================================================
 
 /** @brief TODO*/
 regPin pinRX1;
@@ -43,51 +45,57 @@ regPin pinRX1;
 /** @brief TODO*/
 regPin pinTX1;
 
-//------------------------------------------------------------------------------
-// Private Prototypes
-//------------------------------------------------------------------------------
+//==============================================================================
+// PRIVATE FUNCTIONS
+//==============================================================================
 
-//------------------------------------------------------------------------------
-// Functions Source
-//------------------------------------------------------------------------------
+/**@brief TODO documentar*/
+void (*uart0_rx_callback)(uint8_t);
 
-void uart_setup_interrupt(uint8 module, uint8 rx, uint8 tx)
+/**@brief TODO documentar*/
+void (*uart0_tx_callback)(void);
+
+//==============================================================================
+// SOURCE CODE
+//==============================================================================
+
+void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx)
 {
     switch(module)
     {
-        case _UART1:
+        case _UART0:
 
             PIE1bits.RCIE = rx;
             PIE1bits.TXIE = tx;
 
-            interrupt_setup(_UART_RX, rx);
-            interrupt_setup(_UART_TX, tx);
+//            interrupt_setup(_UART_RX, rx);
+//            interrupt_setup(_UART_TX, tx);
 
             break;
     }
 }
 
-void uart_priority_interrupt(uint8 module, uint8 rx, uint8 tx)
+void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priority_tx)
 {
     switch(module)
     {
-    case _UART1:
+    case _UART0:
 
-        IPR1bits.RCIP = rx; //modulo receptor
-        IPR1bits.TXIP = tx; //modulo transmissao
+        IPR1bits.RCIP = priority_rx; //modulo receptor
+        IPR1bits.TXIP = priority_tx; //modulo transmissao
 
-        interrupt_set_priority(_UART_RX, rx);
-        interrupt_set_priority(_UART_TX, tx);
+//        interrupt_set_priority(_UART_RX, priority_rx);
+//        interrupt_set_priority(_UART_TX, priority_tx);
 
         break;
     }
 }
 
-void uart_set_baudRate(uint8 module, uint8 value)
+void uart_set_baudRate(uint8_t module, uint8_t value)
 {
     switch(module)
     {
-        case _UART1:
+        case _UART0:
             if(value == BAUD_4800)
             {
                 //aki igual 9600
@@ -125,11 +133,11 @@ void uart_attach(regPin pin, regGPIO reg)
     GPIO_regPin_setDir(&reg, DIR_INPUT);
 }
 
-void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint8 tx9bits,  uint8 bd16bits)
+void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits,  uint8_t bd16bits)
 {
     switch(module)
     {
-        case _UART1:
+        case _UART0:
 
             TXSTAbits.SYNC = sync;
             TXSTAbits.BRGH = high_com;
@@ -140,11 +148,11 @@ void uart_set_conf(uint8 module, uint8 sync, uint8 high_com, uint8 rx9bits, uint
     }
 }
 
-void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 enable_tx)
+void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx)
 {
     switch(module)
     {
-        case _UART1:
+        case _UART0:
             
             RCSTAbits.SPEN = enable_uart;
             RCSTAbits.CREN = enable_rx;
@@ -153,27 +161,7 @@ void uart_set_enable(uint8 module, uint8 enable_uart, uint8 enable_rx, uint8 ena
     }
 }
 
-void uart_rx_set_callbak(uint8 module, void (*func)(void))
-{
-    switch(module)
-    {
-        case _UART1:
-            interrupt_set_callback(_UART_RX, func);
-        break;
-    }
-}
-
-void uart_tx_set_callbak(uint8 module, void (*func)(void))
-{
-    switch(module)
-    {
-        case _UART1:
-            interrupt_set_callback(_UART_TX, func);
-        break;
-    }
-}
-
-void uart_putc(uint8 UI8_caracter)
+void uart_putc(uint8_t UI8_caracter)
 {
     TXREG = UI8_caracter;
     while(!TXSTAbits.TRMT);
@@ -185,7 +173,54 @@ void uart_putc(uint8 UI8_caracter)
     }
 }
 
-inline uint8 uart_get_data(void)
+inline uint8_t uart_get_data(void)
 {
     return(RCREG);
 }
+
+void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t))
+{
+    switch(module)
+    {
+        case _UART0:
+            uart0_rx_callback = func;
+        break;
+    }
+}
+
+void uart_tx_set_callback(uint8_t module, void (*func)(void))
+{
+    switch(module)
+    {
+        case _UART0:
+            uart0_tx_callback = func;
+        break;
+    }
+}
+
+inline void uart_rx_isr(void)
+{
+    uint8_t data;
+    
+    if(PIR1bits.RCIF)
+    {
+        data = uart_get_data();
+        uart0_rx_callback(data);
+        
+        //Limpa flag da interrupcao
+        PIR1bits.RCIF = 0;
+    }
+}
+
+inline void uart_tx_isr(void)
+{
+    if(PIR1bits.TXIF)
+    {
+        uart0_tx_callback();
+        
+        //Limpa flag da interrupcao
+        PIR1bits.TXIF = 0;
+    }
+}
+
+

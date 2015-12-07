@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=gnumkdir -p
+MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../../../Middleware/buttons/buttons.c ../../../../Middleware/info_hw/info_hw.c ../../../../Middleware/lcd/lcd.c ../../../../Middleware/leds/leds.c ../../../../Middleware/serial/serial.c ../../../../HAL/PIC18F4550/ad/hal_ad.c ../../../../HAL/PIC18F4550/delay/hal_delay.c ../../../../HAL/PIC18F4550/eeprom/hal_eeprom.c ../../../../HAL/PIC18F4550/flash/hal_flash.c ../../../../HAL/PIC18F4550/gpio/hal_gpio.c ../../../../HAL/PIC18F4550/i2c/hal_i2c.c ../../../../HAL/PIC18F4550/interrupt/hal_interrupts.c ../../../../HAL/PIC18F4550/pwm/hal_pwm.c ../../../../HAL/PIC18F4550/reset/hal_reset.c ../../../../HAL/PIC18F4550/spi/hal_spi.c ../../../../HAL/PIC18F4550/timer/hal_timer.c ../../../../HAL/PIC18F4550/uart/hal_uart.c ../../../../Util/crc/crc.c ../Source/main.c ../Source/sys_timer.c ../Source/sys_i2c.c ../Source/sys_ad.c ../Source/sys_spi.c ../Source/sys_pwm.c ../Source/sys_uart.c ../Source/app_control.c ../Source/app_him.c ../Source/app_info.c ../Source/sys_gpio.c ../Source/sys_hw.c ../Source/sys_mcu.c
+SOURCEFILES_QUOTED_IF_SPACED=../../../../Middleware/buttons/buttons.c ../../../../Middleware/info_hw/info_hw.c ../../../../Middleware/lcd/lcd.c ../../../../Middleware/leds/leds.c ../../../../HAL/PIC18F4550/ad/hal_ad.c ../../../../HAL/PIC18F4550/delay/hal_delay.c ../../../../HAL/PIC18F4550/eeprom/hal_eeprom.c ../../../../HAL/PIC18F4550/flash/hal_flash.c ../../../../HAL/PIC18F4550/gpio/hal_gpio.c ../../../../HAL/PIC18F4550/i2c/hal_i2c.c ../../../../HAL/PIC18F4550/interrupt/hal_interrupts.c ../../../../HAL/PIC18F4550/pwm/hal_pwm.c ../../../../HAL/PIC18F4550/reset/hal_reset.c ../../../../HAL/PIC18F4550/spi/hal_spi.c ../../../../HAL/PIC18F4550/timer/hal_timer.c ../../../../HAL/PIC18F4550/uart/hal_uart.c ../Source/main.c ../Source/sys_timer.c ../Source/sys_i2c.c ../Source/sys_ad.c ../Source/sys_spi.c ../Source/sys_pwm.c ../Source/sys_uart.c ../Source/app_control.c ../Source/app_him.c ../Source/app_info.c ../Source/sys_gpio.c ../Source/sys_hw.c ../Source/sys_mcu.c ../../../../Util/crc/crc.c ../../../../Util/PID/pid.c ../../../../Util/xprintf/xprintf.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/755039388/buttons.p1 ${OBJECTDIR}/_ext/949021219/info_hw.p1 ${OBJECTDIR}/_ext/188133584/lcd.p1 ${OBJECTDIR}/_ext/1537171771/leds.p1 ${OBJECTDIR}/_ext/447492529/serial.p1 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1 ${OBJECTDIR}/_ext/1614864127/hal_delay.p1 ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1 ${OBJECTDIR}/_ext/1612818578/hal_flash.p1 ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1 ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1 ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1 ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1 ${OBJECTDIR}/_ext/1601927987/hal_reset.p1 ${OBJECTDIR}/_ext/1491070122/hal_spi.p1 ${OBJECTDIR}/_ext/1599967549/hal_timer.p1 ${OBJECTDIR}/_ext/1021420912/hal_uart.p1 ${OBJECTDIR}/_ext/430495143/crc.p1 ${OBJECTDIR}/_ext/1728301206/main.p1 ${OBJECTDIR}/_ext/1728301206/sys_timer.p1 ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1 ${OBJECTDIR}/_ext/1728301206/sys_ad.p1 ${OBJECTDIR}/_ext/1728301206/sys_spi.p1 ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1 ${OBJECTDIR}/_ext/1728301206/sys_uart.p1 ${OBJECTDIR}/_ext/1728301206/app_control.p1 ${OBJECTDIR}/_ext/1728301206/app_him.p1 ${OBJECTDIR}/_ext/1728301206/app_info.p1 ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1 ${OBJECTDIR}/_ext/1728301206/sys_hw.p1 ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/755039388/buttons.p1.d ${OBJECTDIR}/_ext/949021219/info_hw.p1.d ${OBJECTDIR}/_ext/188133584/lcd.p1.d ${OBJECTDIR}/_ext/1537171771/leds.p1.d ${OBJECTDIR}/_ext/447492529/serial.p1.d ${OBJECTDIR}/_ext/1891564187/hal_ad.p1.d ${OBJECTDIR}/_ext/1614864127/hal_delay.p1.d ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1.d ${OBJECTDIR}/_ext/1612818578/hal_flash.p1.d ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1.d ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1.d ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1.d ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1.d ${OBJECTDIR}/_ext/1601927987/hal_reset.p1.d ${OBJECTDIR}/_ext/1491070122/hal_spi.p1.d ${OBJECTDIR}/_ext/1599967549/hal_timer.p1.d ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d ${OBJECTDIR}/_ext/430495143/crc.p1.d ${OBJECTDIR}/_ext/1728301206/main.p1.d ${OBJECTDIR}/_ext/1728301206/sys_timer.p1.d ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1.d ${OBJECTDIR}/_ext/1728301206/sys_ad.p1.d ${OBJECTDIR}/_ext/1728301206/sys_spi.p1.d ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1.d ${OBJECTDIR}/_ext/1728301206/sys_uart.p1.d ${OBJECTDIR}/_ext/1728301206/app_control.p1.d ${OBJECTDIR}/_ext/1728301206/app_him.p1.d ${OBJECTDIR}/_ext/1728301206/app_info.p1.d ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1.d ${OBJECTDIR}/_ext/1728301206/sys_hw.p1.d ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/755039388/buttons.p1 ${OBJECTDIR}/_ext/949021219/info_hw.p1 ${OBJECTDIR}/_ext/188133584/lcd.p1 ${OBJECTDIR}/_ext/1537171771/leds.p1 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1 ${OBJECTDIR}/_ext/1614864127/hal_delay.p1 ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1 ${OBJECTDIR}/_ext/1612818578/hal_flash.p1 ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1 ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1 ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1 ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1 ${OBJECTDIR}/_ext/1601927987/hal_reset.p1 ${OBJECTDIR}/_ext/1491070122/hal_spi.p1 ${OBJECTDIR}/_ext/1599967549/hal_timer.p1 ${OBJECTDIR}/_ext/1021420912/hal_uart.p1 ${OBJECTDIR}/_ext/1728301206/main.p1 ${OBJECTDIR}/_ext/1728301206/sys_timer.p1 ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1 ${OBJECTDIR}/_ext/1728301206/sys_ad.p1 ${OBJECTDIR}/_ext/1728301206/sys_spi.p1 ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1 ${OBJECTDIR}/_ext/1728301206/sys_uart.p1 ${OBJECTDIR}/_ext/1728301206/app_control.p1 ${OBJECTDIR}/_ext/1728301206/app_him.p1 ${OBJECTDIR}/_ext/1728301206/app_info.p1 ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1 ${OBJECTDIR}/_ext/1728301206/sys_hw.p1 ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1 ${OBJECTDIR}/_ext/430495143/crc.p1 ${OBJECTDIR}/_ext/430475582/pid.p1 ${OBJECTDIR}/_ext/484809764/xprintf.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/755039388/buttons.p1.d ${OBJECTDIR}/_ext/949021219/info_hw.p1.d ${OBJECTDIR}/_ext/188133584/lcd.p1.d ${OBJECTDIR}/_ext/1537171771/leds.p1.d ${OBJECTDIR}/_ext/1891564187/hal_ad.p1.d ${OBJECTDIR}/_ext/1614864127/hal_delay.p1.d ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1.d ${OBJECTDIR}/_ext/1612818578/hal_flash.p1.d ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1.d ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1.d ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1.d ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1.d ${OBJECTDIR}/_ext/1601927987/hal_reset.p1.d ${OBJECTDIR}/_ext/1491070122/hal_spi.p1.d ${OBJECTDIR}/_ext/1599967549/hal_timer.p1.d ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d ${OBJECTDIR}/_ext/1728301206/main.p1.d ${OBJECTDIR}/_ext/1728301206/sys_timer.p1.d ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1.d ${OBJECTDIR}/_ext/1728301206/sys_ad.p1.d ${OBJECTDIR}/_ext/1728301206/sys_spi.p1.d ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1.d ${OBJECTDIR}/_ext/1728301206/sys_uart.p1.d ${OBJECTDIR}/_ext/1728301206/app_control.p1.d ${OBJECTDIR}/_ext/1728301206/app_him.p1.d ${OBJECTDIR}/_ext/1728301206/app_info.p1.d ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1.d ${OBJECTDIR}/_ext/1728301206/sys_hw.p1.d ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d ${OBJECTDIR}/_ext/430495143/crc.p1.d ${OBJECTDIR}/_ext/430475582/pid.p1.d ${OBJECTDIR}/_ext/484809764/xprintf.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/755039388/buttons.p1 ${OBJECTDIR}/_ext/949021219/info_hw.p1 ${OBJECTDIR}/_ext/188133584/lcd.p1 ${OBJECTDIR}/_ext/1537171771/leds.p1 ${OBJECTDIR}/_ext/447492529/serial.p1 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1 ${OBJECTDIR}/_ext/1614864127/hal_delay.p1 ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1 ${OBJECTDIR}/_ext/1612818578/hal_flash.p1 ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1 ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1 ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1 ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1 ${OBJECTDIR}/_ext/1601927987/hal_reset.p1 ${OBJECTDIR}/_ext/1491070122/hal_spi.p1 ${OBJECTDIR}/_ext/1599967549/hal_timer.p1 ${OBJECTDIR}/_ext/1021420912/hal_uart.p1 ${OBJECTDIR}/_ext/430495143/crc.p1 ${OBJECTDIR}/_ext/1728301206/main.p1 ${OBJECTDIR}/_ext/1728301206/sys_timer.p1 ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1 ${OBJECTDIR}/_ext/1728301206/sys_ad.p1 ${OBJECTDIR}/_ext/1728301206/sys_spi.p1 ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1 ${OBJECTDIR}/_ext/1728301206/sys_uart.p1 ${OBJECTDIR}/_ext/1728301206/app_control.p1 ${OBJECTDIR}/_ext/1728301206/app_him.p1 ${OBJECTDIR}/_ext/1728301206/app_info.p1 ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1 ${OBJECTDIR}/_ext/1728301206/sys_hw.p1 ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1
+OBJECTFILES=${OBJECTDIR}/_ext/755039388/buttons.p1 ${OBJECTDIR}/_ext/949021219/info_hw.p1 ${OBJECTDIR}/_ext/188133584/lcd.p1 ${OBJECTDIR}/_ext/1537171771/leds.p1 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1 ${OBJECTDIR}/_ext/1614864127/hal_delay.p1 ${OBJECTDIR}/_ext/1507584066/hal_eeprom.p1 ${OBJECTDIR}/_ext/1612818578/hal_flash.p1 ${OBJECTDIR}/_ext/1021823855/hal_gpio.p1 ${OBJECTDIR}/_ext/1491058584/hal_i2c.p1 ${OBJECTDIR}/_ext/1284659487/hal_interrupts.p1 ${OBJECTDIR}/_ext/1491067460/hal_pwm.p1 ${OBJECTDIR}/_ext/1601927987/hal_reset.p1 ${OBJECTDIR}/_ext/1491070122/hal_spi.p1 ${OBJECTDIR}/_ext/1599967549/hal_timer.p1 ${OBJECTDIR}/_ext/1021420912/hal_uart.p1 ${OBJECTDIR}/_ext/1728301206/main.p1 ${OBJECTDIR}/_ext/1728301206/sys_timer.p1 ${OBJECTDIR}/_ext/1728301206/sys_i2c.p1 ${OBJECTDIR}/_ext/1728301206/sys_ad.p1 ${OBJECTDIR}/_ext/1728301206/sys_spi.p1 ${OBJECTDIR}/_ext/1728301206/sys_pwm.p1 ${OBJECTDIR}/_ext/1728301206/sys_uart.p1 ${OBJECTDIR}/_ext/1728301206/app_control.p1 ${OBJECTDIR}/_ext/1728301206/app_him.p1 ${OBJECTDIR}/_ext/1728301206/app_info.p1 ${OBJECTDIR}/_ext/1728301206/sys_gpio.p1 ${OBJECTDIR}/_ext/1728301206/sys_hw.p1 ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1 ${OBJECTDIR}/_ext/430495143/crc.p1 ${OBJECTDIR}/_ext/430475582/pid.p1 ${OBJECTDIR}/_ext/484809764/xprintf.p1
 
 # Source Files
-SOURCEFILES=../../../../Middleware/buttons/buttons.c ../../../../Middleware/info_hw/info_hw.c ../../../../Middleware/lcd/lcd.c ../../../../Middleware/leds/leds.c ../../../../Middleware/serial/serial.c ../../../../HAL/PIC18F4550/ad/hal_ad.c ../../../../HAL/PIC18F4550/delay/hal_delay.c ../../../../HAL/PIC18F4550/eeprom/hal_eeprom.c ../../../../HAL/PIC18F4550/flash/hal_flash.c ../../../../HAL/PIC18F4550/gpio/hal_gpio.c ../../../../HAL/PIC18F4550/i2c/hal_i2c.c ../../../../HAL/PIC18F4550/interrupt/hal_interrupts.c ../../../../HAL/PIC18F4550/pwm/hal_pwm.c ../../../../HAL/PIC18F4550/reset/hal_reset.c ../../../../HAL/PIC18F4550/spi/hal_spi.c ../../../../HAL/PIC18F4550/timer/hal_timer.c ../../../../HAL/PIC18F4550/uart/hal_uart.c ../../../../Util/crc/crc.c ../Source/main.c ../Source/sys_timer.c ../Source/sys_i2c.c ../Source/sys_ad.c ../Source/sys_spi.c ../Source/sys_pwm.c ../Source/sys_uart.c ../Source/app_control.c ../Source/app_him.c ../Source/app_info.c ../Source/sys_gpio.c ../Source/sys_hw.c ../Source/sys_mcu.c
+SOURCEFILES=../../../../Middleware/buttons/buttons.c ../../../../Middleware/info_hw/info_hw.c ../../../../Middleware/lcd/lcd.c ../../../../Middleware/leds/leds.c ../../../../HAL/PIC18F4550/ad/hal_ad.c ../../../../HAL/PIC18F4550/delay/hal_delay.c ../../../../HAL/PIC18F4550/eeprom/hal_eeprom.c ../../../../HAL/PIC18F4550/flash/hal_flash.c ../../../../HAL/PIC18F4550/gpio/hal_gpio.c ../../../../HAL/PIC18F4550/i2c/hal_i2c.c ../../../../HAL/PIC18F4550/interrupt/hal_interrupts.c ../../../../HAL/PIC18F4550/pwm/hal_pwm.c ../../../../HAL/PIC18F4550/reset/hal_reset.c ../../../../HAL/PIC18F4550/spi/hal_spi.c ../../../../HAL/PIC18F4550/timer/hal_timer.c ../../../../HAL/PIC18F4550/uart/hal_uart.c ../Source/main.c ../Source/sys_timer.c ../Source/sys_i2c.c ../Source/sys_ad.c ../Source/sys_spi.c ../Source/sys_pwm.c ../Source/sys_uart.c ../Source/app_control.c ../Source/app_him.c ../Source/app_info.c ../Source/sys_gpio.c ../Source/sys_hw.c ../Source/sys_mcu.c ../../../../Util/crc/crc.c ../../../../Util/PID/pid.c ../../../../Util/xprintf/xprintf.c
 
 
 CFLAGS=
@@ -112,14 +112,6 @@ ${OBJECTDIR}/_ext/1537171771/leds.p1: ../../../../Middleware/leds/leds.c  nbproj
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1537171771/leds.p1  ../../../../Middleware/leds/leds.c 
 	@-${MV} ${OBJECTDIR}/_ext/1537171771/leds.d ${OBJECTDIR}/_ext/1537171771/leds.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1537171771/leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/447492529/serial.p1: ../../../../Middleware/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/447492529" 
-	@${RM} ${OBJECTDIR}/_ext/447492529/serial.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/447492529/serial.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/447492529/serial.p1  ../../../../Middleware/serial/serial.c 
-	@-${MV} ${OBJECTDIR}/_ext/447492529/serial.d ${OBJECTDIR}/_ext/447492529/serial.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/447492529/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1: ../../../../HAL/PIC18F4550/ad/hal_ad.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1891564187" 
@@ -216,14 +208,6 @@ ${OBJECTDIR}/_ext/1021420912/hal_uart.p1: ../../../../HAL/PIC18F4550/uart/hal_ua
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1021420912/hal_uart.p1  ../../../../HAL/PIC18F4550/uart/hal_uart.c 
 	@-${MV} ${OBJECTDIR}/_ext/1021420912/hal_uart.d ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/430495143/crc.p1: ../../../../Util/crc/crc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/430495143" 
-	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430495143/crc.p1  ../../../../Util/crc/crc.c 
-	@-${MV} ${OBJECTDIR}/_ext/430495143/crc.d ${OBJECTDIR}/_ext/430495143/crc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/430495143/crc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_ext/1728301206/main.p1: ../Source/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1728301206" 
@@ -329,6 +313,30 @@ ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1: ../Source/sys_mcu.c  nbproject/Makefile
 	@-${MV} ${OBJECTDIR}/_ext/1728301206/sys_mcu.d ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_ext/430495143/crc.p1: ../../../../Util/crc/crc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/430495143" 
+	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430495143/crc.p1  ../../../../Util/crc/crc.c 
+	@-${MV} ${OBJECTDIR}/_ext/430495143/crc.d ${OBJECTDIR}/_ext/430495143/crc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/430495143/crc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/430475582/pid.p1: ../../../../Util/PID/pid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/430475582" 
+	@${RM} ${OBJECTDIR}/_ext/430475582/pid.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/430475582/pid.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430475582/pid.p1  ../../../../Util/PID/pid.c 
+	@-${MV} ${OBJECTDIR}/_ext/430475582/pid.d ${OBJECTDIR}/_ext/430475582/pid.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/430475582/pid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/484809764/xprintf.p1: ../../../../Util/xprintf/xprintf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/484809764" 
+	@${RM} ${OBJECTDIR}/_ext/484809764/xprintf.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/484809764/xprintf.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/484809764/xprintf.p1  ../../../../Util/xprintf/xprintf.c 
+	@-${MV} ${OBJECTDIR}/_ext/484809764/xprintf.d ${OBJECTDIR}/_ext/484809764/xprintf.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/484809764/xprintf.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/_ext/755039388/buttons.p1: ../../../../Middleware/buttons/buttons.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/755039388" 
@@ -361,14 +369,6 @@ ${OBJECTDIR}/_ext/1537171771/leds.p1: ../../../../Middleware/leds/leds.c  nbproj
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1537171771/leds.p1  ../../../../Middleware/leds/leds.c 
 	@-${MV} ${OBJECTDIR}/_ext/1537171771/leds.d ${OBJECTDIR}/_ext/1537171771/leds.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1537171771/leds.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/447492529/serial.p1: ../../../../Middleware/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/447492529" 
-	@${RM} ${OBJECTDIR}/_ext/447492529/serial.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/447492529/serial.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/447492529/serial.p1  ../../../../Middleware/serial/serial.c 
-	@-${MV} ${OBJECTDIR}/_ext/447492529/serial.d ${OBJECTDIR}/_ext/447492529/serial.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/447492529/serial.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_ext/1891564187/hal_ad.p1: ../../../../HAL/PIC18F4550/ad/hal_ad.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1891564187" 
@@ -465,14 +465,6 @@ ${OBJECTDIR}/_ext/1021420912/hal_uart.p1: ../../../../HAL/PIC18F4550/uart/hal_ua
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/1021420912/hal_uart.p1  ../../../../HAL/PIC18F4550/uart/hal_uart.c 
 	@-${MV} ${OBJECTDIR}/_ext/1021420912/hal_uart.d ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1021420912/hal_uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/430495143/crc.p1: ../../../../Util/crc/crc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/430495143" 
-	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430495143/crc.p1  ../../../../Util/crc/crc.c 
-	@-${MV} ${OBJECTDIR}/_ext/430495143/crc.d ${OBJECTDIR}/_ext/430495143/crc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/430495143/crc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_ext/1728301206/main.p1: ../Source/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1728301206" 
@@ -578,6 +570,30 @@ ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1: ../Source/sys_mcu.c  nbproject/Makefile
 	@-${MV} ${OBJECTDIR}/_ext/1728301206/sys_mcu.d ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1728301206/sys_mcu.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_ext/430495143/crc.p1: ../../../../Util/crc/crc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/430495143" 
+	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/430495143/crc.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430495143/crc.p1  ../../../../Util/crc/crc.c 
+	@-${MV} ${OBJECTDIR}/_ext/430495143/crc.d ${OBJECTDIR}/_ext/430495143/crc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/430495143/crc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/430475582/pid.p1: ../../../../Util/PID/pid.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/430475582" 
+	@${RM} ${OBJECTDIR}/_ext/430475582/pid.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/430475582/pid.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/430475582/pid.p1  ../../../../Util/PID/pid.c 
+	@-${MV} ${OBJECTDIR}/_ext/430475582/pid.d ${OBJECTDIR}/_ext/430475582/pid.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/430475582/pid.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/484809764/xprintf.p1: ../../../../Util/xprintf/xprintf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/484809764" 
+	@${RM} ${OBJECTDIR}/_ext/484809764/xprintf.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/484809764/xprintf.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=pro -D__PIC18F4550 -P -N255 -I"../../../../HAL/PIC18F4550" -I"../../../../Middleware" -I"../Header" -I"../../../../Util" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/484809764/xprintf.p1  ../../../../Util/xprintf/xprintf.c 
+	@-${MV} ${OBJECTDIR}/_ext/484809764/xprintf.d ${OBJECTDIR}/_ext/484809764/xprintf.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/484809764/xprintf.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -617,7 +633,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif
