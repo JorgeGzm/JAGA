@@ -1,9 +1,9 @@
 /**
-  * @file    sys_timer.c
-  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
-  * @date    Feb 27, 2015
+  * @file    bitwise.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Dez 09, 2015
   * @version 0.1.0.0 (beta)
-  * @brief   TODO documentar
+  * @brief   Bibliteoca para manipular bits.
   * @details
   * @section LICENSE
   *
@@ -19,34 +19,64 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
+#ifndef BITWISE_H
+	#define	BITWISE_H
+
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
-#include "sys_timer.h"
+#include <stdint.h>
 
 //==============================================================================
-// PRIVATE DEFINITIONS
+// PUBLIC DEFINITIONS
+//==============================================================================
+
+/**
+ * @brief coloca em 1 o bit x da variavel byte.
+ * @details Exemplo:  set_bit(PORTD, 5); \n
+ * Resultado: PORTD = 0b00010000
+ */
+#define	set_bit(value,bit_x)	(value |= (1 << bit_x))
+
+/**
+ * @brief coloca em 0 no bit_x da variavel variavel byte.
+ * @details Exemplo:  lr_bit(PORTD, 5);     \n
+ * Resultado: PORTD = 0b00000000
+ */
+#define	clr_bit(value,bit_x)	(value &= ~(1 << bit_x))
+
+/**
+* @brief troca o estado logico do bit x da variavel bytex.
+* @details Exemplo:   toggle_bit(PORTD, 5); \n
+* Resultado: PORTD = 0b00000000 ou PORTD = 0b00010000
+*/
+#define toggle_bit(value,bit_x)     (value ^= (1 << bit_x))
+
+/**
+ * @brief retorna 0 ou !0 conforme leitura do bit.
+ * @details Exemplo:   tst_bit(PORTD, 5);   \n
+ * Resultado: x = 0 ou x = 32
+ */
+#define tst_bit(value,bit_x)        (value & (1 << bit_x))
+
+/**
+ * @brief retorna 0 ou 1 conforme leitura do bit. Range(0-7).
+ * @details Exemplo:   tst_bit_bool(PORTD, 5);  \n
+ * Resultado: x = 0 ou x = 1
+ */
+#define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
+
+//==============================================================================
+// PUBLIC TYPEDEFS
 //==============================================================================
 
 //==============================================================================
-// PRIVATE TYPEDEFS
+// PUBLIC VARIABLES			
 //==============================================================================
 
 //==============================================================================
-// PRIVATE VARIABLES			
+// PUBLIC FUNCTIONS
 //==============================================================================
 
-//==============================================================================
-// PRIVATE FUNCTIONS
-//==============================================================================
-
-//==============================================================================
-// SOURCE CODE
-//==============================================================================
-
-void init_timer0(void)
-{
-
-}
-
+#endif	

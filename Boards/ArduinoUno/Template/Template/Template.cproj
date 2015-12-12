@@ -245,6 +245,18 @@
       <SubType>compile</SubType>
       <Link>src\leds.h</Link>
     </Compile>
+    <Compile Include="..\..\..\..\Util\bitwise\bitwise.h">
+      <SubType>compile</SubType>
+      <Link>src\bitwise.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Util\xprintf\xprintf.c">
+      <SubType>compile</SubType>
+      <Link>src\xprintf.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Util\xprintf\xprintf.h">
+      <SubType>compile</SubType>
+      <Link>src\xprintf.h</Link>
+    </Compile>
     <Compile Include="src\Header\app_control.h">
       <SubType>compile</SubType>
     </Compile>
@@ -324,12 +336,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Source\sys_uart.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\xprintf.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\xprintf.h">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\asf.h">

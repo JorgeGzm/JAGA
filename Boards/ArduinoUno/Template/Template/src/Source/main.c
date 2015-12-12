@@ -48,7 +48,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void main(void)
+int main(void)
 {
     //Inicializa sistema
     setupHardware();
@@ -65,4 +65,5 @@ void main(void)
         run_him();
     }
 	
+    return 0;
 }

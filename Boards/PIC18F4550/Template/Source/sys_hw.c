@@ -89,6 +89,7 @@ void setupHardware(void)
 
 void setupDevices(void)
 {   
+
     //inicializa informaçoes do equipamento.
     info_init();
 
@@ -102,7 +103,7 @@ void setupDevices(void)
     lcd_gotoxy(1, 1);
     uint8_t buff[] = {"Modulo JAGA!    "};
     lcd_print(&buff);
-    
+   
     //configura mecanismo de controle dos leds
     leds_attach(0, rA1);
     leds_attach(1, rA2);

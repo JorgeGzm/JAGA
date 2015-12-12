@@ -48,7 +48,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void main(void)
+int main(void)
 {
     //Inicializa sistema
     init_drivers();
@@ -64,4 +64,5 @@ void main(void)
         //Executa rotina que trata a HIM'
         run_him();
     }
+    return 0;
 }

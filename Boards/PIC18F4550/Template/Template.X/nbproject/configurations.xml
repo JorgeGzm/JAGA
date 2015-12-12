@@ -112,6 +112,9 @@
       <itemPath>../Source/sys_mcu.c</itemPath>
     </logicalFolder>
     <logicalFolder name="Util" displayName="Util" projectFiles="true">
+      <logicalFolder name="bitwise" displayName="bitwise" projectFiles="true">
+        <itemPath>../../../../Util/bitwise/bitwise.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="crc" displayName="crc" projectFiles="true">
         <itemPath>../../../../Util/crc/crc.c</itemPath>
         <itemPath>../../../../Util/crc/crc.h</itemPath>
@@ -122,9 +125,6 @@
       </logicalFolder>
       <logicalFolder name="types" displayName="types" projectFiles="true">
         <itemPath>../../../../Util/types/types.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="vars" displayName="vars" projectFiles="true">
-        <itemPath>../../../../Util/vars/vars.h</itemPath>
       </logicalFolder>
       <logicalFolder name="xprintf" displayName="xprintf" projectFiles="true">
         <itemPath>../../../../Util/xprintf/xprintf.c</itemPath>
