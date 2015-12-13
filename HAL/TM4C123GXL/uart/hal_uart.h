@@ -29,7 +29,6 @@
 #include <stdint.h>
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
-#include "vars/vars.h"
 #include "types/types.h"
 
 //==============================================================================

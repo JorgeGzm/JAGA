@@ -25,6 +25,7 @@
 
 #include "hal_gpio.h"
 #include "device/hal_device.h"
+#include "bitwise/bitwise.h"
 
 //==============================================================================
 // PRIVATE DEFINITIONS

@@ -34,6 +34,14 @@
 // PUBLIC DEFINITIONS
 //==============================================================================
 
+
+/** @brief Informa que o i2c deseja realizar uma escrita */
+#define I2C_WR          0x00
+
+/** @brief Informa que o i2c deseja realizar uma leitura */
+#define I2C_RD          0x01
+
+
  /** habilita porta serial sincrona e configura SCL e SDA respectivamente como pinos de clock e dado */
 #define I2C_EN_PIN_I2C 1
 
@@ -84,12 +92,6 @@
 #define I2C_CK_240KHz   49
 
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-/**@brief Informa que o i2c deseja realizar uma escrita */
-#define I2C_WR          0x00
-
-/**Informa que o i2c deseja realizar uma leitura */
-#define I2C_RD          0x01
 
 /**@brief */
 #define TOUT_I2C1       50
@@ -221,7 +223,7 @@ void i2c_nack(void);
 /**
  * @brief Espera receber um ACK
  */
-void i2c_wait_ack(void);
+uint8_t i2c_wait_ack(void);
 
 /**
  * @brief Transmite um byte pelo barramento I2C
@@ -250,6 +252,6 @@ uint8_t i2c_ack_stat(void);
  * @param UI8_data Dado que deseja ser enviado.
  * @return Dado recebido.
  */
-uint8_t i2c(uint8_t UI8_tipo, uint8_t UI8_data);
+uint8_t i2c(I2C_COMMAND UI8_tipo, uint8_t UI8_data);
 
 #endif

@@ -71,16 +71,16 @@ void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck)
 {
     SSPEN = enable_i2c;
 
-//    if(enable_i2c)
-//    {
-//        GPIO_regPin_outputHigh(sda); //TODO erro
-//        GPIO_regPin_outputHigh(sck); //TODO erro
-//    }
-//    else
-//    {
-//        GPIO_regPin_outputLow(sda);//TODO erro
-//        GPIO_regPin_outputLow(sck);
-//    }
+    if(enable_i2c)
+    {
+        GPIO_regPin_setDir(sda, DIR_INPUT);
+        GPIO_regPin_setDir(sck, DIR_INPUT);
+    }
+    else
+    {
+        GPIO_regPin_setDir(sda, DIR_OUTPUT);
+        GPIO_regPin_setDir(sck, DIR_OUTPUT);
+    }
 }
 
 void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)
@@ -214,7 +214,7 @@ void i2c_nack(void)//I2C_NACK
     while (SSPCON2bits.ACKEN);			//aguarda terminar seqüência ACK
 }
 
-void i2c_wait_ack(void)//I2C_TESTA_ACK
+uint8_t i2c_wait_ack(void)//I2C_TESTA_ACK
 {
     //Carrega temporizador timeout
 //    set_i2c1_timeout(TOUT_I2C1);
@@ -265,7 +265,7 @@ uint8_t i2c_read(void)
     return(SSPBUF);
 }
 
-uint8_t i2c(uint8_t tipo, uint8_t data)
+uint8_t i2c(I2C_COMMAND tipo, uint8_t data)
 {
     uint8_t feedback = 0;
 
@@ -300,7 +300,7 @@ uint8_t i2c(uint8_t tipo, uint8_t data)
             break;
 
         case EN_I2C_WAIT_ACK:
-            i2c_wait_ack();
+            feedback = i2c_wait_ack();
             break;
 
         case EN_I2C_ACK_STAT:
