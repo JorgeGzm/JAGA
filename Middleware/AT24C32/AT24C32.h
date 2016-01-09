@@ -1,10 +1,10 @@
 /**
-  * @file    steps.h
-  * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
-  * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
-  * @details
+  * @file    AT24C32.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Jun 16, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   TODO documentar
+  * @details Bibliteca para o uso do CI AT24C32(Memoria eeprom com a capacidade de 32Kx8).
   * @section LICENSE
   *
   * This program is free software; you can redistribute it and/or
@@ -19,8 +19,8 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+#ifndef AT24C32_H
+    #define AT24C32_H
 
 //==============================================================================
 // INCLUDE FILES
@@ -28,32 +28,16 @@
 
 #include <stdint.h>
 #include "types/types.h"
-#include "gpio/hal_gpio.h"
+#include "i2c/hal_i2c.h"
+#include "xmemory/xmemory.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
-
-/** @brief */
-typedef enum
-{
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
-
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +47,30 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
+/** @brief   Configura I2C do microcontrolador para se comunicar com o CI AT24C32. */
+void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint8_t*),
+					    uint8_t (*function_wr)(uint8_t, uint16_t, uint16_t, uint8_t*));
 
 /**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
+ * @brief   Escrita de dado na memoria eeprom AT24C32.
+ * @details A funcao efetua a escrita da um byte no endereco de memoria passado. 
+ * @param addr TODO documentar
+ * @param count TODO documentar
+ * @param data TODO documentar
  */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
+void AT24C32_write(uint16_t address, uint16_t count, uint8_t *data);
 
 /**
- * @brief TODO
- * @param index
- * @param action
+ * @brief   Leitura de dado armazenado na memoria eeprom AT24C32.
+ * @details A funcao retorna o byte lido no endereco de memoria passado.
+ * @param addr TODO documentar
+ * @param count TODO documentar
+ * @param data TODO documentar
  */
-void step_action(uint8_t index, STEP_DIRECTION action);
+void AT24C32_read(uint16_t address, uint16_t count, uint8_t* data);
 
-void step_protocol_commads(uint8_t data);
+DESCRIPTION_MEMORY AT24C32_get_description(void);
 
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
+#endif  /* AT24C32_H */
 
-#endif
+

@@ -72,8 +72,8 @@ void nokia_write(uint8_t dc, uint8_t _data);
 
 /**
  * @brief Define a posicao do cursor no glcd.
- * @param x Posicao horizontal (0 - 83).
- * @param y Pagina situada, posicao vertical ( 0 - 5).
+ * @param x Coluna - Posicao horizontal (0 - 83).
+ * @param y Linha - Pagina situada, posicao vertical ( 0 - 5).
  */
 void nokia_set_cursor(uint8_t x, uint8_t y);
 
@@ -85,10 +85,16 @@ void nokia_set_cursor(uint8_t x, uint8_t y);
 void nokia_chr(uint8_t caracter, uint8_t color);
 
 /**
- * @brief Escreve um caracter no glcd.
+ * @brief Escreve um caracter na cor branca e fundo preto no glcd.
  * @param Caracter Caracter a ser escrito.
  */
-void nokia_putc(uint8_t caracter);
+void nokia_white_putc(uint8_t caracter);
+
+/**
+ * @brief Escreve um caracter na cor preta e fundo branco no glcd.
+ * @param Caracter Caracter a ser escrito.
+ */
+void nokia_black_putc(uint8_t caracter);
 
 /**
  * @brief Escreve um caracter no lcd seguindo a tabela ASCII
@@ -98,7 +104,7 @@ void nokia_custom_char(uint8_t *map);
 
 /**
  * @brief Preenche o display com um conteudo do buffer;
- * @param Buffer Valor, quando for 0x00, limpa a tela;
+ * @param Buffer Valor, quando for 0x00, limpa a tela; 0xFF dexa a tela preta;
  */
 void nokia_fill(uint8_t Buffer);
 
@@ -135,8 +141,8 @@ void nokia_write_big_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color);
 
 /**
  * @brief Escreve um numero de tamanho grande.
- * @param x X deve ser incrementado de 11 em 11.
- * @param y Y deve ser incrementado de 2 em 2.
+ * @param x deve ser incrementado de 11 em 11.
+ * @param y deve ser incrementado de 2 em 2.(Valores: 0, 2, 4)
  * @param n
  * @param Color
  */

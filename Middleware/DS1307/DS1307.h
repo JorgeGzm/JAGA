@@ -1,10 +1,10 @@
 /**
-  * @file    steps.h
-  * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
-  * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
-  * @details
+  * @file    DS1307.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
+  * @date    Jun 26, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   TODO documentar
+  * @details Esta biblioca faz o uso da comunicacao I2C para a traca de dados com o CI.
   * @section LICENSE
   *
   * This program is free software; you can redistribute it and/or
@@ -19,41 +19,25 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+#ifndef DS1307_H
+    #define DS1307_H
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
 #include <stdint.h>
-#include "types/types.h"
-#include "gpio/hal_gpio.h"
+#include "i2c/hal_i2c.h"
+#include "xtime/xtime.h"
+#include "xmemory/xmemory.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
-
-/** @brief */
-typedef enum
-{
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
-
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +47,45 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
+/**
+ * @brief TODO Documentar.
+ * @param function_rd
+ * @param function_wr
+ */
+//void DS1307_attach_i2c(uint8_t (*function_rd)(), uint8_t (*function_wr)());
+void DS1307_attach_i2c(uint8_t (*function_rd)(uint8_t, uint8_t, uint16_t, uint8_t*),
+					   uint8_t (*function_wr)(uint8_t, uint8_t, uint16_t, uint8_t*));
 
 /**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
+ * @brief TODO Documentar. 
+ * @param data_time
  */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
+void DS1307_write(DataTime data_time);
 
 /**
- * @brief TODO
- * @param index
- * @param action
+ * @brief Funcao para ler os dados do CI RTC e carregar na estrutura RTC
+ * @param data_time
  */
-void step_action(uint8_t index, STEP_DIRECTION action);
+void DS1307_read(DataTime *data_time);
 
-void step_protocol_commads(uint8_t data);
+/**
+ * @brief Os dados sao perdidos apos a interrup��o da fonte de energia.
+ * @param addr Range 0x08 to 0x3F
+ * @param count
+ * @param data
+ * @return 
+ */
+uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data);
 
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
+/**
+ * @brief Os dados sao perdidos apos a interrup��o da fonte de energia.
+ * @param addr Range 0x08 to 0x3F
+ * @param count
+ * @param data
+ * @return 
+ */
+uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data);
+
+DESCRIPTION_MEMORY DS1307_get_description(void);
 
 #endif

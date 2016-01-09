@@ -24,10 +24,17 @@
 //==============================================================================
 
 #include "hal_i2c.h"
+#include "bitwise/bitwise.h"
 
 //==============================================================================
 // PRIVATE DEFINITIONS
 //==============================================================================
+
+/** @brief Informa que o i2c deseja realizar uma escrita */
+#define I2C_WR          0x00
+
+/** @brief Informa que o i2c deseja realizar uma leitura */
+#define I2C_RD          0x01
 
 //==============================================================================
 // PRIVATE TYPEDEFS
@@ -119,32 +126,6 @@ void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave)
     SSPCON1bits.WCOL = 0; //
 }
 
-//void i2c_setup(void)//modo Mestre
-//{
-//    //Pinos usados, pic 18f4550
-//    TRISBbits.TRISB0 = 1;       //RTC SDA aki
-//    TRISBbits.TRISB1 = 1;       //RTC SCK
-//
-//     //Disable serial port
-//    SSPCON1bits.SSPEN = 0; //descomentar
-//
-//    //Slew Rate Control is disable for Standard Speed mode (400 KHz a 1 MHz)
-//    SSPSTATbits.SMP = 1;//ok
-//
-//    //I2C Master mode
-//    SSPCON1bits.SSPM = 8; //ok
-//
-//    //Clock configuration (49 = 240 KHz) //bit rate de 100kbps a Fosc = 20MHz. obs: clock = Fosc/[4x(SSPAD+1)].
-//    SSPADD = 49; //ok
-//
-//    //Write data to be transmitted
-//    SSPBUF = 0x00; //ok
-//
-//    //Enable serial port
-//    SSPCON1bits.SSPEN = 1; //
-//    SSPCON1bits.WCOL = 0; //ok
-//}
-
 void i2c_idle(void)//I2C_LIVRE
 {
     //Carrega temporizador timeout
@@ -221,6 +202,7 @@ uint8_t i2c_wait_ack(void)//I2C_TESTA_ACK
 
     while(SSPCON2bits.ACKSTAT)// && get_i2c1_timeout())
         Nop();
+    return 0;
 }
 
 int8_t i2c_write(uint8_t UI8_dado)
@@ -314,3 +296,145 @@ uint8_t i2c(I2C_COMMAND tipo, uint8_t data)
 
     return (feedback);
 }
+
+uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
+{
+    i2c_idle();
+    i2c_start();
+    
+    i2c_write(clr_bit(slaveAddr,0));
+    i2c_wait_ack();
+    
+    i2c_write(memAddr);
+    i2c_wait_ack();
+    
+    i2c_start();
+        
+    i2c_write(set_bit(slaveAddr, 0));   
+    i2c_wait_ack();
+    
+    while (byteCount > 1)
+    {
+        
+        *data++ =  i2c_read();        
+        i2c_ack();
+        byteCount--;
+    }
+    
+    *data++ =  i2c_read();         
+    i2c_stop();
+    
+    return 0;
+}
+
+uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
+{
+    i2c_idle();
+    i2c_start();
+    
+    i2c_write(clr_bit(slaveAddr,0));
+    i2c_wait_ack();
+    
+    i2c_write(memAddr);
+    i2c_wait_ack();
+    
+    while (byteCount)
+    { 
+       i2c_write(*data++);        
+       i2c_wait_ack();
+       byteCount--;
+    }
+    
+    i2c_stop();    
+}
+
+uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
+{
+    UWord aux_memAddr;
+    
+    aux_memAddr.value = memAddr;
+    
+    i2c_idle();
+    i2c_start();    
+    
+    i2c_write(clr_bit(slaveAddr,0));
+    i2c_wait_ack();
+    
+    i2c_write(aux_memAddr.b.b2);
+    i2c_wait_ack();
+    
+     i2c_write(aux_memAddr.b.b1);
+    i2c_wait_ack();
+    
+    i2c_start();  
+    
+    i2c_write(set_bit(slaveAddr, 0));   
+    i2c_wait_ack();
+    
+    while (byteCount > 1)
+    {
+        
+        *data++ =  i2c_read();        
+        i2c_ack();
+        byteCount--;
+    }
+    
+    *data++ =  i2c_read();         
+    i2c_stop();
+    
+    return 0;
+}
+
+uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
+{   
+    UWord aux_memAddr;
+    
+    aux_memAddr.value = memAddr;
+    
+    i2c_idle();
+    i2c_start(); 
+    
+    i2c_write(clr_bit(slaveAddr,0));
+    i2c_wait_ack();
+    
+    i2c_write(aux_memAddr.b.b2);
+    i2c_wait_ack();
+    
+    i2c_write(aux_memAddr.b.b1);
+    i2c_wait_ack();
+    
+    while (byteCount)
+    { 
+       i2c_write(*data++);        
+       i2c_wait_ack();
+       byteCount--;
+    }
+    
+    i2c_stop();  
+}
+
+//void i2c_setup(void)//modo Mestre apenas para teste
+//{
+//    //Pinos usados, pic 18f4550
+//    TRISBbits.TRISB0 = 1;       //RTC SDA aki
+//    TRISBbits.TRISB1 = 1;       //RTC SCK
+//
+//     //Disable serial port
+//    SSPCON1bits.SSPEN = 0; //descomentar
+//
+//    //Slew Rate Control is disable for Standard Speed mode (400 KHz a 1 MHz)
+//    SSPSTATbits.SMP = 1;//ok
+//
+//    //I2C Master mode
+//    SSPCON1bits.SSPM = 8; //ok
+//
+//    //Clock configuration (49 = 240 KHz) //bit rate de 100kbps a Fosc = 20MHz. obs: clock = Fosc/[4x(SSPAD+1)].
+//    SSPADD = 49; //ok
+//
+//    //Write data to be transmitted
+//    SSPBUF = 0x00; //ok
+//
+//    //Enable serial port
+//    SSPCON1bits.SSPEN = 1; //
+//    SSPCON1bits.WCOL = 0; //ok
+//}

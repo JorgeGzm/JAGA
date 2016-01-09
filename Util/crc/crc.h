@@ -49,17 +49,15 @@
  * @brief Calcula CRC de uma variavel "uint8" recebida e retorna o valor calculado. 
  * @param crc 
  * @param dado
- * @return Retorna o valor CRC calculo 
  */
-uint16_t crc_calculo(uint16_t crc, uint8_t dado);
+void crc_calculo(uint16_t *crc, uint8_t dado);
 
 /**
  * @brief Calcula CRC de um vetor "uint8" recebido e retorna o valor calculado. 
- * @param count Numero de posicoes do vetor
- * @param buffer Ponteiro bara o vetor que contem os dados.
- * @return Retorna o valor CRC calculo 
+ * @param crc Ponteiro para o valor que recebe o valor crc.
+ * @param buffer Ponteiro para o vetor que contem os dados.
  */
-uint16_t crc_calcula_buff(uint16_t count, uint8_t *buffer);
+void crc_calcula_buff(uint16_t *crc, uint8_t *buffer);
 
 #endif	
 

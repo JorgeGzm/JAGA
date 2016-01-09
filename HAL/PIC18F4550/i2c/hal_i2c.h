@@ -34,14 +34,6 @@
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
-/** @brief Informa que o i2c deseja realizar uma escrita */
-#define I2C_WR          0x00
-
-/** @brief Informa que o i2c deseja realizar uma leitura */
-#define I2C_RD          0x01
-
-
  /** habilita porta serial sincrona e configura SCL e SDA respectivamente como pinos de clock e dado */
 #define I2C_EN_PIN_I2C 1
 
@@ -254,4 +246,47 @@ uint8_t i2c_ack_stat(void);
  */
 uint8_t i2c(I2C_COMMAND UI8_tipo, uint8_t UI8_data);
 
+/**
+ * 
+ * @param slaveAddr
+ * @param memAddr
+ * @param byteCount
+ * @param data
+ * @return 
+ */
+uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+
+/**
+ * 
+ * @param slaveAddr
+ * @param memAddr
+ * @param byteCount
+ * @param data
+ * @return 
+ */
+uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+
+/**
+ * 
+ * @param slaveAddr
+ * @param memAddr
+ * @param byteCount
+ * @param data
+ * @return 
+ */
+uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
+
+/**
+ * 
+ * @param slaveAddr
+ * @param memAddr
+ * @param byteCount
+ * @param data
+ * @return 
+ */
+uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
+
+
 #endif
+
+

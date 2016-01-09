@@ -1,9 +1,9 @@
 /**
-  * @file    steps.h
-  * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
-  * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
+  * @file    xmemory.h
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Dez 26, 2015
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para descrever memorias eeprom, flash, etc.
   * @details
   * @section LICENSE
   *
@@ -19,41 +19,30 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+#ifndef XMEMORY_H
+	#define	XMEMORY_H
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
 #include <stdint.h>
-#include "types/types.h"
-#include "gpio/hal_gpio.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
 
-/** @brief */
-typedef enum
+typedef struct
 {
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
+	uint16_t init;
+	uint16_t store;
+	uint8_t str_devide[10];
 
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
+}DESCRIPTION_MEMORY;
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +52,4 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
-
-/**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
- */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
-
-/**
- * @brief TODO
- * @param index
- * @param action
- */
-void step_action(uint8_t index, STEP_DIRECTION action);
-
-void step_protocol_commads(uint8_t data);
-
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
-
-#endif
+#endif	

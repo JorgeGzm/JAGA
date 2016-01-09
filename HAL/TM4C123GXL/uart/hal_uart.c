@@ -41,6 +41,9 @@
 // PRIVATE FUNCTIONS
 //==============================================================================
 
+	extern uint8_t xdado[300];
+	extern uint8_t xi;
+
 /**@brief TODO documentar*/
 void (*uart0_rx_callback)(uint8_t);
 
@@ -156,15 +159,20 @@ void UART1_Handler(void)
 	volatile int readback;
 
 	unsigned char c;
-	static unsigned char buf[5];
 
 	if (UART1->MIS & 0x0010)
 	{
 		c = UART1->DR;              /* read the received data */
 		//-------------------
 
-		uart1_rx_callback(c);
 
+//		if(xi>300-1)
+//		{
+//			xi = 0;
+//		}
+//		xdado[xi++] = c;
+		uart1_rx_callback(c);
+		//step_protocol_commads(c);
 		//-------------------------
 
 		UART1->ICR = 0x0010;        /* clear Rx interrupt flag */

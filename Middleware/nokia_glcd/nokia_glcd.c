@@ -217,6 +217,7 @@ uint8_t const BigNumbers[][42] =
 {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}    //
 };
 
+
 /** parametro que controlara o GLCD nokia*/
 GLCD_nokia nokia =
 {
@@ -413,16 +414,17 @@ void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
     }
 }
 
-void nokia_putc(uint8_t caracter)
+void nokia_white_putc(uint8_t caracter)
 {
-    uint8_t i, chr;
-
-    for(i = 0; i < 5; i++)
-    {
-        chr = ASCII_TABLE[caracter - 0x20][i];
-        nokia_write(LCD_DATA, chr);
-    }
+   nokia_chr(caracter, 0);
 }
+
+
+void nokia_black_putc(uint8_t caracter)
+{
+   nokia_chr(caracter, 1);
+}
+
 
 /*
  *    exemplo

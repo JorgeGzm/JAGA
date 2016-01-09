@@ -1,9 +1,9 @@
 /**
-  * @file    steps.h
+  * @file    RFID_Card.h
   * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
-  * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
+  * @date    Jun 13, 2014
+  * @version 0.1.0.0 (beta)
+  * @brief   Bibliteoca para o uso do mudulo de leitura do Cartao RFID
   * @details
   * @section LICENSE
   *
@@ -19,41 +19,39 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+
+#ifndef RFIDCARD_H
+	#define RFIDCARD_H
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
-#include <stdint.h>
 #include "types/types.h"
-#include "gpio/hal_gpio.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
 
-/** @brief */
+/**
+ * @brief Informa se o dado foi validado ou nao
+ */
 typedef enum
 {
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
+	/**  @brief Nao ha ID para tratar*/
+	VALIDATION_NONE = 0,
 
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
+	/**  @brief ID de cartao nao e conhecido pelo sistema */
+	VALIDATION_ERROR,
+
+	/**  @brief ID de cartao e conhecido pelo sistema */
+	VALIDATION_OK, 
+
+}VALIDATION;
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +61,17 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
+/**
+ * @brief TODO documentar
+ * @param data TODO documentar
+ */
+void rfid_card_isr_buff(uint8_t data);
 
 /**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
+ * @brief TODO documentar
+ * @param buffID TODO documentar
  */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
+VALIDATION rfid_card_validation(uint8_t buffID[]);
 
-/**
- * @brief TODO
- * @param index
- * @param action
- */
-void step_action(uint8_t index, STEP_DIRECTION action);
 
-void step_protocol_commads(uint8_t data);
-
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
-
-#endif
+#endif  /* RFIDCARD_H */

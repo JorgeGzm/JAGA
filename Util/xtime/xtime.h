@@ -1,9 +1,9 @@
 /**
-  * @file    steps.h
-  * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
+  * @file    xtime.c
+  * @author  Jorge Guzman (jorge.gzm@gmail.com);
+  * @date    Dez 11, 2015
   * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
+  * @brief   TODO documentar
   * @details
   * @section LICENSE
   *
@@ -19,41 +19,35 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+#ifndef XTIME_H
+	#define	XTIME_H
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
 #include <stdint.h>
-#include "types/types.h"
-#include "gpio/hal_gpio.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
 
-/** @brief */
-typedef enum
+typedef struct 
 {
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
-
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
+    uint8_t day;
+    uint8_t date;
+    uint8_t month;
+    uint8_t yearChar;
+    uint16_t yearInt;
+    uint8_t hour;
+    uint8_t minute;
+    uint8_t second;
+    int8_t str_day[13];
+}DataTime; 
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +57,33 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
+/**
+ * @brief Converte um valor decimal para o formato BCD
+ * @param val Valor decimal a ser convertido para BCD
+ * @return Valor no formato BCD
+ */
+uint8_t decToBcd(uint8_t val);
 
 /**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
+ * @brief Configura o módulo MSSP 1 para I2c
+ * @param val Valor BCD a ser convertido para decimal
+ * @return Valor no formato decimal
  */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
+uint8_t bcdToDec(uint8_t val);
 
 /**
- * @brief TODO
- * @param index
- * @param action
+ * @brief Recupera string do dia da semana.
+ * @param day
+ * @return erro
  */
-void step_action(uint8_t index, STEP_DIRECTION action);
+uint8_t get_string_day(DataTime *day);
 
-void step_protocol_commads(uint8_t data);
+/**
+ *
+ * @param Relogio
+ * @return Retorna o Time Stamp calculado usando o Data Time passado.
+ */
+//Timestamp timestamp_calc(DataTime data_time);
 
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
+#endif	/* PRINT_H */
 
-#endif
