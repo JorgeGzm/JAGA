@@ -63,7 +63,6 @@
  
 void run_him(void)
 {
-    static uint16_t counterB = 0;    
     char str[7];
     float aux;
     DataTime rtc;
@@ -121,17 +120,7 @@ void run_him(void)
                 
                 leds_set(LD1G, LED_OFF);
                 leds_set(LD2G, LED_BLINK_FAST);   
-
-//                lcd_gotoxy(1, 1);
-//                xprintf(lcd_putc, (uint8_t *)"BUTTON DOWN     ");
-//
-//                lcd_gotoxy(1, 2);
-//                xprintf(lcd_putc, (uint8_t *)"%u      ", ++counterB);
-//
-//                leds_set(LD1G, LED_OFF);
-//                leds_set(LD2G, LED_BLINK_FAST);   
-//
-//                xprintf(callback_uart_putc, (uint8_t *)"\r\nButton DOWN pressed %u times", counterB);     
+    
                 break;
 
             case 0x08:

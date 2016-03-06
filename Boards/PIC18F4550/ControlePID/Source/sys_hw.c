@@ -42,6 +42,7 @@
 #include "DS1307/DS1307.h"
 #include "AT24C32/AT24C32.h"
 #include "LM35/lm35.h"
+#include "xprintf/xprintf.h"
 
 #include "ad/hal_ad.h"
 #include "i2c/hal_i2c.h"
@@ -86,7 +87,7 @@ void setupHardware(void)
 
 void setupDevices(void)
 {   
-    DataTime relogio;    
+    //DataTime relogio;    
       
     //inicializa informaçoes do equipamento.
     info_init();
@@ -108,8 +109,8 @@ void setupDevices(void)
     lcd_print(&buff);
    
     //configura mecanismo de controle dos leds
-    leds_attach(0, rA1);
-    leds_attach(1, rA2);
+    leds_attach(0, rA4);
+    leds_attach(1, rA5);
     leds_set(LD1G, LED_OFF);
          
     //Sensor Ultrasonico
@@ -124,14 +125,16 @@ void setupDevices(void)
     AT24C32_attach_i2c(i2c0_burst_read16, i2c0_burst_write16);
         
     init_nivel_controle();
-    
-  
-    relogio.second = 10;
-    relogio.minute = 40;
-    relogio.hour = 18;
-    relogio.day = 4;
-    relogio.date = 3;
-    relogio.month = 2;
-    relogio.yearChar = 16;
-    DS1307_write(relogio);
+     
+    //Init datatime in RTC
+//    relogio.second = 10;
+//    relogio.minute = 40;
+//    relogio.hour = 18;
+//    relogio.day = 4;
+//    relogio.date = 3;
+//    relogio.month = 2;
+//    relogio.yearChar = 16;
+//    DS1307_write(relogio);
+     
+     xprintf(callback_uart_putc, (uint8_t *)"\r\nInit JAGA system");    
 }
