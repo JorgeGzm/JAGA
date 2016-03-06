@@ -343,7 +343,7 @@ void nokia_fill(uint8_t Buffer )
   }
 }
 
-void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color)
+void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color) //OK
 {
   nokia_set_cursor(col, row );
 

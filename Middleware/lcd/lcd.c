@@ -222,6 +222,10 @@ void lcd_putc(uint8_t c)
 		case '\b': // Volta um caracter
 			lcd_send_byte(0, 0x10);
 		break;
+        
+		case '%': // Volta um caracter
+			lcd_send_byte(1, 0x25);
+		break;
 
 		default: // Escreve o caracter
 			lcd_send_byte(1, c);

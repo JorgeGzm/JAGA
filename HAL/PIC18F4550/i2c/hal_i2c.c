@@ -346,6 +346,8 @@ uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount,
     }
     
     i2c_stop();    
+    
+    return 0;
 }
 
 uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
@@ -411,6 +413,8 @@ uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCou
     }
     
     i2c_stop();  
+    
+    return 0;
 }
 
 //void i2c_setup(void)//modo Mestre apenas para teste

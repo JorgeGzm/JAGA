@@ -120,8 +120,6 @@ void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco);
  * @param sonar Variavel que contem as configuracoes do sensor.
  * @return Retorna a distancia em centimetros com resolucao de 2 casas decimais.
  */
-uint16_t HCSR04_read(HCSR04 sonar);
-
-extern HCSR04 ultrason[4];
+float HCSR04_read(uint8_t index);
 
 #endif	/* HCSR04_H */

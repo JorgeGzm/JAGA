@@ -92,4 +92,10 @@ uint8_t buttons_check_press(BUTTON_NAME button_id, BUTTON_CHECK_TYPE press);
  */
 void button_attach(uint8_t index, regGPIO reg);
 
+/**
+ * @brief Retorna teclas pressionadas
+ * @return 
+ */
+uint8_t buttons_event(void);
+
 #endif 

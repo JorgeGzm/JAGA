@@ -24,7 +24,7 @@
 //==============================================================================
 
 #include "hal_ad.h"
-
+#include <pwm.h>
 //==============================================================================
 // PRIVATE DEFINITIONS
 //==============================================================================
@@ -52,13 +52,11 @@ void ad_setup_vref(uint8_t p_vref, uint8_t n_vref)
     ADCON1bits.VCFG0 = p_vref;
 }
 
-void ad_setup_enable(uint8_t chanel, uint8_t analog_in, uint8_t enable)
+void ad_setup_enable(uint8_t analog_in, uint8_t enable)
 {
     uint8_t value;
     
     value = ~analog_in;
-
-    ADCON0bits.CHS = chanel;
 
     //mascara para configura AD dos pinos analogicos
     ADCON1bits.PCFG = 0x0F &value;    

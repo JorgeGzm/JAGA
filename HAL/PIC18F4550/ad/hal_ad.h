@@ -107,29 +107,27 @@ enum AD_CH
  */
 enum AD_AN
 {
-    AD_AN0 = 1,
-    AD_AN1,
-    AD_AN2,
-    AD_AN3,
-    AD_AN4,
-    AD_AN5,
-    AD_AN6,
-    AD_AN7,
-    AD_AN8,
-    AD_AN9,
-    AD_AN10,
-    AD_AN11,
-    AD_AN12,
-    AD_AN_SIZE,
+    EN_AN0 = 1,
+    EN_AN0_TO_1,
+    EN_AN0_TO_2,
+    EN_AN0_TO_3,
+    EN_AN0_TO_4,
+    EN_AN0_TO_5,
+    EN_AN0_TO_6,
+    EN_AN0_TO_7,
+    EN_AN0_TO_8,
+    EN_AN0_TO_9,
+    EN_AN0_TO_10,
+    EN_AN0_TO_11,
+    EN_AN0_TO_12,
+    EN_AN_SIZE,
 };
 
 /** @brif Estrutura que configura o uso do convesor AD para qualquer sensor*/
 typedef struct 
 {
-    regGPIO reg;
-    uint8_t channel;
-    //void (*set1)(uint8);//configura canal que vai ser usado.  Responsabilidade do AD agora
-    uint16_t(*read1)(uint8_t);    
+    regPin reg;
+    uint8_t channel;          
     uint8_t error;    
 }Analog;
 
@@ -153,21 +151,7 @@ typedef struct
 void ad_setup_vref(uint8_t pVref, uint8_t nVref);
 
 /**
- * @brief TODO documentar
- * @param bit de selecao do canal analogico, iniciando de AD_CH0 ate AD_CHX. \n
- *  AD_CH0: seleciona canal 0               \n
- *  AD_CH1: seleciona canais 0 e 1          \n
- *  AD_CH2: seleciona canais 0, 1 e 2       \n
- *  AD_CH3: seleciona canal 0, 1, 2 e 3     \n
- *  AD_CH4: seleciona canais 0 ate 4        \n
- *  AD_CH5: seleciona canais 0 ate 5        \n
- *  AD_CH6: seleciona canais 0 ate 6        \n
- *  AD_CH7: seleciona canais 0 ate 7        \n
- *  AD_CH8: seleciona canais 0 ate 8        \n
- *  AD_CH9: seleciona canais 0 ate 9        \n
- *  AD_CH10: seleciona canais 0 ate 10      \n
- *  AD_CH11: seleciona canais 0 ate 11      \n
- *  AD_CH12: seleciona canais 0 ate 12      
+ * @brief TODO documentar 
  * @param analog_in Configura os pinos conversores A/D como entrada analogica ou digital. \n
  * AD_AN0: Habilita AD do CH0               \n
  * AD_AN1: Habilita AD de CH0 e CH1         \n
@@ -186,7 +170,7 @@ void ad_setup_vref(uint8_t pVref, uint8_t nVref);
  *  AD_ENABLE:                              \n
  *  AD_DISABLE                              
  */
-void ad_setup_enable(uint8_t chanel, uint8_t analog_in, uint8_t enable);
+void ad_setup_enable(uint8_t analog_in, uint8_t enable);
 
 /**
  * @brief TODO documentar

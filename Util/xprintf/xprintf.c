@@ -68,7 +68,7 @@ void xprint_INT16(void (*func)(uint8_t), int16_t value);
 
 void xprint_putc(void (*func)(uint8_t), uint8_t c)
 {
-	func(c);
+  	func(c);
 }
 
 void xprint_string(void (*func)(uint8_t), const uint8_t *fmt)
@@ -151,13 +151,15 @@ void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...)
 
     va_start(pa, fmt);
     
-	while(*fmt != '\0')
+	//while(*fmt != '\0')
+	while(*fmt)
 	{
 		if(*fmt == '%')
 		{
 			switch(*++fmt)
 			{
-				case '%': xprint_putc(func, '%');
+				case '%': //XXX Bug aqui
+                    xprint_putc(func, '%');
 				break;
 
 				case 'c': /* uint8*/

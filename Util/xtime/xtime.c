@@ -80,8 +80,7 @@ uint8_t get_string_day(DataTime *day)
 				break;
 		default:
 			strcpy(day->str_day, "    ");
-			return -1;
-			break;
+			return -1;			
 	}
 	return 0;
 }

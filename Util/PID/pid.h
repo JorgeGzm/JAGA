@@ -19,27 +19,23 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef PID_H_
-#define PID_H_
+#ifndef _PID_H
+#define _PID_H
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
-#include "types/types.h"
-#include "gpio/hal_gpio.h"
-
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
-
 
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
 
 
-/** @brief Struct de Parâmetros do Controlador PI */
+/** @brief Struct de Parametros do Controlador PI */
 typedef struct
 {
     /** @brief Ganhos q0. q0 = Kp, Kp->Ganho Proporcional, Ti->Tempo de Integracao. */
@@ -48,7 +44,7 @@ typedef struct
     /**@brief Ganhos q1. q1 = -Kp*(1-Tamost/Ti), Tamost->Tempo de Amostragem. */
     float q1;
 
-    /** @brief Saturação da Saída. */
+    /** @brief Saturacao da Saida. */
     float sat_min, sat_max;
 
     /** @brief Variáveis Auxiliares.*/
@@ -57,7 +53,7 @@ typedef struct
 }PI_Params;
 
 
-/** @brief Struct de Parâmetros do Controlador PID*/
+/** @brief Struct de Parametros do Controlador PID*/
 typedef struct
 {
     /** @brief Ganhos q0. q0 = Kp * (1+Td/Tamost) */
@@ -69,10 +65,10 @@ typedef struct
     /** @brief Ganhos q2. q2 = Kp*Td/Tamost */
     float q2;
 
-    /** @brief Saturação da Saída. */
+    /** @brief Saturacao da Saida. */
     float sat_min, sat_max;
 
-    /** @brief Variáveis Auxiliares. */
+    /** @brief Variaveis Auxiliares. */
     float erro_ant, erro_ant2, y_ant;
 
 }PID_Params;
@@ -86,20 +82,22 @@ typedef struct
 //==============================================================================
 
 /**
- * @brief TODO
+ * 
  * @param x
  * @param x_ref
- * @param Params
- * @return
+ * @param params
+ * @return 
  */
-float PI_Control(float x, float x_ref, PI_Params *params);
+float PI_control(float x, float x_ref, PI_Params *params);
 
 /**
- * @brief TODO
+ * 
  * @param x
  * @param x_ref
- * @param Params
- * @return
+ * @param params
+ * @return 
  */
-float PID_Control(float x, float x_ref, PID_Params *params);
+float PID_control(float x, float x_ref, PID_Params *params);
+
 #endif
+

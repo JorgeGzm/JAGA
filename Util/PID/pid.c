@@ -64,21 +64,25 @@ float PI_control(float x, float x_ref, PI_Params *params)
 
 float PID_control(float x, float x_ref, PID_Params *params)
 {
-	float erro_atual;
-    float y;
-
-    float x2;
+	float erro_atual, y;
+    
     erro_atual = x_ref - x;
 
     y = params->y_ant + params->q0 * erro_atual + params->q1 * params->erro_ant + params->q2 * params->erro_ant2;
 
-    x2 = params->q1;
-
-    if (y > params->sat_max) y = params->sat_max;
-    else if (y < params->sat_min) y = params->sat_min;
+    if (y > params->sat_max) 
+    {
+        y = params->sat_max;
+    }
+    else if (y < params->sat_min)
+    {
+        y = params->sat_min;
+    }
     params->erro_ant2 = params->erro_ant;
     params->erro_ant = erro_atual;
     params->y_ant = y;
 
-    return y;
+    return y;    
 }
+
+

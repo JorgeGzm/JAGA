@@ -58,7 +58,7 @@ float k = 0.0;
 
 void HCSR04_set_const(float clock, uint8_t prescaler)
 {
-    float aux;
+   
 
     //constante  = 0.017(cm/us)*(prescaler*Fosc(us))
     k = 0.03433*(4.00/clock)*prescaler;
@@ -81,7 +81,7 @@ void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco)
     GPIO_regPin_setDir(&eco, DIR_INPUT);
 }
 
-uint16_t HCSR04_read(HCSR04 sonar)
+float HCSR04_read(uint8_t index)
 {
     float fl_distancia = 0.0;
     UWord count_timer;
@@ -90,15 +90,15 @@ uint16_t HCSR04_read(HCSR04 sonar)
     timer_set_counter(timerM, 0);
 
     //Pulso
-    GPIO_regPin_outputHigh(&sonar.trig);
+    GPIO_regPin_outputHigh(&ultrason[index].trig);
     Delay_us(10);
-    GPIO_regPin_outputLow(&sonar.trig);
+    GPIO_regPin_outputLow(&ultrason[index].trig);
 
     //ECO
-    while(!GPIO_regPin_inputBit(&sonar.eco));
+    while(!GPIO_regPin_inputBit(&ultrason[index].eco));
     //while(!GPIO_input_state(sonar.eco.port));//espera chegada do eco
     timer_start(timerM,1);//start
-    while(GPIO_regPin_inputBit(&sonar.eco));
+    while(GPIO_regPin_inputBit(&ultrason[index].eco));
     //while(GPIO_input_state(sonar.eco.port));
     timer_start(timerM,0);//stop
 
@@ -108,6 +108,36 @@ uint16_t HCSR04_read(HCSR04 sonar)
     //fl_distancia = (float)distancia.value*0.011328;
     fl_distancia = (float)count_timer.value*k;
 
-    return (uint16_t)(fl_distancia*100);
+    return (fl_distancia);
 }
+
+//uint16_t HCSR04_read(HCSR04 sonar)
+//{
+//    float fl_distancia = 0.0;
+//    UWord count_timer;
+//
+//    //limpa contador
+//    timer_set_counter(timerM, 0);
+//
+//    //Pulso
+//    GPIO_regPin_outputHigh(&sonar.trig);
+//    Delay_us(10);
+//    GPIO_regPin_outputLow(&sonar.trig);
+//
+//    //ECO
+//    while(!GPIO_regPin_inputBit(&sonar.eco));
+//    //while(!GPIO_input_state(sonar.eco.port));//espera chegada do eco
+//    timer_start(timerM,1);//start
+//    while(GPIO_regPin_inputBit(&sonar.eco));
+//    //while(GPIO_input_state(sonar.eco.port));
+//    timer_start(timerM,0);//stop
+//
+//    //Calculo de distancia.
+//    count_timer.value = timer_get_counter(timerM);
+//
+//    //fl_distancia = (float)distancia.value*0.011328;
+//    fl_distancia = (float)count_timer.value*k;
+//
+//    return (uint16_t)(fl_distancia*100);
+//}
 

@@ -46,7 +46,7 @@ typedef struct
     uint8_t hour;
     uint8_t minute;
     uint8_t second;
-    int8_t str_day[13];
+    uint8_t str_day[16];
 }DataTime; 
 
 //==============================================================================

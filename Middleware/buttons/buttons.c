@@ -216,3 +216,9 @@ uint8_t buttons_check_press(BUTTON_NAME button_mask, BUTTON_CHECK_TYPE press)
         }
     }
 }
+
+uint8_t buttons_event(void)
+{
+   return buttons.b.status;
+}
+
