@@ -28,6 +28,7 @@
 
 #include "device/hal_device.h"
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -46,14 +47,14 @@
 //==============================================================================
 
 /** @brief Reinicia o microcontrolador */
-void resetMCU(void);
+PUBLIC void resetMCU(void);
 
 /**
  * @brief TODO
  * @param senha_p1
  * @param senha_p2
  */
-void resetMCU_device(uint16_t senha_p1, uint16_t senha_p2);
+PUBLIC void resetMCU_device(uint16_t senha_p1, uint16_t senha_p2);
 
 #endif	
 

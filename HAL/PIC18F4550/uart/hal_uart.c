@@ -39,11 +39,6 @@
 // PRIVATE VARIABLES			
 //==============================================================================
 
-/** @brief TODO*/
-regPin pinRX1;
-
-/** @brief TODO*/
-regPin pinTX1;
 
 //==============================================================================
 // PRIVATE FUNCTIONS
@@ -59,7 +54,7 @@ void (*uart0_tx_callback)(void);
 // SOURCE CODE
 //==============================================================================
 
-void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx)
+PUBLIC void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx)
 {
     switch(module)
     {
@@ -75,7 +70,7 @@ void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx)
     }
 }
 
-void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priority_tx)
+PUBLIC void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priority_tx)
 {
     switch(module)
     {
@@ -91,7 +86,7 @@ void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priori
     }
 }
 
-void uart_set_baudRate(uint8_t module, uint8_t value)
+PUBLIC void uart_set_baudRate(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -124,16 +119,14 @@ void uart_set_baudRate(uint8_t module, uint8_t value)
     }
 }
 
-void uart_attach(regPin pin, regGPIO reg)
-{
-   
-    GPIO_regPin_attach(&pin, &reg);
-
+PUBLIC void uart_attach(uint8_t rx, uint8_t tx)
+{  
     //Configura pino do botao como entrada
-    GPIO_regPin_setDir(&reg, DIR_INPUT);
+    pinMode(rx, INPUT);
+    pinMode(tx, INPUT);
 }
 
-void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits,  uint8_t bd16bits)
+PUBLIC void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits,  uint8_t bd16bits)
 {
     switch(module)
     {
@@ -148,7 +141,7 @@ void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bi
     }
 }
 
-void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx)
+PUBLIC void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx)
 {
     switch(module)
     {
@@ -161,7 +154,7 @@ void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uin
     }
 }
 
-void uart_putc(uint8_t UI8_caracter)
+PUBLIC void uart_putc(uint8_t UI8_caracter)
 {
     TXREG = UI8_caracter;
     while(!TXSTAbits.TRMT);
@@ -178,7 +171,7 @@ inline uint8_t uart_get_data(void)
     return(RCREG);
 }
 
-void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t))
+PUBLIC void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t))
 {
     switch(module)
     {
@@ -188,7 +181,7 @@ void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t))
     }
 }
 
-void uart_tx_set_callback(uint8_t module, void (*func)(void))
+PUBLIC void uart_tx_set_callback(uint8_t module, void (*func)(void))
 {
     switch(module)
     {

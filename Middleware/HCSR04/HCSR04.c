@@ -56,32 +56,30 @@ float k = 0.0;
 // SOURCE CODE
 //------------------------------------------------------------------------------
 
-void HCSR04_set_const(float clock, uint8_t prescaler)
+PUBLIC void HCSR04_set_const(float clock, uint8_t prescaler)
 {
-   
-
     //constante  = 0.017(cm/us)*(prescaler*Fosc(us))
     k = 0.03433*(4.00/clock)*prescaler;
     k = k*1000000.00;
     k = k/2.0;
 }
 
-void HCSR04_attach_Timer(uint8_t modulo)
+PUBLIC void HCSR04_attach_Timer(uint8_t modulo)
 {
     timerM = modulo;
 }
 
-void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco)
+PUBLIC void HCSR04_attach(uint8_t index, uint8_t pin_trig, uint8_t pin_eco)
 {
     //Aloca o pino para o botao
-    GPIO_regPin_attach(&ultrason[index].trig, &trig);
-	GPIO_regPin_attach(&ultrason[index].eco, &eco);
+    ultrason[index].trig = pin_trig;
+    ultrason[index].eco = pin_eco;
 
-    GPIO_regPin_setDir(&trig, DIR_OUTPUT);
-    GPIO_regPin_setDir(&eco, DIR_INPUT);
+    pinMode(pin_trig, OUTPUT);
+    pinMode(pin_eco, INPUT);    
 }
 
-float HCSR04_read(uint8_t index)
+PUBLIC float HCSR04_read(uint8_t index)
 {
     float fl_distancia = 0.0;
     UWord count_timer;
@@ -90,16 +88,15 @@ float HCSR04_read(uint8_t index)
     timer_set_counter(timerM, 0);
 
     //Pulso
-    GPIO_regPin_outputHigh(&ultrason[index].trig);
+    digitalWrite(ultrason[index].trig, 1);
     Delay_us(10);
-    GPIO_regPin_outputLow(&ultrason[index].trig);
+    digitalWrite(ultrason[index].trig, 0);
 
     //ECO
-    while(!GPIO_regPin_inputBit(&ultrason[index].eco));
-    //while(!GPIO_input_state(sonar.eco.port));//espera chegada do eco
+    while(!digitalRead(ultrason[index].eco));  
     timer_start(timerM,1);//start
-    while(GPIO_regPin_inputBit(&ultrason[index].eco));
-    //while(GPIO_input_state(sonar.eco.port));
+    
+    while(digitalRead(ultrason[index].eco));
     timer_start(timerM,0);//stop
 
     //Calculo de distancia.

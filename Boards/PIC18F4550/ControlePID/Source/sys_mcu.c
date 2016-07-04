@@ -46,7 +46,7 @@
 // SOURCE CODE
 //==============================================================================
 
- void init_mcu(void)
+ PUBLIC void init_mcu(void)
  {
     //Inicializacao de todas as interrupcoes utilizadas no sistema. TODO abstrair
     RCONbits.IPEN = 1; //b7:(1) habilita niveis de interrupcao

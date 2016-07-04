@@ -29,6 +29,7 @@
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "sys_mcu.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -97,7 +98,7 @@
  * PWM_MODE_P1A_P1C_LOW_P1B_P1D_HIGH:   \n
  * PWM_MODE_P1A_P1C_LOW_P1B_P1D_LOW:    \n
  */
-void pwmMCU_setup_conf(uint8_t func, uint8_t ccp);
+PUBLIC void pwmMCU_setup_conf(uint8_t func, uint8_t ccp);
 
 /**
  * @brief
@@ -124,13 +125,13 @@ void pwmMCU_setup_tmr(uint8_t enable, float frequencia);
  * @brief Configura Duty cycle
  * @param duty Porgentagem do duty cycle. Range: 0.00 - 100.00%
  */
-void pwmMCU_set_fduty(float duty);
+PUBLIC void pwmMCU_set_fduty(float duty);
 
 /**
  * @brief
  * @param duty
  */
-void pwmMCU_set_duty(uint8_t duty);
+PUBLIC void pwmMCU_set_duty(uint8_t duty);
 
 #endif
 

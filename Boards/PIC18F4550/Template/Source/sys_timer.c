@@ -47,25 +47,25 @@
 //==============================================================================
 
 /** @brief Funcao callback da interrupcao do TMR0 */
-static void timer_counter(void);
+PRIVATE void timer_counter(void);
 
 /** @brief Contadores de 1 milisegundo */
-inline static void counter_1_ms(void);
+inline PRIVATE void counter_1_ms(void);
 
 /** @brief Contadores de 10 milisegundos */
-inline static void counter_10_ms(void);
+inline PRIVATE void counter_10_ms(void);
 
 /** @brief Contadores de 100 milisegundos */
-inline static void counter_100_ms(void);
+inline PRIVATE void counter_100_ms(void);
 
 /** @brief Contadores de 1 segundo */
-inline static void counter_1_s(void);
+inline PRIVATE void counter_1_s(void);
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void init_timer0(void)
+PUBLIC void init_timer0(void)
 {
     //Inicializa TMR0
     timer_init_regs(_TMR0);
@@ -84,7 +84,7 @@ void init_timer0(void)
     timer_start(_TMR0, TMR_ON);
 }
 
-static void timer_counter(void)
+PRIVATE void timer_counter(void)
 {
     // --- Temporizadores das bases de tempo 1ms, 10ms, 100ms, 1s ---
     //static uint8 tmr_1_ms = 1;
@@ -123,24 +123,24 @@ static void timer_counter(void)
     }
 }
 
-inline static void counter_1_ms(void)
+inline PRIVATE void counter_1_ms(void)
 {
 
 }
 
-inline static void counter_10_ms(void)
+inline PRIVATE void counter_10_ms(void)
 {
     //Leitura das teclas
     buttons_read_isr_10ms();
 }
 
-inline static void counter_100_ms(void)
+inline PRIVATE void counter_100_ms(void)
 {
     //varredura dos leds
     leds_action_isr_100ms();
 }
 
-inline static void counter_1_s(void)
+inline PRIVATE void counter_1_s(void)
 {
 
 }

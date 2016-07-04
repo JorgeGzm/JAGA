@@ -27,6 +27,7 @@
 //==============================================================================
 
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -49,13 +50,13 @@
  * @param address Endereco onde o dado sera gravado.
  * @return Retorna o dado lido no endereço passado
  */
-uint8_t eeprom_rd(uint8_t address);
+PUBLIC uint8_t eeprom_rd(uint8_t address);
 
 /**
  * @brief  Escrita na memoria EEPROM do pic18f4550
  * @param address Endereco onde o dado se encontra. Range: 0 - 255.
  * @param data Dado a ser gravado.
  */
-void eeprom_wr(uint8_t address, uint8_t data);
+PUBLIC void eeprom_wr(uint8_t address, uint8_t data);
 
 #endif	

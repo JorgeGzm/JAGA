@@ -46,8 +46,9 @@
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
-void init_i2c(void)
+
+PUBLIC void init_i2c(void)
 {
-    i2c_setup_enable(I2C_EN_PIN_I2C, &rB0, &rB1);
+    i2c_setup_enable(I2C_EN_PIN_I2C, 26, 27);
     i2c_setup_master(I2C_STP_MASTER_CLOCK, I2C_SPEED_FAST, I2C_CK_240KHz);
 }

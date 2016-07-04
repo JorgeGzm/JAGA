@@ -28,10 +28,16 @@
 
 #include "types/types.h"
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
+
+#define OUTPUT 0
+#define INPUT  1
+#define LOW 0
+#define HIGH 1
 
 //==============================================================================
 // PUBLIC TYPEDEFS
@@ -255,5 +261,9 @@ void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection);
  * @return TODO
  */
 uint8_t GPIO_regPin_inputBit(regPin *pin);
+
+PUBLIC int digitalRead(int pin);
+PUBLIC void digitalWrite(int pin, int value);
+PUBLIC void pinMode(int pin, int type);
 
 #endif	

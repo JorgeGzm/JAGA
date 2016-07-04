@@ -64,7 +64,7 @@ uint8_t ready = 0;
 // PRIVATE FUNCTIONS
 //==============================================================================
 
-void rfid_card_isr_buff(uint8_t data)
+PUBLIC void rfid_card_isr_buff(uint8_t data)
 {
 	static int ind = 0;
 	static CARD_STATES status = ST_START;
@@ -101,7 +101,7 @@ void rfid_card_isr_buff(uint8_t data)
 	}
 }
 
-VALIDATION rfid_card_validation(uint8_t buffID[])
+PUBLIC VALIDATION rfid_card_validation(uint8_t buffID[])
 {
 	if(ready)
     {

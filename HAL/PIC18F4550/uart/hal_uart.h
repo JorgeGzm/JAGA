@@ -29,6 +29,7 @@
 #include <stdint.h>
 #include "gpio/hal_gpio.h"
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -123,9 +124,6 @@
 // PUBLIC VARIABLES			
 //==============================================================================
 
-extern regPin pinRX1;
-extern regPin pinTX1;
-
 //==============================================================================
 // PUBLIC FUNCTIONS
 //==============================================================================
@@ -136,7 +134,7 @@ extern regPin pinTX1;
  * @param port TODO
  * @param tris TODO
  */
-void uart_attach(regPin reg, regGPIO port);
+PUBLIC void uart_attach(uint8_t rx, uint8_t tx);
 
 /**
  * @brief
@@ -145,7 +143,7 @@ void uart_attach(regPin reg, regGPIO port);
  * @param rx Habilita ou Desabilita a interrupcao modulo receptor da porta serial
  * @param tx Habilita ou Desabilita a interrupcao modulo transmissao da porta serial
  */
-void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
+PUBLIC void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
@@ -158,7 +156,7 @@ void uart_setup_interrupt(uint8_t module, uint8_t rx, uint8_t tx);
  *  ENABLE: Habilita transmissao de dados como interrupcao de alta prioridade \n
  *  DISABLE: Habilita transmissao de dados como interrupcao de baixa prioridade \n
  */
-void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priority_tx);
+PUBLIC void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priority_tx);
 
 /**
  * @brief TODO
@@ -174,7 +172,7 @@ void uart_priority_interrupt(uint8_t module, uint8_t priority_rx, uint8_t priori
  *  UART_ENABLE_TX: Habilita transmissao. \n
  *  UART_DISABLE_TX: Desabilita transmissao.
  */
-void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx);
+PUBLIC void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uint8_t enable_tx);
 
 /**
  * @brief TODO
@@ -196,7 +194,7 @@ void uart_set_enable(uint8_t module, uint8_t enable_uart, uint8_t enable_rx, uin
  *  UART_BD_8BITS: Gerador de baud rate de 8 bits. \n
  *  UART_BD_16BITS: Gerador de baud rate de 16 bits.
  */
-void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits, uint8_t bd16bits);
+PUBLIC void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bits, uint8_t tx9bits, uint8_t bd16bits);
 
 /**
  * @brief TODO
@@ -207,7 +205,7 @@ void uart_set_conf(uint8_t module, uint8_t sync, uint8_t high_com, uint8_t rx9bi
  *  BAUD_19200: \n
  *  BAUD_115200: \n
  */
-void uart_set_baudRate(uint8_t module, uint8_t value);
+PUBLIC void uart_set_baudRate(uint8_t module, uint8_t value);
 
 /**
  * @brief TODO
@@ -215,7 +213,7 @@ void uart_set_baudRate(uint8_t module, uint8_t value);
  *  _UART1: UART 1.  \n
  * @param func
  */
-void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t));
+PUBLIC void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t));
 
 /**
  * @brief TODO
@@ -223,13 +221,13 @@ void uart_rx_set_callback(uint8_t module, void (*func)(uint8_t));
  *  _UART1: UART 1. \n
  * @param func
  */
-void uart_tx_set_callback(uint8_t module, void (*func)(void));
+PUBLIC void uart_tx_set_callback(uint8_t module, void (*func)(void));
 
 /**
  * @brief A funcao envia um  byte  pela porta serial.
  * @param UI8_caracter recebe o byte que sera enviado pela serial.
  */
-void uart_putc(uint8_t UI8_caracter);
+PUBLIC void uart_putc(uint8_t UI8_caracter);
 
 /**
  * @brief TODO

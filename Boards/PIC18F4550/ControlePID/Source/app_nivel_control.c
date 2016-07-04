@@ -60,7 +60,7 @@ float Tamost = 0.1;
 float nivel_real = 0.0; //em cemtimetros
 float pwm_out;
 
-void init_nivel_controle(void)
+PUBLIC void init_nivel_controle(void)
 {    
     fl_set_point = 15.0;
 
@@ -76,7 +76,7 @@ void init_nivel_controle(void)
     pid.y_ant = 0;
 }
 
-void run_nivel_control(void)
+PUBLIC void run_nivel_control(void)
 {    
     nivel_real = ALTURA_TANQUE - HCSR04_read(0);  
   
@@ -99,12 +99,12 @@ void run_nivel_control(void)
     pwmMCU_set_fduty(pwm_out);        
 }
 
-float get_nivel_tanque(void)
+PUBLIC float get_nivel_tanque(void)
 {
     return nivel_real;
 }
 
-float get_nivel_dutyPWM(void)
+PUBLIC float get_nivel_dutyPWM(void)
 {
     return pwm_out;
 }

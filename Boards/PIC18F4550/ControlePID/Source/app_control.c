@@ -48,7 +48,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void run_system(void)
+PUBLIC void run_system(void)
 {
   
 }

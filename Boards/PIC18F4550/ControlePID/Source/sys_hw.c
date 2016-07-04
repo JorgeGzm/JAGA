@@ -48,6 +48,7 @@
 #include "i2c/hal_i2c.h"
 #include "interrupt/hal_interrupts.h"
 #include "timer/hal_timer.h"
+#include "gpio/hal_gpio.h"
 
 //==============================================================================
 // PRIVATE DEFINITIONS
@@ -69,7 +70,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void setupHardware(void)
+PUBLIC void setupHardware(void)
 {
     //inicializa as configuraçoes do micrococontrolador
     init_mcu();
@@ -85,56 +86,56 @@ void setupHardware(void)
     init_pwm();
 }
 
-void setupDevices(void)
+PUBLIC void setupDevices(void)
 {   
-    //DataTime relogio;    
+   // DataTime relogio;    
       
     //inicializa informaçoes do equipamento.
     info_init();
-
-    lm35_init();
-    lm35_attach(0, rA0, AD_CH0);
     
     //Inicializa e configura mecanismo de controle das teclas
     buttons_init();
-    button_attach(0, rB3);
-    button_attach(1, rB2);
-    button_attach(2, rE2);
-    button_attach(3, rE1);
+   // button_attach(0, 29);
+    button_attach(1, 28);
+    button_attach(2, 9);
+    //button_attach(3, 8);
 
     //Configura e inicializa pinos que serao usados pela biblioteca LCD.
-    lcd_attach(rD0, rD1, rD4, rD5, rD6, rD7);
+    lcd_attach(14, 15, 22, 23, 24, 25);
     lcd_gotoxy(1, 1);
     uint8_t buff[] = {"Modulo JAGA!    "};
     lcd_print(&buff);
    
     //configura mecanismo de controle dos leds
-    leds_attach(0, rA4);
-    leds_attach(1, rA5);
+    leds_attach(0, 4);
+    leds_attach(1, 5);
     leds_set(LD1G, LED_OFF);
          
     //Sensor Ultrasonico
-    HCSR04_attach(0, rD3, rD2); 
-    HCSR04_set_const(48000000F, 8);                                                    
+    HCSR04_attach(0, 17, 16); 
+    HCSR04_set_const(48000000, 8);                                                    
     HCSR04_attach_Timer(_TMR1);     
     
     //RTC
-    DS1307_attach_i2c(i2c0_burst_read, i2c0_burst_write);
+    DS1307_attach_i2c(&Driver_I2C0);
     
     //Memoria EEPROM externa
     AT24C32_attach_i2c(i2c0_burst_read16, i2c0_burst_write16);
         
+    lm35_init();
+    lm35_attach(0, 1, AD_CH0);
+    
     init_nivel_controle();
      
-    //Init datatime in RTC
+   // Init datatime in RTC
 //    relogio.second = 10;
-//    relogio.minute = 40;
-//    relogio.hour = 18;
-//    relogio.day = 4;
-//    relogio.date = 3;
-//    relogio.month = 2;
+//    relogio.minute = 56;
+//    relogio.hour = 33;
+//    relogio.day = 6;
+//    relogio.date = 11;
+//    relogio.month = 3;
 //    relogio.yearChar = 16;
 //    DS1307_write(relogio);
      
-     xprintf(callback_uart_putc, (uint8_t *)"\r\nInit JAGA system");    
+    xprintf(callback_uart_putc, (uint8_t *)"\r\nInit JAGA system");    
 }

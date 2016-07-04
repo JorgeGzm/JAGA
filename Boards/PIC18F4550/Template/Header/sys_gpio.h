@@ -22,6 +22,8 @@
 #ifndef SYS_GPIO_H
     #define SYS_GPIO_H
 
+#include "const/conts.h"
+
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
@@ -43,6 +45,6 @@
 //==============================================================================
 
 /** @brief Inicializa todas I/O do Microcontrolador segundo as especificaçoes do projeto */
-void init_gpio(void);
+PUBLIC void init_gpio(void);
 
 #endif	

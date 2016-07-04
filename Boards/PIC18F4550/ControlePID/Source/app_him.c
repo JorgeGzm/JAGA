@@ -61,7 +61,7 @@
 // SOURCE CODE
 //==============================================================================
  
-void run_him(void)
+PUBLIC void run_him(void)
 {
     char str[7];
     float aux;

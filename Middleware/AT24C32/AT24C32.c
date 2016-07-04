@@ -41,30 +41,30 @@
 // PRIVATE VARIABLES			
 //==============================================================================
 
-DESCRIPTION_MEMORY AT24C32_description = { 0, 4096, "AT24C32"};
+PRIVATE DESCRIPTION_MEMORY AT24C32_description = { 0, 4096, "AT24C32"};
 
 //==============================================================================
 // PRIVATE FUNCTIONS
 //==============================================================================
 
 /** @brief Callback para a funcao de leitura da i2c usada pela biblioteca.*/
-uint8_t (*AT24C32_i2c_read)(uint8_t, uint16_t, uint16_t, uint8_t*);
+PRIVATE uint8_t (*AT24C32_i2c_read)(uint8_t, uint16_t, uint16_t, uint8_t*);
 
 /** @brief Callback para a funcao de escrita da i2c usada pela biblioteca.*/
-uint8_t (*AT24C32_i2c_write)(uint8_t, uint16_t, uint16_t, uint8_t*);
+PRIVATE uint8_t (*AT24C32_i2c_write)(uint8_t, uint16_t, uint16_t, uint8_t*);
 
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint8_t*), uint8_t (*function_wr)(uint8_t, uint16_t, uint16_t, uint8_t*))
+PUBLIC void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint8_t*), uint8_t (*function_wr)(uint8_t, uint16_t, uint16_t, uint8_t*))
 {
 	AT24C32_i2c_read = function_rd;
     AT24C32_i2c_write = function_wr;	
 }
 
-void AT24C32_read(uint16_t addr, uint16_t count, uint8_t* data)
+PUBLIC void AT24C32_read(uint16_t addr, uint16_t count, uint8_t* data)
 {    
 	if(addr >= AT24C32_description.init && addr <= AT24C32_description.store && AT24C32_i2c_read != NULL)
     {        
@@ -72,7 +72,7 @@ void AT24C32_read(uint16_t addr, uint16_t count, uint8_t* data)
     }    
 }
 
-void AT24C32_write(uint16_t addr, uint16_t count, uint8_t* data)
+PUBLIC void AT24C32_write(uint16_t addr, uint16_t count, uint8_t* data)
 {
 	if(addr >= AT24C32_description.init && addr <= AT24C32_description.store && AT24C32_i2c_write != NULL)
     {        
@@ -80,7 +80,7 @@ void AT24C32_write(uint16_t addr, uint16_t count, uint8_t* data)
     }    
 }
 
-DESCRIPTION_MEMORY AT24C32_get_description(void)
+PUBLIC DESCRIPTION_MEMORY AT24C32_get_description(void)
 {
 	return AT24C32_description;
 }

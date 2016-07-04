@@ -28,6 +28,7 @@
 
 #include <stdint.h>
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -117,33 +118,33 @@
  * @param module Range: _TMR0 a _TMR3
  * @param value Range: 8 bits - (0 a 255) ou 16 bits - (0 a 65535)
  */
-void timer_set_counter(uint8_t module, uint16_t val);
+PUBLIC void timer_set_counter(uint8_t module, uint16_t val);
 
 /**
  * @brief 
  * @param module Range: _TMR0 a _TMR3
  * @return Valor do temporizador
  */
-uint16_t timer_get_counter(uint8_t module);
+PUBLIC uint16_t timer_get_counter(uint8_t module);
 
 /**
  * @brief
  * @param module Range: _TMR0 a _TMR3
  * @param value Range: DISABLE - Desabilita interrupcao ENABLE - Habilita interrupcao
  */
-void timer_setup_interrupt(uint8_t module, uint8_t value);
+PUBLIC void timer_setup_interrupt(uint8_t module, uint8_t value);
 
 /**
  * @brief
  * @param module Range: _TMR0 a TMR3
  * @param value Range: LOW_PRIORITY - Baixa prioridade HIGH_PRIORITY - Alta prioridade
  */
-void timer_priority_interrupt(uint8_t module, uint8_t value);
+PUBLIC void timer_priority_interrupt(uint8_t module, uint8_t value);
 
 /**
  * @brief Inicializa os registradores do Timer0
  */
-void timer_init_regs(uint8_t module);
+PUBLIC void timer_init_regs(uint8_t module);
 
 /**
  * @brief Funcao para configurar a fonte de clock para o contador do Timer e a transicao de nivel em que deve ser incrementado
@@ -152,7 +153,7 @@ void timer_init_regs(uint8_t module);
  * @param source Range: TMR0_EXT_CLOCK, TMR0_INT_CLOCK
  * @param transition Range: TMR0_HIGH_TO_LOW, TMR0_LOW_TO_HIGH
  */
-void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition);
+PUBLIC void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition);
 
 /**
  * @brief Funcao para habilitar e configurar o prescale do Timer0
@@ -160,27 +161,27 @@ void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition);
  * @param on_off Range: TMR_PRESCALE_OFF, TMR_PRESCALE_ON
  * @param prescale Range: TMR0_PRESCALE_1_x (x->1,2,4,8,16,32,64,128,256)
  */
-void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t postscale);
+PUBLIC void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t postscale);
 
 /**
  * @brief Funcao para configurar a quantidade de bits dos contadores dos timers
  * Ex.: timer_setup_bits(TMR_16_BIT);
  * @param bits Range: TMR_8_BIT, TMR_16_BIT
  */
-void timer_setup_bits(uint8_t module, uint8_t bits);
+PUBLIC void timer_setup_bits(uint8_t module, uint8_t bits);
 
 /**
  * @brief
  * @param value Range: TMR_ON - habilita o temporizador TMR_OFF - desabilita o temporizador
  */
-void timer_start(uint8_t module, uint8_t value);
+PUBLIC void timer_start(uint8_t module, uint8_t value);
 
 /**
  * @brief
  * @param module
  * @param func
  */
-void timer_set_callbak(uint8_t module, void (*func)(void));
+PUBLIC void timer_set_callbak(uint8_t module, void (*func)(void));
 
 /** @brief TODO */
 inline void timer0_isr(void);

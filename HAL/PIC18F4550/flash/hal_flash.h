@@ -28,6 +28,7 @@
 
 #include <stdint.h>
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -60,7 +61,7 @@
  * PIC18F4550 each have 32 Kbytes of Flash memory \n
  * @param UI16_address A leitura dos endereos deve ser feita Range de enderecos da memoria de programa: 0x19h - 0x8000.
  */
-uint16_t flash_rd(int16_t UI16_address);
+PUBLIC uint16_t flash_rd(int16_t UI16_address);
 
 /**
  * @brief Apaga regiao da memoria flash
@@ -71,7 +72,7 @@ uint16_t flash_rd(int16_t UI16_address);
  * @param UI16_address Indica endereco de inicio para comeca a apagar os proximos 64 bytes.
  *  Range da memoria de programa: 0x0019 ate 0x7FFF,
  */
-void flash_erasing(int16_t UI16_address);
+PUBLIC void flash_erasing(int16_t UI16_address);
 
 /**
  * @brief Escreve na memorias flash do PIC18f4550
@@ -82,6 +83,6 @@ void flash_erasing(int16_t UI16_address);
  * @param UI16_buffer
  * @param UI16_address Indica endereco de inicio para comeca a escrever 32 bytes de dados.
  */
-void flash_wr(UWord UI16_buffer[], int16_t UI16_address);
+PUBLIC void flash_wr(UWord UI16_buffer[], int16_t UI16_address);
 
 #endif	

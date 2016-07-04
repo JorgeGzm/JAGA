@@ -28,6 +28,8 @@
 // INCLUDE FILES
 //==============================================================================
 
+#include "const/conts.h"
+
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
@@ -45,10 +47,10 @@
 //==============================================================================
 
 /** @brief Initialize the main hardware parameters. */
-void setupHardware(void);
+PUBLIC void setupHardware(void);
 
 /** @brief Configuracao e inicializacao dos dispositivos externo que serao usados */
-void setupDevices(void);
+PUBLIC void setupDevices(void);
 
 
 #endif	

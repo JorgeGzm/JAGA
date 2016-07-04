@@ -53,7 +53,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void run_him(void)
+PUBLIC void run_him(void)
 {
     static uint16_t counterA = 0;
     static uint16_t counterB = 0;

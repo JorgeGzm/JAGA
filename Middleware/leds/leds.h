@@ -2,7 +2,7 @@
   * @file    leds.h
   * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
   * @date    Apr 23, 2014
-  * @version 0.2.0.0 (beta)
+  * @version 0.3.0.0 (beta)
   * @brief   Bibliteoca para o uso dos Leds
   * @details
   * @section LICENSE
@@ -19,8 +19,8 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef LEDS_H_
-#define LEDS_H_
+#ifndef LEDS2_H_
+#define LEDS2_H_
 
 //==============================================================================
 // INCLUDE FILES
@@ -29,6 +29,7 @@
 #include <stdint.h>
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -97,7 +98,7 @@ typedef struct
 /**
  * @brief TODO
  */
-void leds_init(void);
+PUBLIC void leds_init(void);
 
 /**
  * @brief Seta os bits das variaveis de controle do acendimento das leds.
@@ -114,25 +115,25 @@ void leds_init(void);
  *                    LED_BLINK_SLOW = devemos fazer as leds piscarem lentamente
  *                    LED_BLINK_FAST = devemos fazer as leds piscarem rapidamente
  */
-void leds_set(uint8_t in_leds, uint8_t action);
+PUBLIC void leds_set(uint8_t in_leds, uint8_t action);
 
 /**
  * @brief verifica se o timer para a revers�o dos leds estourou tanto no slow como no fast
  * deve ser chamado dentrao da interrucao de timer de 100mS.
  */
-void leds_action_isr_100ms(void);
+PUBLIC void leds_action_isr_100ms(void);
 
 /**
  * @brief TODO
  * @param index TODO
  * @param reg   TODO
  */
-void leds_attach(uint8_t index, regGPIO reg);
+PUBLIC void leds_attach(uint8_t index, int pin);
 
 /**
  * @brief TODO
  * @return TODO
  */
-uint8_t leds_status(void);
+PUBLIC uint8_t leds_status(void);
 
 #endif 

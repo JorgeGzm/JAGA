@@ -45,7 +45,7 @@
 // SOURCE CODE
 //==============================================================================
 
-float PI_control(float x, float x_ref, PI_Params *params)
+PUBLIC float PI_control(float x, float x_ref, PI_Params *params)
 {
   float erro_atual, y;
 
@@ -62,7 +62,7 @@ float PI_control(float x, float x_ref, PI_Params *params)
   return y;
 }
 
-float PID_control(float x, float x_ref, PID_Params *params)
+PUBLIC float PID_control(float x, float x_ref, PID_Params *params)
 {
 	float erro_atual, y;
     

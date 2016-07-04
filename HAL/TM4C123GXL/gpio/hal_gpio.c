@@ -244,3 +244,122 @@ void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
     }
     */
 }
+
+PUBLIC void digitalWrite(int pin, int value)
+{
+	switch (pin)
+    {
+//        case x:  wr_bit(GPIO_PORTA_DATA_R, 0, value); break;
+//        case x:  wr_bit(GPIO_PORTA_DATA_R, 1, value); break;
+        case 11: wr_bit(GPIO_PORTA_DATA_R, 2, value); break;
+        case 12: wr_bit(GPIO_PORTA_DATA_R, 3, value); break;
+        case 13: wr_bit(GPIO_PORTA_DATA_R, 4, value); break;
+        case 8:  wr_bit(GPIO_PORTA_DATA_R, 5, value); break;
+        case 9:  wr_bit(GPIO_PORTA_DATA_R, 6, value); break;
+        case 10: wr_bit(GPIO_PORTA_DATA_R, 7, value); break;
+
+        case 3:  wr_bit(GPIO_PORTB_DATA_R, 0, value); break;
+        case 4:  wr_bit(GPIO_PORTB_DATA_R, 1, value); break;
+        case 19: wr_bit(GPIO_PORTB_DATA_R, 2, value); break;
+        case 38: wr_bit(GPIO_PORTB_DATA_R, 3, value); break;
+        case 7:  wr_bit(GPIO_PORTB_DATA_R, 4, value); break;
+        case 2:  wr_bit(GPIO_PORTB_DATA_R, 5, value); break;
+        case 14: wr_bit(GPIO_PORTB_DATA_R, 6, value); break;
+        case 15: wr_bit(GPIO_PORTB_DATA_R, 7, value); break;
+
+//        case x: wr_bit(GPIO_PORTC_DATA_R, 0, value); break;
+//        case x: wr_bit(GPIO_PORTC_DATA_R, 1, value); break;
+//        case x: wr_bit(GPIO_PORTC_DATA_R, 2, value); break;
+//        case x: wr_bit(GPIO_PORTC_DATA_R, 3, value); break;
+        case 37: wr_bit(GPIO_PORTC_DATA_R, 4, value); break;
+        case 36: wr_bit(GPIO_PORTC_DATA_R, 5, value); break;
+        case 35: wr_bit(GPIO_PORTC_DATA_R, 6, value); break;
+        case 34: wr_bit(GPIO_PORTC_DATA_R, 7, value); break;
+
+        case 23: wr_bit(GPIO_PORTD_DATA_R, 0, value); break;
+        case 24: wr_bit(GPIO_PORTD_DATA_R, 1, value); break;
+        case 25: wr_bit(GPIO_PORTD_DATA_R, 2, value); break;
+        case 26: wr_bit(GPIO_PORTD_DATA_R, 3, value); break;
+//        case x: wr_bit(GPIO_PORTD_DATA_R, 4, value); break;
+//        case x: wr_bit(GPIO_PORTD_DATA_R, 5, value); break;
+        case 33: wr_bit(GPIO_PORTD_DATA_R, 6, value); break;
+        case 32: wr_bit(GPIO_PORTD_DATA_R, 7, value); break;
+
+        case 18: wr_bit(GPIO_PORTE_DATA_R, 0, value); break;
+        case 27: wr_bit(GPIO_PORTE_DATA_R, 1, value); break;
+        case 28: wr_bit(GPIO_PORTE_DATA_R, 2, value); break;
+        case 29: wr_bit(GPIO_PORTE_DATA_R, 3, value); break;
+        case 5:  wr_bit(GPIO_PORTE_DATA_R, 4, value); break;
+        case 6:  wr_bit(GPIO_PORTE_DATA_R, 5, value); break;
+
+        case 17: wr_bit(GPIO_PORTF_DATA_R, 0, value); break;
+		case 30: wr_bit(GPIO_PORTF_DATA_R, 1, value); break;
+		case 40: wr_bit(GPIO_PORTF_DATA_R, 2, value); break;
+		case 39: wr_bit(GPIO_PORTF_DATA_R, 3, value); break;
+		case 31: wr_bit(GPIO_PORTF_DATA_R, 4, value); break;
+
+        default: break;
+    }
+}
+
+PUBLIC int digitalRead(int pin)
+{
+	switch (pin)
+    {
+//        case x:  wr_bit(GPIO_PORTA_DATA_R, 0);
+//        case x:  wr_bit(GPIO_PORTA_DATA_R, 1);
+        case 11: return tst_bit(GPIO_PORTA_DATA_R, 2);
+        case 12: return tst_bit(GPIO_PORTA_DATA_R, 3);
+        case 13: return tst_bit(GPIO_PORTA_DATA_R, 4);
+        case 8:  return tst_bit(GPIO_PORTA_DATA_R, 5);
+        case 9:  return tst_bit(GPIO_PORTA_DATA_R, 6);
+        case 10: return tst_bit(GPIO_PORTA_DATA_R, 7);
+
+        case 3:  return tst_bit(GPIO_PORTB_DATA_R, 0);
+        case 4:  return tst_bit(GPIO_PORTB_DATA_R, 1);
+        case 19: return tst_bit(GPIO_PORTB_DATA_R, 2);
+        case 38: return tst_bit(GPIO_PORTB_DATA_R, 3);
+        case 7:  return tst_bit(GPIO_PORTB_DATA_R, 4);
+        case 2:  return tst_bit(GPIO_PORTB_DATA_R, 5);
+        case 14: return tst_bit(GPIO_PORTB_DATA_R, 6);
+        case 15: return tst_bit(GPIO_PORTB_DATA_R, 7);
+
+//        case x:  return tst_bit(GPIO_PORTC_DATA_R, 0);
+//        case x:  return tst_bit(GPIO_PORTC_DATA_R, 1);
+//        case x:  return tst_bit(GPIO_PORTC_DATA_R, 2);
+//        case x:  return tst_bit(GPIO_PORTC_DATA_R, 3);
+        case 37: return tst_bit(GPIO_PORTC_DATA_R, 4);
+        case 36: return tst_bit(GPIO_PORTC_DATA_R, 5);
+        case 35: return tst_bit(GPIO_PORTC_DATA_R, 6);
+        case 34: return tst_bit(GPIO_PORTC_DATA_R, 7);
+
+        case 23: return tst_bit(GPIO_PORTD_DATA_R, 0);
+        case 24: return tst_bit(GPIO_PORTD_DATA_R, 1);
+        case 25: return tst_bit(GPIO_PORTD_DATA_R, 2);
+        case 26: return tst_bit(GPIO_PORTD_DATA_R, 3);
+//        case x:  return tst_bit(GPIO_PORTD_DATA_R, 4);
+//        case x:  return tst_bit(GPIO_PORTD_DATA_R, 5);
+        case 33: return tst_bit(GPIO_PORTD_DATA_R, 6);
+        case 32: return tst_bit(GPIO_PORTD_DATA_R, 7);
+
+        case 18: return tst_bit(GPIO_PORTE_DATA_R, 0);
+        case 27: return tst_bit(GPIO_PORTE_DATA_R, 1);
+        case 28: return tst_bit(GPIO_PORTE_DATA_R, 2);
+        case 29: return tst_bit(GPIO_PORTE_DATA_R, 3);
+        case 5:  return tst_bit(GPIO_PORTE_DATA_R, 4);
+        case 6:  return tst_bit(GPIO_PORTE_DATA_R, 5);
+
+        case 17: return tst_bit(GPIO_PORTF_DATA_R, 0);
+		case 30: return tst_bit(GPIO_PORTF_DATA_R, 1);
+		case 40: return tst_bit(GPIO_PORTF_DATA_R, 2);
+		case 39: return tst_bit(GPIO_PORTF_DATA_R, 3);
+		case 31: return tst_bit(GPIO_PORTF_DATA_R, 4);
+
+        default: break;
+    }
+}
+
+PUBLIC void pinMode(int pin, int type)
+{
+
+}

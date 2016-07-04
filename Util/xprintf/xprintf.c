@@ -46,32 +46,36 @@
  * @param index TODO documentar
  * @param fmt pinteiro para a string que sera enviada.
  */
-void xprint_string(void (*func)(uint8_t), const uint8_t *fmt);
+PRIVATE void xprint_string(void (*func)(uint8_t), const uint8_t *fmt);
 
 /**
  * @brief Envia uma variavel unsigned int pela UART
  * @param index TODO documentar
  * @param value valor que sera enviado
  */
-void xprint_UINT16(void (*func)(uint8_t), uint16_t value);
+PRIVATE void xprint_UINT16(void (*func)(uint8_t), uint16_t value);
 
 /**
  * @brief Envia uma variavel int pela UART
  * @param index TODO documentar
  * @param value TODO documentar
  */
-void xprint_INT16(void (*func)(uint8_t), int16_t value);
+PRIVATE void xprint_INT16(void (*func)(uint8_t), int16_t value);
+
+/**
+ */
+PRIVATE void xprint_putc(void (*func)(uint8_t), uint8_t c);
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void xprint_putc(void (*func)(uint8_t), uint8_t c)
+PRIVATE void xprint_putc(void (*func)(uint8_t), uint8_t c)
 {
   	func(c);
 }
 
-void xprint_string(void (*func)(uint8_t), const uint8_t *fmt)
+PRIVATE void xprint_string(void (*func)(uint8_t), const uint8_t *fmt)
 {
     uint8_t c;
 
@@ -82,7 +86,7 @@ void xprint_string(void (*func)(uint8_t), const uint8_t *fmt)
     }
 }
 
-void xprint_UINT16(void (*func)(uint8_t), uint16_t value)
+PRIVATE void xprint_UINT16(void (*func)(uint8_t), uint16_t value)
 {
     unsigned cnt = 0;
     uint8_t buffer[11];
@@ -101,7 +105,7 @@ void xprint_UINT16(void (*func)(uint8_t), uint16_t value)
     }
 }
 
-void xprint_INT16(void (*func)(uint8_t), int16_t value)
+PRIVATE void xprint_INT16(void (*func)(uint8_t), int16_t value)
 {
 	unsigned cnt = 0;
     uint8_t flag_negativo;
@@ -142,7 +146,7 @@ void xprint_INT16(void (*func)(uint8_t), int16_t value)
     }
 }
 
-void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...)
+PUBLIC void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...)
 {
     va_list pa;
     uint8_t *s, c;

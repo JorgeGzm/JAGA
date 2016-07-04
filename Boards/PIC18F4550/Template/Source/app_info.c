@@ -54,7 +54,7 @@ uint16_t version;
 //==============================================================================
 
 /** Inicializa informacoes do equipamento*/
-void info_init(void)
+PUBLIC void info_init(void)
 {
     version = VERSION_FIRMWARE;
     id_device.value = ID_DEVICE;   

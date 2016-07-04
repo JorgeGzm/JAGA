@@ -1,0 +1,11 @@
+21:23:16 **** Incremental Build of configuration Debug for project Template_FreeRTOS ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Template_FreeRTOS.elf"
+   text	   data	    bss	    dec	    hex	filename
+  12148	     20	  13200	  25368	   6318	Template_FreeRTOS.elf
+Finished building: Template_FreeRTOS.siz
+ 
+
+21:23:16 Build Finished (took 150ms)
+

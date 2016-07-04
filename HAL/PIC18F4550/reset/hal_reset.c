@@ -45,12 +45,12 @@
 // SOURCE CODE
 //==============================================================================
 
-void resetMCU(void)
+PUBLIC void resetMCU(void)
 {
      asm(" reset");
 }
 
-void resetMCU_device(uint16_t senha_p1, uint16_t senha_p2)
+PUBLIC void resetMCU_device(uint16_t senha_p1, uint16_t senha_p2)
 {
     //Verifica se chegou comando de reset do aparelho
     if(senha_p1 == 1234 && senha_p2 == 4321)

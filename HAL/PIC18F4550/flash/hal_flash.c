@@ -51,7 +51,7 @@
 // SOURCE CODE
 //==============================================================================
 
-uint16_t flash_rd(int16_t address)
+PUBLIC uint16_t flash_rd(int16_t address)
 {
     UWord aux_address;
     UWord aux_data;
@@ -73,7 +73,7 @@ uint16_t flash_rd(int16_t address)
     return(aux_data.value);
 }
 
-void flash_erasing(int16_t address)
+PUBLIC void flash_erasing(int16_t address)
 {
     UWord aux_address;
     uint8_t UI8_aux;
@@ -101,7 +101,7 @@ void flash_erasing(int16_t address)
     } //desabilita interrupcoes
 }
 
-void flash_wr(UWord UI16_buffer[], int16_t UI16_address)
+PUBLIC void flash_wr(UWord UI16_buffer[], int16_t UI16_address)
 {
     UWord ST_address;
     uint8_t UI8_aux;

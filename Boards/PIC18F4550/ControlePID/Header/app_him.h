@@ -23,6 +23,7 @@
     #define APP_HIM_H
 
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // INCLUDE FILES
@@ -45,6 +46,6 @@
 //==============================================================================
 
 /** @brief Executa as aplicações que controlam a him. */
-void run_him(void);
+PUBLIC void run_him(void);
 
 #endif	

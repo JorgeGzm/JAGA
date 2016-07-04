@@ -37,7 +37,7 @@
  * @details Exemplo:  set_bit(PORTD, 5); \n
  * Resultado: PORTD = 0b00010000
  */
-#define	set_bit(value,bit_x)	(value |= (1 << bit_x))
+#define	set_bit(value, bit_x)	(value |= (1 << bit_x))
 
 /**
  * @brief coloca em 0 no bit_x da variavel variavel byte.
@@ -65,8 +65,9 @@
  * @details Exemplo:   tst_bit_bool(PORTD, 5);  \n
  * Resultado: x = 0 ou x = 1
  */
-#define tst_bit_bool(value,bit_x) 	((value & (1 << bit_x)) >> bit_x)
+#define tst_bit_bool(value, bit_x) 	((value & (1 << bit_x)) >> bit_x)
 
+#define wr_bit(value, bit_x, _bool) (_bool == 1 ? set_bit(value, bit_x ) : clr_bit(value, bit_x))
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================

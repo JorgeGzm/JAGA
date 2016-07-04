@@ -52,7 +52,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void interrupt_init(void)
+PUBLIC void interrupt_init(void)
 {
    
 }

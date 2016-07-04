@@ -2,7 +2,7 @@
   * @file    lcd.h
   * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
   * @date    Jul 9, 2014
-  * @version 0.1.0.0 (beta)
+  * @version 0.2.0.0 (beta)
   * @brief   Bibliteoca para o uso do display LCD 2x16 ou 4x20.
   * @details
   * @section LICENSE
@@ -30,6 +30,7 @@
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -43,22 +44,22 @@
 typedef struct 
 {
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB4 do CLD */
-    regPin db4;
+    uint8_t db4;
     
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB5 do CLD */
-    regPin db5;
+    uint8_t db5;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB6 do CLD */
-    regPin db6;
+    uint8_t db6;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o DB7 do CLD */
-    regPin db7;
+    uint8_t db7;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o E do CLD */
-    regPin e;
+    uint8_t e;
 
     /** @brief Recebe a configuracao de qual pino do pic que controlara o RS do CLD */
-    regPin rs;
+    uint8_t rs;
 }DisplayLcd;
 
 //==============================================================================
@@ -75,12 +76,12 @@ typedef struct
  * @param port
  * @param tris
  */
-void lcd_attach(regGPIO RS, regGPIO E, regGPIO DB4, regGPIO DB5, regGPIO DB6, regGPIO DB7);
+PUBLIC void lcd_attach(uint8_t RS, uint8_t E, uint8_t DB4, uint8_t DB5, uint8_t DB6, uint8_t DB7);
 
 /**
  * @brief Todo Documentar
  */
-void lcd_putc(uint8_t c);
+PUBLIC void lcd_putc(uint8_t c);
 
 /**
 * @brief Posiciona o cursor na posicao x , y.  O limite superior 1, 1 e o limete inferior e 1, 4
@@ -94,12 +95,12 @@ void lcd_putc(uint8_t c);
 * @param x: coluna
 * @param y: linha
 */
-void lcd_gotoxy(uint8_t x, uint8_t y);
+PUBLIC void lcd_gotoxy(uint8_t x, uint8_t y);
 
 /**
  * @brief Todo Documentar
  */
-void lcd_print(const uint8_t *fmt);
+PUBLIC void lcd_print(const uint8_t *fmt);
 
 #endif	
 

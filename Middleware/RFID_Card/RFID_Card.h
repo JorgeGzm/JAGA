@@ -28,6 +28,7 @@
 //==============================================================================
 
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -65,13 +66,13 @@ typedef enum
  * @brief TODO documentar
  * @param data TODO documentar
  */
-void rfid_card_isr_buff(uint8_t data);
+PUBLIC void rfid_card_isr_buff(uint8_t data);
 
 /**
  * @brief TODO documentar
  * @param buffID TODO documentar
  */
-VALIDATION rfid_card_validation(uint8_t buffID[]);
+PUBLIC VALIDATION rfid_card_validation(uint8_t buffID[]);
 
 
 #endif  /* RFIDCARD_H */

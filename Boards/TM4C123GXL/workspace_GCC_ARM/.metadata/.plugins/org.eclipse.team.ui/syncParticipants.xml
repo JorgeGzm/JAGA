@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syncparticipants>
+<participant displayName="Git (Template)" id="org.eclipse.egit.ui.modelCompareParticipant" secondary_id="1467572690855">
+<data forceFetch="false" root="false">
+<org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS org.eclipse.team.ui.MODEL_PARTICIPANT_DESCRIPTION="Template" startupAction="none">
+<org.eclipse.team.ui.MODEL_PARTICIPANT_REFRESH_SCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
+<org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS modelProviderId="org.eclipse.core.resources.modelProvider">
+<mappings>
+<resources resourcePath="/Template" resourceType="4"/>
+</mappings>
+</org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS>
+</org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS>
+<gitSynchronizeData container="/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template" dstRev="HEAD" inludeLocal="true" srcRev="HEAD">
+<includedPaths>
+<path path="/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template"/>
+</includedPaths>
+</gitSynchronizeData>
+</data>
+</participant>
+</syncparticipants>

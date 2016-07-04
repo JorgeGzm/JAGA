@@ -62,7 +62,7 @@ void (*tmr3_callback)(void);
 // SOURCE CODE
 //==============================================================================
 
-void timer_set_counter(uint8_t module, uint16_t val)
+PUBLIC void timer_set_counter(uint8_t module, uint16_t val)
 {
     UWord aux_value;
     
@@ -92,7 +92,7 @@ void timer_set_counter(uint8_t module, uint16_t val)
     }
 }
 
-uint16_t timer_get_counter(uint8_t module)
+PUBLIC uint16_t timer_get_counter(uint8_t module)
 {   
      UWord timer = {0};
     
@@ -116,7 +116,7 @@ uint16_t timer_get_counter(uint8_t module)
     return(0);
 }
 
-void timer_init_regs(uint8_t module)
+PUBLIC void timer_init_regs(uint8_t module)
 {
     switch(module)
     {
@@ -159,7 +159,7 @@ void timer_init_regs(uint8_t module)
     }
 }
 
-void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition)
+PUBLIC void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition)
 {
     switch(module)
     {
@@ -180,7 +180,7 @@ void timer_setup_clock(uint8_t module, uint8_t source, uint8_t transition)
     }
 }
 
-void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t postscale)
+PUBLIC void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t postscale)
 {
     switch(module)
     {
@@ -222,7 +222,7 @@ void timer_setup_scale(uint8_t module, uint8_t on_off, uint8_t prescale, uint8_t
     }
 }
 
-void timer_setup_bits(uint8_t module, uint8_t bits)
+PUBLIC void timer_setup_bits(uint8_t module, uint8_t bits)
 {
     //TMR0 = 1 - 8 bits
     //TMR1 = 1 - 16 bits
@@ -247,7 +247,7 @@ void timer_setup_bits(uint8_t module, uint8_t bits)
     }
 }
 
-void timer_start(uint8_t module, uint8_t value)
+PUBLIC void timer_start(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -269,7 +269,7 @@ void timer_start(uint8_t module, uint8_t value)
     }
 }
 
-void timer_setup_interrupt(uint8_t module, uint8_t value)
+PUBLIC void timer_setup_interrupt(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -297,7 +297,7 @@ void timer_setup_interrupt(uint8_t module, uint8_t value)
     //interrupt_setup(module, value);
 }
 
-void timer_priority_interrupt(uint8_t module, uint8_t value)
+PUBLIC void timer_priority_interrupt(uint8_t module, uint8_t value)
 {
     switch(module)
     {
@@ -321,7 +321,7 @@ void timer_priority_interrupt(uint8_t module, uint8_t value)
   //  interrupt_set_priority(module, value);
 }
 
-void timer_set_callbak(uint8_t module, void (*func)(void))
+PUBLIC void timer_set_callbak(uint8_t module, void (*func)(void))
 {
     switch(module)
     {

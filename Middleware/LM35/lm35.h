@@ -29,6 +29,7 @@
 #include "gpio/hal_gpio.h"
 #include "ad/hal_ad.h"
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -62,7 +63,7 @@ typedef enum
 //==============================================================================
 
 /** @brief Inicializa variaveis.*/
-void lm35_init(void);
+PUBLIC void lm35_init(void);
 
 /**
  * @brief Configura os pinos que serao usados para a leitura analogicoa do sensor LM35
@@ -71,21 +72,21 @@ void lm35_init(void);
  * @param ch Informa o canal AD que sera usado para as leituras analogicas do sensor.
  * @param function_rd ponteiro para a funcao de leitura ADC que sera usada.
  */
-void lm35_attach(INDEX_LM35 index, regGPIO reg, uint8_t ch);
+PUBLIC void lm35_attach(INDEX_LM35 index, uint8_t pin, uint8_t ch_ad);
 
 /**
  * @brief Transforma a leitura AD em ºC
  * @param sensor
  * @return Retorna temperatura com 2 casas de resolucao apos a virgula
  */
-float lm35_read(INDEX_LM35 index);
+PUBLIC float lm35_read(INDEX_LM35 index);
 
 /**
  * @brief Retorna o tipo de erro que aconteceu durante a leitura de temperatura
  * @param index
  * @return 
  */
-uint8_t lm35_get_error(INDEX_LM35 index);
+PUBLIC uint8_t lm35_get_error(INDEX_LM35 index);
 
 #endif	
 

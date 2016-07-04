@@ -56,19 +56,19 @@ typedef enum
 //==============================================================================
 
 /** @brief TODO documentar */
-int decode(uint8_t data, uint8_t buf[]);
+PRIVATE int decode(uint8_t data, uint8_t buf[]);
 
 /** @brief Funcao callback da interrupcao do RX da UART1*/
-void uart_rx(uint8_t c);
+PRIVATE void uart_rx(uint8_t c);
 
 /** @brief Funcao callback da interrupcao do TX da UART1*/
-void uart_tx(void);
+PRIVATE void uart_tx(void);
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-int decode(uint8_t data, uint8_t buf[])
+PRIVATE int decode(uint8_t data, uint8_t buf[])
 {
 	static int ind = 0;
 	static RX_STATES status = ST_START;
@@ -105,7 +105,7 @@ int decode(uint8_t data, uint8_t buf[])
 	return ret;
 }
 
-void uart_rx(uint8_t c)
+PRIVATE void uart_rx(uint8_t c)
 {    
     static uint8_t buf1[5];
    
@@ -119,7 +119,7 @@ void uart_rx(uint8_t c)
     }       
 }
  
-void uart_tx(void)
+PRIVATE void uart_tx(void)
 {
    
 }
@@ -129,11 +129,10 @@ void callback_uart_putc(uint8_t value)
     uart_putc(value);
 }
 
-void init_uart(void)
+PUBLIC void init_uart(void)
 {
     //Inicializa pinos UART
-    uart_attach(pinRX1, rC7);
-    uart_attach(pinTX1, rC6);
+    uart_attach(21, 20);
 
     //Configura funcionamento da UART1   
     uart_set_baudRate(_UART0, BAUD_9600);

@@ -28,6 +28,7 @@
 
 #include <stdint.h>
 #include "types/types.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -50,14 +51,14 @@
  * @param crc 
  * @param dado
  */
-void crc_calculo(uint16_t *crc, uint8_t dado);
+PUBLIC void crc_calculo(uint16_t *crc, uint8_t dado);
 
 /**
  * @brief Calcula CRC de um vetor "uint8" recebido e retorna o valor calculado. 
  * @param crc Ponteiro para o valor que recebe o valor crc.
  * @param buffer Ponteiro para o vetor que contem os dados.
  */
-void crc_calcula_buff(uint16_t *crc, uint8_t *buffer);
+PUBLIC void crc_calcula_buff(uint16_t *crc, uint8_t *buffer);
 
 #endif	
 

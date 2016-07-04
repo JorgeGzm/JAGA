@@ -29,6 +29,7 @@
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -126,7 +127,7 @@ enum AD_AN
 /** @brif Estrutura que configura o uso do convesor AD para qualquer sensor*/
 typedef struct 
 {
-    regPin reg;
+    uint8_t pin;
     uint8_t channel;          
     uint8_t error;    
 }Analog;
@@ -148,7 +149,7 @@ typedef struct
  *  AD_VREF_NEG_GND: Seleciona GND como tensao de refencia de VREF-.        \n
  *  AD_VREF_NEG_AN2: Seleciona o pino AN2 como tensao de refencia de VREF-. \n
  */
-void ad_setup_vref(uint8_t pVref, uint8_t nVref);
+PUBLIC void ad_setup_vref(uint8_t pVref, uint8_t nVref);
 
 /**
  * @brief TODO documentar 
@@ -170,7 +171,7 @@ void ad_setup_vref(uint8_t pVref, uint8_t nVref);
  *  AD_ENABLE:                              \n
  *  AD_DISABLE                              
  */
-void ad_setup_enable(uint8_t analog_in, uint8_t enable);
+PUBLIC void ad_setup_enable(uint8_t analog_in, uint8_t enable);
 
 /**
  * @brief TODO documentar
@@ -193,13 +194,13 @@ void ad_setup_enable(uint8_t analog_in, uint8_t enable);
  *  AD_CK_FOSC_DIV_8:                       \n
  *  AD_CK_FOSC_DIV_2:                       \n
  */
-void ad_setup_clock(uint8_t tad, uint8_t clock);
+PUBLIC void ad_setup_clock(uint8_t tad, uint8_t clock);
 
 /**
  * @brief TODO documentar
  * @param channel TODO documentar
  * @return TODO documentar
  */
-uint16_t ad_read(uint8_t channel);
+PUBLIC uint16_t ad_read(uint8_t channel);
 
 #endif	

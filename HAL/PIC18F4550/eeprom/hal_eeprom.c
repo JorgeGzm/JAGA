@@ -46,7 +46,7 @@
 // SOURCE CODE
 //==============================================================================
 
-uint8_t eeprom_rd(uint8_t address)
+PUBLIC uint8_t eeprom_rd(uint8_t address)
 {
     EEADR = address; ;//endereço da eeprom onde o dado esta gravado
     EECON1bits.EEPGD = 0; //ponteiro da memoria de dados
@@ -56,7 +56,7 @@ uint8_t eeprom_rd(uint8_t address)
     return (EEDATA);
 }
 
-void eeprom_wr(uint8_t address, uint8_t data)
+PUBLIC void eeprom_wr(uint8_t address, uint8_t data)
 {
     EEADR = address; ;//endereço da eeprom onde o dado sera gravado
     EEDATA = data;    //repassa o dado que sera escrito ao microcontrolador

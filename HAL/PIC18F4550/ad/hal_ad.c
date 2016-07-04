@@ -24,7 +24,7 @@
 //==============================================================================
 
 #include "hal_ad.h"
-#include <pwm.h>
+
 //==============================================================================
 // PRIVATE DEFINITIONS
 //==============================================================================
@@ -45,14 +45,14 @@
 // SOURCE CODE
 //==============================================================================
 
-void ad_setup_vref(uint8_t p_vref, uint8_t n_vref)
+PUBLIC void ad_setup_vref(uint8_t p_vref, uint8_t n_vref)
 {
     ADCON1bits.VCFG1 = n_vref;
 
     ADCON1bits.VCFG0 = p_vref;
 }
 
-void ad_setup_enable(uint8_t analog_in, uint8_t enable)
+PUBLIC void ad_setup_enable(uint8_t analog_in, uint8_t enable)
 {
     uint8_t value;
     
@@ -64,7 +64,7 @@ void ad_setup_enable(uint8_t analog_in, uint8_t enable)
     ADCON0bits.ADON = enable;
 }
 
-void ad_setup_clock(uint8_t tad, uint8_t clock)
+PUBLIC void ad_setup_clock(uint8_t tad, uint8_t clock)
 {
     //Padrao desta lib, formato da conversao, justificado a direita
     ADCON2bits.ADFM = 1;
@@ -74,7 +74,7 @@ void ad_setup_clock(uint8_t tad, uint8_t clock)
     ADCON2bits.ADCS = clock;
 }
 
-uint16_t ad_read(uint8_t channel)
+PUBLIC uint16_t ad_read(uint8_t channel)
 {
     UWord resulte_ad; //recebe a leitura do canal AD
 

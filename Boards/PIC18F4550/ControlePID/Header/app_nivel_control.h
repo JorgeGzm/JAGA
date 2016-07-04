@@ -26,6 +26,8 @@
 // INCLUDE FILES
 //==============================================================================
 
+#include "const/conts.h"
+
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
@@ -43,12 +45,12 @@
 //==============================================================================
 
 /** @brief Rotinas principais do sistemas */
-void init_nivel_controle(void);
+PUBLIC void init_nivel_controle(void);
 
-void run_nivel_control(void);
+PUBLIC void run_nivel_control(void);
 
-float get_nivel_tanque(void);
+PUBLIC float get_nivel_tanque(void);
 
-float get_nivel_dutyPWM(void);
+PUBLIC float get_nivel_dutyPWM(void);
 
 #endif	/* APP_CONTROL_H */

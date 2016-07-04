@@ -24,17 +24,18 @@
 
 #include <stdint.h>
 #include "types/types.h"
+#include "const/conts.h"
 
 /**
  *  Extern Functions
  */
-void set_num_serie(uint16_t num_serie_h, uint16_t num_serie_l);
-void set_release(uint16_t _release);
-void set_version(uint16_t _version);
-void set_id_device(uint16_t _id);
-void set_pwd_device(uint8_t celula);
-uint16_t get_pwd_device(void);
-void set_data_active(uint16_t high, uint16_t middle, uint16_t low);
+PUBLIC void set_num_serie(uint16_t num_serie_h, uint16_t num_serie_l);
+PUBLIC void set_release(uint16_t _release);
+PUBLIC void set_version(uint16_t _version);
+PUBLIC void set_id_device(uint16_t _id);
+PUBLIC void set_pwd_device(uint8_t celula);
+PUBLIC uint16_t get_pwd_device(void);
+PUBLIC void set_data_active(uint16_t high, uint16_t middle, uint16_t low);
 //Timestamp get_data_active(void);
 
 //Variaveis externas

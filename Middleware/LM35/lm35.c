@@ -41,7 +41,7 @@
 //==============================================================================
 
 /** Variavel que contem as configuracoes do sensor de temperatura LM35*/
-Analog LM35[INDEX_MAX];
+PRIVATE Analog LM35[INDEX_MAX];
 
 //==============================================================================
 // PRIVATE FUNCTIONS
@@ -51,28 +51,27 @@ Analog LM35[INDEX_MAX];
 // SOURCE CODE
 //==============================================================================
 
-void lm35_init(void)
+PUBLIC void lm35_init(void)
 {
     uint8_t i;
 
     for(i = 0; i < INDEX_MAX; i++)
     {
-        LM35[i].reg.pin = 0;
-        LM35[i].reg.out = 0;
+        LM35[i].pin = 0;
         LM35[i].channel = 0;
         LM35[i].error = 0;        
     }   
 }
 
-void lm35_attach(INDEX_LM35 index, regGPIO reg, uint8_t ch)
+PUBLIC void lm35_attach(INDEX_LM35 index, uint8_t pin, uint8_t ch_ad)
 {
-    GPIO_regPin_attach(&LM35[index].reg, &reg);
-    GPIO_regPin_setDir(&reg, DIR_INPUT);
-
-    LM35[index].channel = ch;    
+    LM35[index].pin = pin;
+    LM35[index].channel = ch_ad;    
+    
+    pinMode(pin, INPUT);
 }
 
-float lm35_read(INDEX_LM35 index)
+PUBLIC float lm35_read(INDEX_LM35 index)
 {
     float value;
     
@@ -95,7 +94,7 @@ float lm35_read(INDEX_LM35 index)
     return(value);    
 }
 
-uint8_t lm35_get_error(INDEX_LM35 index)
+PUBLIC uint8_t lm35_get_error(INDEX_LM35 index)
 {
     return (LM35[index].error);
 }

@@ -57,6 +57,7 @@
 #include "gpio/hal_gpio.h"
 #include "delay/hal_delay.h"
 #include "timer/hal_timer.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -66,9 +67,9 @@
 typedef struct
 {
     /** */
-    regPin trig;
+    uint8_t trig;
     /** */
-    regPin eco;
+    uint8_t eco;
 }HCSR04;
 
 //==============================================================================
@@ -94,7 +95,7 @@ typedef struct
  *  2: prescaler igual a 2 \n
  *  ...etc
  */
-void HCSR04_set_const(float clock, uint8_t prescaler);
+PUBLIC void HCSR04_set_const(float clock, uint8_t prescaler);
 
 /**
  * @brief Funcao que indica qual timer sera usado para medicao de tempo de duracao do eco.
@@ -105,7 +106,7 @@ void HCSR04_set_const(float clock, uint8_t prescaler);
  *  _TMR3: referencia ao timer 3                        \n
  *  ...etc.                                             \n
  */
-void HCSR04_attach_Timer(uint8_t modulo);
+PUBLIC void HCSR04_attach_Timer(uint8_t modulo);
 
 /**
  * @brief TODO
@@ -113,13 +114,13 @@ void HCSR04_attach_Timer(uint8_t modulo);
  * @param trig
  * @param eco
  */
-void HCSR04_attach(uint8_t index, regGPIO trig, regGPIO eco);
+PUBLIC void HCSR04_attach(uint8_t index, uint8_t pin_trig, uint8_t pin_eco);
 
 /**
  * @brief A funcao abaixo realiza a leitura da distancia em centimetros
  * @param sonar Variavel que contem as configuracoes do sensor.
  * @return Retorna a distancia em centimetros com resolucao de 2 casas decimais.
  */
-float HCSR04_read(uint8_t index);
+PUBLIC float HCSR04_read(uint8_t index);
 
 #endif	/* HCSR04_H */

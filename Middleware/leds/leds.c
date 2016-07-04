@@ -2,7 +2,7 @@
   * @file    leds.c
   * @author  Alexandre Bader; Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
   * @date    Apr 23, 2014
-  * @version 0.2.0.0 (beta)
+  * @version 0.3.0.0 (beta)
   * @brief   Bibliteoca para o uso dos Leds
   * @details
   * @section LICENSE
@@ -39,28 +39,19 @@
 //==============================================================================
 
 /**@brief TODO */
-regPin leds[NUM_LEDS] = {
-    {0, 0},
-    {0, 0},
-    {0, 0},
-    {0, 0},
-    {0, 0},
-    {0, 0},
-    {0, 0},
-    {0, 0},
-};
+PRIVATE char leds[NUM_LEDS];
 
 /** @brief Controle imediato do estado das leds */
-Leds UN_ledsStatus;
+PRIVATE Leds UN_ledsStatus;
 
 /** @brief Indicao das leds que estao 100% ligadas */
-Leds UN_ledsON;
+PRIVATE Leds UN_ledsON;
 
 /** @brief Indicao das Leds que estao picando lentamnete */
-Leds leds_blink_slow;
+PRIVATE Leds leds_blink_slow;
 
 /** @brief Indicao das Leds que estao piscando rapido */
-Leds leds_blink_fast; 
+PRIVATE Leds leds_blink_fast; 
 
 //==============================================================================
 // PRIVATE FUNCTIONS
@@ -70,40 +61,47 @@ Leds leds_blink_fast;
  * @brief Verifica quals leds serao ligados
  * @param UI8_LedsMask: mascara que contem quais leds serao ligados.
  */
-static void leds_on(uint8_t leds_mask);
+PRIVATE void leds_on(uint8_t leds_mask);
 
 /**
  * @brief Verifica quals leds serao desligados
  * @param UI8_LedsMask: mascara que contem quais leds serao desligados
  */
-static void leds_off(uint8_t leds_mask);
+PRIVATE void leds_off(uint8_t leds_mask);
 
 /**
  * @brief Inverte as leds representadas pelos bits 1 da mascara de entrada
  * @param UI8_LedsMask: mascara que contem quais leds serao invertidos
  */
-static void leds_reverse(uint8_t leds_mask);
+PRIVATE void leds_reverse(uint8_t leds_mask);
 
 /**
  * @brief TODO
  * @param out
  */
-static void leds_write(uint8_t out);
+PRIVATE void leds_write(uint8_t out);
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void leds_init(void)
+PUBLIC void leds_init(void)
 {
+    uint8_t i;
+    
     // Zera os valores das variaveis auxiliares
     UN_ledsStatus.UI8_value = 0;
     UN_ledsON.UI8_value = 0;
     leds_blink_slow.UI8_value = 0;
     leds_blink_fast.UI8_value = 0;
+    
+    for(i = 0; i < NUM_LEDS; i++)
+    {
+       leds[i] = 0xFF;
+    }
 }
 
-void leds_set(uint8_t in_leds, uint8_t action)
+PUBLIC void leds_set(uint8_t in_leds, uint8_t action)
 {
     // Variaveis locais
     uint8_t leds_temp; /// auxiliar para operacoes logicas
@@ -187,16 +185,13 @@ void leds_set(uint8_t in_leds, uint8_t action)
     }
 }
 
-void leds_attach(uint8_t index, regGPIO reg)
+PUBLIC void leds_attach(uint8_t index, int pin)
 {
-    //Aloca o pino para o botao
-    GPIO_regPin_attach(&leds[index], &reg);
-
-    //Configura pino do botao como saida
-    GPIO_regPin_setDir(&reg, DIR_OUTPUT);
+    leds[index] = pin;
+    pinMode(pin, OUTPUT);
 }
 
-void leds_action_isr_100ms(void)
+PUBLIC void leds_action_isr_100ms(void)
 {
     static uint8_t timer_led_slow_reverse_counter = 0; /// variavel de controle do blink lento
     static uint8_t timer_led_fast_reverse_counter = 0; /// controle do blink rapido
@@ -226,7 +221,7 @@ void leds_action_isr_100ms(void)
     }
 }
 
-static void leds_reverse(uint8_t leds_mask)
+PRIVATE void leds_reverse(uint8_t leds_mask)
 {
     // Variaveis locais
     uint8_t leds_temp; /// auxiliar para opera��es logicas
@@ -250,7 +245,7 @@ static void leds_reverse(uint8_t leds_mask)
     }
 }
 
-static void leds_on(uint8_t leds_mask)
+PRIVATE void leds_on(uint8_t leds_mask)
 {
     uint8_t aux;
     // executa um OU para ativar os bits
@@ -263,11 +258,10 @@ static void leds_on(uint8_t leds_mask)
     leds_write(aux);
 }
 
-static void leds_off(uint8_t leds_mask)
+PRIVATE void leds_off(uint8_t leds_mask)
 {
-    // Variaveis locais
     uint8_t aux;
-    uint8_t leds_temp; /// auxiliar para opera��es logicas
+    uint8_t leds_temp; 
 
     // devemos desligar os bits
     leds_temp = UN_ledsStatus.UI8_value ^ leds_mask;
@@ -280,7 +274,7 @@ static void leds_off(uint8_t leds_mask)
     leds_write(aux);
 }
 
-uint8_t leds_status(void)
+PUBLIC uint8_t leds_status(void)
 {
     uint8_t index;
     UByte status;
@@ -288,27 +282,31 @@ uint8_t leds_status(void)
 
     for(index = 0; index < NUM_LEDS; index++)
     {
-        if(GPIO_regPin_rdBit(&leds[index]))
+        if((leds[index] != 0xFF) && digitalRead(leds[index]))
         {
-            status.value|=  (1 << index);
+            status.value |=  (1 << index);
         }
     }
+    
     return(status.value);
 }
 
-static void leds_write(uint8_t out)
+PRIVATE void leds_write(uint8_t out)
 {
     uint8_t index;
 
     for (index = 0; index < NUM_LEDS; index++)
     {
-
-        if (tst_bit(out, index))
+        if(leds[index] != 0xFF)
         {
-            GPIO_regPin_outputHigh(&leds[index]);
-        } else
-        {
-            GPIO_regPin_outputLow(&leds[index]);
+            if (tst_bit(out, index))
+            {
+                digitalWrite(leds[index], HIGH);
+            } 
+            else
+            {
+                digitalWrite(leds[index], LOW);
+            }
         }
     }
 }

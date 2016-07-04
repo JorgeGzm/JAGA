@@ -40,6 +40,8 @@
 #include "interrupt/hal_interrupts.h"
 #include "xprintf/xprintf.h"
 
+#include "gpio/hal_gpio.h"
+
 //==============================================================================
 // PRIVATE DEFINITIONS
 //==============================================================================
@@ -60,7 +62,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void setupHardware(void)
+PUBLIC void setupHardware(void)
 {
     //inicializa as configuraçoes do micrococontrolador
     init_mcu();
@@ -87,26 +89,29 @@ void setupHardware(void)
     init_pwm();
 }
 
-void setupDevices(void)
+PUBLIC void setupDevices(void)
 {   
-
     //inicializa informaçoes do equipamento.
     info_init();
 
-    //Inicializa e configura mecanismo de controle das teclas
+    //inicializa e configura mecanismo de controle das teclas
     buttons_init();
-    button_attach(1, rE1);
-    button_attach(2, rB2);
+    button_attach(1, 9);
+    button_attach(2, 28);
 
-    //Configura e inicializa pinos que serao usados pela biblioteca LCD.
-    lcd_attach(rD0, rD1, rD4, rD5, rD6, rD7);
+    //configura e inicializa pinos que serao usados pela biblioteca LCD.
+    lcd_attach(14, 15, 22, 23, 24, 25);
     lcd_gotoxy(1, 1);
     uint8_t buff[] = {"Modulo JAGA!    "};
     lcd_print(&buff);
    
     //configura mecanismo de controle dos leds
-    leds_attach(0, rA1);
-    leds_attach(1, rA2);
-    leds_set(LD1G, LED_OFF);
-    leds_set(LD2G, LED_OFF);
+    pinMode(0, INPUT);
+    leds_init();
+    leds_attach(0, 4);
+    leds_attach(1, 5);
+    
+    leds_set(LD1G, LED_BLINK_FAST);
+    leds_set(LD2G, LED_BLINK_SLOW);
+   
 }

@@ -26,6 +26,7 @@
 // INCLUDE FILES
 //==============================================================================
 
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -44,9 +45,9 @@
 //==============================================================================
 
 /** @brief Configuracao do TMR0 - Contadores */
-void init_timer0(void);
+PUBLIC void init_timer0(void);
 
 /** @brief Configuracao do TMR1 - Contadores */
-void init_timer1(void);
+PUBLIC void init_timer1(void);
 
 #endif	

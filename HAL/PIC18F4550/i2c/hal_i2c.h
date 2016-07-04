@@ -29,6 +29,7 @@
 #include "types/types.h"
 #include "gpio/hal_gpio.h"
 #include "device/hal_device.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -107,11 +108,18 @@ typedef enum
     EN_I2C_IDLE,
 }I2C_COMMAND;
 
+typedef struct
+{
+    uint8_t  (*write) (uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+    uint8_t  (*read)  (uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);                       
+}DRIVER_I2C;
+
 //==============================================================================
 // PUBLIC VARIABLES			
 //==============================================================================
 
 extern uint8_t tmr_i2c1_tout;
+extern DRIVER_I2C Driver_I2C0;
 
 //==============================================================================
 // PUBLIC FUNCTIONS
@@ -121,10 +129,10 @@ extern uint8_t tmr_i2c1_tout;
  * @brief Configura temporizador timeout
  * @param valor: valor do timer
  */
-void set_i2c1_timeout(uint8_t);
+PUBLIC void set_i2c1_timeout(uint8_t);
 
 /** @brief retorna valor do timer*/
-uint8_t get_i2c1_timeout(void);
+PUBLIC uint8_t get_i2c1_timeout(void);
 
 /**
  * @brief Porta serial concrona habilitada(quando habilitada, pos pinos SDA e SCL, precisam
@@ -134,7 +142,7 @@ uint8_t get_i2c1_timeout(void);
  * @param sda   pino configurado para dado da i2c
  * @param sck   Pino configurado para o clock da I2C
  */
-void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck);
+PUBLIC void i2c_setup_enable(uint8_t enable_i2c, uint8_t sda, uint8_t sck);
 
 /**
  * @brief Configura i2c para funcionar como mestre
@@ -147,7 +155,7 @@ void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck);
  * @param clock_master Clock = Fosc/[4x(SSPAD+1)], apenas para I2C_MASTER_CLOCK \n
  *  I2C_CK_240KHz: configura clock em 240kHz    \n
  */
-void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master);
+PUBLIC void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master);
 
 /**
  * @brief Configura i2c para funcionar como slave
@@ -161,14 +169,14 @@ void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master);
  *  I2C_SPEED_SLOW: \n
  * @param clock_slave   \n
  */
-void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave);
+PUBLIC void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave);
 
 //void i2c_setup();
 /**
  * @brief Para que o mestre possa inciar uma transimissao é necessario
  * ele se certificar de que o barramento I2C não esteja envolvido em alguma transmissao
  */
-void i2c_idle(void);
+PUBLIC void i2c_idle(void);
 
 /**
  * @brief Habilita condicao de START(somente modo Mestre). A condicao
@@ -176,7 +184,7 @@ void i2c_idle(void);
  * pelo hardware no final da condiçao START, sendo no mesmo momento setado o
  * bit SSPIF(Uma interrupçao sera gerada se ela estiver habilitada).
  */
-void i2c_start(void);
+PUBLIC void i2c_start(void);
 
 /**
  * @brief A fucao I2C_RESTART e exatamente igual a funcao I2C_START
@@ -184,7 +192,7 @@ void i2c_start(void);
  * de dados(Estrita ou Leitura) sem que o dispitivo mestre precise antes finalizar
  * a transmissao corrente com uma condicao de STOP.
  */
-void i2c_repeat_start(void);
+PUBLIC void i2c_repeat_start(void);
 
 /**
  * @brief A fucao STOP é gerada quando o bit PEN é setado(inicia condicao
@@ -192,7 +200,7 @@ void i2c_repeat_start(void);
  * final da condiçao STOP, sendo no mesmo momento setado obit SSPIF(Uma interrupçao
  * sera gerada se ela estiver habilitada).
  */
-void i2c_stop(void);
+PUBLIC void i2c_stop(void);
 
 /**
  * @brief Se Apos a chegada de um novo byte no dispostivo mestre deseja
@@ -201,7 +209,7 @@ void i2c_stop(void);
  * o fim da transmissao do bit ACK = 0. O bit SSPIF tambem e setado na borda de
  * descida do nono pulso de clock, sendo gerado uma interrupçao se ela estiver habilitada.
  */
-void i2c_ack(void);
+PUBLIC void i2c_ack(void);
 
 /**
  * @brief Se Apos a chegada de um novo byte no dispostivo mestre NAO deseja
@@ -210,25 +218,25 @@ void i2c_ack(void);
  * o fim da transmissao do bit ACK = 1. O bit SSPIF tambem e setado na borda de
  * descida do nono pulso de clock, sendo gerado uma interrupçao se ela estiver habilitada.
  */
-void i2c_nack(void);
+PUBLIC void i2c_nack(void);
 
 /**
  * @brief Espera receber um ACK
  */
-uint8_t i2c_wait_ack(void);
+PUBLIC uint8_t i2c_wait_ack(void);
 
 /**
  * @brief Transmite um byte pelo barramento I2C
  * @param UI8_dado
  * @return
  */
-int8_t i2c_write(uint8_t UI8_dado);
+PUBLIC uint8_t i2c_write(uint8_t UI8_dado);
 
 /**
  * @brief Le um byte do barramento I2C
  * @return dado lido
  */
-uint8_t i2c_read(void);
+PUBLIC uint8_t i2c_read(void);
 
 /**
  * @brief Depois de cada byte e transmitido o dispositivo mestre precisa
@@ -236,7 +244,7 @@ uint8_t i2c_read(void);
  * recebido no nono pulso de clock. O bit ACKSTAT indica se o dispositivo escravo
  * recebeu ou nao o byte transmito.
  */
-uint8_t i2c_ack_stat(void);
+PUBLIC uint8_t i2c_ack_stat(void);
 
 /**
  * @brief Funcao que contem todos os camandos da comunicacao i2c habstraidas.
@@ -244,7 +252,7 @@ uint8_t i2c_ack_stat(void);
  * @param UI8_data Dado que deseja ser enviado.
  * @return Dado recebido.
  */
-uint8_t i2c(I2C_COMMAND UI8_tipo, uint8_t UI8_data);
+PUBLIC uint8_t i2c(I2C_COMMAND UI8_tipo, uint8_t UI8_data);
 
 /**
  * 
@@ -254,7 +262,7 @@ uint8_t i2c(I2C_COMMAND UI8_tipo, uint8_t UI8_data);
  * @param data
  * @return 
  */
-uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+PUBLIC uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
 
 /**
  * 
@@ -264,7 +272,7 @@ uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, 
  * @param data
  * @return 
  */
-uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+PUBLIC uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
 
 /**
  * 
@@ -274,7 +282,7 @@ uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount,
  * @param data
  * @return 
  */
-uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
+PUBLIC uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
 
 /**
  * 
@@ -284,8 +292,7 @@ uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCoun
  * @param data
  * @return 
  */
-uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
-
+PUBLIC uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
 
 #endif
 

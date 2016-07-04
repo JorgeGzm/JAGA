@@ -27,6 +27,7 @@
 //==============================================================================
 
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -45,11 +46,12 @@
 //==============================================================================
 
 /** @brief Contem a rotina de configuracao e inicializacao da uart. */
-void init_uart(void);
+PUBLIC void init_uart(void);
 
 /**
  * TODO documentar
  * @param value
  */
-void callback_uart_putc(uint8_t value);
+PUBLIC void callback_uart_putc(uint8_t value);
+
 #endif	

@@ -30,6 +30,7 @@
 #include "i2c/hal_i2c.h"
 #include "xtime/xtime.h"
 #include "xmemory/xmemory.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -47,26 +48,27 @@
 // PUBLIC FUNCTIONS
 //==============================================================================
 
+PUBLIC void DS1307_attach_i2c(DRIVER_I2C *driver);
+
 /**
  * @brief TODO Documentar.
  * @param function_rd
  * @param function_wr
  */
-//void DS1307_attach_i2c(uint8_t (*function_rd)(), uint8_t (*function_wr)());
-void DS1307_attach_i2c(uint8_t (*function_rd)(uint8_t, uint8_t, uint16_t, uint8_t*),
-					   uint8_t (*function_wr)(uint8_t, uint8_t, uint16_t, uint8_t*));
+//PUBLIC void DS1307_attach_i2c(uint8_t (*function_rd)(uint8_t, uint8_t, uint16_t, uint8_t*),
+//					            uint8_t (*function_wr)(uint8_t, uint8_t, uint16_t, uint8_t*));
 
 /**
  * @brief TODO Documentar. 
  * @param data_time
  */
-void DS1307_write(DataTime data_time);
+PUBLIC void DS1307_write(DataTime data_time);
 
 /**
  * @brief Funcao para ler os dados do CI RTC e carregar na estrutura RTC
  * @param data_time
  */
-void DS1307_read(DataTime *data_time);
+PUBLIC void DS1307_read(DataTime *data_time);
 
 /**
  * @brief Os dados sao perdidos apos a interrup��o da fonte de energia.
@@ -75,7 +77,7 @@ void DS1307_read(DataTime *data_time);
  * @param data
  * @return 
  */
-uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data);
+PUBLIC uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data);
 
 /**
  * @brief Os dados sao perdidos apos a interrup��o da fonte de energia.
@@ -84,8 +86,8 @@ uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data);
  * @param data
  * @return 
  */
-uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data);
+PUBLIC uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data);
 
-DESCRIPTION_MEMORY DS1307_get_description(void);
+PUBLIC DESCRIPTION_MEMORY DS1307_get_description(void);
 
 #endif

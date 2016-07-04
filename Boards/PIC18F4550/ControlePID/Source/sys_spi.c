@@ -45,7 +45,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void init_spi(void)
+PUBLIC void init_spi(void)
 {
   
 }

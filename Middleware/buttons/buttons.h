@@ -2,7 +2,7 @@
   * @file    buttons.h
   * @author  Jorge Guzman (jorge.gzm@gmail.com); Rafael lopes (faellf@hotmail.com); 
   * @date    Feb 27, 2015
-  * @version 0.1.0.0 (beta)
+  * @version 0.2.0.0 (beta)
   * @brief   Biblioteca para o uso de teclas.
   * @details Esta biblioca controla e configura os pinos do microcontrolador para o uso de ate 8 teclas.
   * @section LICENSE
@@ -28,8 +28,8 @@
 
 #include <stdint.h>
 #include "device/hal_device.h"
-#include "gpio/hal_gpio.h"
 #include "config_buttons.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -48,7 +48,7 @@ typedef enum
     /** @brief TODO */
     BTN_CONTINUOS  
             
-} BUTTON_CHECK_TYPE; 
+}BUTTON_CHECK_TYPE; 
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -59,13 +59,13 @@ typedef enum
 //==============================================================================
  
 /** @brief Inicializa com zero todo o vetor que contem a configuracao das teclas. */
-void buttons_init(void);
+PUBLIC void buttons_init(void);
 
 /** 
  * @brief Verifica se alguma tecla foi pressionada a cada 10ms. 
  * @details A funcao espera um intervalo de tempo antes de confirmar o precionamento da tecla, eliminando assim o debaunce da chave mecanica.
 */
-void buttons_read_isr_10ms(void);
+PUBLIC void buttons_read_isr_10ms(void);
 
 /**
  * @brief Verifica e retorna 1 ou 0 se alguma tecla foi pressionado ou nao. 
@@ -81,21 +81,21 @@ void buttons_read_isr_10ms(void);
  * 0 = botao nao foi prescionado.                               \n
  * 1 = botao foi prescionado.
  */
-uint8_t buttons_check_press(BUTTON_NAME button_id, BUTTON_CHECK_TYPE press);
+PUBLIC uint8_t buttons_check_press(BUTTON_NAME button_id, BUTTON_CHECK_TYPE press);
 
 /**
  * @brief Esta funcao configura uma nova tecla.
  * @details A funcao recebe um valor index < BUTTON_SIZE e o pino do microcontrolador que sera usado.
  * TODO: tratar combinacao de teclas.
  * @param index Range: 0 - 7
- * @param reg
+ * @param pin
  */
-void button_attach(uint8_t index, regGPIO reg);
+PUBLIC void button_attach(uint8_t index, uint8_t pin);
 
 /**
  * @brief Retorna teclas pressionadas
  * @return 
  */
-uint8_t buttons_event(void);
+PUBLIC uint8_t buttons_event(void);
 
 #endif 

@@ -37,100 +37,6 @@
 // PRIVATE VARIABLES			
 //==============================================================================
 
-/** @brief variavel abstraida para acessar o PORTA*/
-volatile uint8_t *ref_PORTA = &PORTA;
-
-/** @brief variavel abstraida para acessar o TRISA*/
-volatile uint8_t *ref_TRISA = &TRISA;
-
-/** @brief variavel abstraida para acessar o LATA*/
-volatile uint8_t *ref_LATA = &LATA;
-
-/** variavel abstraida para acessar o LATE*/
-regGPIO rA0 = { &PORTA, &TRISA, &LATA, PIN_0}; //{ .port = &PORTA, .tris = &TRISA, .lat = &LATA, .numPin = PIN_0 };
-regGPIO rA1 = { &PORTA, &TRISA, &LATA, PIN_1};
-regGPIO rA2 = { &PORTA, &TRISA, &LATA, PIN_2};
-regGPIO rA3 = { &PORTA, &TRISA, &LATA, PIN_3};
-regGPIO rA4 = { &PORTA, &TRISA, &LATA, PIN_4};
-regGPIO rA5 = { &PORTA, &TRISA, &LATA, PIN_5};
-regGPIO rA6 = { &PORTA, &TRISA, &LATA, PIN_6};
-regGPIO rA7 = { &PORTA, &TRISA, &LATA, PIN_7};
-
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-/** @brief variavel abstraida para acessar o PORTB*/
-volatile uint8_t *ref_PORTB = &PORTB;
-
-/** @brief variavel abstraida para acessar o TRISB*/
-volatile uint8_t *ref_TRISB = &TRISB;
-
-/** @brief variavel abstraida para acessar o LATB*/
-volatile uint8_t *ref_LATB = &LATB;
-
-regGPIO rB0 = { &PORTB, &TRISB, &LATB, PIN_0};
-regGPIO rB1 = { &PORTB, &TRISB, &LATB, PIN_1};
-regGPIO rB2 = { &PORTB, &TRISB, &LATB, PIN_2};
-regGPIO rB3 = { &PORTB, &TRISB, &LATB, PIN_3};
-regGPIO rB4 = { &PORTB, &TRISB, &LATB, PIN_4};
-regGPIO rB5 = { &PORTB, &TRISB, &LATB, PIN_5};
-regGPIO rB6 = { &PORTB, &TRISB, &LATB, PIN_6};
-regGPIO rB7 = { &PORTB, &TRISB, &LATB, PIN_7};
-
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-/** @brief variavel abstraida para acessar o PORTC*/
-volatile uint8_t *ref_PORTC = &PORTC;
-
-/** @brief variavel abstraida para acessar o TRISC*/
-volatile uint8_t *ref_TRISC = &TRISC;
-
-/** @brief variavel abstraida para acessar o LATC*/
-volatile uint8_t *ref_LATC = &LATC;
-
-regGPIO rC0 = { &PORTC, &TRISC, &LATC, PIN_0};
-regGPIO rC1 = { &PORTC, &TRISC, &LATC, PIN_1};
-regGPIO rC2 = { &PORTC, &TRISC, &LATC, PIN_2};
-regGPIO rC3 = { &PORTC, &TRISC, &LATC, PIN_3};
-regGPIO rC4 = { &PORTC, &TRISC, &LATC, PIN_4};
-regGPIO rC5 = { &PORTC, &TRISC, &LATC, PIN_5};
-regGPIO rC6 = { &PORTC, &TRISC, &LATC, PIN_6};
-regGPIO rC7 = { &PORTC, &TRISC, &LATC, PIN_7};
-
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-/** @brief variavel abstraida para acessar o PORTC*/
-volatile uint8_t *ref_PORTD = &PORTD;
-
-/** @brief variavel abstraida para acessar o TRISD*/
-volatile uint8_t *ref_TRISD = &TRISD;
-
-/** @brief variavel abstraida para acessar o LATD*/
-volatile uint8_t *ref_LATD = &LATD;
-
-regGPIO rD0 = { &PORTD, &TRISD, &LATD, PIN_0};
-regGPIO rD1 = { &PORTD, &TRISD, &LATD, PIN_1};
-regGPIO rD2 = { &PORTD, &TRISD, &LATD, PIN_2};
-regGPIO rD3 = { &PORTD, &TRISD, &LATD, PIN_3};
-regGPIO rD4 = { &PORTD, &TRISD, &LATD, PIN_4};
-regGPIO rD5 = { &PORTD, &TRISD, &LATD, PIN_5};
-regGPIO rD6 = { &PORTD, &TRISD, &LATD, PIN_6};
-regGPIO rD7 = { &PORTD, &TRISD, &LATD, PIN_7};
-
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-/** @brief variavel abstraida para acessar o PORTE*/
-volatile uint8_t *ref_PORTE = &PORTE;
-
-/** @brief variavel abstraida para acessar o TRISE*/
-volatile uint8_t *ref_TRISE = &TRISE;
-
-/** @brief variavel abstraida para acessar o LATE*/
-volatile uint8_t *ref_LATE = &LATE;
-
-regGPIO rE0 = { &PORTE, &TRISE, &LATE, PIN_0};
-regGPIO rE1 = { &PORTE, &TRISE, &LATE, PIN_1};
-regGPIO rE2 = { &PORTE, &TRISE, &LATE, PIN_2};
-
 //==============================================================================
 // PRIVATE FUNCTIONS
 //==============================================================================
@@ -139,104 +45,241 @@ regGPIO rE2 = { &PORTE, &TRISE, &LATE, PIN_2};
 // SOURCE CODE
 //==============================================================================
 
-void V_initRefRegisters(void)
+PUBLIC void V_initRefRegisters(void)
 {
 
 }
 
-void GPIO_write_data(volatile uint8_t *registrador, uint8_t UI8_value)
-{
-    *registrador = UI8_value;
-}
+//PUBLIC void GPIO_write_data(volatile uint8_t *registrador, uint8_t UI8_value)
+//{
+//    *registrador = UI8_value;
+//}
+//
+//PUBLIC void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
+//{
+//    reg = _port;    
+//}
+//
+//PUBLIC void GPIO_outputBit(volatile uint8_t *port, uint8_t pino, uint8_t UI8_flag)
+//{
+//    if(UI8_flag)
+//    {
+//        set_bit(*port, pino);
+//    }
+//    else
+//    {
+//        clr_bit(*port, pino);
+//    }
+//}
+//
+//PUBLIC void GPIO_low(volatile uint8_t *port, uint8_t pino)
+//{
+//    clr_bit(*port, pino);
+//}
+//
+//PUBLIC void GPIO_high( volatile uint8_t *port, uint8_t pino)
+//{
+//    set_bit(*port, pino);
+//}
+//
+//PUBLIC void GPIO_output_toggle(volatile uint8_t *port, uint8_t pino)
+//{
+//    toggle_bit(*port, pino);
+//}
+//
+//PUBLIC void GPIO_regPin_attach(regPin *pin, regGPIO *reg)
+//{
+//    pin->out = reg->port;    
+//    pin->pin = reg->numPin;    
+//}
+//
+//PUBLIC void GPIO_regPin_outputHigh(regPin *pin)
+//{
+//   set_bit(*pin->out, pin->pin);
+//}
+//
+//PUBLIC void GPIO_regPin_outputLow(regPin *pin)
+//{
+//    clr_bit(*pin->out, pin->pin);
+//}
+//
+//PUBLIC void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
+//{
+//    if(IODirection)
+//    {
+//       //input
+//       set_bit(*pin->tris, pin->numPin);
+//    }
+//    else
+//    {
+//       //output
+//       clr_bit(*pin->tris, pin->numPin);
+//    }
+//}
+//
+//PUBLIC uint8_t GPIO_regPin_rdBit(regPin *pin)
+//{
+//    return(tst_bit(*pin->out, pin->pin));
+//}
+//
+//PUBLIC uint8_t GPIO_regPin_inputBit(regPin *pin)
+//{
+//    if(tst_bit(*pin->out, pin->pin))
+//    {
+//        return 1;
+//    }
+//    else
+//    {
+//        return 0;
+//    }
+//}
+//
+//PUBLIC void GPIO_regPin_outputBit(regPin *pin, uint8_t flag)
+//{
+//    if(flag)
+//    {
+//        set_bit(*pin->out, pin->pin);
+//    }
+//    else
+//    {
+//        clr_bit(*pin->out, pin->pin);
+//    }
+//}
 
-void GPIO_regGPIO_attach(regGPIO *reg, regGPIO *_port)
+PUBLIC void pinMode(int pin, int type)
 {
-    reg = _port;    
-}
+    switch (pin) 
+    {            
+        case 1:  wr_bit(TRISA, 0, type); break;
+        case 2:  wr_bit(TRISA, 1, type); break;
+        case 3:  wr_bit(TRISA, 2, type); break;
+        case 4:  wr_bit(TRISA, 3, type); break;
+        case 5:  wr_bit(TRISA, 4, type); break;
+        case 6:  wr_bit(TRISA, 5, type); break;
+        case 10:  wr_bit(TRISA, 6, type); break;
 
-void GPIO_outputBit(volatile uint8_t *port, uint8_t pino, uint8_t UI8_flag)
-{
-    if(UI8_flag)
-    {
-        set_bit(*port, pino);
+        case 26: wr_bit(TRISB, 0, type); break;
+        case 27: wr_bit(TRISB, 1, type); break;
+        case 28: wr_bit(TRISB, 2, type); break;
+        case 29: wr_bit(TRISB, 3, type); break;
+        case 30: wr_bit(TRISB, 4, type); break;
+        case 31: wr_bit(TRISB, 5, type); break;
+        case 32: wr_bit(TRISB, 6, type); break;
+        case 33: wr_bit(TRISB, 7, type); break;
+
+        case 11: wr_bit(TRISC, 0, type); break;
+        case 12: wr_bit(TRISC, 1, type); break;
+        case 13: wr_bit(TRISC, 2, type); break;
+        case 18: wr_bit(TRISC, 4, type); break;
+        case 19: wr_bit(TRISC, 5, type); break;
+        case 20: wr_bit(TRISC, 6, type); break;
+
+        case 14: wr_bit(TRISD, 0, type); break;		
+        case 15: wr_bit(TRISD, 1, type); break;
+        case 16: wr_bit(TRISD, 2, type); break;
+        case 17: wr_bit(TRISD, 3, type); break;
+        case 22: wr_bit(TRISD, 4, type); break;
+        case 23: wr_bit(TRISD, 5, type); break;
+        case 24: wr_bit(TRISD, 6, type); break;
+        case 25: wr_bit(TRISD, 7, type); break;
+
+        case 7:  wr_bit(TRISE, 0, type); break;
+        case 8:  wr_bit(TRISE, 1, type); break;
+        case 9:  wr_bit(TRISE, 2, type); break;
+        case 0:  wr_bit(TRISE, 3, type); break;
+        
+        default: break;
     }
-    else
-    {
-        clr_bit(*port, pino);
+}
+
+PUBLIC void digitalWrite(int pin, int value) 
+{
+	switch (pin) 
+    {            
+        case 1:  wr_bit(PORTA, 0, value); break;
+        case 2:  wr_bit(PORTA, 1, value); break;
+        case 3:  wr_bit(PORTA, 2, value); break;
+        case 4:  wr_bit(PORTA, 3, value); break;
+        case 5:  wr_bit(PORTA, 4, value); break;
+        case 6:  wr_bit(PORTA, 5, value); break;
+        case 10: wr_bit(PORTA, 6, value); break;
+
+        case 26: wr_bit(PORTB, 0, value); break;
+        case 27: wr_bit(PORTB, 1, value); break;
+        case 28: wr_bit(PORTB, 2, value); break;
+        case 29: wr_bit(PORTB, 3, value); break;
+        case 30: wr_bit(PORTB, 4, value); break;
+        case 31: wr_bit(PORTB, 5, value); break;
+        case 32: wr_bit(PORTB, 6, value); break;
+        case 33: wr_bit(PORTB, 7, value); break;
+
+        case 11: wr_bit(PORTC, 0, value); break;
+        case 12: wr_bit(PORTC, 1, value); break;
+        case 13: wr_bit(PORTC, 2, value); break;
+        case 18: wr_bit(PORTC, 4, value); break;
+        case 19: wr_bit(PORTC, 5, value); break;
+        case 20: wr_bit(PORTC, 6, value); break;
+
+        case 14: wr_bit(PORTD, 0, value); break;		
+        case 15: wr_bit(PORTD, 1, value); break;
+        case 16: wr_bit(PORTD, 2, value); break;
+        case 17: wr_bit(PORTD, 3, value); break;
+        case 22: wr_bit(PORTD, 4, value); break;
+        case 23: wr_bit(PORTD, 5, value); break;
+        case 24: wr_bit(PORTD, 6, value); break;
+        case 25: wr_bit(PORTD, 7, value); break;
+
+        case 7:  wr_bit(PORTE, 0, value); break;
+        case 8:  wr_bit(PORTE, 1, value); break;
+        case 9:  wr_bit(PORTE, 2, value); break;
+        case 0:  wr_bit(PORTE, 3, value); break;
+        
+        default: break;
     }
 }
 
-void GPIO_low(volatile uint8_t *port, uint8_t pino)
-{
-    clr_bit(*port, pino);
-}
+PUBLIC int digitalRead(int pin) 
+{    
+    switch (pin) 
+    {            
+        case 1:  return tst_bit(PORTA, 0);
+        case 2:  return tst_bit(PORTA, 1);
+        case 3:  return tst_bit(PORTA, 2);
+        case 4:  return tst_bit(PORTA, 3);
+        case 5:  return tst_bit(PORTA, 4);
+        case 6:  return tst_bit(PORTA, 5);
+        case 10: return tst_bit(PORTA, 6);
 
-void GPIO_high( volatile uint8_t *port, uint8_t pino)
-{
-    set_bit(*port, pino);
-}
+        case 26: return tst_bit(PORTB, 0);
+        case 27: return tst_bit(PORTB, 1);
+        case 28: return tst_bit(PORTB, 2);
+        case 29: return tst_bit(PORTB, 3);
+        case 30: return tst_bit(PORTB, 4);
+        case 31: return tst_bit(PORTB, 5);
+        case 32: return tst_bit(PORTB, 6);
+        case 33: return tst_bit(PORTB, 7);
 
-void GPIO_output_toggle(volatile uint8_t *port, uint8_t pino)
-{
-    toggle_bit(*port, pino);
-}
+        case 11: return tst_bit(PORTC, 0);
+        case 12: return tst_bit(PORTC, 1);
+        case 13: return tst_bit(PORTC, 2);
+        case 18: return tst_bit(PORTC, 4);
+        case 19: return tst_bit(PORTC, 5);
+        case 20: return tst_bit(PORTC, 6);
 
-void GPIO_regPin_attach(regPin *pin, regGPIO *reg)
-{
-    pin->out = reg->port;    
-    pin->pin = reg->numPin;    
-}
+        case 14: return tst_bit(PORTD, 0);		
+        case 15: return tst_bit(PORTD, 1);
+        case 16: return tst_bit(PORTD, 2);
+        case 17: return tst_bit(PORTD, 3);
+        case 22: return tst_bit(PORTD, 4);
+        case 23: return tst_bit(PORTD, 5);
+        case 24: return tst_bit(PORTD, 6);
+        case 25: return tst_bit(PORTD, 7);
 
-void GPIO_regPin_outputHigh(regPin *pin)
-{
-   set_bit(*pin->out, pin->pin);
-}
+        case 7:  return tst_bit(PORTE, 0);
+        case 8:  return tst_bit(PORTE, 1);
+        case 9:  return tst_bit(PORTE, 2);
+        case 0:  return tst_bit(PORTE, 3);
 
-void GPIO_regPin_outputLow(regPin *pin)
-{
-    clr_bit(*pin->out, pin->pin);
-}
-
-void GPIO_regPin_setDir(regGPIO *pin, PIN_DIR IODirection)
-{
-    if(IODirection)
-    {
-       //input
-       set_bit(*pin->tris, pin->numPin);
-    }
-    else
-    {
-       //output
-       clr_bit(*pin->tris, pin->numPin);
-    }
-}
-
-uint8_t GPIO_regPin_rdBit(regPin *pin)
-{
-    return(tst_bit(*pin->out, pin->pin));
-}
-
-uint8_t GPIO_regPin_inputBit(regPin *pin)
-{
-    if(tst_bit(*pin->out, pin->pin))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
+        default: return -1;
     }
 }
-
-void GPIO_regPin_outputBit(regPin *pin, uint8_t flag)
-{
-    if(flag)
-    {
-        set_bit(*pin->out, pin->pin);
-    }
-    else
-    {
-        clr_bit(*pin->out, pin->pin);
-    }
-}
-

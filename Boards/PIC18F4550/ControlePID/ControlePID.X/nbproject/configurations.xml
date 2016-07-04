@@ -133,6 +133,10 @@
       <logicalFolder name="bitwise" displayName="bitwise" projectFiles="true">
         <itemPath>../../../../Util/bitwise/bitwise.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="const" displayName="const" projectFiles="true">
+        <itemPath>../../../../Util/const/conts.c</itemPath>
+        <itemPath>../../../../Util/const/conts.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="crc" displayName="crc" projectFiles="true">
         <itemPath>../../../../Util/crc/crc.c</itemPath>
         <itemPath>../../../../Util/crc/crc.h</itemPath>
@@ -179,8 +183,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.21</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>1.37</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <compileType>
         <linkerTool>

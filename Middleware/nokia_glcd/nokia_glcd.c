@@ -2,7 +2,7 @@
   * @file    nokia_glcd.c
   * @author  Tiago Melo; Jorge Guzman (jorge.gzm@gmail.com);
   * @date    Apr 2, 2014
-  * @version 0.1.0.0 (beta)
+  * @version 0.2.0.0 (beta)
   * @brief   nokia3310 - Display Monocromático 48x84
   * @details
   * @section LICENSE
@@ -22,6 +22,7 @@
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
+
 #include "nokia_glcd.h"
 #include <string.h>
 
@@ -60,19 +61,19 @@
 typedef struct _GLCD_nokia
 {
     /** Clock */
-	regPin clk;
+	uint8_t clk;
 
     /** Pino que envia o dado serial */
-	regPin data;
+	uint8_t data;
 
     /** */
-	regPin dc;
+	uint8_t dc;
 
     /** Reset */
-	regPin rst;
+	uint8_t rst;
 
     /**  Habilita escrita no lcd*/
-	regPin sce;
+	uint8_t sce;
 }GLCD_nokia;
 
 //==============================================================================
@@ -221,11 +222,11 @@ uint8_t const BigNumbers[][42] =
 /** parametro que controlara o GLCD nokia*/
 GLCD_nokia nokia =
 {
-    { 0, 0},
-	{ 0, 0},
-	{ 0, 0},
-	{ 0, 0},
-	{ 0, 0}
+    { 0x00 },
+	{ 0x00 },
+	{ 0x00 },
+	{ 0x00 },
+	{ 0x00 }
 };
 
 //==============================================================================
@@ -233,19 +234,25 @@ GLCD_nokia nokia =
 //==============================================================================
 
 /** @brief Inicializa o glcd nokia */
-void nokia_init(void);
+PRIVATE void nokia_init(void);
+
+/**
+ * @brief Envia um dado de forma serial, nao usa a SPI no microcontrolador
+ * @param data Valor a ser enviado;
+ */
+PRIVATE void nokia_spi_wr(uint8_t data);
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void nokia_init(void)
+PRIVATE void nokia_init(void)
 {
     //Reset
-	GPIO_regPin_outputLow(&nokia.rst);
-    Delay_ms(1);
-    GPIO_regPin_outputHigh(&nokia.rst);
-
+    digitalWrite(nokia.rst, LOW);
+	Delay_ms(1);
+    digitalWrite(nokia.rst, HIGH);
+    
     nokia_write(LCD_CMD, 0x21); // LCD Extended Commands.
     nokia_write(LCD_CMD, 0xBC); // Set LCD Vop (Contrast).
     nokia_write(LCD_CMD, 0x04); // Set Temp coefficent. //0x04
@@ -255,27 +262,27 @@ void nokia_init(void)
     nokia_write(LCD_CMD, 0x0C);
 }
 
-void nokia_attach(regGPIO clk, regGPIO data, regGPIO dc, regGPIO rst, regGPIO sce)
+PUBLIC void nokia_attach(uint8_t clk, uint8_t data, uint8_t dc, uint8_t rst, uint8_t sce)
 {
-	GPIO_regPin_attach(&nokia.clk, &clk);
-	GPIO_regPin_setDir(&clk, DIR_OUTPUT);
+    nokia.clk = clk;
+    pinMode(clk, OUTPUT);
+    
+    nokia.data = data;
+    pinMode(data, OUTPUT);
 
-	GPIO_regPin_attach(&nokia.data, &data);
-	GPIO_regPin_setDir(&data, DIR_OUTPUT);
+    nokia.dc = dc;
+    pinMode(dc, OUTPUT);
+    
+    nokia.rst = rst;
+    pinMode(rst, OUTPUT);
 
-	GPIO_regPin_attach(&nokia.dc, &dc);
-	GPIO_regPin_setDir(&dc, DIR_OUTPUT);
-
-	GPIO_regPin_attach(&nokia.rst, &rst);
-	GPIO_regPin_setDir(&rst, DIR_OUTPUT);
-
-	GPIO_regPin_attach(&nokia.sce, &sce);
-	GPIO_regPin_setDir(&sce, DIR_OUTPUT);
-
+    nokia.sce = sce;
+    pinMode(sce, OUTPUT);
+  
 	nokia_init();
 }
 
-static void nokia_spi_wr(uint8_t data)
+PRIVATE void nokia_spi_wr(uint8_t data)
 {
     Byte aux_data;
     uint8_t i;
@@ -283,31 +290,33 @@ static void nokia_spi_wr(uint8_t data)
     
     for(i = 0; i < 8; i++)
     {
-    	GPIO_regPin_outputLow(&nokia.clk);
-    	GPIO_regPin_outputBit(&nokia.data, aux_data.bit7);
+        digitalWrite(nokia.clk, LOW);
+        digitalWrite(nokia.data, aux_data.bit7);
         aux_data.value <<= 1;
-        GPIO_regPin_outputHigh(&nokia.clk);
+        digitalWrite(nokia.clk, HIGH);
     }
 }
 
-void nokia_write(uint8_t dc, uint8_t _data )
+PUBLIC void nokia_write(uint8_t dc, uint8_t _data)
 {
-  Byte aux_dc;
+	Byte aux_dc;
 
-  aux_dc.value = dc;
-  GPIO_regPin_outputBit(&nokia.dc, aux_dc.bit0);
-  GPIO_regPin_outputLow(&nokia.sce); //habilita escrita no lcd
-  nokia_spi_wr( _data );
-  GPIO_regPin_outputHigh(&nokia.sce); //Desabilita escrita no lcd
+	aux_dc.value = dc;
+	digitalWrite(nokia.dc, aux_dc.bit0);
+
+	digitalWrite(nokia.sce, LOW); //habilita escrita no lcd
+	nokia_spi_wr( _data );
+	digitalWrite(nokia.sce, HIGH); //Desabilita escrita no lcd
+  
 }
 
-void nokia_set_cursor(uint8_t x, uint8_t y)
+PUBLIC void nokia_set_cursor(uint8_t x, uint8_t y)
 {
     nokia_write(LCD_CMD, 0x40 | y); //  linha  (0 - 5)
     nokia_write(LCD_CMD, 0x80 | x); //  coluna (0 - 83)
 }
 
-void nokia_chr(uint8_t caracter, uint8_t color )
+PUBLIC void nokia_chr(uint8_t caracter, uint8_t color )
 {
     uint8_t i, chr;
 
@@ -322,78 +331,78 @@ void nokia_chr(uint8_t caracter, uint8_t color )
     }
 }
 
-void nokia_custom_char(uint8_t *map)
+PUBLIC void nokia_custom_char(uint8_t *map)
 {
-  uint8_t i;
+	uint8_t i;
 
-  for(i = 0; i < 5; i++)
-  {
-    nokia_write(LCD_DATA, *map++);
-  }
+	for(i = 0; i < 5; i++)
+	{
+		nokia_write(LCD_DATA, *map++);
+	}
 }
 
-void nokia_fill(uint8_t Buffer )
+PUBLIC void nokia_fill(uint8_t Buffer )
 {
-  unsigned index;
-  nokia_set_cursor( 0, 0 );
+	unsigned index;
+	nokia_set_cursor( 0, 0 );
 
-  for(index = 0; index < 504; index++)
-  {
-    nokia_write( LCD_DATA, Buffer );
-  }
+	for(index = 0; index < 504; index++)
+	{
+		nokia_write( LCD_DATA, Buffer );
+	}
 }
 
-void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color) //OK
+PUBLIC void nokia_out(uint8_t row, uint8_t col, uint8_t *string, uint8_t color) //OK
 {
-  nokia_set_cursor(col, row );
+	nokia_set_cursor(col, row );
 
-  while (*string)
-  {
-    nokia_chr(*string++, color);
-  }
+	while (*string)
+	{
+		nokia_chr(*string++, color);
+	}
 }
 
-void nokia_out_cp(uint8_t *String, uint8_t Color)
+PUBLIC void nokia_out_cp(uint8_t *String, uint8_t Color)
 {
-  while(*String)
-  {
-        nokia_chr( *String++, Color );
-  }
+	while(*String)
+	{
+		nokia_chr( *String++, Color );
+	}
 }
 
-void nokia_image(const uint8_t *Bmp )
+PUBLIC void nokia_image(const uint8_t *Bmp )
 {
-  unsigned i;
-  nokia_set_cursor(0, 0);
+	unsigned i;
+	nokia_set_cursor(0, 0);
 
-  for(i = 0; i < 504; i++)
-  {
-    nokia_write(LCD_DATA, Bmp[i]);
-  }
+	for(i = 0; i < 504; i++)
+	{
+		nokia_write(LCD_DATA, Bmp[i]);
+	}
 }
 
-void nokia_write_big_number( uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
+PUBLIC void nokia_write_big_number( uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
 {
-  uint8_t i, chr;
-  for(i = 0; i < 42; i++)
-  {
-     if(i % 14 == 0)
-     {
-       nokia_set_cursor(x, y++);
-     }
+	uint8_t i, chr;
+	for(i = 0; i < 42; i++)
+	{
+		if(i % 14 == 0)
+		{
+			nokia_set_cursor(x, y++);
+		}
 
-     chr = BigNumbers[n][i];
+		chr = BigNumbers[n][i];
 
-     if(Color == 0)
-        {
-            chr = ~chr;
-        }
+		if(Color == 0)
+		{
+			chr = ~chr;
+		}
 
-        nokia_write(LCD_DATA, chr);
-    }
+		nokia_write(LCD_DATA, chr);
+	}
 }
 
-void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
+PUBLIC void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
 {
     uint8_t i, chr;
     for (i = 0; i < 24; i++) 
@@ -414,13 +423,13 @@ void nokia_write_med_number(uint8_t x, uint8_t y, uint8_t n, uint8_t Color )
     }
 }
 
-void nokia_white_putc(uint8_t caracter)
+PUBLIC void nokia_white_putc(uint8_t caracter)
 {
    nokia_chr(caracter, 0);
 }
 
 
-void nokia_black_putc(uint8_t caracter)
+PUBLIC void nokia_black_putc(uint8_t caracter)
 {
    nokia_chr(caracter, 1);
 }
@@ -428,13 +437,8 @@ void nokia_black_putc(uint8_t caracter)
 
 /*
  *    exemplo
- *    nokia_attach(&nokia.clk, &pRD7, &tRD7);
- *    nokia_attach(&nokia.data, &pRD6, &tRD6);
- *    nokia_attach(&nokia.dc, &pRD5, &tRD5);
- *    nokia_attach(&nokia.rst, &pRD4, &tRD4);
- *    nokia_attach(&nokia.sce, &pRD3, &tRD3);
- *    nokia_Init();
- *
+ *    nokia_attach( 1, 2, 3, 4, 5);
+  *
  *    uint8 buffers[16];
  *    strcpy(buffers, "Ola Mundo!");
  *    nokia_Fill(0x00);

@@ -47,7 +47,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void init_AD(void)
+PUBLIC void init_AD(void)
 {
 //  float valor;
 //  float valor2;

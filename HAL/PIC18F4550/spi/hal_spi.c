@@ -62,7 +62,7 @@ void spi_set_cke(uint8_t transmissao);
 // SOURCE CODE
 //==============================================================================
 
-void spi_init(void)
+PUBLIC void spi_init(void)
 {
     spi_setup.enable = SPI_DISABLE;
     spi_setup.type = SPI_MASTER_FOSC_4;
@@ -72,29 +72,29 @@ void spi_init(void)
     spi_setup.mode = SPI_MODE_0;
 }
 
-void spi_attach(regGPIO *_sdi, regGPIO *_sdo, regGPIO *_sck, regGPIO *_ss)
+PUBLIC void spi_attach(uint8_t sdi, uint8_t sdo, uint8_t sck, uint8_t ss)
 {
-    GPIO_regGPIO_attach(&spi_device.sdi_tris, _sdi);
-    GPIO_regGPIO_attach(&spi_device.sdo_tris, _sdo);
-    GPIO_regGPIO_attach(&spi_device.sck_tris, _sck);
-    GPIO_regGPIO_attach(&spi_device.ss_tris, _ss);
+    spi_device.sdi_tris = sdi;
+    spi_device.sdo_tris = sdo;
+    spi_device.sck_tris = sck;
+    spi_device.ss_tris = ss;
 
-    GPIO_regPin_setDir(&spi_device.sdi_tris, DIR_INPUT);
-    GPIO_regPin_setDir(&spi_device.sdo_tris, DIR_OUTPUT);
-    GPIO_regPin_setDir(&spi_device.ss_tris, DIR_INPUT);
+    pinMode(sdi, INPUT);
+    pinMode(sdo, OUTPUT);
+    pinMode(ss, INPUT);
 
     // Se SPI configurada para operar como SLAVE 
     if(spi_setup.type == SPI_SLAVE_SS_DISABLE || spi_setup.type == SPI_SLAVE_SS_ENABLE)
     {
-        GPIO_regPin_setDir(&spi_device.sck_tris, DIR_INPUT);
+        pinMode(sck, INPUT);
     }
     else
     {
-        GPIO_regPin_setDir(&spi_device.sck_tris, DIR_OUTPUT);
+        pinMode(sck, OUTPUT);
     }
 }
 
-void spi_set_chipselect(regGPIO chipselect, uint8_t status)
+PUBLIC void spi_set_chipselect(regGPIO chipselect, uint8_t status)
 {
     //GPIO_pin_outputBit(chipselect->port, status);
 }
@@ -113,7 +113,7 @@ void spi_set_cke(uint8_t transmissao)
     SSPSTATbits.CKE = transmissao;
 }
 
-void spi_set_mode(uint8_t mode)
+PUBLIC void spi_set_mode(uint8_t mode)
 {
     spi_setup.mode = mode;
 
@@ -155,7 +155,7 @@ void spi_set_mode(uint8_t mode)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-void spi_set_sampled_time(uint8_t sampled_time)
+PUBLIC void spi_set_sampled_time(uint8_t sampled_time)
 {
     spi_setup.sampled_time = sampled_time;
 
@@ -168,14 +168,14 @@ void spi_set_sampled_time(uint8_t sampled_time)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-void spi_enable(uint8_t value)
+PUBLIC void spi_enable(uint8_t value)
 {
     spi_setup.enable = value;
 
     SSPCON1bits.SSPEN = value;
 }
 
-void spi_set_type(uint8_t type)
+PUBLIC void spi_set_type(uint8_t type)
 {
     spi_setup.type = type;
 
@@ -194,7 +194,7 @@ void spi_set_type(uint8_t type)
     SSPCON1bits.SSPEN = spi_setup.enable;
 }
 
-uint8_t spi_wr_rd(uint8_t UI8_dado)
+PUBLIC uint8_t spi_wr_rd(uint8_t UI8_dado)
 {
     uint8_t temp;
 
@@ -239,7 +239,7 @@ uint8_t spi_wr_rd(uint8_t UI8_dado)
     }
 }
 
-uint8_t spi_write(uint8_t dado)
+PUBLIC uint8_t spi_write(uint8_t dado)
 {   
     if(SSPCON1bits.WCOL)                            //Verifica write collision
     {
@@ -268,7 +268,7 @@ uint8_t spi_write(uint8_t dado)
     return (0);
 }
 
-uint8_t spi_read(void)
+PUBLIC uint8_t spi_read(void)
 {
     SSPBUF = 0xFF; // initiate bus cycle
     

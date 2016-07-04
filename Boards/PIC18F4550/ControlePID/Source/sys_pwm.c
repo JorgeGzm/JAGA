@@ -46,9 +46,9 @@
 // SOURCE CODE
 //==============================================================================
 
-void init_pwm(void)
+PUBLIC void init_pwm(void)
 {
     pwmMCU_setup_conf(PWM_P1A_MODU_P1B_P1C_P1D_IO, PWM_MODE_P1A_P1C_HIGH_P1B_P1D_HIGH);
-    pwmMCU_setup_tmr(PWM_COUNTER_ON, 15625F);
+    pwmMCU_setup_tmr(PWM_COUNTER_ON, 15625);
     pwmMCU_set_fduty(00.00);       
 }

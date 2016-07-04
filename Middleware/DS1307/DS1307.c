@@ -33,8 +33,6 @@
 #include "DS1307.h"
 #include "types/types.h"
 #include "xtime/xtime.h"
-#include "i2c/hal_i2c.h"
-
 
 //==============================================================================
 // PRIVATE DEFINITIONS
@@ -51,35 +49,35 @@
 // PRIVATE VARIABLES			
 //==============================================================================
 
-DESCRIPTION_MEMORY DS1307_description = { 8, 63, "DS1307"};
+PRIVATE DESCRIPTION_MEMORY DS1307_description = { 8, 63, "DS1307"};
+
+PRIVATE DRIVER_I2C *I2Cdrv;
 
 //==============================================================================
 // PRIVATE FUNCTIONS
 //==============================================================================
-
-/** @brief Callback para aleitura da funcao i2c usada pela biblioteca.*/
-uint8_t (*DS1307_i2c_read)(uint8_t, uint8_t, uint16_t, uint8_t*);
-
-/** @brief Callback para a escrita da funcao i2c usada pela biblioteca.*/
-uint8_t (*DS1307_i2c_write)(uint8_t, uint8_t, uint16_t, uint8_t*);
+//
+///** @brief Callback para aleitura da funcao i2c usada pela biblioteca.*/
+//PRIVATE uint8_t (*DS1307_i2c_read)(uint8_t, uint8_t, uint16_t, uint8_t*);
+//
+///** @brief Callback para a escrita da funcao i2c usada pela biblioteca.*/
+//PRIVATE uint8_t (*DS1307_i2c_write)(uint8_t, uint8_t, uint16_t, uint8_t*);
 
 
 //==============================================================================
 // SOURCE CODE
 //==============================================================================
 
-void DS1307_attach_i2c(uint8_t (*function_rd)(uint8_t, uint8_t, uint16_t, uint8_t*), 
-                       uint8_t (*function_wr)(uint8_t, uint8_t, uint16_t, uint8_t*))
+PUBLIC void DS1307_attach_i2c(DRIVER_I2C *driver)
 {
-    DS1307_i2c_read = function_rd;
-    DS1307_i2c_write = function_wr; 
+    I2Cdrv = driver;
 }
 
-void DS1307_write(DataTime data_time)
+PUBLIC void DS1307_write(DataTime data_time)
 {
     uint8_t timeDateToSet[7];
     
-    if(DS1307_i2c_write != NULL)
+    if(I2Cdrv->read != NULL)
     {
         timeDateToSet[0] = decToBcd(data_time.second);
         timeDateToSet[1] = decToBcd(data_time.minute);
@@ -89,7 +87,7 @@ void DS1307_write(DataTime data_time)
         timeDateToSet[5] = decToBcd(data_time.month);
         timeDateToSet[6] = decToBcd(data_time.yearChar);
      
-		DS1307_i2c_write(DS1307_ADDRESS, 0x00, 7, &timeDateToSet[0]);
+        I2Cdrv->write(DS1307_ADDRESS, 0, 7, &timeDateToSet[0]);
 //
 //        DS1307_i2c_wr(DS1307_ADDRESS, 0, 1, &timeDateToSet[0]);
 //        DS1307_i2c_wr(DS1307_ADDRESS, 1, 1, &timeDateToSet[1]);
@@ -100,13 +98,14 @@ void DS1307_write(DataTime data_time)
     }    
 }
 
-void DS1307_read(DataTime *data_time)
+PUBLIC void DS1307_read(DataTime *data_time)
 {    
     uint8_t timeDateReadBack[7];
     
-    if(DS1307_i2c_read != NULL)
+    if(I2Cdrv->read != NULL)
     {
-        DS1307_i2c_read(DS1307_ADDRESS, 0x00, 7, &timeDateReadBack[0]);
+        //DS1307_i2c_read(DS1307_ADDRESS, 0x00, 7, &timeDateReadBack[0]);
+        I2Cdrv->read(DS1307_ADDRESS, 0, 7, &timeDateReadBack[0]);
 
         data_time->second   = bcdToDec(timeDateReadBack[0] & 0x7F);
         data_time->minute   = bcdToDec(timeDateReadBack[1] & 0x7F);
@@ -141,11 +140,11 @@ void DS1307_read(DataTime *data_time)
     }
 }
 
-uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data)
+PUBLIC uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data)
 {
-	if(addr >= DS1307_description.init && addr <= DS1307_description.store && DS1307_i2c_read != NULL)
+	if(addr >= DS1307_description.init && addr <= DS1307_description.store && I2Cdrv->read != NULL)
     {
-        DS1307_i2c_write(DS1307_ADDRESS, addr, count, data);
+        I2Cdrv->write(DS1307_ADDRESS, addr, count, data);
 		return 1;
     }
     else
@@ -154,11 +153,11 @@ uint8_t DS1307_sram_write(uint8_t addr, uint16_t count, uint8_t* data)
     }
 }
 
-uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data)
+PUBLIC uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data)
 {
-    if(addr >= DS1307_description.init && addr <= DS1307_description.store && DS1307_i2c_read != NULL)
+    if(addr >= DS1307_description.init && addr <= DS1307_description.store && I2Cdrv->read != NULL)
     {
-       DS1307_i2c_read(DS1307_ADDRESS, addr, count, data);
+       I2Cdrv->read(DS1307_ADDRESS, addr, count, data);
        return 1;
     }
     else
@@ -167,7 +166,7 @@ uint8_t DS1307_sram_read(uint8_t addr, uint16_t count, uint8_t* data)
     }
 }
 
-DESCRIPTION_MEMORY DS1307_get_description(void)
+PUBLIC DESCRIPTION_MEMORY DS1307_get_description(void)
 {
 	return DS1307_description;
 }

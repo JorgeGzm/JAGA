@@ -29,6 +29,7 @@
 #include "types/types.h"
 #include "device/hal_device.h"
 #include "gpio/hal_gpio.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -86,10 +87,10 @@
 
 typedef struct
 {
-    regGPIO sdi_tris;
-    regGPIO sdo_tris;
-    regGPIO sck_tris;
-    regGPIO ss_tris;
+    uint8_t sdi_tris;
+    uint8_t sdo_tris;
+    uint8_t sck_tris;
+    uint8_t ss_tris;
 }SpiDevice;
 
 typedef union
@@ -120,7 +121,7 @@ typedef union
  * Ex.: spi_init();
  * @param spi_setup
  */
-void spi_init(void);
+PUBLIC void spi_init(void);
 
 /**
  * @brief Configura quais pinos do microcontrolador sao utilizados pela SPI.
@@ -130,61 +131,61 @@ void spi_init(void);
  * @param sck
  * @param ss
  */
-void spi_attach(regGPIO *_sdi, regGPIO *_sdo, regGPIO *_sck, regGPIO *_ss);
+PUBLIC void spi_attach(uint8_t sdi, uint8_t sdo, uint8_t sck, uint8_t ss);
 
 /**
  * @brief Funcao para habilitar ou desabilitar o chipselect
  * @param cs
  * @param status
  */
-void spi_set_chipselect(regGPIO chipselect, uint8_t status);
+PUBLIC void spi_set_chipselect(regGPIO chipselect, uint8_t status);
 
 /**
  * @brief Funcao para configurar o modo de operacao da SPI.
  * Ex.: spi_set_mode(SPI_MODE_1);
  * @param mode  - Seleciona o modo de operacao da SPI
  */
-void spi_set_mode(uint8_t mode);
+PUBLIC void spi_set_mode(uint8_t mode);
 /**
  * @brief Configura o momento da amostragem do dado de entrada.
  * Ex.: spi_set_sampled_time(SPI_SAMPLED_MIDDLE);
  * @param sampled_time
  */
-void spi_set_sampled_time(uint8_t sampled_time);
+PUBLIC void spi_set_sampled_time(uint8_t sampled_time);
 
 /**
  * @brief Configura os pinos do microcontrolador como porta serial.
  * Ex.: spi_enalbe(SPI_ENABLE);
  * @param value
  */
-void spi_enable(uint8_t value);
+PUBLIC void spi_enable(uint8_t value);
 
 /**
  * @brief Confiura o tipo da comunicao serial (Mestre/Escravo).
  * Ex.: spi_type(SPI_MASTER_FOSC_4);
  * @param type
  */
-void spi_set_type(uint8_t type);
+PUBLIC void spi_set_type(uint8_t type);
 
 /**
  * @brief Transmite um dado pela SPI e retorna o dado recebido pela mesma.
  * @param dado: dado a enviar
  * @return dado a recebido
  */
-uint8_t spi_wr_rd(uint8_t UI8_dado);
+PUBLIC uint8_t spi_wr_rd(uint8_t UI8_dado);
 
 /**
  * @brief Transmite um dado pela SPI 1
  * @param dado: dado a ser transmitido
  * @return
  */
-uint8_t spi_write(uint8_t dado);
+PUBLIC uint8_t spi_write(uint8_t dado);
 
 /**
  * @brief Recebe um dado pela SPI 1
  * @return dado recebido
  */
-uint8_t spi_read(void);
+PUBLIC uint8_t spi_read(void);
 
 #endif
 

@@ -45,7 +45,7 @@
 // SOURCE CODE
 //==============================================================================
 
-void crc_calculo(uint16_t *crc, uint8_t dado)
+PUBLIC void crc_calculo(uint16_t *crc, uint8_t dado)
 {
     UWord aux_crc;
     aux_crc.value = *crc;
@@ -69,7 +69,7 @@ void crc_calculo(uint16_t *crc, uint8_t dado)
     *crc = aux_crc.value;
 }
 
-void crc_calcula_buff(uint16_t *crc, uint8_t *buffer)
+PUBLIC void crc_calcula_buff(uint16_t *crc, uint8_t *buffer)
 {
 	*crc = 0xFFFF;
 

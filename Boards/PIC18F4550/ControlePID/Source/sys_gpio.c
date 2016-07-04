@@ -48,22 +48,8 @@
 // SOURCE CODE
 //==============================================================================
 
-void init_gpio(void)
+PUBLIC void init_gpio(void)
 {
-    //Configuracao inicial das I/O do microcontrolador
-    GPIO_write_data(ref_TRISA, 0x00);
-    GPIO_write_data(ref_TRISB, 0x00);
-    GPIO_write_data(ref_TRISC, 0x00);
-    GPIO_write_data(ref_TRISD, 0x00);
-    GPIO_write_data(ref_TRISE, 0x00);
-
-    //Configuracao iniciais dos Ports do microcontrolador
-    GPIO_write_data(ref_PORTA, 0x00);
-    GPIO_write_data(ref_PORTB, 0x00);
-    GPIO_write_data(ref_PORTC, 0x00);
-    GPIO_write_data(ref_PORTD, 0x00);
-    GPIO_write_data(ref_PORTE, 0x00);
-
     //Rotinas de inicializacao especiais
 
     //Libera o uso do PORTB como I/O

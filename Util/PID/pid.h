@@ -26,6 +26,8 @@
 // INCLUDE FILES
 //==============================================================================
 
+#include "const/conts.h"
+
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
@@ -88,7 +90,7 @@ typedef struct
  * @param params
  * @return 
  */
-float PI_control(float x, float x_ref, PI_Params *params);
+PUBLIC float PI_control(float x, float x_ref, PI_Params *params);
 
 /**
  * 
@@ -97,7 +99,7 @@ float PI_control(float x, float x_ref, PI_Params *params);
  * @param params
  * @return 
  */
-float PID_control(float x, float x_ref, PID_Params *params);
+PUBLIC float PID_control(float x, float x_ref, PID_Params *params);
 
 #endif
 

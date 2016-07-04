@@ -5,16 +5,18 @@
             <url>file:/C:/JAGA/Boards/PIC18F4550/ControlePID/Source/sys_hw.c</url>
             <bookmark id="1">
                 <name/>
-                <line>89</line>
+                <line>90</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/JAGA/Middleware/lcd/lcd.c</file>
-            <file>file:/C:/JAGA/Boards/PIC18F4550/ControlePID/Source/app_him.c</file>
-            <file>file:/C:/JAGA/Boards/PIC18F4550/ControlePID/Source/sys_hw.c</file>
+            <file>file:/home/jaga/workspace/git/JAGA/Boards/PIC18F4550/ControlePID/Source/sys_pwm.c</file>
+            <file>file:/home/jaga/workspace/git/JAGA/HAL/PIC18F4550/ad/hal_ad.h</file>
+            <file>file:/home/jaga/workspace/git/JAGA/HAL/PIC18F4550/i2c/hal_i2c.c</file>
+            <file>file:/home/jaga/workspace/git/JAGA/Middleware/LM35/lm35.c</file>
+            <file>file:/home/jaga/workspace/git/JAGA/Boards/PIC18F4550/ControlePID/Source/sys_hw.c</file>
         </group>
     </open-files>
 </project-private>

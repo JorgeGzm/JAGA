@@ -27,6 +27,7 @@
 //==============================================================================
 
 #include <stdint.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -62,21 +63,21 @@ typedef struct
  * @param val Valor decimal a ser convertido para BCD
  * @return Valor no formato BCD
  */
-uint8_t decToBcd(uint8_t val);
+PUBLIC uint8_t decToBcd(uint8_t val);
 
 /**
  * @brief Configura o módulo MSSP 1 para I2c
  * @param val Valor BCD a ser convertido para decimal
  * @return Valor no formato decimal
  */
-uint8_t bcdToDec(uint8_t val);
+PUBLIC uint8_t bcdToDec(uint8_t val);
 
 /**
  * @brief Recupera string do dia da semana.
  * @param day
  * @return erro
  */
-uint8_t get_string_day(DataTime *day);
+PUBLIC uint8_t get_string_day(DataTime *day);
 
 /**
  *

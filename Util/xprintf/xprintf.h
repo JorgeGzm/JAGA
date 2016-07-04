@@ -28,6 +28,7 @@
 
 #include <stdint.h>
 #include <stdarg.h>
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -59,7 +60,7 @@
  * @param fmt TODO documentar
  * @param ... TODO documentar
  */
-void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...);
+PUBLIC void xprintf(void (*func)(uint8_t), const uint8_t *fmt, ...);
 
 
 #endif	/* PRINT_H */

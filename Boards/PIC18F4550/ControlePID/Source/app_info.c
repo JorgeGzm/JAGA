@@ -40,10 +40,10 @@
 //==============================================================================
 
 /** Codigo do equipamento*/
-UWord id_device;
+PRIVATE UWord id_device;
 
 /** Versao do Firmware*/
-uint16_t version;
+PRIVATE uint16_t version;
 
 //==============================================================================
 // PRIVATE FUNCTIONS
@@ -54,7 +54,7 @@ uint16_t version;
 //==============================================================================
 
 /** Inicializa informacoes do equipamento*/
-void info_init(void)
+PUBLIC void info_init(void)
 {
     version = VERSION_FIRMWARE;
     id_device.value = ID_DEVICE;   

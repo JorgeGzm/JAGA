@@ -64,33 +64,33 @@ void isr_1ms_i2c1(void)
         tmr_i2c1_tout--;
 }
 
-void set_i2c1_timeout(uint8_t valor)
+PUBLIC void set_i2c1_timeout(uint8_t valor)
 {
     tmr_i2c1_tout = valor;
 }
 
-uint8_t get_i2c1_timeout(void)
+PUBLIC uint8_t get_i2c1_timeout(void)
 {
     return (tmr_i2c1_tout);
 }
 
-void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck)
+PUBLIC void i2c_setup_enable(uint8_t enable_i2c, uint8_t sda, uint8_t sck)
 {
     SSPEN = enable_i2c;
 
     if(enable_i2c)
     {
-        GPIO_regPin_setDir(sda, DIR_INPUT);
-        GPIO_regPin_setDir(sck, DIR_INPUT);
+        pinMode(sda, INPUT);
+        pinMode(sck, INPUT);
     }
     else
     {
-        GPIO_regPin_setDir(sda, DIR_OUTPUT);
-        GPIO_regPin_setDir(sck, DIR_OUTPUT);
+        pinMode(sda, OUTPUT);
+        pinMode(sck, OUTPUT);
     }
 }
 
-void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)
+PUBLIC void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)
 {
     //bit de controle do slow rate
     SSPSTATbits.SMP = speed;
@@ -108,7 +108,7 @@ void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)
     SSPCON1bits.WCOL = 0; //
 }
 
-void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave)
+PUBLIC void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave)
 {
     //bit de controle do slow rate
     SSPSTATbits.SMP = speed;
@@ -126,7 +126,7 @@ void i2c_setup_slave(uint8_t modo, int8_t speed, uint8_t clock_slave)
     SSPCON1bits.WCOL = 0; //
 }
 
-void i2c_idle(void)//I2C_LIVRE
+PUBLIC void i2c_idle(void)//I2C_LIVRE
 {
     //Carrega temporizador timeout
 //    set_i2c1_timeout(TOUT_I2C1);
@@ -136,7 +136,7 @@ void i2c_idle(void)//I2C_LIVRE
         Nop();
 }
 
-void i2c_start(void)//I2C_START
+PUBLIC void i2c_start(void)//I2C_START
 {
     //Inicializa Start Condition
     SSPCON2bits.SEN = 1;
@@ -149,7 +149,7 @@ void i2c_start(void)//I2C_START
         Nop();
 }
 
-void i2c_repeat_start(void)//I2C_RESTART
+PUBLIC void i2c_repeat_start(void)//I2C_RESTART
 {
     //Inicializa Repeated Start Condition
     SSPCON2bits.RSEN = 1;
@@ -162,7 +162,7 @@ void i2c_repeat_start(void)//I2C_RESTART
         Nop();
 }
 
-void i2c_stop(void)//I2C_STOP
+PUBLIC void i2c_stop(void)//I2C_STOP
 {
     //Inicializa Stop Condition
     SSPCON2bits.PEN = 1;
@@ -175,27 +175,27 @@ void i2c_stop(void)//I2C_STOP
         Nop();
 }
 
-void i2c_ack(void)//I2C_ACK
+PUBLIC void i2c_ack(void)//I2C_ACK
 {
     SSPCON2bits.ACKDT = 0;
     SSPCON2bits.ACKEN = 1;
     while (SSPCON2bits.ACKEN);
 }
 
-uint8_t i2c_ack_stat(void)//I2C_TESTA_ACK
+PUBLIC uint8_t i2c_ack_stat(void)//I2C_TESTA_ACK
 {
     return (SSPCON2bits.ACKSTAT);
 }
 
 
-void i2c_nack(void)//I2C_NACK
+PUBLIC void i2c_nack(void)//I2C_NACK
 {
     SSPCON2bits.ACKDT = 1;
     SSPCON2bits.ACKEN = 1;
     while (SSPCON2bits.ACKEN);			//aguarda terminar seqüência ACK
 }
 
-uint8_t i2c_wait_ack(void)//I2C_TESTA_ACK
+PUBLIC uint8_t i2c_wait_ack(void)//I2C_TESTA_ACK
 {
     //Carrega temporizador timeout
 //    set_i2c1_timeout(TOUT_I2C1);
@@ -205,7 +205,7 @@ uint8_t i2c_wait_ack(void)//I2C_TESTA_ACK
     return 0;
 }
 
-int8_t i2c_write(uint8_t UI8_dado)
+PUBLIC uint8_t i2c_write(uint8_t UI8_dado)
 {
     i2c_idle();
     SSPBUF = UI8_dado; //carrega dado a ser transmitido no registrador SSPBUF
@@ -229,7 +229,7 @@ int8_t i2c_write(uint8_t UI8_dado)
     }
 }
 
-uint8_t i2c_read(void)
+PUBLIC uint8_t i2c_read(void)
 {
     //Carrega temporizador timeout
     // set_i2c1_timeout(TOUT_I2C1);
@@ -247,7 +247,7 @@ uint8_t i2c_read(void)
     return(SSPBUF);
 }
 
-uint8_t i2c(I2C_COMMAND tipo, uint8_t data)
+PUBLIC uint8_t i2c(I2C_COMMAND tipo, uint8_t data)
 {
     uint8_t feedback = 0;
 
@@ -297,7 +297,7 @@ uint8_t i2c(I2C_COMMAND tipo, uint8_t data)
     return (feedback);
 }
 
-uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
+PUBLIC uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
 {
     i2c_idle();
     i2c_start();
@@ -327,7 +327,7 @@ uint8_t i2c0_burst_read(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, 
     return 0;
 }
 
-uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
+PUBLIC uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data)
 {
     i2c_idle();
     i2c_start();
@@ -350,7 +350,7 @@ uint8_t i2c0_burst_write(uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount,
     return 0;
 }
 
-uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
+PUBLIC uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
 {
     UWord aux_memAddr;
     
@@ -387,7 +387,7 @@ uint8_t i2c0_burst_read16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCoun
     return 0;
 }
 
-uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
+PUBLIC uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data)
 {   
     UWord aux_memAddr;
     
@@ -416,6 +416,12 @@ uint8_t i2c0_burst_write16(uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCou
     
     return 0;
 }
+
+DRIVER_I2C Driver_I2C0 =
+{
+    &i2c0_burst_write,
+    &i2c0_burst_read
+};
 
 //void i2c_setup(void)//modo Mestre apenas para teste
 //{

@@ -115,6 +115,12 @@ typedef enum
     EN_I2C_IDLE,
 }I2C_COMMAND;
 
+typedef struct
+{
+    uint8_t  (*write) (uint8_t slaveAddr, uint8_t memAddr, uint16_t byteCount, uint8_t* data);
+    uint8_t  (*read)  (uint8_t slaveAddr, uint16_t memAddr, uint16_t byteCount, uint8_t* data);
+}DRIVER_I2C;
+
 //==============================================================================
 // PUBLIC VARIABLES			
 //==============================================================================

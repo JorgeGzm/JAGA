@@ -30,6 +30,7 @@
 #include "types/types.h"
 #include "i2c/hal_i2c.h"
 #include "xmemory/xmemory.h"
+#include "const/conts.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
@@ -48,7 +49,7 @@
 //==============================================================================
 
 /** @brief   Configura I2C do microcontrolador para se comunicar com o CI AT24C32. */
-void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint8_t*),
+PUBLIC void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint8_t*),
 					    uint8_t (*function_wr)(uint8_t, uint16_t, uint16_t, uint8_t*));
 
 /**
@@ -58,7 +59,7 @@ void AT24C32_attach_i2c(uint8_t (*function_rd)(uint8_t, uint16_t, uint16_t, uint
  * @param count TODO documentar
  * @param data TODO documentar
  */
-void AT24C32_write(uint16_t address, uint16_t count, uint8_t *data);
+PUBLIC void AT24C32_write(uint16_t address, uint16_t count, uint8_t *data);
 
 /**
  * @brief   Leitura de dado armazenado na memoria eeprom AT24C32.
@@ -67,9 +68,9 @@ void AT24C32_write(uint16_t address, uint16_t count, uint8_t *data);
  * @param count TODO documentar
  * @param data TODO documentar
  */
-void AT24C32_read(uint16_t address, uint16_t count, uint8_t* data);
+PUBLIC void AT24C32_read(uint16_t address, uint16_t count, uint8_t* data);
 
-DESCRIPTION_MEMORY AT24C32_get_description(void);
+PUBLIC DESCRIPTION_MEMORY AT24C32_get_description(void);
 
 #endif  /* AT24C32_H */
 

@@ -101,7 +101,7 @@ void pwmMCU_setup_tmr(uint8_t enable, float frequencia)
     pwmMCU_set_frequencia(frequencia);
 }
 
-void pwmMCU_setup_conf(uint8_t func, uint8_t ccp)
+PUBLIC void pwmMCU_setup_conf(uint8_t func, uint8_t ccp)
 {
     //Bits de configuração de saída PWM Aprimorado
     CCP1CONbits.P1M = func;
@@ -109,7 +109,7 @@ void pwmMCU_setup_conf(uint8_t func, uint8_t ccp)
     CCP1CONbits.CCP1M = ccp;
 }
 
-void pwmMCU_set_fduty(float duty)
+PUBLIC void pwmMCU_set_fduty(float duty)
 {
     UWord aux_10bts;
     float aux_duty;
@@ -135,7 +135,7 @@ void pwmMCU_set_fduty(float duty)
 }
 
 
-void pwmMCU_set_duty(uint8_t duty)
+PUBLIC void pwmMCU_set_duty(uint8_t duty)
 {
     UWord aux_10bts;
     aux_10bts.b.b1 = duty;

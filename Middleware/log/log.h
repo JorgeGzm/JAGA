@@ -1,9 +1,9 @@
 /**
-  * @file    steps.h
+  * @file    log.c
   * @author  Jorge Guzman (jorge.gzm@gmail.com)
-  * @date    Set 20, 2015
+  * @date    Dez 26, 2015
   * @version 0.2.0.0 (beta)
-  * @brief   Bibliteoca para o uso das rodas do carrinho
+  * @brief   Bibliteoca para o registro de acontecimentos(log)
   * @details
   * @section LICENSE
   *
@@ -19,41 +19,23 @@
   * http://www.gnu.org/copyleft/gpl.html
 */
 
-#ifndef STEPS_H_
-#define STEPS_H_
+#ifndef XLOG_H_
+#define XLOG_H_
 
 //==============================================================================
 // INCLUDE FILES
 //==============================================================================
 
-#include <stdint.h>
 #include "types/types.h"
-#include "gpio/hal_gpio.h"
 
 //==============================================================================
 // PUBLIC DEFINITIONS
 //==============================================================================
 
-
 //==============================================================================
 // PUBLIC TYPEDEFS
 //==============================================================================
 
-/** @brief */
-typedef enum
-{
-	STOP = 0,
-	GO,
-	BACK,
-	LEFT,
-	RIGHT
-}STEP_DIRECTION;
-
-#define C_GO   	'G'
-#define C_STOP 	'S'
-#define C_BACK 	'B'
-#define C_LEFT 	'L'
-#define C_RIGHT 'R'
 
 //==============================================================================
 // PUBLIC VARIABLES			
@@ -63,27 +45,9 @@ typedef enum
 // PUBLIC FUNCTIONS
 //==============================================================================
 
-/** @brief Limpa e inicializa o controle das rodas. */
-void step_init(void);
-
-/**
- * @brief TODO
- * @param step1
- * @param step2
- * @param step3
- * @param step4
- */
-void step_driver_attach(uint8_t index, regGPIO step_1A, regGPIO step_1B);
-
-/**
- * @brief TODO
- * @param index
- * @param action
- */
-void step_action(uint8_t index, STEP_DIRECTION action);
-
-void step_protocol_commads(uint8_t data);
-
-void step_action_bl(uint8_t index, STEP_DIRECTION action);
+void save_pointer(uint16_t addr_page);
+void load_pointer(void);
+void wr_ext_e2p(uint16_t addr, uint16_t data);
+uint16_t rd_ext_e2p(uint16_t addr);
 
 #endif

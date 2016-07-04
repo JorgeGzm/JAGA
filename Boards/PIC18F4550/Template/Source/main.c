@@ -51,7 +51,7 @@ int main(void)
 
     //Inicializa dispositivos
     setupDevices();
-   
+    
     while(1)
     {
         //Executa rotinas da funcionalidade
