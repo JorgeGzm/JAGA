@@ -17,6 +17,9 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/opt/JAGA/Boards/PIC18F4550/Template/Source/sys_hw.c</file>
+            <file>file:/opt/JAGA/Boards/PIC18F4550/Template/Source/main.c</file>
+        </group>
     </open-files>
 </project-private>

@@ -1,5 +1,214 @@
-21:23:16 **** Incremental Build of configuration Debug for project Template_FreeRTOS ****
+17:32:11 **** Build of configuration Debug for project Template_FreeRTOS ****
 make all 
+Building file: ../src/Source/app_control.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/app_control.d" -MT"src/Source/app_control.o" -c -o "src/Source/app_control.o" "../src/Source/app_control.c"
+Finished building: ../src/Source/app_control.c
+ 
+Building file: ../src/Source/app_him.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/app_him.d" -MT"src/Source/app_him.o" -c -o "src/Source/app_him.o" "../src/Source/app_him.c"
+Finished building: ../src/Source/app_him.c
+ 
+Building file: ../src/Source/app_info.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/app_info.d" -MT"src/Source/app_info.o" -c -o "src/Source/app_info.o" "../src/Source/app_info.c"
+Finished building: ../src/Source/app_info.c
+ 
+Building file: ../src/Source/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/main.d" -MT"src/Source/main.o" -c -o "src/Source/main.o" "../src/Source/main.c"
+Finished building: ../src/Source/main.c
+ 
+Building file: ../src/Source/startup_gcc.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/startup_gcc.d" -MT"src/Source/startup_gcc.o" -c -o "src/Source/startup_gcc.o" "../src/Source/startup_gcc.c"
+Finished building: ../src/Source/startup_gcc.c
+ 
+Building file: ../src/Source/sys_ad.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_ad.d" -MT"src/Source/sys_ad.o" -c -o "src/Source/sys_ad.o" "../src/Source/sys_ad.c"
+Finished building: ../src/Source/sys_ad.c
+ 
+Building file: ../src/Source/sys_gpio.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_gpio.d" -MT"src/Source/sys_gpio.o" -c -o "src/Source/sys_gpio.o" "../src/Source/sys_gpio.c"
+Finished building: ../src/Source/sys_gpio.c
+ 
+Building file: ../src/Source/sys_hw.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_hw.d" -MT"src/Source/sys_hw.o" -c -o "src/Source/sys_hw.o" "../src/Source/sys_hw.c"
+Finished building: ../src/Source/sys_hw.c
+ 
+Building file: ../src/Source/sys_i2c.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_i2c.d" -MT"src/Source/sys_i2c.o" -c -o "src/Source/sys_i2c.o" "../src/Source/sys_i2c.c"
+Finished building: ../src/Source/sys_i2c.c
+ 
+Building file: ../src/Source/sys_mcu.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_mcu.d" -MT"src/Source/sys_mcu.o" -c -o "src/Source/sys_mcu.o" "../src/Source/sys_mcu.c"
+Finished building: ../src/Source/sys_mcu.c
+ 
+Building file: ../src/Source/sys_pwm.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_pwm.d" -MT"src/Source/sys_pwm.o" -c -o "src/Source/sys_pwm.o" "../src/Source/sys_pwm.c"
+Finished building: ../src/Source/sys_pwm.c
+ 
+Building file: ../src/Source/sys_spi.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_spi.d" -MT"src/Source/sys_spi.o" -c -o "src/Source/sys_spi.o" "../src/Source/sys_spi.c"
+Finished building: ../src/Source/sys_spi.c
+ 
+Building file: ../src/Source/sys_timer.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_timer.d" -MT"src/Source/sys_timer.o" -c -o "src/Source/sys_timer.o" "../src/Source/sys_timer.c"
+Finished building: ../src/Source/sys_timer.c
+ 
+Building file: ../src/Source/sys_uart.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"src/Source/sys_uart.d" -MT"src/Source/sys_uart.o" -c -o "src/Source/sys_uart.o" "../src/Source/sys_uart.c"
+Finished building: ../src/Source/sys_uart.c
+ 
+Building file: /opt/JAGA/Util/xtime/xtime.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Util/xtime/xtime.d" -MT"Util/xtime/xtime.o" -c -o "Util/xtime/xtime.o" "/opt/JAGA/Util/xtime/xtime.c"
+Finished building: /opt/JAGA/Util/xtime/xtime.c
+ 
+Building file: /opt/JAGA/Util/xprintf/xprintf.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Util/xprintf/xprintf.d" -MT"Util/xprintf/xprintf.o" -c -o "Util/xprintf/xprintf.o" "/opt/JAGA/Util/xprintf/xprintf.c"
+Finished building: /opt/JAGA/Util/xprintf/xprintf.c
+ 
+Building file: /opt/JAGA/Util/crc/crc.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Util/crc/crc.d" -MT"Util/crc/crc.o" -c -o "Util/crc/crc.o" "/opt/JAGA/Util/crc/crc.c"
+Finished building: /opt/JAGA/Util/crc/crc.c
+ 
+Building file: /opt/JAGA/Util/const/conts.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Util/const/conts.d" -MT"Util/const/conts.o" -c -o "Util/const/conts.o" "/opt/JAGA/Util/const/conts.c"
+Finished building: /opt/JAGA/Util/const/conts.c
+ 
+Building file: /opt/JAGA/Util/PID/pid.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Util/PID/pid.d" -MT"Util/PID/pid.o" -c -o "Util/PID/pid.o" "/opt/JAGA/Util/PID/pid.c"
+Finished building: /opt/JAGA/Util/PID/pid.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/uart/hal_uart.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/uart/hal_uart.d" -MT"TM4C123GXL/uart/hal_uart.o" -c -o "TM4C123GXL/uart/hal_uart.o" "/opt/JAGA/HAL/TM4C123GXL/uart/hal_uart.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/uart/hal_uart.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/systick/hal_systick.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/systick/hal_systick.d" -MT"TM4C123GXL/systick/hal_systick.o" -c -o "TM4C123GXL/systick/hal_systick.o" "/opt/JAGA/HAL/TM4C123GXL/systick/hal_systick.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/systick/hal_systick.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/portable/MemMang/heap_2.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/portable/MemMang/heap_2.d" -MT"TM4C123GXL/portable/MemMang/heap_2.o" -c -o "TM4C123GXL/portable/MemMang/heap_2.o" "/opt/JAGA/HAL/TM4C123GXL/portable/MemMang/heap_2.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/portable/MemMang/heap_2.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F/port.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/portable/GCC/ARM_CM4F/port.d" -MT"TM4C123GXL/portable/GCC/ARM_CM4F/port.o" -c -o "TM4C123GXL/portable/GCC/ARM_CM4F/port.o" "/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F/port.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F/port.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/i2c/hal_i2c.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/i2c/hal_i2c.d" -MT"TM4C123GXL/i2c/hal_i2c.o" -c -o "TM4C123GXL/i2c/hal_i2c.o" "/opt/JAGA/HAL/TM4C123GXL/i2c/hal_i2c.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/i2c/hal_i2c.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/gpio/hal_gpio.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/gpio/hal_gpio.d" -MT"TM4C123GXL/gpio/hal_gpio.o" -c -o "TM4C123GXL/gpio/hal_gpio.o" "/opt/JAGA/HAL/TM4C123GXL/gpio/hal_gpio.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/gpio/hal_gpio.c
+ 
+Building file: /opt/JAGA/HAL/TM4C123GXL/delay/hal_delay.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"TM4C123GXL/delay/hal_delay.d" -MT"TM4C123GXL/delay/hal_delay.o" -c -o "TM4C123GXL/delay/hal_delay.o" "/opt/JAGA/HAL/TM4C123GXL/delay/hal_delay.c"
+Finished building: /opt/JAGA/HAL/TM4C123GXL/delay/hal_delay.c
+ 
+Building file: /opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/nokia_glcd/nokia_glcd.d" -MT"Middleware/nokia_glcd/nokia_glcd.o" -c -o "Middleware/nokia_glcd/nokia_glcd.o" "/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c"
+Finished building: /opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c
+ 
+Building file: /opt/JAGA/Middleware/leds/leds.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/leds/leds.d" -MT"Middleware/leds/leds.o" -c -o "Middleware/leds/leds.o" "/opt/JAGA/Middleware/leds/leds.c"
+Finished building: /opt/JAGA/Middleware/leds/leds.c
+ 
+Building file: /opt/JAGA/Middleware/lcd/lcd.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/lcd/lcd.d" -MT"Middleware/lcd/lcd.o" -c -o "Middleware/lcd/lcd.o" "/opt/JAGA/Middleware/lcd/lcd.c"
+Finished building: /opt/JAGA/Middleware/lcd/lcd.c
+ 
+Building file: /opt/JAGA/Middleware/info_hw/info_hw.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/info_hw/info_hw.d" -MT"Middleware/info_hw/info_hw.o" -c -o "Middleware/info_hw/info_hw.o" "/opt/JAGA/Middleware/info_hw/info_hw.c"
+Finished building: /opt/JAGA/Middleware/info_hw/info_hw.c
+ 
+Building file: /opt/JAGA/Middleware/buttons/buttons.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/buttons/buttons.d" -MT"Middleware/buttons/buttons.o" -c -o "Middleware/buttons/buttons.o" "/opt/JAGA/Middleware/buttons/buttons.c"
+Finished building: /opt/JAGA/Middleware/buttons/buttons.c
+ 
+Building file: /opt/JAGA/Middleware/RFID_Card/RFID_Card.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/RFID_Card/RFID_Card.d" -MT"Middleware/RFID_Card/RFID_Card.o" -c -o "Middleware/RFID_Card/RFID_Card.o" "/opt/JAGA/Middleware/RFID_Card/RFID_Card.c"
+Finished building: /opt/JAGA/Middleware/RFID_Card/RFID_Card.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/croutine.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/croutine.d" -MT"Middleware/FreeRTOS/Source/croutine.o" -c -o "Middleware/FreeRTOS/Source/croutine.o" "/opt/JAGA/Middleware/FreeRTOS/Source/croutine.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/croutine.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/event_groups.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/event_groups.d" -MT"Middleware/FreeRTOS/Source/event_groups.o" -c -o "Middleware/FreeRTOS/Source/event_groups.o" "/opt/JAGA/Middleware/FreeRTOS/Source/event_groups.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/event_groups.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/list.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/list.d" -MT"Middleware/FreeRTOS/Source/list.o" -c -o "Middleware/FreeRTOS/Source/list.o" "/opt/JAGA/Middleware/FreeRTOS/Source/list.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/list.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/queue.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/queue.d" -MT"Middleware/FreeRTOS/Source/queue.o" -c -o "Middleware/FreeRTOS/Source/queue.o" "/opt/JAGA/Middleware/FreeRTOS/Source/queue.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/queue.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/tasks.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/tasks.d" -MT"Middleware/FreeRTOS/Source/tasks.o" -c -o "Middleware/FreeRTOS/Source/tasks.o" "/opt/JAGA/Middleware/FreeRTOS/Source/tasks.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/tasks.c
+ 
+Building file: /opt/JAGA/Middleware/FreeRTOS/Source/timers.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/FreeRTOS/Source/timers.d" -MT"Middleware/FreeRTOS/Source/timers.o" -c -o "Middleware/FreeRTOS/Source/timers.o" "/opt/JAGA/Middleware/FreeRTOS/Source/timers.c"
+Finished building: /opt/JAGA/Middleware/FreeRTOS/Source/timers.c
+ 
+Building file: /opt/JAGA/Middleware/DS1307/DS1307.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/DS1307/DS1307.d" -MT"Middleware/DS1307/DS1307.o" -c -o "Middleware/DS1307/DS1307.o" "/opt/JAGA/Middleware/DS1307/DS1307.c"
+Finished building: /opt/JAGA/Middleware/DS1307/DS1307.c
+ 
+Building file: /opt/JAGA/Middleware/AT24C32/AT24C32.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/Util" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Middleware/FreeRTOS/Source/include" -I"/opt/JAGA/Middleware/FreeRTOS/Source" -I"/opt/JAGA/HAL/TM4C123GXL/portable/MemMang" -I"/opt/JAGA/HAL/TM4C123GXL/portable/GCC/ARM_CM4F" -std=gnu11 -MMD -MP -MF"Middleware/AT24C32/AT24C32.d" -MT"Middleware/AT24C32/AT24C32.o" -c -o "Middleware/AT24C32/AT24C32.o" "/opt/JAGA/Middleware/AT24C32/AT24C32.c"
+Finished building: /opt/JAGA/Middleware/AT24C32/AT24C32.c
+ 
+Building target: Template_FreeRTOS.elf
+Invoking: Cross ARM C Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template_FreeRTOS/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template_FreeRTOS.map" -o "Template_FreeRTOS.elf"  ./src/Source/app_control.o ./src/Source/app_him.o ./src/Source/app_info.o ./src/Source/main.o ./src/Source/startup_gcc.o ./src/Source/sys_ad.o ./src/Source/sys_gpio.o ./src/Source/sys_hw.o ./src/Source/sys_i2c.o ./src/Source/sys_mcu.o ./src/Source/sys_pwm.o ./src/Source/sys_spi.o ./src/Source/sys_timer.o ./src/Source/sys_uart.o  ./Util/xtime/xtime.o  ./Util/xprintf/xprintf.o  ./Util/crc/crc.o  ./Util/const/conts.o  ./Util/PID/pid.o  ./TM4C123GXL/uart/hal_uart.o  ./TM4C123GXL/systick/hal_systick.o  ./TM4C123GXL/portable/MemMang/heap_2.o  ./TM4C123GXL/portable/GCC/ARM_CM4F/port.o  ./TM4C123GXL/i2c/hal_i2c.o  ./TM4C123GXL/gpio/hal_gpio.o  ./TM4C123GXL/delay/hal_delay.o  ./Middleware/nokia_glcd/nokia_glcd.o  ./Middleware/leds/leds.o  ./Middleware/lcd/lcd.o  ./Middleware/info_hw/info_hw.o  ./Middleware/buttons/buttons.o  ./Middleware/RFID_Card/RFID_Card.o  ./Middleware/FreeRTOS/Source/croutine.o ./Middleware/FreeRTOS/Source/event_groups.o ./Middleware/FreeRTOS/Source/list.o ./Middleware/FreeRTOS/Source/queue.o ./Middleware/FreeRTOS/Source/tasks.o ./Middleware/FreeRTOS/Source/timers.o  ./Middleware/DS1307/DS1307.o  ./Middleware/AT24C32/AT24C32.o   
+Finished building target: Template_FreeRTOS.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "Template_FreeRTOS.elf"  "Template_FreeRTOS.hex"
+Finished building: Template_FreeRTOS.hex
+ 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "Template_FreeRTOS.elf"
    text	   data	    bss	    dec	    hex	filename
@@ -7,5 +216,5 @@ arm-none-eabi-size --format=berkeley "Template_FreeRTOS.elf"
 Finished building: Template_FreeRTOS.siz
  
 
-21:23:16 Build Finished (took 150ms)
+17:32:13 Build Finished (took 2s.119ms)
 

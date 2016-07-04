@@ -68,20 +68,18 @@ uint8_t get_i2c1_timeout(void)
     return (tmr_i2c1_tout);
 }
 
-void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck)
+void i2c_setup_enable(uint8_t enable_i2c, uint8_t sda, uint8_t sck)
 {
-    //SSPEN = enable_i2c;
-
-    if(enable_i2c)
-    {
-        GPIO_regPin_setDir(sda, DIR_INPUT);
-        GPIO_regPin_setDir(sck, DIR_INPUT);
-    }
-    else
-    {
-        GPIO_regPin_setDir(sda, DIR_OUTPUT);
-        GPIO_regPin_setDir(sck, DIR_OUTPUT);
-    }
+	if(enable_i2c)
+	{
+		pinMode(sda, INPUT);
+		pinMode(sck, INPUT);
+	}
+	else
+	{
+		pinMode(sda, OUTPUT);
+		pinMode(sck, OUTPUT);
+	}
 }
 
 void i2c_setup_master(uint8_t modo, uint8_t speed, uint8_t clock_master)

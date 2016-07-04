@@ -73,19 +73,6 @@ typedef union
     };
 }Leds;
 
-/** @brief TODO*/
-typedef struct 
-{
-   regGPIO ld1;
-   regGPIO ld2;
-   regGPIO ld3;
-   regGPIO ld4;
-   regGPIO ld5;
-   regGPIO ld6;
-   regGPIO ld7;
-   regGPIO ld8;
-}LD;
-
 
 //==============================================================================
 // PUBLIC VARIABLES			

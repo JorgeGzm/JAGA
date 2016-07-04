@@ -41,9 +41,6 @@
 // PRIVATE FUNCTIONS
 //==============================================================================
 
-	extern uint8_t xdado[300];
-	extern uint8_t xi;
-
 /**@brief TODO documentar*/
 void (*uart0_rx_callback)(uint8_t);
 
@@ -165,15 +162,7 @@ void UART1_Handler(void)
 		c = UART1->DR;              /* read the received data */
 		//-------------------
 
-
-//		if(xi>300-1)
-//		{
-//			xi = 0;
-//		}
-//		xdado[xi++] = c;
 		uart1_rx_callback(c);
-		//step_protocol_commads(c);
-		//-------------------------
 
 		UART1->ICR = 0x0010;        /* clear Rx interrupt flag */
 		readback = UART1->ICR;      /* a read to force clearing of interrupt flag */

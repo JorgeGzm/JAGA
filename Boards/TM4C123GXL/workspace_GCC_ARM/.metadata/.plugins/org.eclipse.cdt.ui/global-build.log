@@ -1,4 +1,8 @@
-21:23:32 **** Build of configuration Debug for project Template ****
+17:35:04 **** Clean-only build of configuration Debug for project Template ****
+make clean 
+rm -rf  ./src/Source/app_control.o ./src/Source/app_him.o ./src/Source/app_info.o ./src/Source/main.o ./src/Source/startup_gcc.o ./src/Source/sys_ad.o ./src/Source/sys_gpio.o ./src/Source/sys_hw.o ./src/Source/sys_i2c.o ./src/Source/sys_mcu.o ./src/Source/sys_pwm.o ./src/Source/sys_spi.o ./src/Source/sys_timer.o ./src/Source/sys_uart.o  ./Util/xtime/xtime.o  ./Util/xprintf/xprintf.o  ./Util/crc/crc.o  ./Util/const/conts.o  ./Util/PID/pid.o  ./TM4C123GXL/uart/hal_uart.o  ./TM4C123GXL/systick/hal_systick.o  ./TM4C123GXL/i2c/hal_i2c.o  ./TM4C123GXL/gpio/hal_gpio.o  ./TM4C123GXL/delay/hal_delay.o  ./Middleware/nokia_glcd/nokia_glcd.o  ./Middleware/leds/leds.o  ./Middleware/lcd/lcd.o  ./Middleware/info_hw/info_hw.o  ./Middleware/buttons/buttons.o  ./Middleware/DS1307/DS1307.o  ./Middleware/AT24C32/AT24C32.o  Template.hex  Template.siz  ./src/Source/app_control.d ./src/Source/app_him.d ./src/Source/app_info.d ./src/Source/main.d ./src/Source/startup_gcc.d ./src/Source/sys_ad.d ./src/Source/sys_gpio.d ./src/Source/sys_hw.d ./src/Source/sys_i2c.d ./src/Source/sys_mcu.d ./src/Source/sys_pwm.d ./src/Source/sys_spi.d ./src/Source/sys_timer.d ./src/Source/sys_uart.d  ./Util/xtime/xtime.d  ./Util/xprintf/xprintf.d  ./Util/crc/crc.d  ./Util/const/conts.d  ./Util/PID/pid.d  ./TM4C123GXL/uart/hal_uart.d  ./TM4C123GXL/systick/hal_systick.d  ./TM4C123GXL/i2c/hal_i2c.d  ./TM4C123GXL/gpio/hal_gpio.d  ./TM4C123GXL/delay/hal_delay.d  ./Middleware/nokia_glcd/nokia_glcd.d  ./Middleware/leds/leds.d  ./Middleware/lcd/lcd.d  ./Middleware/info_hw/info_hw.d  ./Middleware/buttons/buttons.d  ./Middleware/DS1307/DS1307.d  ./Middleware/AT24C32/AT24C32.d  Template.elf
+ 
+17:35:04 **** Incremental Build of configuration Debug for project Template ****
 make all 
 Building file: ../src/Source/app_control.c
 Invoking: Cross ARM C Compiler
@@ -120,52 +124,6 @@ Invoking: Cross ARM C Compiler
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Util" -std=gnu11 -MMD -MP -MF"TM4C123GXL/delay/hal_delay.d" -MT"TM4C123GXL/delay/hal_delay.o" -c -o "TM4C123GXL/delay/hal_delay.o" "/opt/JAGA/HAL/TM4C123GXL/delay/hal_delay.c"
 Finished building: /opt/JAGA/HAL/TM4C123GXL/delay/hal_delay.c
  
-Building file: /opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c
-Invoking: Cross ARM C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Util" -std=gnu11 -MMD -MP -MF"Middleware/nokia_glcd/nokia_glcd.d" -MT"Middleware/nokia_glcd/nokia_glcd.o" -c -o "Middleware/nokia_glcd/nokia_glcd.o" "/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c"
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:225:5: warning: braces around scalar initializer
-     { 0x00 },
-     ^
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:225:5: warning: (near initialization for 'nokia.clk')
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:226:2: warning: braces around scalar initializer
-  { 0x00 },
-  ^
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:226:2: warning: (near initialization for 'nokia.data')
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:227:2: warning: braces around scalar initializer
-  { 0x00 },
-  ^
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:227:2: warning: (near initialization for 'nokia.dc')
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:228:2: warning: braces around scalar initializer
-  { 0x00 },
-  ^
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:228:2: warning: (near initialization for 'nokia.rst')
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:229:2: warning: braces around scalar initializer
-  { 0x00 }
-  ^
-/opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c:229:2: warning: (near initialization for 'nokia.sce')
-Finished building: /opt/JAGA/Middleware/nokia_glcd/nokia_glcd.c
- 
-Building file: /opt/JAGA/Middleware/log/log.c
-Invoking: Cross ARM C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Util" -std=gnu11 -MMD -MP -MF"Middleware/log/log.d" -MT"Middleware/log/log.o" -c -o "Middleware/log/log.o" "/opt/JAGA/Middleware/log/log.c"
-/opt/JAGA/Middleware/log/log.c: In function 'wr_ext_e2p':
-/opt/JAGA/Middleware/log/log.c:204:25: warning: passing argument 3 of 'AT24C32_write' makes pointer from integer without a cast
-  AT24C32_write(addr, 1, data);
-                         ^
-In file included from /opt/JAGA/Middleware/log/log.c:28:0:
-/opt/JAGA/Middleware/AT24C32/AT24C32.h:62:13: note: expected 'uint8_t *' but argument is of type 'uint16_t'
- PUBLIC void AT24C32_write(uint16_t address, uint16_t count, uint8_t *data);
-             ^
-/opt/JAGA/Middleware/log/log.c: In function 'rd_ext_e2p':
-/opt/JAGA/Middleware/log/log.c:211:24: warning: passing argument 3 of 'AT24C32_read' from incompatible pointer type
-  AT24C32_read(addr, 1, &data);
-                        ^
-In file included from /opt/JAGA/Middleware/log/log.c:28:0:
-/opt/JAGA/Middleware/AT24C32/AT24C32.h:71:13: note: expected 'uint8_t *' but argument is of type 'uint16_t *'
- PUBLIC void AT24C32_read(uint16_t address, uint16_t count, uint8_t* data);
-             ^
-Finished building: /opt/JAGA/Middleware/log/log.c
- 
 Building file: /opt/JAGA/Middleware/leds/leds.c
 Invoking: Cross ARM C Compiler
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -DARM_MATH_CM4 -DPART_LM4F123GH6M -DTARGET_IS_BLIZZARD_RA1 -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Header" -I"/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source" -I"/opt/JAGA/Middleware" -I"/opt/JAGA/HAL/TM4C123GXL" -I"/opt/JAGA/Util" -std=gnu11 -MMD -MP -MF"Middleware/leds/leds.d" -MT"Middleware/leds/leds.o" -c -o "Middleware/leds/leds.o" "/opt/JAGA/Middleware/leds/leds.c"
@@ -198,7 +156,7 @@ Finished building: /opt/JAGA/Middleware/AT24C32/AT24C32.c
  
 Building target: Template.elf
 Invoking: Cross ARM C Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template.map" -o "Template.elf"  ./src/Source/app_control.o ./src/Source/app_him.o ./src/Source/app_info.o ./src/Source/main.o ./src/Source/startup_gcc.o ./src/Source/sys_ad.o ./src/Source/sys_gpio.o ./src/Source/sys_hw.o ./src/Source/sys_i2c.o ./src/Source/sys_mcu.o ./src/Source/sys_pwm.o ./src/Source/sys_spi.o ./src/Source/sys_timer.o ./src/Source/sys_uart.o  ./Util/xtime/xtime.o  ./Util/xprintf/xprintf.o  ./Util/crc/crc.o  ./Util/const/conts.o  ./Util/PID/pid.o  ./TM4C123GXL/uart/hal_uart.o  ./TM4C123GXL/systick/hal_systick.o  ./TM4C123GXL/i2c/hal_i2c.o  ./TM4C123GXL/gpio/hal_gpio.o  ./TM4C123GXL/delay/hal_delay.o  ./Middleware/nokia_glcd/nokia_glcd.o  ./Middleware/log/log.o  ./Middleware/leds/leds.o  ./Middleware/lcd/lcd.o  ./Middleware/info_hw/info_hw.o  ./Middleware/buttons/buttons.o  ./Middleware/DS1307/DS1307.o  ./Middleware/AT24C32/AT24C32.o   
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template/src/Source/main.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Template.map" -o "Template.elf"  ./src/Source/app_control.o ./src/Source/app_him.o ./src/Source/app_info.o ./src/Source/main.o ./src/Source/startup_gcc.o ./src/Source/sys_ad.o ./src/Source/sys_gpio.o ./src/Source/sys_hw.o ./src/Source/sys_i2c.o ./src/Source/sys_mcu.o ./src/Source/sys_pwm.o ./src/Source/sys_spi.o ./src/Source/sys_timer.o ./src/Source/sys_uart.o  ./Util/xtime/xtime.o  ./Util/xprintf/xprintf.o  ./Util/crc/crc.o  ./Util/const/conts.o  ./Util/PID/pid.o  ./TM4C123GXL/uart/hal_uart.o  ./TM4C123GXL/systick/hal_systick.o  ./TM4C123GXL/i2c/hal_i2c.o  ./TM4C123GXL/gpio/hal_gpio.o  ./TM4C123GXL/delay/hal_delay.o  ./Middleware/leds/leds.o  ./Middleware/lcd/lcd.o  ./Middleware/info_hw/info_hw.o  ./Middleware/buttons/buttons.o  ./Middleware/DS1307/DS1307.o  ./Middleware/AT24C32/AT24C32.o   
 Finished building target: Template.elf
  
 Invoking: Cross ARM GNU Create Flash Image

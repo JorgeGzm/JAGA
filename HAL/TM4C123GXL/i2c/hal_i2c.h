@@ -145,10 +145,11 @@ uint8_t get_i2c1_timeout(void);
  * estar configurados como entrada
  * @param enable_i2c I2C_EN_PIN_I2C: habilita pinos para o uso do i2c.  \n
  *                   I2C_EN_PIN_IO: desabilota i2c e configura pinos como I/O   \n
+ * @param enable_i2c habilita i2c
  * @param sda   pino configurado para dado da i2c
  * @param sck   Pino configurado para o clock da I2C
  */
-void i2c_setup_enable(uint8_t enable_i2c, regGPIO *sda, regGPIO *sck);
+void i2c_setup_enable(uint8_t enable_i2c, uint8_t sda, uint8_t sck);
 
 /**
  * @brief Configura i2c para funcionar como mestre

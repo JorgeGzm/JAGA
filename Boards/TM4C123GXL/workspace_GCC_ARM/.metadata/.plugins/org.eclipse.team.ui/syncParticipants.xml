@@ -10,7 +10,7 @@
 </mappings>
 </org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS>
 </org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS>
-<gitSynchronizeData container="/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template" dstRev="HEAD" inludeLocal="true" srcRev="HEAD">
+<gitSynchronizeData container="/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/RemoteSystemsTempFiles" dstRev="HEAD" inludeLocal="true" srcRev="HEAD">
 <includedPaths>
 <path path="/opt/JAGA/Boards/TM4C123GXL/workspace_GCC_ARM/Template"/>
 </includedPaths>

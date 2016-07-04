@@ -25,7 +25,7 @@
 
 #include "nokia_glcd.h"
 #include <string.h>
-
+#include <stdint.h>
 //==============================================================================
 // PRIVATE DEFINITIONS
 //==============================================================================
@@ -220,14 +220,8 @@ uint8_t const BigNumbers[][42] =
 
 
 /** parametro que controlara o GLCD nokia*/
-GLCD_nokia nokia =
-{
-    { 0x00 },
-	{ 0x00 },
-	{ 0x00 },
-	{ 0x00 },
-	{ 0x00 }
-};
+GLCD_nokia nokia;
+
 
 //==============================================================================
 // PRIVATE FUNCTIONS

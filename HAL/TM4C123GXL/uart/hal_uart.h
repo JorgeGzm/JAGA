@@ -131,7 +131,7 @@
  * @param pin
  * @param reg
  */
-void uart_attach(regPin *pin, regGPIO *reg);
+void uart_attach(uint8_t rx, uint8_t tx);
 
 /**
  * @brief TODO
